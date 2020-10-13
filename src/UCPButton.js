@@ -26,6 +26,11 @@ function UCPButton() {
 <form action="https://canvas.anglia.ac.uk/courses/17176/modules">
 <button className="largetealbutton">Button 5</button>
 </form>
+
+<br></br>
+<form action="https://canvas.anglia.ac.uk/courses/17176/modules">
+<button className="finalbutton">Button 6</button>
+</form>
 </div>
     )
     }
