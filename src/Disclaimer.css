@@ -1,0 +1,18 @@
+.disclaimer{
+    width:500px;
+    height:450px;
+
+    border:1px solid #005C6E;
+
+}
+
+.text{
+    color: black;
+
+
+}
+
+.text:hover{
+
+    color: black    
+}
