@@ -1,9 +1,12 @@
 .disclaimer{
     width:500px;
     height:450px;
-
+    align-content: center;
+    background-color: #31B7BC;
+    color: black;
+padding-left: 30px; padding-right: 30px;
     border:1px solid #005C6E;
-
+    border-radius: 25px;
 }
 
 .text{
