@@ -7,9 +7,9 @@ export default class BreadcrumbComp extends React.Component{
  render(){
      return (
         <Breadcrumb>
-        <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
-        <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">Library</Breadcrumb.Item>
-        <Breadcrumb.Item active>Data</Breadcrumb.Item>
+        <Breadcrumb.Item href="#">Personal Information</Breadcrumb.Item>
+        <Breadcrumb.Item href="a">Qualifications</Breadcrumb.Item>
+        <Breadcrumb.Item active>About you</Breadcrumb.Item>
         </Breadcrumb>
      )
  }
