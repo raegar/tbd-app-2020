@@ -30,7 +30,7 @@ TextBox.propTypes = {
     minlength: PropTypes.number,
     //Minimum input length
     placeholder: PropTypes.string,
-    type: PropTypes.oneOf(['text', 'password', 'email', 'tel'])
+    type: PropTypes.oneOf(['text', 'password', 'email', 'tel', 'number'])
 };
 
 TextBox.defaultProps = {
