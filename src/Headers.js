@@ -1,5 +1,5 @@
 import React from 'react';
-import UCPLogo  from './UCPLogo.png'
+import UCPLogo  from './UCPLogo.png';
 import './Headers.css';
 
 export default class Headers extends React.Component{

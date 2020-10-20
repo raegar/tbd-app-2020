@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row , Col } from 'react-bootstrap';
-import TextBox from './TextBox';
+import {TextBox} from './TextBox';
+import UCPButton from './UCPButton';
 export default class Login extends React.Component{
     render(){
         return (
