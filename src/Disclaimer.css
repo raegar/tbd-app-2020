@@ -3,19 +3,20 @@
     height:350px;
     align-content: center;
     background-color: #31B7BC;
-    color: black;
+    color: white;
 padding-left: 30px; padding-right: 30px;
     border:1px solid #005C6E;
     border-radius: 25px;
 }
 
 .text{
-    color: black;
-
+    color: white;
+    text-decoration:none;
 
 }
 
 .text:hover{
 
-    color: black    
+    color: white; 
+    text-decoration:none;
 }
