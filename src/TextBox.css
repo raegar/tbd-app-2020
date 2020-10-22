@@ -1,0 +1,16 @@
+.textbox {
+    margin: 1.5% 3% 1.5% 3%;
+}
+
+.textbox input {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border: 2px solid black;
+    margin-left: 1.5%;
+}
+
+.textbox input:focus {
+    outline: none !important;
+    border: 2px solid #31b7bc;
+}
