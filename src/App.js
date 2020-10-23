@@ -9,7 +9,6 @@ function App() {
     <div className="App">      
       <Headers/>
       <Login/>    
-      <Breadcrumb/>
     </div>
   );
 }
