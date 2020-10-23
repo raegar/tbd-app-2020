@@ -6,9 +6,7 @@ import Breadcrumb from './Breadcrumb';
 function App() {
   return (
     <div className="App">
-      
-      <Headers/>
-    
+      <Headers/>  
       <Breadcrumb/>
     </div>
   );
