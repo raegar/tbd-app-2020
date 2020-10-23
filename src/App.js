@@ -6,11 +6,9 @@ import Login from './Login';
 
 function App() {
   return (
-    <div className="App">
-      
-      <Login/>
+    <div className="App">      
       <Headers/>
-    
+      <Login/>    
       <Breadcrumb/>
     </div>
   );
