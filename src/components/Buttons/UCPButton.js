@@ -1,38 +1,38 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './UCPButton.css';
-function UCPButton() {
-    return (
-        <div className="Button">
 
-<br></br>
-<form action="https://canvas.anglia.ac.uk/courses/17176/modules">
-<button className="button">Button 1</button>
-</form>
-<br></br>
-<form action="https://canvas.anglia.ac.uk/courses/17176/modules">
-<button className="button2">Button 2</button>
-</form>
-<br></br>
-<form action="https://canvas.anglia.ac.uk/courses/17176/modules">
-<button className="lightbutton">Button 3</button>
-</form>
+export const UCPButton = ({ primary, className, buttonText, ...props}) => {
+     return (
+    <button
+     type="button"
+     className={className}
+          {...props}
+     >{buttonText}​
+    </button>
+  );
+};
+UCPButton.propTypes = {
+    /**
+   * Is this the principal call to action on the page?
+   */
+primary:PropTypes.bool,
+/**
+   * Class Name Selected
+   */
+className:PropTypes.string,
+/**
+   * Optional click handler
+   */
+onClick:PropTypes.func,
+};
+UCPButton.defaultProps = {
+    primary:false,
+    size:'UCPDefault',
+    onClick:undefined
+};
+export default UCPButton
 
-<br></br>
-<form action="https://canvas.anglia.ac.uk/courses/17176/modules">
-<button className="tealbutton">Button 4</button>
-</form>
+/* Example
 
-<br></br>
-<form action="https://canvas.anglia.ac.uk/courses/17176/modules">
-<button className="largetealbutton">Button 5</button>
-</form>
-
-<br></br>
-<form action="https://canvas.anglia.ac.uk/courses/17176/modules">
-<button className="finalbutton">Button 6</button>
-</form>
-</div>
-    )
-    }
-
-export default UCPButton;
+<UCPButton primary=true className="Large" buttonText="Click Here"/> */
