@@ -51,4 +51,49 @@
 
   }
 
-  
+  .smallbutton:hover{
+    background-color: white;
+    color: black;
+    width: 400px;
+    height: 200px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;    border-radius: 25px;
+    border: 2px solid #005C6E;
+    outline: none !important;
+
+  }
+
+  .mediumbuttom:hover{
+    background-color: white;
+    color: black;
+    width: 400px;
+    height: 200px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;    border-radius: 25px;
+    border: 2px solid #005C6E;
+    outline: none !important;
+
+  }
+
+  .largebutton:hover{
+    background-color: white;
+    color: black;
+    width: 400px;
+    height: 200px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;    border-radius: 25px;
+    border: 2px solid #005C6E;
+    outline: none !important;
+
+  }
+  .extralargebutton:hover{
+    background-color: white;
+    color: black;
+    width: 400px;
+    height: 200px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;    border-radius: 25px;
+    border: 2px solid #005C6E;
+    outline: none !important;
+
+  }
