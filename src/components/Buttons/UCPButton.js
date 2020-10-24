@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './UCPButton.css';
 
-export const UCPButton = ({ primary, className, buttonText, ...props}) => {
+export const UCPButton = ({ className, buttonText, ...props}) => {
      return (
-    <button
+    <button data-testid="ucpButton"
      type="button"
      className={className}
           {...props}
@@ -16,10 +16,6 @@ UCPButton.propTypes = {
     /**
    * Is this the principal call to action on the page?
    */
-primary:PropTypes.bool,
-/**
-   * Class Name Selected
-   */
 className:PropTypes.string,
 /**
    * Optional click handler
@@ -27,7 +23,6 @@ className:PropTypes.string,
 onClick:PropTypes.func,
 };
 UCPButton.defaultProps = {
-    primary:false,
     size:'UCPDefault',
     onClick:undefined
 };

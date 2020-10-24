@@ -9,7 +9,7 @@ const options = [
 ]
 
 const DropdownMenu = () => (
-  <Select options={options} />
+  <Select data-testid="ucpDropdownMenu" options={options} />
 )
 
 export default DropdownMenu;

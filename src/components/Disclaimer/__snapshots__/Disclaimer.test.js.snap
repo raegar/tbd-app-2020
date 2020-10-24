@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders disclaimer 1`] = `
+<DocumentFragment>
+  <div
+    class="Disclaimer"
+  >
+    <br />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <form
+      action="https://canvas.anglia.ac.uk/courses/17176/modules"
+    >
+      <div
+        class="disclaimer"
+        data-testid="ucpDisclaimer"
+      >
+        <p>
+            
+          <b>
+            PRIVACY STATEMENT:
+          </b>
+          <br />
+           We will only use your personal information to administer your application and / or enrolment and to provide the products and services you have requested from us.
+          <br />
+           Further information on our privacy policy can be found at https://www.ucp.ac.uk/privacy-and-cookies/ or by emailing 
+          <a
+            class="text"
+            href="mailto:hello@ucp.ac.uk"
+          >
+            hello@ucp.ac.uk
+          </a>
+        </p>
+        <button
+          class="tealbutton"
+          data-testid="ucpButton"
+          primary="True"
+          type="button"
+        >
+          close​
+        </button>
+      </div>
+    </form>
+  </div>
+</DocumentFragment>
+`;
