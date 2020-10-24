@@ -8,8 +8,8 @@ function App() {
     <div className="App">
 
       <Headers/>
+      <Disclaimer/>
       <UCPButton primary="true" className="largetealbutton" buttonText="Click Here"/>
-
     </div>
   );
 }
