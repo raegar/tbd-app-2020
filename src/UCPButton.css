@@ -11,3 +11,15 @@
   }
 
   
+
+  .mediumbutton{
+    background-color: #31B7BC;
+    color: black;
+    width: 125px;
+    height: 75px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;    border-radius: 25px;
+    border: 2px solid #005C6E;
+  }
+
+

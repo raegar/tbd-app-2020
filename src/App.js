@@ -22,7 +22,10 @@ function App() {
         <Disclaimer></Disclaimer>
         <br></br>
         <UCPButton primary= "true" className="smallbutton" buttonText="Click Here"/>
-
+        <br></br>
+        <UCPButton primary= "true" className="mediumbutton" buttonText="Click Here"/>
+        <br></br>
+       
 
 <br></br>
       </header>
