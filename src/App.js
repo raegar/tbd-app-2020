@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Button2 from './UCPButton.js';
+import UCPButton from './UCPButton.js';
 import Disclaimer from './Disclaimer.js';
 function App() {
   return (
@@ -20,7 +20,10 @@ function App() {
           Learn React
         </a>
         <Disclaimer></Disclaimer>
-        <Button2></Button2>
+        <br></br>
+        <UCPButton primary= "true" className="smallbutton" buttonText="Click Here"/>
+
+
 <br></br>
       </header>
     </div>
