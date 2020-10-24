@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Modal 1`] = `
+<DocumentFragment>
+  <button
+    class="btnClass"
+  >
+    This is a modal button
+  </button>
+</DocumentFragment>
+`;
