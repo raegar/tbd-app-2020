@@ -25,7 +25,7 @@ export default class Login extends React.Component{
                 </Row>
                 <Row>
                     <div className="UserInfo">
-                        <UCPButton/>
+                        <UCPButton buttonText="Login" className="smallbutton"/>
                     </div>
                 </Row>
             </Container>
