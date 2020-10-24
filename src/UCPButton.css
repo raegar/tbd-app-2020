@@ -1,3 +1,44 @@
+
+  .smallbutton{
+    background-color: #31B7BC;
+    color: black;
+    width: 100px;
+    height: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;    border-radius: 25px;
+    border: 2px solid #005C6E;
+  }
+
+  
+
+  .mediumbutton{
+    background-color: #31B7BC;
+    color: black;
+    width: 125px;
+    height: 75px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;    border-radius: 25px;
+    border: 2px solid #005C6E;
+  }
+  .largebutton{
+    background-color: #31B7BC;
+    color: black;
+    width: 200px;
+    height: 100px; 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;    border-radius: 25px;
+    border: 2px solid #005C6E;
+  }
+
+  .extralargebutton{
+    background-color: #31B7BC;
+    color: black;
+    width: 400px;
+    height: 200px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;    border-radius: 25px;
+    border: 2px solid #005C6E;
+  }
 .finalbutton{
   background-color: #31B7BC;
   color: black;
