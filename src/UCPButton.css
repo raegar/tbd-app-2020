@@ -34,4 +34,12 @@
     border: 2px solid #005C6E;
   }
 
-  
+  .extralargebutton{
+    background-color: #31B7BC;
+    color: black;
+    width: 400px;
+    height: 200px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;    border-radius: 25px;
+    border: 2px solid #005C6E;
+  }
