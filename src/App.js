@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Headers from './components/Header/Headers';
 import UCPButton from './components/Buttons/UCPButton'
+import Disclaimer from './components/Disclaimer/Disclaimer'
 
 function App() {
   return (
