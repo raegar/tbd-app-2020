@@ -4,7 +4,7 @@ function UCPButton() {
     return (
         <div className="Button">
             <form action="https://canvas.anglia.ac.uk/courses/17176/modules">
-                <button className="finalbutton">Button 6</button>
+                <button className="finalbutton">Login</button>
             </form>
         </div>
     )
