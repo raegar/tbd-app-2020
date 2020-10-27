@@ -1,13 +1,21 @@
-import React from 'react';
-import './UCPButton.css';
-function UCPButton() {
-    return (
-        <div className="Button">
-            <form action="https://canvas.anglia.ac.uk/courses/17176/modules">
-                <button className="finalbutton">Login</button>
-            </form>
-        </div>
-    )
-}
 
-export default UCPButton;
+import React from 'react';
+import PropTypes from 'prop-types';
+import './UCPButton.css';
+export const UCPButton =
+({primary, className, buttonText, ...props}) => {
+    return (<button type="button" className={className}{...props}>{buttonText}</button>);
+
+};
+
+UCPButton.propTypes = {
+primary:PropTypes.bool,
+className:PropTypes.string,
+onClick:PropTypes.func,
+};
+
+UCPButton.defaultProps = {
+    primary:false, size: 'UCPDefault', onClick:undefined
+};
+
+export default UCPButton ;
