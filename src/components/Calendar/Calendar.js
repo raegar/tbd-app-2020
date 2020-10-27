@@ -14,13 +14,23 @@ const options = [
     { value: '6', label: '15:00'},
     { value: '7', label: '16:00'},
   ]
+
+ 
+
+
 export default function Calendar (){
  
  
      return (
 
       <Container>
-      <DropdownMenu options = {options}/>
+           <table>
+        <th><UCPButton className="largebutton" buttonText="Week Commencing 26/10/2020"/></th>
+        <th><UCPButton className="largebutton" buttonText="Week Commencing 2/11/2020"/></th>
+        <th><UCPButton className="largebutton" buttonText="Week Commencing 9/11/2020"/></th>
+        <th><UCPButton className="largebutton" buttonText="Week Commencing 16/11/2020"/></th>
+        </table> 
+     
       <table>
      
         <th><UCPButton className="mediumbutton" buttonText="Monday"/></th>
@@ -30,6 +40,7 @@ export default function Calendar (){
         <th><UCPButton className="mediumbutton" buttonText="Friday"/></th>
       
       </table>
+      <DropdownMenu options = {options}/>
     </Container>
      )
  
