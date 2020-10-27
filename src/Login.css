@@ -1,0 +1,17 @@
+.UserInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ContainerStyle {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background-color: #31B7BC;
+    position: absolute;
+    width: 40%;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
