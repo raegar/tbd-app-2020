@@ -8,7 +8,6 @@ return (
         <label for={id}>{title}</label>
         <input
         placeholder={placeholder}
-        type="text"
         id= {id}
         maxlength = {maxlength}
         minlength = {minlength}
