@@ -4,6 +4,9 @@ import Headers from './components/Header/Headers';
 import UCPButton from './components/Buttons/UCPButton'
 import Disclaimer from './components/Disclaimer/Disclaimer'
 import DropdownMenu from './components/DropdownMenu/DropdownMenu'
+import Login from './Login';
+
+
 
 function App() {
   return (
@@ -12,6 +15,8 @@ function App() {
       <DropdownMenu/>
       <Disclaimer/>
       <UCPButton className="largetealbutton" buttonText="Click Here"/>
+      <Disclaimer/>
+      <Login/>   
     </div>
   );
 }
