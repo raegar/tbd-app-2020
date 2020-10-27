@@ -7,20 +7,14 @@ import DropdownMenu from './components/DropdownMenu/DropdownMenu'
 import Breadcrumb from './components/Breadcrumb/Breadcrumb'
 import RadioButton from './RadioButton';
 import Calendar from './components/Calendar/Calendar';
+import Login  from './components/Login/Login'
 
 
 function App() {
   return (
     <div className="App">
-
       <Headers/>
-      <Breadcrumb/>
-      <DropdownMenu/>
-      <Disclaimer/>
-      <UCPButton className="mediumbutton" buttonText="Click Here"/>
-     <RadioButton/>
-       <Calendar/>  
-
+      <Login/>
     </div>
   );
 }

@@ -9,11 +9,15 @@ const initialState = {
     password: "",
     usernameError: "",
     passwordError: ""
+    
 };
 
 export default class LoginForm extends React.Component {
-    state = initialState;
+    constructor(){
+        super();
 
+        this.state = initialState;
+   }
     handleChangeUsername = event => {
         this.setState({username: event.target.value });
     };
@@ -35,12 +39,13 @@ export default class LoginForm extends React.Component {
         if(result===true){
           this.setState({
             usernameError:false,
-            username:email
+            username:email,
           })
           return true;
         } else{
           this.setState({
-            usernameError:true
+            usernameError:true,
+            
           })
           return false;
         }
@@ -51,11 +56,12 @@ export default class LoginForm extends React.Component {
         let passwordError = "";
         if(!this.validateEmail(this.state.username))
         {
-            usernameError = "invalid username"  
+            usernameError = "Invalid username!"
+            
         }
         if(!this.state.password)
         {
-            passwordError = "invalid password"   
+            passwordError = "Invalid password!"   
         }
         if(usernameError || passwordError)
         {
@@ -71,23 +77,35 @@ export default class LoginForm extends React.Component {
         return(
             <Container className="ContainerStyle">
                 <form>
+                <Row>
+                    <Col>
+                    <div className="UserInfo">
+                        <h2>Login</h2>
+                    </div>
+                    </Col>
+                </Row>
                     <Row>
                         <Col>
                         <div className="UserInfo">
-                            <p>Username: </p>
-                            <TextBox type="text" value={this.state.username} 
-                             onChange={this.handleChangeUsername} placeholder="Enter Username"/> 
-                            <span style={{ fontSize: 10, color: "red"}}>{this.state.usernameError}</span>
+                            <span>Username: </span>
+                            <TextBox
+                             type="text" value={this.state.username} 
+                             onChange={this.handleChangeUsername}  placeholder="Enter Your Username"/> 
+                        </div>
+                        <div className="InvalidInput">
+                           <span>{this.state.usernameError}</span>
                         </div>
                         </Col>
                     </Row>
                     <Row>
                         <Col>
                         <div className="UserInfo">
-                            <p>Password: </p>
+                            <span>Password: </span>
                             <TextBox type="password" value={this.state.password} 
-                             onChange={this.handleChangePassword} placeholder="Enter Password"/> 
-                             <span style={{ fontSize: 10, color: "red"}}>{this.state.passwordError}</span>
+                             onChange={this.handleChangePassword} placeholder="Enter Your Password"/> 
+                        </div>
+                        <div className="InvalidInput">
+                           <span>{this.state.passwordError}</span>
                         </div>
                         </Col>
                     </Row>
