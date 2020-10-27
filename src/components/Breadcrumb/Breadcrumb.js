@@ -14,9 +14,9 @@ export default class BreadcrumbComp extends React.Component{
             
             <Container>
 <ul class="breadcrumb">
-  <li><a href="#">Personal Information</a></li>
-  <li><a href="#">Qualifications</a></li>
-  <li><a href="#">About you</a></li>
+  <li><a href="www.google.co.uk">Personal Information</a></li>
+  <li><a href="www.google.co.uk">Qualifications</a></li>
+  <li><a href="www.google.co.uk">About you</a></li>
 </ul>
 
 
