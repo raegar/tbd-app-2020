@@ -6,18 +6,21 @@ import Disclaimer from './components/Disclaimer/Disclaimer'
 import DropdownMenu from './components/DropdownMenu/DropdownMenu'
 import Breadcrumb from './components/Breadcrumb/Breadcrumb'
 import RadioButton from './RadioButton';
+import Calendar from './components/Calendar/Calendar';
 
 
 function App() {
   return (
     <div className="App">
+
       <Headers/>
       <Breadcrumb/>
-
       <DropdownMenu/>
       <Disclaimer/>
       <UCPButton className="mediumbutton" buttonText="Click Here"/>
      <RadioButton/>
+       <Calendar/>  
+
     </div>
   );
 }
