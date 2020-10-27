@@ -1,67 +1,51 @@
-.button{
-    background-color: #005C6E;
-    color: #F08575;
-    width: 200px;
-    height: 100px;
-    font-size: large;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-radius: 25px;
+
+  .smallbutton{
+    background-color: #31B7BC;
+    color: black;
+    width: 100px;
+    height: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;    border-radius: 25px;
     border: 2px solid #005C6E;
   }
 
-  .button2{
-    background-color: #005C6E;
-    color: white;
-    width: 200px;
-    height: 100px;
-    font-size: large;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-radius: 25px;
-    border: 2px solid white;
-  }
+  
 
-  .lightbutton{
-    background-color: #B2DFDB;
-    color: #005C6E;
-    width: 200px;
-    height: 100px;
-    font-size: large;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-radius: 25px;
-    border: 2px solid #B2DFDB;
-  }
-
-
-  .tealbutton{
+  .mediumbutton{
     background-color: #31B7BC;
-    color: white;
-    width: 200px;
-    height: 100px;
-    font-size: large;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-radius: 25px;
-    border: 2px solid #31B7BC;
+    color: black;
+    width: 125px;
+    height: 75px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;    border-radius: 25px;
+    border: 2px solid #005C6E;
   }
-
-
-  .largetealbutton{
-    background-color: #31B7BC;
-    color: white;
-    width: 400px;
-    height: 200px;
-    font-size: large;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-radius: 5px;
-    border: 2px solid #31B7BC;
-  }
-
-  .finalbutton{
+  .largebutton{
     background-color: #31B7BC;
     color: black;
     width: 200px;
-    height: 100px;
-    font-size: large;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-radius: 25px;
+    height: 100px; 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;    border-radius: 25px;
     border: 2px solid #005C6E;
   }
+
+  .extralargebutton{
+    background-color: #31B7BC;
+    color: black;
+    width: 400px;
+    height: 200px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;    border-radius: 25px;
+    border: 2px solid #005C6E;
+  }
+.finalbutton{
+  background-color: #31B7BC;
+  color: black;
+  width: 100px;
+  height: 50px;
+  font-size: large;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border-radius: 25px;
+  border: 2px solid #005C6E;
+}

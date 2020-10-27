@@ -1,38 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './UCPButton.css';
-function UCPButton() {
-    return (
-        <div className="Button">
+export const UCPButton =
+({primary, className, buttonText, ...props}) => {
+    return (<button type="button" className={className}{...props}>{buttonText}</button>);
 
-<br></br>
-<form action="https://canvas.anglia.ac.uk/courses/17176/modules">
-<button className="button">Button 1</button>
-</form>
-<br></br>
-<form action="https://canvas.anglia.ac.uk/courses/17176/modules">
-<button className="button2">Button 2</button>
-</form>
-<br></br>
-<form action="https://canvas.anglia.ac.uk/courses/17176/modules">
-<button className="lightbutton">Button 3</button>
-</form>
+};
 
-<br></br>
-<form action="https://canvas.anglia.ac.uk/courses/17176/modules">
-<button className="tealbutton">Button 4</button>
-</form>
+UCPButton.propTypes = {
+primary:PropTypes.bool,
+className:PropTypes.string,
+onClick:PropTypes.func,
+};
 
-<br></br>
-<form action="https://canvas.anglia.ac.uk/courses/17176/modules">
-<button className="largetealbutton">Button 5</button>
-</form>
+UCPButton.defaultProps = {
+    primary:false, size: 'UCPDefault', onClick:undefined
+};
 
-<br></br>
-<form action="https://canvas.anglia.ac.uk/courses/17176/modules">
-<button className="finalbutton">Button 6</button>
-</form>
-</div>
-    )
-    }
-
-export default UCPButton;
+export default UCPButton ;
