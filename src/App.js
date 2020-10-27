@@ -4,7 +4,7 @@ import Headers from './components/Header/Headers';
 import UCPButton from './components/Buttons/UCPButton'
 import Disclaimer from './components/Disclaimer/Disclaimer'
 import DropdownMenu from './components/DropdownMenu/DropdownMenu'
-import Login from './Login';
+import Login from './components/Login/Login';
 
 
 
@@ -14,11 +14,9 @@ function App() {
       <Headers/>
       <DropdownMenu/>
       <Disclaimer/>
-      <UCPButton className="largetealbutton" buttonText="Click Here"/>
-      <Disclaimer/>
+      <UCPButton className="mediumbutton" buttonText="Click Here"/>
       <Login/>   
     </div>
   );
 }
-
 export default App;

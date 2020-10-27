@@ -1,72 +1,3 @@
-<<<<<<< HEAD:src/components/Buttons/UCPButton.css
-.button{
-    background-color: #005C6E;
-    color: #F08575;
-    width: 200px;
-    height: 100px;
-    font-size: large;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-radius: 25px;
-    border: 2px solid #005C6E;
-  }
-
-  .button2{
-    background-color: #005C6E;
-    color: white;
-    width: 200px;
-    height: 100px;
-    font-size: large;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-radius: 25px;
-    border: 2px solid white;
-  }
-
-  .lightbutton{
-    background-color: #B2DFDB;
-    color: #005C6E;
-    width: 200px;
-    height: 100px;
-    font-size: large;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-radius: 25px;
-    border: 2px solid #B2DFDB;
-  }
-
-
-  .tealbutton{
-    background-color: #3f3f3f;
-    color: white;
-    width: 200px;
-    height: 100px;
-    font-size: large;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-radius: 25px;
-    border: 2px solid #080808;
-  }
-
-
-  .largetealbutton{
-    background-color: #31B7BC;
-    color: white;
-    width: 400px;
-    height: 200px;
-    font-size: large;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-radius: 5px;
-    border: 2px solid #31B7BC;
-  }
-
-  .finalbutton{
-    background-color: #31B7BC;
-    color: black;
-    width: 200px;
-    height: 100px;
-    font-size: large;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-radius: 25px;
-    border: 2px solid #005C6E;
-  }
-=======
 
   .smallbutton{
     background-color: #31B7BC;
@@ -77,9 +8,6 @@
     font-size: 16px;    border-radius: 25px;
     border: 2px solid #005C6E;
   }
-
-  
-
   .mediumbutton{
     background-color: #31B7BC;
     color: black;
@@ -118,4 +46,3 @@
   border-radius: 25px;
   border: 2px solid #005C6E;
 }
->>>>>>> main:src/UCPButton.css
