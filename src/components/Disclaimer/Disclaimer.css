@@ -1,14 +1,13 @@
 .disclaimer{
-    width:500px;
-    height:350px;
+    width:50%;
     align-content: center;
     background-color: #31B7BC;
     color: white;
-padding-left: 30px; padding-right: 30px;
+    padding-left: 30px; padding-right: 30px;
     border:1px solid #005C6E;
     border-radius: 25px;
     font-family: 'Montserrat', sans-serif;
-font-size: 22px;}
+    font-size: 22px;}
 
 
 .text{

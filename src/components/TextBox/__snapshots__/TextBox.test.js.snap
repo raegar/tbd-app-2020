@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders TextBox 1`] = `
+<DocumentFragment>
+  <div
+    class="textbox"
+  >
+    <label
+      for="input1"
+    >
+      First Name
+    </label>
+    <input
+      id="input1"
+      maxlength="30"
+      minlength="5"
+      placeholder="Enter your firstname"
+      type="text"
+    />
+  </div>
+</DocumentFragment>
+`;
