@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/raegar/tbd-app-2020.svg?token=tXp1Xi2zzHH6R2YCAp21&branch=main)](https://travis-ci.com/raegar/tbd-app-2020)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
