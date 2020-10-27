@@ -2,14 +2,19 @@ import React from 'react'
 import Select from 'react-select'
 import './DropdownMenu.css'
 
-const options = [
-  { value: 'computing', label: 'BSc (Hons) Computing and Information Systems' },
-  { value: 'criminoloy', label: 'BA (Hons) Crimonology'},
-  { value: 'digitalArts', label: 'FDA Digital Arts'}
-]
 
-const DropdownMenu = () => (
+
+const DropdownMenu = ({options, ...props}) => (
   <Select options={options} />
 )
 
 export default DropdownMenu;
+
+DropdownMenu.defaultProps = {
+  
+    options:[
+      { value: 'computing', label: 'BSc (Hons) Computing and Information Systems' },
+      { value: 'criminoloy', label: 'BA (Hons) Crimonology'},
+      { value: 'digitalArts', label: 'FDA Digital Arts'}
+    ]
+};

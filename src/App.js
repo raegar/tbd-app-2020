@@ -7,6 +7,7 @@ import DropdownMenu from './components/DropdownMenu/DropdownMenu'
 import Login from './components/Login/Login';
 import Breadcrumb from './components/Breadcrumb/Breadcrumb'
 import RadioButton from './RadioButton';
+import Calendar from './components/Calendar/Calendar';
 
 
 
@@ -19,7 +20,8 @@ function App() {
       <UCPButton className="mediumbutton" buttonText="Click Here"/>
       <Breadcrumb/>
      <RadioButton/>
-      <Login/>   
+      <Login/> 
+      <Calendar/>  
     </div>
   );
 }
