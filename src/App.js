@@ -1,12 +1,7 @@
 import React from 'react';
 import './App.css';
 import Headers from './components/Header/Headers';
-import UCPButton from './components/Buttons/UCPButton'
-import Disclaimer from './components/Disclaimer/Disclaimer'
-import DropdownMenu from './components/DropdownMenu/DropdownMenu'
-import Breadcrumb from './components/Breadcrumb/Breadcrumb'
-import RadioButton from './RadioButton';
-import Calendar from './components/Calendar/Calendar';
+import SelectRole from './components/SelectRole/SelectRole'
 import Login  from './components/Login/Login'
 
 
@@ -14,8 +9,10 @@ function App() {
   return (
     <div className="App">
       <Headers/>
-      <Login/>
+      <SelectRole/>
     </div>
   );
 }
 export default App;
+
+/* <Login/> should be called when the user selects the staff portal in the SelectRole Option */
