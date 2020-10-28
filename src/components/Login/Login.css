@@ -3,23 +3,27 @@
     align-items: center;
     justify-content: center;
 }
+.LoginButton {
+    float: right;
+    margin-right: 25%;
+}
 .InvalidInput
 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 10px;
     color: red;
     margin: 0% 0% 1% 5%;
 }
 
 .ContainerStyle {
-    padding-top: 10%;
-    padding-bottom: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
     background-color: #31B7BC;
     position: absolute;
-    width: 40%;
+    border-radius: 17px;
+    width: 40% !important;
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);

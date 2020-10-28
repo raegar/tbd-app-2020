@@ -109,8 +109,8 @@ export default class LoginForm extends React.Component {
                         </div>
                         </Col>
                     </Row>
-                    <div className="UserInfo">
-                        <UCPButton className="smallbutton" buttonText="Submit"
+                    <div className="LoginButton">
+                        <UCPButton className="smallbutton" buttonText="Login"
                             type="submit"
                             onClick={this.handleSubmit}
                         />
