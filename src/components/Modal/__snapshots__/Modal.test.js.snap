@@ -3,9 +3,11 @@
 exports[`Renders Modal 1`] = `
 <DocumentFragment>
   <button
-    class="btnClass"
+    class="mediumbutton"
+    data-testid="ucpButton"
+    type="button"
   >
-    This is a modal button
+    This is a modal button​
   </button>
 </DocumentFragment>
 `;

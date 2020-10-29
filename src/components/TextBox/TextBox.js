@@ -21,7 +21,7 @@ return (
 TextBox.propTypes = {
     backgroundColor: PropTypes.string,
         /** What background colour to use */
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
         /** Input contents */
     size: PropTypes.oneOf(['small', 'medium', 'large']),
         /** How large should the input be? */
