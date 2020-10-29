@@ -12,14 +12,18 @@ const Modal = ({id, btnText, btnClass, btnId, ...props}) => {
         );
     } else {
         return (
+            <>
+            <button id={btnId} class="btnClass" onClick={() => setShow(true)}>{btnText}</button>
             <div 
-            className="modal" 
+            className="main-modal" 
             id={id}>
                 <span className="close" onClick={() => setShow(false)}>&times;</span>
-                <div className="modal-content">
+                <div className="main-modal-content">
                     {props.children}
                 </div>
             </div>
+            <div className="modal-overlay" onClick={() => setShow(false)}></div>
+            </>
         );   
     }
 }
