@@ -6,15 +6,15 @@ class RadioButton extends React.Component
     {
         return (
                 <div>
-                    <label for="first">
+                    <label htmlFor="first">
                     <input type="radio" id= "first" />1st radio button
                     </label>
 
-                    <label for="second">
+                    <label htmlFor="second">
                     <input type="radio" id= "second" />2nd radio button
                     </label>
 
-                    <label for="third">
+                    <label htmlFor="third">
                     <input type="radio" id= "third" />3rd radio button
                     </label>
                     
