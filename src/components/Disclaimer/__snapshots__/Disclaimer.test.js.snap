@@ -34,7 +34,7 @@ exports[`Renders Disclaimer 1`] = `
           </a>
         </p>
         <button
-          class="mediumbutton"
+          class="smallbutton"
           data-testid="ucpButton"
           primary="True"
           type="button"

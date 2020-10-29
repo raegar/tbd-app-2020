@@ -5,7 +5,7 @@ import App from './App';
 
 test('renders learn react link', () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/PRIVACY STATEMENT/i);
+  const linkElement = getByText(/Username/i);
   expect(linkElement).toBeInTheDocument();
 
 });
