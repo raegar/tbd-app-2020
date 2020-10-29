@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import UCPButton from '../Buttons/UCPButton';
 import './Modal.css';
 
 const Modal = ({id, btnText, btnClass, btnId, ...props}) => {
@@ -8,12 +9,16 @@ const Modal = ({id, btnText, btnClass, btnId, ...props}) => {
 
     if(!show) {
         return(
-            <button id={btnId} class="btnClass" onClick={() => setShow(true)}>{btnText}</button>
+            <UCPButton id={btnId} className={btnClass} buttonText={btnText}
+                            onClick={()=>setShow(true)}
+                        />
         );
     } else {
         return (
             <>
-            <button id={btnId} class="btnClass" onClick={() => setShow(true)}>{btnText}</button>
+            <UCPButton id={btnId} className={btnClass} buttonText={btnText}
+                            onClick={()=>setShow(true)}
+                        />
             <div 
             className="main-modal" 
             id={id}>
@@ -38,7 +43,7 @@ Modal.propTypes = {
 Modal.defaultProps = {
     id: null,
     btnText: '',
-    btnClass: null,
+    btnClass: 'mediumbutton',
     btnId: null
 };
 

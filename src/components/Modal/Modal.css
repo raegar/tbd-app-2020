@@ -9,7 +9,7 @@ html,body
 
 .main-modal {
     font-family: 'Montserrat', sans-serif;
-    border-radius: 4px;
+    border-radius: 25px;
     color: black;
     position: fixed;
     z-index: 500;
