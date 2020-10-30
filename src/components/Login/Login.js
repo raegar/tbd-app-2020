@@ -34,7 +34,7 @@ export default class LoginForm extends React.Component {
         }
     };
     validateEmail(email){
-        const pattern = /[a-zA-Z0-9]+[\.]?([a-zA-Z0-9]+)?[\@][a-z]{3,9}[\.][a-z]{2,5}/;
+        const pattern = /[a-zA-Z0-9]+[.]?([a-zA-Z0-9]+)?[@][a-z]{3,9}[.][a-z]{2,5}/;
         const result = pattern.test(email);
         if(result===true){
           this.setState({
