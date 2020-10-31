@@ -23,7 +23,7 @@ export default function Calendar (){
  
      return (
 
-      <Container>
+      <Container className="">
            <table>
         <th><UCPButton className="largebutton" buttonText="Week Commencing 26/10/2020"/></th>
         <th><UCPButton className="largebutton" buttonText="Week Commencing 2/11/2020"/></th>
@@ -40,7 +40,7 @@ export default function Calendar (){
         <th><UCPButton className="mediumbutton" buttonText="Friday"/></th>
       
       </table>
-      <DropdownMenu options = {options}/>
+      <DropdownMenu className="Dropdown" options = {options}/>
     </Container>
      )
  
