@@ -1,16 +1,27 @@
 import React from 'react';
-import Breadcrumb from 'react-bootstrap/Breadcrumb'
+import { Container} from 'react-bootstrap';
+import './Breadcrumb.css';
 //import { Breadcrumb } from 'react-bootstrap';
 
 
 export default class BreadcrumbComp extends React.Component{
- render(){
-     return (
-        <Breadcrumb>
-            <Breadcrumb.Item href="#">Personal Information</Breadcrumb.Item>
-            <Breadcrumb.Item href="a">Qualifications</Breadcrumb.Item>
-            <Breadcrumb.Item active>About you</Breadcrumb.Item>
-        </Breadcrumb>
-     )
- }
+    render(){
+        return (        
+
+
+
+            
+            
+            <Container>
+<ul class="breadcrumb">
+  <li><a href="www.google.co.uk">Personal Information</a></li>
+  <li><a href="www.google.co.uk">Qualifications</a></li>
+  <li><a href="www.google.co.uk">About you</a></li>
+</ul>
+
+
+
+            </Container>
+        )
+    }
 };

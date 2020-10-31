@@ -2,15 +2,16 @@ import React from 'react';
 import './TextBox.css'
 import PropTypes from 'prop-types';
 
-const TextBox = ({backgroundColor, title, size, id, maxlength, minlength, placeholder, type, ...props}) => {
+const TextBox = ({backgroundColor, title, size, id, maxLength, minLength, placeholder, type, onChange, ...props}) => {
 return (
     <div className="textbox">
-        <label for={id}>{title}</label>
+        <label htmlFor={id}>{title}</label>
         <input
+        onChange={onChange}
         placeholder={placeholder}
         id= {id}
-        maxlength = {maxlength}
-        minlength = {minlength}
+        maxLength = {maxLength}
+        minLength = {minLength}
         type={type}
         />
     </div>
@@ -20,13 +21,13 @@ return (
 TextBox.propTypes = {
     backgroundColor: PropTypes.string,
         /** What background colour to use */
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
         /** Input contents */
     size: PropTypes.oneOf(['small', 'medium', 'large']),
         /** How large should the input be? */
-    maxlength: PropTypes.number,
+    maxLength: PropTypes.number,
     //Maximum input length
-    minlength: PropTypes.number,
+    minLength: PropTypes.number,
     //Minimum input length
     placeholder: PropTypes.string,
     type: PropTypes.oneOf(['text', 'password', 'email', 'tel', 'number'])
@@ -35,8 +36,8 @@ TextBox.propTypes = {
 TextBox.defaultProps = {
     backgroundColor: null,
     size: 'small',
-    maxlength: 30,
-    minlength: 0,
+    maxLength: 30,
+    minLength: 0,
     placeholder: '',
     type: "text"
 };
@@ -46,8 +47,8 @@ TextBox.defaultProps = {
 <TextBox 
     title="First Name" 
     placeholder="Enter your firstname" 
-    minlength="5" 
-    maxlength="30" 
+    minLength="5" 
+    maxLength="30" 
     id="input1" 
     type="text" 
 />
