@@ -16,6 +16,6 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: $TBD_TOKEN
-  local_dir: dist
+  local_dir: build
   on:
-    branch: main
+    branch: master
