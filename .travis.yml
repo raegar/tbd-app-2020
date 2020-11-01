@@ -18,4 +18,4 @@ deploy:
   github_token: $TBD_TOKEN
   local_dir: build
   on:
-    branch: master
+    branch: main
