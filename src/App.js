@@ -1,14 +1,15 @@
 import React from 'react';
 import './App.css';
 import Headers from './components/Header/Headers';
-import Login  from './components/Login/Login'
-
+import Calendar from './components/Calendar/Calendar';
+import Disclaimer from './components/Disclaimer/Disclaimer';
 
 function App() {
   return (
     <div className="App">
       <Headers/>
-      <Login/>
+      <Calendar/>
+      
     </div>
   );
 }
