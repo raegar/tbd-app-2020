@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Headers from './components/Header/Headers';
-import Login  from './components/Login/Login'
+import Login from './components/Login/Login';
 
 
 function App() {
@@ -9,6 +9,7 @@ function App() {
     <div className="App">
       <Headers/>
       <Login/>
+      
     </div>
   );
 }
