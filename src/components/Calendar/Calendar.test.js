@@ -9,4 +9,5 @@ afterEach(cleanup);
 it("renders", () => {
     const { asFragment } = render(<Calendar/>);
     expect(asFragment()).toMatchSnapshot();
+    
 });

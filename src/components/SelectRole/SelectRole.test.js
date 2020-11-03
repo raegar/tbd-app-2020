@@ -6,7 +6,7 @@ import SelectRole from './SelectRole';
 //cleans up 
 afterEach(cleanup);
 
-it("Renders SelectRole", () => {
+it("Render SelectRole", () => {
     const { asFragment } = render(<SelectRole  />);
-    expect(asFragment()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();  
 });
