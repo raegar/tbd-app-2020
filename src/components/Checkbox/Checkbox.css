@@ -1,0 +1,21 @@
+
+.checkboxlocation{
+    margin: 10px;
+}
+input.checkbox {
+    width: 25px;
+    height: 25px;
+
+  }
+
+
+  .labelposition {
+    width: 20%;
+    float: left;
+    text-align: right;
+}
+.checkboxposition {
+    width: 65%;
+    margin-left: 10px;
+    float:left;
+}
