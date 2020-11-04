@@ -23,7 +23,7 @@
 }
 
 @media screen and (max-width: 600px) {
-    .jumbotron {
+    .jumbotron { 
         padding-top: 2% !important;
         background-color: #a1a1a1;
         position: absolute;

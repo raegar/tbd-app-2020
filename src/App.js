@@ -9,6 +9,6 @@ function App() {
       <Headers/>
       <JumbotronComponent/> 
     </div>
-  );
+  ); 
 }
 export default App;
