@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render SelectRole 1`] = `
+<DocumentFragment>
+  <div
+    class="mt-5 px-3 py-3 select-role-container container"
+  >
+    <div
+      class="text-center row"
+    >
+      <div
+        class="mt-3 mb-3 col"
+      >
+        <a
+          href="/login"
+        >
+          <button
+            class="extralargebutton"
+            data-testid="ucpButton"
+            href="/login"
+            type="button"
+          >
+            Staff Portal​
+          </button>
+        </a>
+      </div>
+      <div
+        class="mt-3 mb-3 col"
+      >
+        <a
+          href="/emptyLink"
+        >
+          <button
+            class="extralargebutton"
+            data-testid="ucpButton"
+            href="#"
+            type="button"
+          >
+            Prospective Student​
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -2,12 +2,16 @@
 
 exports[`renders 1`] = `
 <DocumentFragment>
-  <button
-    class="largetealbutton"
-    data-testid="ucpButton"
-    type="button"
+  <a
+    href="/emptyLink"
   >
-    Click Here​
-  </button>
+    <button
+      class="largetealbutton"
+      data-testid="ucpButton"
+      type="button"
+    >
+      Click Here​
+    </button>
+  </a>
 </DocumentFragment>
 `;

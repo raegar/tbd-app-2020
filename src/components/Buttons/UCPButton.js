@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import {  Link } from 'react-router-dom';
 
 import './UCPButton.css';
 
 export const UCPButton = ({ to, className, buttonText, ...props}) => {
-     return (
+  if(to === undefined)
+  {
+    to = "/emptyLink"
+  }   
+  return (
        <Link to={to}>
           <button data-testid="ucpButton"
             type="button"
