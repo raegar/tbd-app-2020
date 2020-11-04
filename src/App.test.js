@@ -8,5 +8,4 @@ test('renders learn react link', () => {
   const { getByText } = render(<Router><App /></Router>);
   const linkElement = getByText(/Staff Portal/i);
   expect(linkElement).toBeInTheDocument();
-
 });
