@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Radio Button 1`] = `
+<DocumentFragment>
+  <div
+    class="radio-buttons"
+  >
+    <h4>
+      Nationality
+    </h4>
+    <div
+      class="radio-group"
+    >
+      <input
+        id="UK"
+        name="test"
+        type="radio"
+        value="UK"
+      />
+      <label
+        for="UK"
+      >
+        UK National
+      </label>
+    </div>
+    <div
+      class="radio-group"
+    >
+      <input
+        id="EU"
+        name="test"
+        type="radio"
+        value="EU"
+      />
+      <label
+        for="EU"
+      >
+        EU National
+      </label>
+    </div>
+    <div
+      class="radio-group"
+    >
+      <input
+        id="Other"
+        name="test"
+        type="radio"
+        value="Other"
+      />
+      <label
+        for="Other"
+      >
+        Other
+      </label>
+    </div>
+  </div>
+</DocumentFragment>
+`;

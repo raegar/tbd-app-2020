@@ -1,7 +1,6 @@
 import React from 'react'
 import DropdownMenu from '../DropdownMenu/DropdownMenu'
 import TextBox from '../TextBox/TextBox'
-import UCPButton from '../Buttons/UCPButton'
 import RadioButton from '../RadioButton/RadioButton'
 import './EssentialApplicantInfo.css'
 
