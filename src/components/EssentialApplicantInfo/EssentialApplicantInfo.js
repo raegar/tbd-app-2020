@@ -3,6 +3,7 @@ import DropdownMenu from '../DropdownMenu/DropdownMenu'
 import TextBox from '../TextBox/TextBox'
 import UCPButton from '../Buttons/UCPButton'
 import RadioButton from '../RadioButton/RadioButton'
+import './EssentialApplicantInfo.css'
 
 const EssentialApplicantInfo = () => {
 
@@ -13,8 +14,9 @@ const EssentialApplicantInfo = () => {
     ];
 
     return (
+        <div className="form-container">
         <div className="form-background">
-            <h3>CLEARING APPLICATION</h3>
+            <h3 className="form-title">CLEARING APPLICATION</h3>
 
             <TextBox 
                 title="Name" 
@@ -22,7 +24,8 @@ const EssentialApplicantInfo = () => {
                 minLength="5" 
                 maxLength="60" 
                 id="nameinput" 
-                type="text" 
+                type="text"
+                name="name"
             />
 
             <TextBox 
@@ -31,33 +34,41 @@ const EssentialApplicantInfo = () => {
                 minLength="5" 
                 maxLength="60" 
                 id="emailinput" 
-                type="email" 
+                type="email"
+                name="email"
             />
 
             <TextBox 
-                title="Phone Number" 
+                title="Tel No" 
                 placeholder="Enter phone number" 
                 minLength="5" 
                 maxLength="12" 
                 id="telinput" 
-                type="tel" 
+                type="tel"
+                name="telno"
             />
 
             <TextBox 
                 title="Date of Birth" 
                 placeholder="Enter date of birth"
                 id="dobinput" 
-                type="date" 
+                type="date"
+                name="dob"
             />
 
             <TextBox 
                 title="UCAS ID" 
                 placeholder="Enter UCAS ID" 
                 id="ucasinput" 
-                type="text" 
+                type="text"
+                name="ucas" 
             />
 
             <RadioButton heading="Nationality" options={options} name="test"/>
+
+            <h4>Course</h4>
+            <DropdownMenu />
+        </div>
         </div>
     );
 }

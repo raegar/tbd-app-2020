@@ -1,3 +1,20 @@
 .form-background {
-    
+    width: 1366px;
+    background-color: #B2DDDF;
+    display: inline-block;
+    padding: 20px;
+    text-align: left;
+    border: 1px solid black;
+}
+
+.form-container {
+    text-align: center;
+}
+
+.form-title {
+    text-align: center;
+}
+
+@media only screen and (max-width: 1366px) {
+    .form-background { width: 90% }
 }
