@@ -1,26 +1,21 @@
 import React from 'react'
+import './RadioButton.css'
 
-class RadioButton extends React.Component
-{
-    render()
-    {
-        return (
-                <div>
-                    <label htmlFor="first">
-                    <input type="radio" id= "first" />1st radio button
-                    </label>
+const RadioButton = ({name, options, heading, ...props}) => {
 
-                    <label htmlFor="second">
-                    <input type="radio" id= "second" />2nd radio button
-                    </label>
+    var items = options.map((item) =>
+        <div className="radio-group">
+            <input name={name} type="radio" id={item.id} value={item.value} />
+            <label htmlFor={item.id}>{item.label}</label>
+        </div>
+    );
 
-                    <label htmlFor="third">
-                    <input type="radio" id= "third" />3rd radio button
-                    </label>
-                    
-                </div>
-        )
-    }
+    return(
+        <div className="radio-buttons">
+            <h4>{heading}</h4>
+            {items}
+        </div>
+    );
 }
 
 export default RadioButton;

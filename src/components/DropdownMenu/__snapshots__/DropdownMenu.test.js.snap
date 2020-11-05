@@ -3,7 +3,7 @@
 exports[`Renders DropdownMenu 1`] = `
 <DocumentFragment>
   <div
-    class=" css-2b097c-container"
+    class="Dropdown css-2b097c-container"
   >
     <div
       class=" css-yk16xz-control"
