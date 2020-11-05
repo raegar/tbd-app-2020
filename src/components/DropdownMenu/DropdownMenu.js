@@ -5,7 +5,7 @@ import './DropdownMenu.css'
 
 
 const DropdownMenu = ({options, ...props}) => (
-  <Select options={options} />
+  <Select className="Dropdown" options={options} />
 )
 
 export default DropdownMenu;
