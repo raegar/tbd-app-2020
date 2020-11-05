@@ -2,11 +2,12 @@ import React from 'react';
 import './TextBox.css'
 import PropTypes from 'prop-types';
 
-const TextBox = ({backgroundColor, title, size, id, maxLength, minLength, placeholder, type, onChange, ...props}) => {
+const TextBox = ({backgroundColor, name, title, size, id, maxLength, minLength, placeholder, type, onChange, ...props}) => {
 return (
     <div className="textbox">
         <label htmlFor={id}>{title}</label>
         <input
+        name={name}
         onChange={onChange}
         placeholder={placeholder}
         id= {id}
