@@ -13,7 +13,7 @@ const SelectRole = () => {
                     <UCPButton to="/login" buttonText="Staff Portal" className="extralargebutton" href="/login" />
                 </Col>
                 <Col className="mt-3 mb-3">
-                    <UCPButton href="#" buttonText="Prospective Student" className="extralargebutton" />
+                    <UCPButton to="/EssentialInfo" href="#" buttonText="Prospective Student" className="extralargebutton" />
                 </Col>
             </Row>
         </Container>
