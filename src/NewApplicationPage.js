@@ -11,6 +11,7 @@ function NewApplicationPage() {
     <Disclaimer className="Disclaimer"/>
     
     <EssentialApplicantInfo className="EssentialApplicantInfo"/>
+  
     
     </Container>
   );
