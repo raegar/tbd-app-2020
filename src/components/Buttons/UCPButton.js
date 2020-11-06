@@ -1,15 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {  Link } from 'react-router-dom';
+
 import './UCPButton.css';
 
-export const UCPButton = ({ className, buttonText, ...props}) => {
-     return (
-    <button data-testid="ucpButton"
-     type="button"
-     className={className}
-          {...props}
-     >{buttonText}​
-    </button>
+export const UCPButton = ({ to, className, buttonText, ...props}) => {
+  if(to === undefined)
+  {
+    to = "/emptyLink"
+  }   
+  return (
+       <Link to={to}>
+          <button data-testid="ucpButton"
+            type="button"
+            className={className}
+            {...props}>
+            {buttonText}​
+          </button>
+      </Link>
   );
 };
 UCPButton.propTypes = {
@@ -30,4 +38,8 @@ export default UCPButton
 
 /* Example
 
-<UCPButton primary=true className="Large" buttonText="Click Here"/> */
+<UCPButton to="NAMEOFPAGE" primary=true className="Large" buttonText="Click Here"/> 
+
+*/
+
+
