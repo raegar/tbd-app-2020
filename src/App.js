@@ -1,29 +1,38 @@
 import React from 'react';
 import './App.css';
 import Headers from './components/Header/Headers';
-import UCPButton from './components/Buttons/UCPButton'
-import Disclaimer from './components/Disclaimer/Disclaimer'
-import DropdownMenu from './components/DropdownMenu/DropdownMenu'
-import Breadcrumb from './components/Breadcrumb/Breadcrumb'
-import RadioButton from './RadioButton';
-import Calendar from './components/Calendar/Calendar';
-import Checkbox from './components/Checkbox/Checkbox';
+import SelectRole from './components/SelectRole/SelectRole';
+import Login from './components/Login/Login'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import EssentialApplicationInfo from './components/EssentialApplicantInfo/EssentialApplicantInfo'
 
+const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
 
 function App() {
   return (
+    <Router basename={baseUrl}>
     <div className="App">
-
       <Headers/>
-      <Breadcrumb/>
-      <DropdownMenu/>
-      <Disclaimer/>
-      <UCPButton className="mediumbutton" buttonText="Click Here"/>
-     <RadioButton/>
-       <Calendar/>  
-       <Checkbox/>  
+
+
+        <Switch>
+          <Route path='/' exact component={SelectRole} />
+          <Route path='/login' component={Login}/>
+          <Route path='/EssentialInfo' component={EssentialApplicationInfo}/>
+        </Switch>
 
     </div>
+    </Router>
   );
 }
+
 export default App;
+
+
+/* To add new pages to the Routing add 
+import the component as normal, then
+
+<Route path='/NAME OF PAGE' component={NAMEOFCOMPONENT}/>
+
+For information on how to link buttons - Look at the notes in UCPButton
+*/

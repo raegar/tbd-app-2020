@@ -2,3 +2,10 @@
     max-width: 350px;
     max-height: auto;
 }
+
+@media screen and (max-width: 600px) {
+    UCPLogoBlue {
+        max-width: 120px;
+        max-height: auto;
+    } 
+  } 

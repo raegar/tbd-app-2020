@@ -7,3 +7,15 @@ cache:
 script:
   - npm test
   - npm run build
+
+notifications:
+
+webhooks: https://outlook.office.com/webhook/7a466859-81af-4cd1-8e29-dfa68474338c@ce86b408-07f5-41a0-9ee4-e2ffa3c617b1/TravisCI/1a24d69011d24650a3cf492709c88486/bf6337b4-256f-4f92-af60-965f0271312c
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $TBD_TOKEN
+  local_dir: build
+  on:
+    branch: main

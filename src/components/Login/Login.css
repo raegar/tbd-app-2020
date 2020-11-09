@@ -3,15 +3,38 @@
     align-items: center;
     justify-content: center;
 }
+.InvalidInput
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: #005C6E;
+    margin: 0% 0% 1% 5%;
+}
 
 .ContainerStyle {
-    padding-top: 10%;
-    padding-bottom: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
     background-color: #31B7BC;
     position: absolute;
-    width: 40%;
     left: 50%;
-    top: 50%;
+    width: 45% !important;
+    top: 50%  !important;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+@media screen and (max-width: 650px) {
+    .ContainerStyle {
+        padding-top: 5%;
+        padding-bottom: 5%;
+        background-color: #31B7BC;
+        position: absolute;
+        left: 50%;
+        width: 90% !important;
+        top: 40%  !important;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+  }
