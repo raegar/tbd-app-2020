@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Checkbox Component 1`] = `
+<DocumentFragment>
+  <div
+    class="labelposition"
+  >
+        
+    <br />
+    <input
+      class="checkbox"
+      id="checkboxexample"
+      name="checkboxexample"
+      type="checkbox"
+      value="Option"
+    />
+    <div
+      class="checkboxposition"
+    >
+      <label
+        class="container"
+      >
+        First Checkbox
+      </label>
+    </div>
+  </div>
+</DocumentFragment>
+`;

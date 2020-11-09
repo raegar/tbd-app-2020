@@ -13,14 +13,11 @@ function App() {
     <Router basename={baseUrl}>
     <div className="App">
       <Headers/>
-
-
         <Switch>
           <Route path='/' exact component={SelectRole} />
           <Route path='/login' component={Login}/>
           <Route path='/EssentialInfo' component={EssentialApplicationInfo}/>
         </Switch>
-
     </div>
     </Router>
   );
