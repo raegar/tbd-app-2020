@@ -2,17 +2,18 @@ import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import UCPButton from './UCPButton';
+import { BrowserRouter as Router} from 'react-router-dom';
 
 //cleans up 
 afterEach(cleanup);
 
 it("renders", () => {
-    const { asFragment } = render(<UCPButton className="largetealbutton" buttonText="Click Here"/>);
+    const { asFragment } = render(<Router><UCPButton className="largetealbutton" buttonText="Click Here"/></Router>);
     expect(asFragment()).toMatchSnapshot();
 });
 
 it("Button Test Id", () => {
-    const { getByTestId } = render(<UCPButton className="largetealbutton" buttonText="Click Here"/>);
+    const { getByTestId } = render(<Router><UCPButton className="largetealbutton" buttonText="Click Here"/></Router>);
     expect(getByTestId('ucpButton'));
 });
 

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Renders SelectRole 1`] = `
+exports[`Render SelectRole 1`] = `
 <DocumentFragment>
   <div
     class="mt-5 px-3 py-3 select-role-container container"
@@ -11,26 +11,34 @@ exports[`Renders SelectRole 1`] = `
       <div
         class="mt-3 mb-3 col"
       >
-        <button
-          class="extralargebutton"
-          data-testid="ucpButton"
-          href="#"
-          type="button"
+        <a
+          href="/login"
         >
-          Staff Portal​
-        </button>
+          <button
+            class="extralargebutton"
+            data-testid="ucpButton"
+            href="/login"
+            type="button"
+          >
+            Staff Portal​
+          </button>
+        </a>
       </div>
       <div
         class="mt-3 mb-3 col"
       >
-        <button
-          class="extralargebutton"
-          data-testid="ucpButton"
-          href="#"
-          type="button"
+        <a
+          href="/EssentialInfo"
         >
-          Prospective Student​
-        </button>
+          <button
+            class="extralargebutton"
+            data-testid="ucpButton"
+            href="#"
+            type="button"
+          >
+            Prospective Student​
+          </button>
+        </a>
       </div>
     </div>
   </div>

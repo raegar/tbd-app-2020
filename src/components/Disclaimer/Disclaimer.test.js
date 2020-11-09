@@ -2,12 +2,13 @@ import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Disclaimer from './Disclaimer';
+import { BrowserRouter as Router} from 'react-router-dom';
 
 //cleans up 
 afterEach(cleanup);
 
 it("Renders Disclaimer", () => {
-    const { asFragment } = render(<Disclaimer/>);
+    const { asFragment } = render(<Router><Disclaimer/></Router>);
     expect(asFragment()).toMatchSnapshot();
 });
 
@@ -17,6 +18,6 @@ it("Renders Disclaimer", () => {
 });*/
 
 it("Correct Text Present", () => {
-    const { getByText } = render(<Disclaimer/>);
+    const { getByText } = render(<Router><Disclaimer/></Router>);
     expect(getByText('PRIVACY STATEMENT:'));
 });
