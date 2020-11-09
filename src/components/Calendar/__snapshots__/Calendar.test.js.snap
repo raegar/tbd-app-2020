@@ -11,46 +11,62 @@ exports[`renders 1`] = `
       <div
         class="col"
       >
-        <button
-          class="largebutton"
-          data-testid="ucpButton"
-          type="button"
+        <a
+          href="/emptyLink"
         >
-          Week Commencing 26/10/2020​
-        </button>
+          <button
+            class="largebutton"
+            data-testid="ucpButton"
+            type="button"
+          >
+            Week Commencing 26/10/2020​
+          </button>
+        </a>
       </div>
       <div
         class="col"
       >
-        <button
-          class="largebutton"
-          data-testid="ucpButton"
-          type="button"
+        <a
+          href="/emptyLink"
         >
-          Week Commencing 2/11/2020​
-        </button>
+          <button
+            class="largebutton"
+            data-testid="ucpButton"
+            type="button"
+          >
+            Week Commencing 2/11/2020​
+          </button>
+        </a>
       </div>
       <div
         class="col"
       >
-        <button
-          class="largebutton"
-          data-testid="ucpButton"
-          type="button"
+        <a
+          href="/emptyLink"
         >
-          Week Commencing 9/11/2020​
-        </button>
+          <button
+            class="largebutton"
+            data-testid="ucpButton"
+            type="button"
+          >
+            Week Commencing 9/11/2020​
+          </button>
+        </a>
       </div>
       <div
         class="col"
       >
-        <button
-          class="largebutton"
-          data-testid="ucpButton"
-          type="button"
+        <a
+          href="/emptyLink"
         >
-          Week Commencing 16/11/2020​
-        </button>
+          <button
+            class="largebutton"
+            data-testid="ucpButton"
+            type="button"
+          >
+            Week Commencing 16/11/2020​
+          </button>
+        </a>
       </div>
     </div>
     <br />
@@ -61,57 +77,77 @@ exports[`renders 1`] = `
       <div
         class="col"
       >
-        <button
-          class="mediumbutton"
-          data-testid="ucpButton"
-          type="button"
+        <a
+          href="/emptyLink"
         >
-          Monday​
-        </button>
+          <button
+            class="mediumbutton"
+            data-testid="ucpButton"
+            type="button"
+          >
+            Monday​
+          </button>
+        </a>
       </div>
       <div
         class="col"
       >
-        <button
-          class="mediumbutton"
-          data-testid="ucpButton"
-          type="button"
+        <a
+          href="/emptyLink"
         >
-          Tuesday​
-        </button>
+          <button
+            class="mediumbutton"
+            data-testid="ucpButton"
+            type="button"
+          >
+            Tuesday​
+          </button>
+        </a>
       </div>
       <div
         class="col"
       >
-        <button
-          class="mediumbutton"
-          data-testid="ucpButton"
-          type="button"
+        <a
+          href="/emptyLink"
         >
-          Wednesday​
-        </button>
+          <button
+            class="mediumbutton"
+            data-testid="ucpButton"
+            type="button"
+          >
+            Wednesday​
+          </button>
+        </a>
       </div>
       <div
         class="col"
       >
-        <button
-          class="mediumbutton"
-          data-testid="ucpButton"
-          type="button"
+        <a
+          href="/emptyLink"
         >
-          Thursday​
-        </button>
+          <button
+            class="mediumbutton"
+            data-testid="ucpButton"
+            type="button"
+          >
+            Thursday​
+          </button>
+        </a>
       </div>
       <div
         class="col"
       >
-        <button
-          class="mediumbutton"
-          data-testid="ucpButton"
-          type="button"
+        <a
+          href="/emptyLink"
         >
-          Friday​
-        </button>
+          <button
+            class="mediumbutton"
+            data-testid="ucpButton"
+            type="button"
+          >
+            Friday​
+          </button>
+        </a>
       </div>
     </div>
     <br />
@@ -214,24 +250,32 @@ exports[`renders 1`] = `
       <div
         class="col"
       >
-        <button
-          class="mediumbutton"
-          data-testid="ucpButton"
-          type="button"
+        <a
+          href="/emptyLink"
         >
-          Refresh​
-        </button>
+          <button
+            class="mediumbutton"
+            data-testid="ucpButton"
+            type="button"
+          >
+            Refresh​
+          </button>
+        </a>
       </div>
       <div
         class="col"
       >
-        <button
-          class="mediumbutton"
-          data-testid="ucpButton"
-          type="button"
+        <a
+          href="/emptyLink"
         >
-          Confirm​
-        </button>
+          <button
+            class="mediumbutton"
+            data-testid="ucpButton"
+            type="button"
+          >
+            Confirm​
+          </button>
+        </a>
       </div>
     </div>
   </div>

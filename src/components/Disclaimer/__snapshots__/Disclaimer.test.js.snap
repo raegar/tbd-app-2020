@@ -33,14 +33,18 @@ exports[`Renders Disclaimer 1`] = `
             hello@ucp.ac.uk
           </a>
         </p>
-        <button
-          class="smallbutton"
-          data-testid="ucpButton"
-          primary="True"
-          type="button"
+        <a
+          href="/emptyLink"
         >
-          close​
-        </button>
+          <button
+            class="smallbutton"
+            data-testid="ucpButton"
+            primary="True"
+            type="button"
+          >
+            close​
+          </button>
+        </a>
       </div>
     </form>
   </div>
