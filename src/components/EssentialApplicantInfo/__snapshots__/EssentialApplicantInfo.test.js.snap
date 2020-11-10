@@ -104,12 +104,13 @@ exports[`Renders Essential Applicant Info 1`] = `
         <h4>
           Nationality
         </h4>
+        <p />
         <div
           class="radio-group"
         >
           <input
             id="UK"
-            name="test"
+            name="nationality"
             type="radio"
             value="UK"
           />
@@ -124,7 +125,7 @@ exports[`Renders Essential Applicant Info 1`] = `
         >
           <input
             id="EU"
-            name="test"
+            name="nationality"
             type="radio"
             value="EU"
           />
@@ -139,7 +140,7 @@ exports[`Renders Essential Applicant Info 1`] = `
         >
           <input
             id="Other"
-            name="test"
+            name="nationality"
             type="radio"
             value="Other"
           />
@@ -147,6 +148,86 @@ exports[`Renders Essential Applicant Info 1`] = `
             for="Other"
           >
             Other
+          </label>
+        </div>
+      </div>
+      <div
+        class="radio-buttons"
+      >
+        <h4>
+          Convictions
+        </h4>
+        <p>
+          Do you have any unspent criminal convictions?
+        </p>
+        <div
+          class="radio-group"
+        >
+          <input
+            id="crimeYes"
+            name="criminal"
+            type="radio"
+            value="yes"
+          />
+          <label
+            for="crimeYes"
+          >
+            Yes
+          </label>
+        </div>
+        <div
+          class="radio-group"
+        >
+          <input
+            id="crimeNo"
+            name="criminal"
+            type="radio"
+            value="no"
+          />
+          <label
+            for="crimeNo"
+          >
+            No
+          </label>
+        </div>
+      </div>
+      <div
+        class="radio-buttons"
+      >
+        <h4>
+          Learning Support
+        </h4>
+        <p>
+          Do you have any additional learning support needs or disabilities?
+        </p>
+        <div
+          class="radio-group"
+        >
+          <input
+            id="supportYes"
+            name="support"
+            type="radio"
+            value="yes"
+          />
+          <label
+            for="supportYes"
+          >
+            Yes
+          </label>
+        </div>
+        <div
+          class="radio-group"
+        >
+          <input
+            id="supportNo"
+            name="support"
+            type="radio"
+            value="no"
+          />
+          <label
+            for="supportNo"
+          >
+            No
           </label>
         </div>
       </div>
