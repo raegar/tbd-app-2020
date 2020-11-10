@@ -1,6 +1,9 @@
 import React from 'react';
 import './Disclaimer.css';
 import UCPButton from '../Buttons/UCPButton'
+
+
+
 function Disclaimer() {
     return (
         <div className="Disclaimer">

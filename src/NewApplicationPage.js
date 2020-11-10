@@ -8,7 +8,7 @@ function NewApplicationPage() {
   return (
  <Container >
     
-    <Disclaimer className="Disclaimer"/>
+    <Disclaimer/>
     
     <EssentialApplicantInfo className="EssentialApplicantInfo"/>
   
