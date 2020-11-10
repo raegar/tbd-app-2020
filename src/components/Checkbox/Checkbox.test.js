@@ -1,15 +1,12 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Calendar from './Calendar';
-import { BrowserRouter as Router} from 'react-router-dom';
+import Checkbox from './Checkbox';
 
 //cleans up 
 afterEach(cleanup);
 
-it("renders", () => {
-
-    const { asFragment } = render(<Router><Calendar/></Router>);
+it("Renders Checkbox Component", () => {
+    const { asFragment } = render(<Checkbox/>);
     expect(asFragment()).toMatchSnapshot();
-    
 });

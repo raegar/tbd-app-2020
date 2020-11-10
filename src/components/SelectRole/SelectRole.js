@@ -10,10 +10,10 @@ const SelectRole = () => {
         <Container className="mt-5 px-3 py-3 select-role-container">
             <Row className="text-center">
                 <Col className="mt-3 mb-3">
-                    <UCPButton href="#" buttonText="Staff Portal" className="extralargebutton" />
+                    <UCPButton to="/login" buttonText="Staff Portal" className="extralargebutton" href="/login" />
                 </Col>
                 <Col className="mt-3 mb-3">
-                    <UCPButton href="#" buttonText="Prospective Student" className="extralargebutton" />
+                    <UCPButton to="/EssentialInfo" href="#" buttonText="Prospective Student" className="extralargebutton" />
                 </Col>
             </Row>
         </Container>

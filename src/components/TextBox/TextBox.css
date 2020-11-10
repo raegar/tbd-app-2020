@@ -1,6 +1,8 @@
 .textbox {
-    margin: 0% 2% 1% 1%;
+    margin: 0% 20% 10px 1%;
+    max-width: 150px;
 }
+
 
 .textbox input {
     background-color: white;
@@ -14,3 +16,11 @@
     outline: none !important;
     border: 2px solid #31b7bc;
 }
+@media screen and (max-width: 650px) {
+    .textbox input {
+        max-width: 120%!important;
+    }
+    .textbox  {
+        margin-right: 20%!important;
+    }
+  }
