@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Row , Col} from 'react-bootstrap';
 import UCPButton from '../Buttons/UCPButton';
-import Checkbox from '../Checkbox/Checkbox';
 import './SelectRole.css'
 
 //Must Set HREF attribute to use
@@ -17,7 +16,6 @@ const SelectRole = () => {
                     <UCPButton to="/EssentialInfo" href="#" buttonText="Prospective Student" className="extralargebutton" />
                 </Col>
             </Row>
-            <Checkbox className="checkbox" checkboxText="Testing"/>
         </Container>
     );
 }
