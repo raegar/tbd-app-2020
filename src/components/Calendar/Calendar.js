@@ -2,9 +2,8 @@ import React from 'react';
 import './Calendar.css';
 import UCPButton from '../Buttons/UCPButton';
 import DropdownMenu from '../DropdownMenu/DropdownMenu';
-import {Jumbotron, Col, Container, Row} from 'react-bootstrap';
-import TextBox from '../TextBox/TextBox';
-
+import { Col, Container, Row} from 'react-bootstrap';
+import JumbotronComponent from '../Jumbotron Component/JumbotronComponent';
 
 const options = [
     { value: '0', label: '9:00' },
@@ -53,15 +52,7 @@ export default function Calendar (){
       <DropdownMenu className="Dropdown" options = {options}/>
       </Col>
       <Col>
-      <Jumbotron>
-      <Container>
-        
-      <h1>This is date and time you selected</h1>
-      <p>
-      12:00... would you like to confirm or choose another time?
-      </p>
-      </Container>
-      </Jumbotron>
+      <JumbotronComponent/>
       </Col>
       </Row>
 
