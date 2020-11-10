@@ -232,7 +232,7 @@ exports[`Renders Essential Applicant Info 1`] = `
         </div>
       </div>
       <h4>
-        Course
+        Preferred Course
       </h4>
       <div
         class="Dropdown css-2b097c-container"
