@@ -79,7 +79,7 @@ const EssentialApplicantInfo = () => {
 
             <RadioButton heading="Learning Support" options={supportOptions} name="support" subtitle="Do you have any additional learning support needs or disabilities?" />
 
-            <h4>Course</h4>
+            <h4>Preferred Course</h4>
             <DropdownMenu />
         </div>
         </div>
