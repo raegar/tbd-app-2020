@@ -6,11 +6,21 @@ import './EssentialApplicantInfo.css'
 
 const EssentialApplicantInfo = () => {
 
-    var options = [
+    var nationalityOptions = [
         {label: "UK National", id: "UK", value: "UK"},
         {label: "EU National", id: "EU", value: "EU"},
         {label: "Other", id: "Other", value: "Other"}
     ];
+
+    var criminalOptions = [
+        {label: "Yes", id: "crimeYes", value: "yes"},
+        {label: "No", id: "crimeNo", value: "no"}
+    ];
+
+    var supportOptions = [
+        {label: "Yes", id: "supportYes", value: "yes"},
+        {label: "No", id: "supportNo", value: "no"}
+    ]
 
     return (
         <div className="form-container">
@@ -63,7 +73,11 @@ const EssentialApplicantInfo = () => {
                 name="ucas" 
             />
 
-            <RadioButton heading="Nationality" options={options} name="test"/>
+            <RadioButton heading="Nationality" options={nationalityOptions} name="nationality"/>
+
+            <RadioButton heading="Convictions" options={criminalOptions} name="criminal" subtitle="Do you have any unspent criminal convictions?" />
+
+            <RadioButton heading="Learning Support" options={supportOptions} name="support" subtitle="Do you have any additional learning support needs or disabilities?" />
 
             <h4>Course</h4>
             <DropdownMenu />
