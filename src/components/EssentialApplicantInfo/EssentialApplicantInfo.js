@@ -11,12 +11,12 @@ const EssentialApplicantInfo = () => {
         {label: "EU National", id: "EU", value: "EU"},
         {label: "Other", id: "Other", value: "Other"}
     ];
-
+      
     return (
         <div className="form-container">
         <div className="form-background">
             <h3 className="form-title">CLEARING APPLICATION</h3>
-
+            <span class="form-left">
             <TextBox 
                 title="Name" 
                 placeholder="Enter your name" 
@@ -62,12 +62,14 @@ const EssentialApplicantInfo = () => {
                 type="text"
                 name="ucas" 
             />
-
+        </span>
+        <span class="form-right">
             <RadioButton heading="Nationality" options={options} name="test"/>
 
             <h4>Course</h4>
             <DropdownMenu />
-        </div>
+        </span>
+          </div>
         </div>
     );
 }

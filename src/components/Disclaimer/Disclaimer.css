@@ -6,9 +6,10 @@
     padding-left: 30px; padding-right: 30px;
     border:1px solid #005C6E;
     font-family: 'Montserrat', sans-serif;
-    font-size: 22px;
+    font-size: 20px;
     text-align: center !important;
     margin-bottom: 15px;
+    padding-bottom: 10px;
 }
 
 .text{
