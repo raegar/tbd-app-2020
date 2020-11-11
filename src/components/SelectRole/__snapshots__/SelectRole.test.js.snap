@@ -34,6 +34,7 @@ exports[`Render SelectRole 1`] = `
             class="extralargebutton"
             data-testid="ucpButton"
             href="#"
+            props="student"
             type="button"
           >
             Prospective Student​

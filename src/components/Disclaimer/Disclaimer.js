@@ -18,11 +18,16 @@ const studentDisclaimer = {
 function Disclaimer(props) {
 
     function HandelClick(){     
-        console.log("made it here");
+        
         if(document.getElementById('confirmButton') !== undefined){
           document.getElementById('confirmButton').removeAttribute("hidden");
           document.getElementById('acceptButton').setAttribute("hidden", true);
         }
+        if(document.getElementById('confirmButton1') !== undefined){
+            document.getElementById('confirmButton1').removeAttribute("hidden");
+            document.getElementById('confirmButton2').removeAttribute("hidden");
+           
+          }
     }
     var disclaimer;
     if(props.staff === "true")

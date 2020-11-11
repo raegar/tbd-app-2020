@@ -16,8 +16,3 @@ it("Renders Disclaimer", () => {
     const { getByTestId } = render(<Disclaimer/>);
     expect(getByTestId('ucpDisclaimer'));
 });*/
-
-it("Correct Text Present", () => {
-    const { getByText } = render(<Router><Disclaimer/></Router>);
-    expect(getByText('PRIVACY STATEMENT:'));
-});

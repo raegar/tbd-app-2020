@@ -18,10 +18,10 @@ const EssentialApplicantInfo = (props) => {
         {
             return (
                 <Row id="buttonRow">
-                    <Col>
+                    <Col className="centered-buttons" >
                         <UCPButton primary="True" className="mediumbutton" buttonText="Go Back"/>
                     </Col>
-                    <Col>
+                    <Col className="centered-buttons">
                     <div id="confirmButton" hidden>
                         <UCPButton primary="True" className="mediumbutton" buttonText="Confirm and Go"/>
                     </div>
@@ -32,14 +32,21 @@ const EssentialApplicantInfo = (props) => {
         else{
             return (
                 <Row id="buttonRow">
-                    <Col>
+                    <Col className="centered-buttons">
+                    <div id="confirmButton" hidden>
                         <UCPButton primary="True" className="mediumbutton" buttonText="Apply Now"/>
+                    </div>
                     </Col>
-                    <Col>
+                    <Col className="centered-buttons">
+                    <div id="confirmButton1" hidden>
                         <UCPButton primary="True" className="mediumbutton" buttonText="Request Call Back"/>
+                        </div>
                     </Col>
-                    <Col>
+                  
+                    <Col className="centered-buttons">
+                    <div id="confirmButton2" hidden>
                         <UCPButton primary="True" className="mediumbutton" buttonText="Request Video Call Back"/>
+                        </div>
                     </Col>
                </Row>
             )

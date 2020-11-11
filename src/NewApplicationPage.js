@@ -10,7 +10,7 @@ function NewApplicationPage(props) {
     return (
       <Container >       
          <Disclaimer staff={props.staff}/>
-         <EssentialApplicantInfo userType="student" />
+         <EssentialApplicantInfo userType="staff" />
          </Container>
        );
   }
@@ -18,7 +18,7 @@ function NewApplicationPage(props) {
     return (
       <Container >
          <Disclaimer staff={props.staff}/>
-         <EssentialApplicantInfo userType="staff"/>
+         <EssentialApplicantInfo userType="student"/>
          </Container>
        );
   }
