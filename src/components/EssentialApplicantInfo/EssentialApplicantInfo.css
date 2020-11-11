@@ -14,7 +14,12 @@
 .form-title {
     text-align: center;
 }
-
-@media only screen and (max-width: 1366px) {
-    .form-background { width: 90% }
+.form-right {
+    float: right;
+    margin-top: 30px;
+    width: 50%;
+}
+.form-left {
+    float:left;
+    width: 50%;
 }
