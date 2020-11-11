@@ -3,6 +3,7 @@ import DropdownMenu from '../DropdownMenu/DropdownMenu'
 import TextBox from '../TextBox/TextBox'
 import RadioButton from '../RadioButton/RadioButton'
 import './EssentialApplicantInfo.css'
+import {  Row, Col, Container } from 'react-bootstrap'
 
 const EssentialApplicantInfo = () => {
 
@@ -13,10 +14,16 @@ const EssentialApplicantInfo = () => {
     ];
 
     return (
-        <div className="form-container">
+        
+      <div className="form-container">
         <div className="form-background">
-            <h3 className="form-title">CLEARING APPLICATION</h3>
-
+   
+        <Container>
+      <h3 className="form-title">CLEARING APPLICATION</h3>
+            
+   
+  <Row>
+     <Col>
             <TextBox 
                 title="Name" 
                 placeholder="Enter your name" 
@@ -26,7 +33,13 @@ const EssentialApplicantInfo = () => {
                 type="text"
                 name="name"
             />
-
+     </Col>
+      <Col>
+            <RadioButton heading="Nationality" options={options} name="test"/>
+            </Col>
+    </Row>
+    <Row>
+        <Col >
             <TextBox 
                 title="Email" 
                 placeholder="Enter your email" 
@@ -36,7 +49,11 @@ const EssentialApplicantInfo = () => {
                 type="email"
                 name="email"
             />
-
+       </Col>
+    </Row>
+    <Row>
+        <Col>
+    
             <TextBox 
                 title="Tel No" 
                 placeholder="Enter phone number" 
@@ -46,7 +63,10 @@ const EssentialApplicantInfo = () => {
                 type="tel"
                 name="telno"
             />
-
+</Col>
+</Row>
+<Row>
+        <Col>
             <TextBox 
                 title="Date of Birth" 
                 placeholder="Enter date of birth"
@@ -54,7 +74,11 @@ const EssentialApplicantInfo = () => {
                 type="date"
                 name="dob"
             />
+            </Col>
+</Row>
 
+    <Row>
+        <Col>
             <TextBox 
                 title="UCAS ID" 
                 placeholder="Enter UCAS ID" 
@@ -62,13 +86,24 @@ const EssentialApplicantInfo = () => {
                 type="text"
                 name="ucas" 
             />
+    
+     </Col>
 
-            <RadioButton heading="Nationality" options={options} name="test"/>
 
+    <Col>
+           
+           
             <h4>Course</h4>
+            
+          
             <DropdownMenu />
-        </div>
-        </div>
+    </Col>
+        </Row>
+
+</Container>
+      </div>
+   </div> 
+       
     );
 }
 
