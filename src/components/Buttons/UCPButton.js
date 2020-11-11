@@ -8,7 +8,18 @@ export const UCPButton = ({ to, className, buttonText, ...props}) => {
   if(to === undefined)
   {
     to = "/emptyLink"
-  }   
+  } 
+  else if(to === "none")
+  {
+    return(
+    <button data-testid="ucpButton"
+            type="button"
+            className={className}
+            {...props}>
+            {buttonText}​
+          </button>
+    )
+  }  
   return (
        <Link to={to}>
           <button data-testid="ucpButton"

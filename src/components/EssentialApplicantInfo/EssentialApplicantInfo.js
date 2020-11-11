@@ -13,7 +13,7 @@ const EssentialApplicantInfo = (props) => {
         {label: "EU National", id: "EU", value: "EU"},
         {label: "Other", id: "Other", value: "Other"}
     ];
-    function userTypeSelect () {
+    function UserTypeSelect () {
         if(props.userType === "staff")
         {
             return (
@@ -22,7 +22,9 @@ const EssentialApplicantInfo = (props) => {
                         <UCPButton primary="True" className="mediumbutton" buttonText="Go Back"/>
                     </Col>
                     <Col>
+                    <div id="confirmButton" hidden>
                         <UCPButton primary="True" className="mediumbutton" buttonText="Confirm and Go"/>
+                    </div>
                     </Col>
                 </Row>
             )
@@ -102,7 +104,7 @@ const EssentialApplicantInfo = (props) => {
         </span>
           </div>
         <div>
-           {userTypeSelect()}
+           {UserTypeSelect()}
         </div>
        </Container>     
     );

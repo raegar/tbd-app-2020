@@ -2,7 +2,7 @@ import React from 'react';
 import './Disclaimer.css';
 import UCPButton from '../Buttons/UCPButton'
 
-
+    
 
 const staffDisclaimer = {
     title: "Please Read",
@@ -16,6 +16,14 @@ const studentDisclaimer = {
 }
 
 function Disclaimer(props) {
+
+    function HandelClick(){     
+        console.log("made it here");
+        if(document.getElementById('confirmButton') !== undefined){
+          document.getElementById('confirmButton').removeAttribute("hidden");
+          document.getElementById('acceptButton').setAttribute("hidden", true);
+        }
+    }
     var disclaimer;
     if(props.staff === "true")
     {
@@ -31,7 +39,9 @@ function Disclaimer(props) {
                     <form action="https://canvas.anglia.ac.uk/courses/17176/modules">
                         <div className="disclaimer" data-testid="ucpDisclaimer">
                         <p><b>{disclaimer.title}</b><br/><b>{disclaimer.intro}</b><br/>{disclaimer.body}</p> 
-                <UCPButton primary="True" className="smallbutton" buttonText="Accept"/>
+                <div id="acceptButton">        
+                    <UCPButton primary="True" className="smallbutton" buttonText="Accept" onClick={HandelClick} to="none"/>
+                </div>
             </div>
         </form>
     </div>
