@@ -6,14 +6,43 @@ import './EssentialApplicantInfo.css'
 import {Container, Row, Col} from 'react-bootstrap'
 import UCPButton from '../Buttons/UCPButton'
 
-const EssentialApplicantInfo = () => {
+const EssentialApplicantInfo = (props) => {
 
     var options = [
         {label: "UK National", id: "UK", value: "UK"},
         {label: "EU National", id: "EU", value: "EU"},
         {label: "Other", id: "Other", value: "Other"}
     ];
-
+    function userTypeSelect () {
+        if(props.userType === "staff")
+        {
+            return (
+                <Row id="buttonRow">
+                    <Col>
+                        <UCPButton primary="True" className="mediumbutton" buttonText="Go Back"/>
+                    </Col>
+                    <Col>
+                        <UCPButton primary="True" className="mediumbutton" buttonText="Confirm and Go"/>
+                    </Col>
+                </Row>
+            )
+        }
+        else{
+            return (
+                <Row id="buttonRow">
+                    <Col>
+                        <UCPButton primary="True" className="mediumbutton" buttonText="Apply Now"/>
+                    </Col>
+                    <Col>
+                        <UCPButton primary="True" className="mediumbutton" buttonText="Request Call Back"/>
+                    </Col>
+                    <Col>
+                        <UCPButton primary="True" className="mediumbutton" buttonText="Request Video Call Back"/>
+                    </Col>
+               </Row>
+            )
+        }
+    }
     return (
         <Container>
         <div className="form-container">
@@ -74,17 +103,10 @@ const EssentialApplicantInfo = () => {
         </span>
           </div>
         </div>
-         <Row id="buttonRow">
-         <Col>
-         <UCPButton primary="True" className="mediumbutton" buttonText="Go Back"/>
-         </Col>
-         <Col>
-         <UCPButton primary="True" className="mediumbutton" buttonText="Confirm and Go"/>
-         </Col>
-       </Row>
-       </Container>
-
-       
+        <div>
+           {userTypeSelect()}
+        </div>
+       </Container>     
     );
 }
 

@@ -19,10 +19,10 @@ function Disclaimer(props) {
     var disclaimer;
     if(props.staff === "true")
     {
-        disclaimer = staffDisclaimer; 
+        disclaimer = studentDisclaimer; 
     }
     else{
-        disclaimer = studentDisclaimer;
+        disclaimer = staffDisclaimer;
     }
     return (
         <div className="Disclaimer">

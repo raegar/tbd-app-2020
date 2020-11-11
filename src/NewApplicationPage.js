@@ -3,15 +3,14 @@ import './NewApplicationPage.css';
 import EssentialApplicantInfo from './components/EssentialApplicantInfo/EssentialApplicantInfo';
 import Disclaimer from './components/Disclaimer/Disclaimer';
 import {Container} from 'react-bootstrap';
-import StaffApp from './components/StaffApplicationPage/StaffApplicationPage'
                                                 
 function NewApplicationPage(props) {
-  if(props === "true")
+  if(props.staff === "true")
   {
     return (
       <Container >       
          <Disclaimer staff={props.staff}/>
-         <StaffApp className="EssentialApplicantInfo"/>
+         <EssentialApplicantInfo userType="student" />
          </Container>
        );
   }
@@ -19,7 +18,7 @@ function NewApplicationPage(props) {
     return (
       <Container >
          <Disclaimer staff={props.staff}/>
-         <EssentialApplicantInfo className="EssentialApplicantInfo"/>
+         <EssentialApplicantInfo userType="staff"/>
          </Container>
        );
   }
