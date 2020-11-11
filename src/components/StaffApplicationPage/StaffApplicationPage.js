@@ -2,7 +2,6 @@ import React from 'react'
 import DropdownMenu from '../DropdownMenu/DropdownMenu'
 import TextBox from '../TextBox/TextBox'
 import RadioButton from '../RadioButton/RadioButton'
-import './EssentialApplicantInfo.css'
 import {Container, Row, Col} from 'react-bootstrap'
 import UCPButton from '../Buttons/UCPButton'
 
@@ -74,17 +73,18 @@ const EssentialApplicantInfo = () => {
         </span>
           </div>
         </div>
-         <Row id="buttonRow">
-         <Col>
-         <UCPButton primary="True" className="mediumbutton" buttonText="Go Back"/>
+        <Row id="buttonRow">
+        <Col>
+         <UCPButton primary="True" className="mediumbutton" buttonText="Apply Now"/>
          </Col>
          <Col>
-         <UCPButton primary="True" className="mediumbutton" buttonText="Confirm and Go"/>
+         <UCPButton primary="True" className="mediumbutton" buttonText="Request Call Back"/>
+         </Col>
+         <Col>
+         <UCPButton primary="True" className="mediumbutton" buttonText="Request Video Call Back"/>
          </Col>
        </Row>
-       </Container>
-
-       
+       </Container>  
     );
 }
 
