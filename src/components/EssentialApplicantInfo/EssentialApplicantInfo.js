@@ -44,8 +44,7 @@ const EssentialApplicantInfo = (props) => {
         }
     }
     return (
-        <Container>
-        <div className="form-container">
+        <Container className="form-container">
         <div className="form-background">
             <h3 className="form-title">CLEARING APPLICATION</h3>
             <span class="form-left">
@@ -102,7 +101,6 @@ const EssentialApplicantInfo = (props) => {
             <DropdownMenu />
         </span>
           </div>
-        </div>
         <div>
            {userTypeSelect()}
         </div>
