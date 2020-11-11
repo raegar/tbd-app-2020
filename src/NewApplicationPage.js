@@ -4,16 +4,24 @@ import EssentialApplicantInfo from './components/EssentialApplicantInfo/Essentia
 import Disclaimer from './components/Disclaimer/Disclaimer';
 import {Container} from 'react-bootstrap';
                                                 
-function NewApplicationPage() {
-  return (
- <Container >
-    
-    <Disclaimer className="Disclaimer"/>
-    
-    <EssentialApplicantInfo className="EssentialApplicantInfo"/>
-  
-    
-    </Container>
-  );
+function NewApplicationPage(props) {
+  if(props.staff === "true")
+  {
+    return (
+      <Container >       
+         <Disclaimer staff={props.staff}/>
+         <EssentialApplicantInfo userType="staff" />
+         </Container>
+       );
+  }
+  else{
+    return (
+      <Container >
+         <Disclaimer staff={props.staff}/>
+         <EssentialApplicantInfo userType="student"/>
+         </Container>
+       );
+  }
+ 
 }
 export default NewApplicationPage;

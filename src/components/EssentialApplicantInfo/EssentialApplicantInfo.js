@@ -3,20 +3,60 @@ import DropdownMenu from '../DropdownMenu/DropdownMenu'
 import TextBox from '../TextBox/TextBox'
 import RadioButton from '../RadioButton/RadioButton'
 import './EssentialApplicantInfo.css'
+import {Container, Row, Col} from 'react-bootstrap'
+import UCPButton from '../Buttons/UCPButton'
 
-const EssentialApplicantInfo = () => {
+const EssentialApplicantInfo = (props) => {
 
     var options = [
         {label: "UK National", id: "UK", value: "UK"},
         {label: "EU National", id: "EU", value: "EU"},
         {label: "Other", id: "Other", value: "Other"}
     ];
-
+    function UserTypeSelect () {
+        if(props.userType === "staff")
+        {
+            return (
+                <Row id="buttonRow">
+                    <Col className="centered-buttons" >
+                        <UCPButton primary="True" className="mediumbutton" buttonText="Go Back"/>
+                    </Col>
+                    <Col className="centered-buttons">
+                    <div id="confirmButton" hidden>
+                        <UCPButton primary="True" className="mediumbutton" buttonText="Confirm and Go"/>
+                    </div>
+                    </Col>
+                </Row>
+            )
+        }
+        else{
+            return (
+                <Row id="buttonRow">
+                    <Col className="centered-buttons">
+                    <div id="confirmButton" hidden>
+                        <UCPButton primary="True" className="mediumbutton" buttonText="Apply Now"/>
+                    </div>
+                    </Col>
+                    <Col className="centered-buttons">
+                    <div id="confirmButton1" hidden>
+                        <UCPButton primary="True" className="mediumbutton" buttonText="Request Call Back"/>
+                        </div>
+                    </Col>
+                  
+                    <Col className="centered-buttons">
+                    <div id="confirmButton2" hidden>
+                        <UCPButton primary="True" className="mediumbutton" buttonText="Request Video Call Back"/>
+                        </div>
+                    </Col>
+               </Row>
+            )
+        }
+    }
     return (
-        <div className="form-container">
+        <Container className="form-container">
         <div className="form-background">
             <h3 className="form-title">CLEARING APPLICATION</h3>
-
+            <span class="form-left">
             <TextBox 
                 title="Name" 
                 placeholder="Enter your name" 
@@ -62,13 +102,18 @@ const EssentialApplicantInfo = () => {
                 type="text"
                 name="ucas" 
             />
-
+        </span>
+        <span class="form-right">
             <RadioButton heading="Nationality" options={options} name="test"/>
 
             <h4>Course</h4>
             <DropdownMenu />
+        </span>
+          </div>
+        <div>
+           {UserTypeSelect()}
         </div>
-        </div>
+       </Container>     
     );
 }
 
