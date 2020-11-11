@@ -2,7 +2,7 @@ import React from 'react';
 import './NewApplicationPage.css';
 import EssentialApplicantInfo from './components/EssentialApplicantInfo/EssentialApplicantInfo';
 import Disclaimer from './components/Disclaimer/Disclaimer';
-import {Container} from 'react-bootstrap';
+import {Container, Row, Col} from 'react-bootstrap';
 import UCPButton from './components/Buttons/UCPButton';
                                                 
 function NewApplicationPage(props) {
@@ -17,9 +17,14 @@ function NewApplicationPage(props) {
     
     <EssentialApplicantInfo className="EssentialApplicantInfo"/>
     
-    <div id="buttonRow">
-      
-    </div>
+    <Row id="buttonRow">
+      <Col>
+      <UCPButton primary="True" className="smallbutton" buttonText="New"/>
+      </Col>
+      <Col>
+      <UCPButton primary="True" className="smallbutton" buttonText="Send"/>
+      </Col>
+    </Row>
     
     </Container>
   );

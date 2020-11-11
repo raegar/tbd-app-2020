@@ -1,16 +1,18 @@
-import React from 'react'
+import React  from 'react'
 import DropdownMenu from '../DropdownMenu/DropdownMenu'
 import TextBox from '../TextBox/TextBox'
 import RadioButton from '../RadioButton/RadioButton'
 import './EssentialApplicantInfo.css'
 
-const EssentialApplicantInfo = () => {
+const EssentialApplicantInfo = ({props}) => {
 
+ 
     var options = [
         {label: "UK National", id: "UK", value: "UK"},
         {label: "EU National", id: "EU", value: "EU"},
         {label: "Other", id: "Other", value: "Other"}
     ];
+  
       
     return (
         <div className="form-container">
@@ -63,7 +65,7 @@ const EssentialApplicantInfo = () => {
                 name="ucas" 
             />
         </span>
-        <span class="form-right">
+         <span class="form-right">
             <RadioButton heading="Nationality" options={options} name="test"/>
 
             <h4>Course</h4>
