@@ -16,53 +16,9 @@ exports[`Renders Essential Applicant Info 1`] = `
       <span
         class="form-left"
       >
-        <label
-          for="dobinput"
-        >
-          Date of Birth
-        </label>
-        <input
-          id="dobinput"
-          maxlength="30"
-          minlength="0"
-          name="dob"
-          placeholder="Enter date of birth"
-          type="date"
-        />
-      </div>
-      <div
-        class="textbox"
-      >
-        <label
-          for="ucasinput"
-        >
-          UCAS ID
-        </label>
-        <input
-          id="ucasinput"
-          maxlength="30"
-          minlength="0"
-          name="ucas"
-          placeholder="Enter UCAS ID"
-          type="text"
-        />
-      </div>
-      <div
-        class="radio-buttons"
-      >
-        <h4>
-          Nationality
-        </h4>
-        <p />
         <div
           class="textbox"
         >
-          <input
-            id="UK"
-            name="nationality"
-            type="radio"
-            value="UK"
-          />
           <label
             for="nameinput"
           >
@@ -86,10 +42,6 @@ exports[`Renders Essential Applicant Info 1`] = `
             Email
           </label>
           <input
-            id="EU"
-            name="nationality"
-            type="radio"
-            value="EU"
             id="emailinput"
             maxlength="60"
             minlength="5"
@@ -124,10 +76,6 @@ exports[`Renders Essential Applicant Info 1`] = `
             Date of Birth
           </label>
           <input
-            id="Other"
-            name="nationality"
-            type="radio"
-            value="Other"
             id="dobinput"
             maxlength="30"
             minlength="0"
@@ -153,92 +101,6 @@ exports[`Renders Essential Applicant Info 1`] = `
             type="text"
           />
         </div>
-      </div>
-      <div
-        class="radio-buttons"
-      >
-        <h4>
-          Convictions
-        </h4>
-        <p>
-          Do you have any unspent criminal convictions?
-        </p>
-        <div
-          class="radio-group"
-        >
-          <input
-            id="crimeYes"
-            name="criminal"
-            type="radio"
-            value="yes"
-          />
-          <label
-            for="crimeYes"
-          >
-            Yes
-          </label>
-        </div>
-        <div
-          class="radio-group"
-        >
-          <input
-            id="crimeNo"
-            name="criminal"
-            type="radio"
-            value="no"
-          />
-          <label
-            for="crimeNo"
-          >
-            No
-          </label>
-        </div>
-      </div>
-      <div
-        class="radio-buttons"
-      >
-        <h4>
-          Learning Support
-        </h4>
-        <p>
-          Do you have any additional learning support needs or disabilities?
-        </p>
-        <div
-          class="radio-group"
-        >
-          <input
-            id="supportYes"
-            name="support"
-            type="radio"
-            value="yes"
-          />
-          <label
-            for="supportYes"
-          >
-            Yes
-          </label>
-        </div>
-        <div
-          class="radio-group"
-        >
-          <input
-            id="supportNo"
-            name="support"
-            type="radio"
-            value="no"
-          />
-          <label
-            for="supportNo"
-          >
-            No
-          </label>
-        </div>
-      </div>
-      <h4>
-        Preferred Course
-      </h4>
-      <div
-        class="Dropdown css-2b097c-container"
       </span>
       <span
         class="form-right"
@@ -249,12 +111,13 @@ exports[`Renders Essential Applicant Info 1`] = `
           <h4>
             Nationality
           </h4>
+          <p />
           <div
             class="radio-group"
           >
             <input
               id="UK"
-              name="test"
+              name="nationality"
               type="radio"
               value="UK"
             />
@@ -269,7 +132,7 @@ exports[`Renders Essential Applicant Info 1`] = `
           >
             <input
               id="EU"
-              name="test"
+              name="nationality"
               type="radio"
               value="EU"
             />
@@ -284,7 +147,7 @@ exports[`Renders Essential Applicant Info 1`] = `
           >
             <input
               id="Other"
-              name="test"
+              name="nationality"
               type="radio"
               value="Other"
             />
@@ -295,8 +158,88 @@ exports[`Renders Essential Applicant Info 1`] = `
             </label>
           </div>
         </div>
+        <div
+          class="radio-buttons"
+        >
+          <h4>
+            Convictions
+          </h4>
+          <p>
+            Do you have any unspent criminal convictions?
+          </p>
+          <div
+            class="radio-group"
+          >
+            <input
+              id="crimeYes"
+              name="criminal"
+              type="radio"
+              value="yes"
+            />
+            <label
+              for="crimeYes"
+            >
+              Yes
+            </label>
+          </div>
+          <div
+            class="radio-group"
+          >
+            <input
+              id="crimeNo"
+              name="criminal"
+              type="radio"
+              value="no"
+            />
+            <label
+              for="crimeNo"
+            >
+              No
+            </label>
+          </div>
+        </div>
+        <div
+          class="radio-buttons"
+        >
+          <h4>
+            Learning Support
+          </h4>
+          <p>
+            Do you have any additional learning support needs or disabilities?
+          </p>
+          <div
+            class="radio-group"
+          >
+            <input
+              id="supportYes"
+              name="support"
+              type="radio"
+              value="yes"
+            />
+            <label
+              for="supportYes"
+            >
+              Yes
+            </label>
+          </div>
+          <div
+            class="radio-group"
+          >
+            <input
+              id="supportNo"
+              name="support"
+              type="radio"
+              value="no"
+            />
+            <label
+              for="supportNo"
+            >
+              No
+            </label>
+          </div>
+        </div>
         <h4>
-          Course
+          Preferred Course
         </h4>
         <div
           class="Dropdown css-2b097c-container"
