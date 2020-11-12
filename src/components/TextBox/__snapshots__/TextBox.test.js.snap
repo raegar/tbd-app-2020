@@ -15,6 +15,7 @@ exports[`Renders TextBox 1`] = `
       maxlength="30"
       minlength="5"
       placeholder="Enter your firstname"
+      size="20"
       type="text"
     />
   </div>

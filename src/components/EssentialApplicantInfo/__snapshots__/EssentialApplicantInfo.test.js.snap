@@ -30,6 +30,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             minlength="5"
             name="name"
             placeholder="Enter your name"
+            size="20"
             type="text"
           />
         </div>
@@ -47,6 +48,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             minlength="5"
             name="email"
             placeholder="Enter your email"
+            size="20"
             type="email"
           />
         </div>
@@ -64,6 +66,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             minlength="5"
             name="telno"
             placeholder="Enter phone number"
+            size="20"
             type="tel"
           />
         </div>
@@ -81,6 +84,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             minlength="0"
             name="dob"
             placeholder="Enter date of birth"
+            size="20"
             type="date"
           />
         </div>
@@ -98,6 +102,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             minlength="0"
             name="ucas"
             placeholder="Enter UCAS ID"
+            size="20"
             type="text"
           />
         </div>
@@ -111,12 +116,13 @@ exports[`Renders Essential Applicant Info 1`] = `
           <h4>
             Nationality
           </h4>
+          <p />
           <div
             class="radio-group"
           >
             <input
               id="UK"
-              name="test"
+              name="nationality"
               type="radio"
               value="UK"
             />
@@ -131,7 +137,7 @@ exports[`Renders Essential Applicant Info 1`] = `
           >
             <input
               id="EU"
-              name="test"
+              name="nationality"
               type="radio"
               value="EU"
             />
@@ -146,7 +152,7 @@ exports[`Renders Essential Applicant Info 1`] = `
           >
             <input
               id="Other"
-              name="test"
+              name="nationality"
               type="radio"
               value="Other"
             />
@@ -157,8 +163,88 @@ exports[`Renders Essential Applicant Info 1`] = `
             </label>
           </div>
         </div>
+        <div
+          class="radio-buttons"
+        >
+          <h4>
+            Convictions
+          </h4>
+          <p>
+            Do you have any unspent criminal convictions?
+          </p>
+          <div
+            class="radio-group"
+          >
+            <input
+              id="crimeYes"
+              name="criminal"
+              type="radio"
+              value="yes"
+            />
+            <label
+              for="crimeYes"
+            >
+              Yes
+            </label>
+          </div>
+          <div
+            class="radio-group"
+          >
+            <input
+              id="crimeNo"
+              name="criminal"
+              type="radio"
+              value="no"
+            />
+            <label
+              for="crimeNo"
+            >
+              No
+            </label>
+          </div>
+        </div>
+        <div
+          class="radio-buttons"
+        >
+          <h4>
+            Learning Support
+          </h4>
+          <p>
+            Do you have any additional learning support needs or disabilities?
+          </p>
+          <div
+            class="radio-group"
+          >
+            <input
+              id="supportYes"
+              name="support"
+              type="radio"
+              value="yes"
+            />
+            <label
+              for="supportYes"
+            >
+              Yes
+            </label>
+          </div>
+          <div
+            class="radio-group"
+          >
+            <input
+              id="supportNo"
+              name="support"
+              type="radio"
+              value="no"
+            />
+            <label
+              for="supportNo"
+            >
+              No
+            </label>
+          </div>
+        </div>
         <h4>
-          Course
+          Preferred Course
         </h4>
         <div
           class="Dropdown css-2b097c-container"
