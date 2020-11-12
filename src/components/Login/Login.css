@@ -33,7 +33,7 @@
         position: absolute;
         left: 50%;
         width: 90% !important;
-        top: 50%  !important;
+        top: 40%  !important;
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
     }
