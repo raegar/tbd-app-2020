@@ -30,6 +30,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             minlength="5"
             name="name"
             placeholder="Enter your name"
+            size="20"
             type="text"
           />
         </div>
@@ -47,6 +48,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             minlength="5"
             name="email"
             placeholder="Enter your email"
+            size="20"
             type="email"
           />
         </div>
@@ -64,6 +66,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             minlength="5"
             name="telno"
             placeholder="Enter phone number"
+            size="20"
             type="tel"
           />
         </div>
@@ -81,6 +84,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             minlength="0"
             name="dob"
             placeholder="Enter date of birth"
+            size="20"
             type="date"
           />
         </div>
@@ -98,6 +102,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             minlength="0"
             name="ucas"
             placeholder="Enter UCAS ID"
+            size="20"
             type="text"
           />
         </div>
