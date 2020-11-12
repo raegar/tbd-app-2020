@@ -24,17 +24,15 @@ return (
 
 TextBox.propTypes = {
     backgroundColor: PropTypes.string,
-        /** What background colour to use */
     title: PropTypes.string,
-        /** Input contents */
     size: PropTypes.number,
-        /** How large should the input be? */
     maxLength: PropTypes.number,
-    //Maximum input length
     minLength: PropTypes.number,
-    //Minimum input length
     placeholder: PropTypes.string,
     type: PropTypes.oneOf(['text', 'password', 'email', 'tel', 'number', 'date']),
+    min: PropTypes.number,
+    max: PropTypes.number,
+    wrapID: PropTypes.string
 };
 
 TextBox.defaultProps = {
