@@ -20,7 +20,7 @@ exports[`Renders Form One 1`] = `
           Address
         </h4>
         <div
-          class="textbox"
+          class="mobiletextbox"
         >
           <label
             for="address-1"
@@ -38,7 +38,7 @@ exports[`Renders Form One 1`] = `
           />
         </div>
         <div
-          class="textbox"
+          class="mobiletextbox"
         >
           <label
             for="address-2"
@@ -56,7 +56,7 @@ exports[`Renders Form One 1`] = `
           />
         </div>
         <div
-          class="textbox"
+          class="mobiletextbox"
         >
           <label
             for="town-city"
@@ -74,7 +74,7 @@ exports[`Renders Form One 1`] = `
           />
         </div>
         <div
-          class="textbox"
+          class="mobiletextbox"
         >
           <label
             for="region"
@@ -92,7 +92,7 @@ exports[`Renders Form One 1`] = `
           />
         </div>
         <div
-          class="textbox"
+          class="mobiletextbox"
         >
           <label
             for="postcode"
