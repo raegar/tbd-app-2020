@@ -5,6 +5,7 @@ import RadioButton from "../RadioButton/RadioButton";
 import "./EssentialApplicantInfo.css";
 import { Container, Row, Col } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
+import Modal from "../Modal/Modal";
 
 const EssentialApplicantInfo = (props) => {
   var nationalityOptions = [
@@ -22,6 +23,10 @@ const EssentialApplicantInfo = (props) => {
     { label: "Yes", id: "supportYes", value: "yes" },
     { label: "No", id: "supportNo", value: "no" },
   ];
+
+  function ReturnModalData() {
+    return <Modal/>
+  }
 
   function UserTypeSelect() {
     if (props.userType === "staff") {
@@ -58,8 +63,8 @@ const EssentialApplicantInfo = (props) => {
             </div>
           </Col>
           <Col className="centered-buttons">
-            <div id="confirmButton1" hidden>
-              <UCPButton
+            <div id="confirmButton1" hidden onClick={ReturnModalData()}>
+              <UCPButton to="none"
                 primary="True"
                 className="mediumbutton"
                 buttonText="Request Call Back"
