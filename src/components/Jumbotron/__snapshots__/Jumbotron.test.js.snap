@@ -3,29 +3,8 @@
 exports[`Renders Jumbotron 1`] = `
 <DocumentFragment>
   <div
-    class="jumbotron"
-  >
-    <br />
-    <div
-      class="jumbotron"
-      data-testid="jumbotron"
-    >
-      <p>
-        <b>
-          PRIVACY STATEMENT:
-        </b>
-        <br />
-         We will only use your personal information to administer your application and / or enrolment and to provide the products and services you have requested from us.
-        <br />
-         Further information on our privacy policy can be found at https://www.ucp.ac.uk/privacy-and-cookies/ or by emailing 
-        <a
-          class="text"
-          href="mailto:hello@ucp.ac.uk"
-        >
-          hello@ucp.ac.uk
-        </a>
-      </p>
-    </div>
-  </div>
+    class="jumbo"
+    data-testid="jumbotron"
+  />
 </DocumentFragment>
 `;
