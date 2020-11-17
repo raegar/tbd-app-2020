@@ -1,7 +1,7 @@
 import React from 'react';
 import './NewApplicationPage.css';
-import EssentialApplicantInfo from './components/EssentialApplicantInfo/EssentialApplicantInfo';
-import Disclaimer from './components/Disclaimer/Disclaimer';
+import EssentialApplicantInfo from '../EssentialApplicantInfo/EssentialApplicantInfo';
+import Disclaimer from '../Disclaimer/Disclaimer';
 import {Container} from 'react-bootstrap';
                                                 
 function NewApplicationPage(props) {

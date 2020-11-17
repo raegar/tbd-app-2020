@@ -1,4 +1,6 @@
 import React from 'react';
+import './Jumbotron.css'
+
 export const JumbotronComponent = ({ className, jumbotronText, ...props }) => {
     return (
         <div className="jumbotron">
@@ -9,14 +11,6 @@ export const JumbotronComponent = ({ className, jumbotronText, ...props }) => {
         </div>
     )
 }
-JumbotronComponent.propTypes = {
-    className:PropTypes.string,
-    jumbotronText:PropTypes.string
-}
-
-JumbotronComponent.defaultProps = {
-
-  };
 
 export default JumbotronComponent;
 

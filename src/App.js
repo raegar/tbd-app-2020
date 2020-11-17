@@ -4,7 +4,7 @@ import Headers from './components/Header/Headers';
 import SelectRole from './components/SelectRole/SelectRole';
 import Login from './components/Login/Login';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import NewApplicationPage from './NewApplicationPage';
+import NewApplicationPage from '../src/components/NewApplicationPage/NewApplicationPage';
 
 const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
 function App() {
