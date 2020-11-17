@@ -25,7 +25,8 @@ const EssentialApplicantInfo = (props) => {
   ];
 
   function ReturnModalData() {
-    return <Modal/>
+    console.log("made it here!");
+    return <Modal id="callback" btnText="Submit" btnClass="mediumbutton"/>
   }
 
   function UserTypeSelect() {
