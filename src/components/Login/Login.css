@@ -3,6 +3,10 @@
     align-items: center;
     justify-content: center;
 }
+.UserInfo span
+{
+    font-size: 12px;
+}
 .InvalidInput
 {
     display: flex;
