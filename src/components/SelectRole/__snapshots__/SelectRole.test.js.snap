@@ -28,12 +28,13 @@ exports[`Render SelectRole 1`] = `
         class="mt-3 mb-3 col"
       >
         <a
-          href="/EssentialInfo"
+          href="/NewApplicationPage"
         >
           <button
             class="extralargebutton"
             data-testid="ucpButton"
             href="#"
+            props="student"
             type="button"
           >
             Prospective Student​

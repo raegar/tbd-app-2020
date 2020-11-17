@@ -3,7 +3,7 @@
 exports[`Renders Essential Applicant Info 1`] = `
 <DocumentFragment>
   <div
-    class="form-container"
+    class="form-container container"
   >
     <div
       class="form-background"
@@ -13,208 +13,372 @@ exports[`Renders Essential Applicant Info 1`] = `
       >
         CLEARING APPLICATION
       </h3>
-      <div
-        class="textbox"
+      <span
+        class="form-left"
       >
-        <label
-          for="nameinput"
+        <div
+          class="textbox"
         >
-          Name
-        </label>
-        <input
-          id="nameinput"
-          maxlength="60"
-          minlength="5"
-          name="name"
-          placeholder="Enter your name"
-          type="text"
-        />
-      </div>
-      <div
-        class="textbox"
-      >
-        <label
-          for="emailinput"
+          <label
+            for="nameinput"
+          >
+            Name
+          </label>
+          <input
+            id="nameinput"
+            maxlength="60"
+            minlength="5"
+            name="name"
+            placeholder="Enter your name"
+            size="20"
+            type="text"
+          />
+        </div>
+        <div
+          class="textbox"
         >
-          Email
-        </label>
-        <input
-          id="emailinput"
-          maxlength="60"
-          minlength="5"
-          name="email"
-          placeholder="Enter your email"
-          type="email"
-        />
-      </div>
-      <div
-        class="textbox"
-      >
-        <label
-          for="telinput"
+          <label
+            for="emailinput"
+          >
+            Email
+          </label>
+          <input
+            id="emailinput"
+            maxlength="60"
+            minlength="5"
+            name="email"
+            placeholder="Enter your email"
+            size="20"
+            type="email"
+          />
+        </div>
+        <div
+          class="textbox"
         >
-          Tel No
-        </label>
-        <input
-          id="telinput"
-          maxlength="12"
-          minlength="5"
-          name="telno"
-          placeholder="Enter phone number"
-          type="tel"
-        />
-      </div>
-      <div
-        class="textbox"
-      >
-        <label
-          for="dobinput"
+          <label
+            for="telinput"
+          >
+            Tel No
+          </label>
+          <input
+            id="telinput"
+            maxlength="12"
+            minlength="5"
+            name="telno"
+            placeholder="Enter phone number"
+            size="20"
+            type="tel"
+          />
+        </div>
+        <div
+          class="textbox"
         >
-          Date of Birth
-        </label>
-        <input
-          id="dobinput"
-          maxlength="30"
-          minlength="0"
-          name="dob"
-          placeholder="Enter date of birth"
-          type="date"
-        />
-      </div>
-      <div
-        class="textbox"
-      >
-        <label
-          for="ucasinput"
+          <label
+            for="dobinput"
+          >
+            Date of Birth
+          </label>
+          <input
+            id="dobinput"
+            maxlength="30"
+            minlength="0"
+            name="dob"
+            placeholder="Enter date of birth"
+            size="20"
+            type="date"
+          />
+        </div>
+        <div
+          class="textbox"
         >
-          UCAS ID
-        </label>
-        <input
-          id="ucasinput"
-          maxlength="30"
-          minlength="0"
-          name="ucas"
-          placeholder="Enter UCAS ID"
-          type="text"
-        />
-      </div>
-      <div
-        class="radio-buttons"
+          <label
+            for="ucasinput"
+          >
+            UCAS ID
+          </label>
+          <input
+            id="ucasinput"
+            maxlength="30"
+            minlength="0"
+            name="ucas"
+            placeholder="Enter UCAS ID"
+            size="20"
+            type="text"
+          />
+        </div>
+      </span>
+      <span
+        class="form-right"
       >
+        <div
+          class="radio-buttons"
+        >
+          <h4>
+            Nationality
+          </h4>
+          <p />
+          <div
+            class="radio-group"
+          >
+            <input
+              id="UK"
+              name="nationality"
+              type="radio"
+              value="UK"
+            />
+            <label
+              for="UK"
+            >
+              UK National
+            </label>
+          </div>
+          <div
+            class="radio-group"
+          >
+            <input
+              id="EU"
+              name="nationality"
+              type="radio"
+              value="EU"
+            />
+            <label
+              for="EU"
+            >
+              EU National
+            </label>
+          </div>
+          <div
+            class="radio-group"
+          >
+            <input
+              id="Other"
+              name="nationality"
+              type="radio"
+              value="Other"
+            />
+            <label
+              for="Other"
+            >
+              Other
+            </label>
+          </div>
+        </div>
+        <div
+          class="radio-buttons"
+        >
+          <h4>
+            Convictions
+          </h4>
+          <p>
+            Do you have any unspent criminal convictions?
+          </p>
+          <div
+            class="radio-group"
+          >
+            <input
+              id="crimeYes"
+              name="criminal"
+              type="radio"
+              value="yes"
+            />
+            <label
+              for="crimeYes"
+            >
+              Yes
+            </label>
+          </div>
+          <div
+            class="radio-group"
+          >
+            <input
+              id="crimeNo"
+              name="criminal"
+              type="radio"
+              value="no"
+            />
+            <label
+              for="crimeNo"
+            >
+              No
+            </label>
+          </div>
+        </div>
+        <div
+          class="radio-buttons"
+        >
+          <h4>
+            Learning Support
+          </h4>
+          <p>
+            Do you have any additional learning support needs or disabilities?
+          </p>
+          <div
+            class="radio-group"
+          >
+            <input
+              id="supportYes"
+              name="support"
+              type="radio"
+              value="yes"
+            />
+            <label
+              for="supportYes"
+            >
+              Yes
+            </label>
+          </div>
+          <div
+            class="radio-group"
+          >
+            <input
+              id="supportNo"
+              name="support"
+              type="radio"
+              value="no"
+            />
+            <label
+              for="supportNo"
+            >
+              No
+            </label>
+          </div>
+        </div>
         <h4>
-          Nationality
+          Preferred Course
         </h4>
         <div
-          class="radio-group"
-        >
-          <input
-            id="UK"
-            name="test"
-            type="radio"
-            value="UK"
-          />
-          <label
-            for="UK"
-          >
-            UK National
-          </label>
-        </div>
-        <div
-          class="radio-group"
-        >
-          <input
-            id="EU"
-            name="test"
-            type="radio"
-            value="EU"
-          />
-          <label
-            for="EU"
-          >
-            EU National
-          </label>
-        </div>
-        <div
-          class="radio-group"
-        >
-          <input
-            id="Other"
-            name="test"
-            type="radio"
-            value="Other"
-          />
-          <label
-            for="Other"
-          >
-            Other
-          </label>
-        </div>
-      </div>
-      <h4>
-        Course
-      </h4>
-      <div
-        class="Dropdown css-2b097c-container"
-      >
-        <div
-          class=" css-yk16xz-control"
+          class="Dropdown css-2b097c-container"
         >
           <div
-            class=" css-g1d714-ValueContainer"
+            class=" css-yk16xz-control"
           >
             <div
-              class=" css-1wa3eu0-placeholder"
-            >
-              Select...
-            </div>
-            <div
-              class="css-b8ldur-Input"
+              class=" css-g1d714-ValueContainer"
             >
               <div
-                class=""
-                style="display: inline-block;"
+                class=" css-1wa3eu0-placeholder"
               >
-                <input
-                  aria-autocomplete="list"
-                  autocapitalize="none"
-                  autocomplete="off"
-                  autocorrect="off"
-                  id="react-select-2-input"
-                  spellcheck="false"
-                  style="box-sizing: content-box; width: 2px; border: 0px; font-size: inherit; opacity: 1; outline: 0; padding: 0px;"
-                  tabindex="0"
-                  type="text"
-                  value=""
-                />
+                Select...
+              </div>
+              <div
+                class="css-b8ldur-Input"
+              >
                 <div
-                  style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: inherit; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
-                />
+                  class=""
+                  style="display: inline-block;"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    autocapitalize="none"
+                    autocomplete="off"
+                    autocorrect="off"
+                    id="react-select-2-input"
+                    spellcheck="false"
+                    style="box-sizing: content-box; width: 2px; border: 0px; font-size: inherit; opacity: 1; outline: 0; padding: 0px;"
+                    tabindex="0"
+                    type="text"
+                    value=""
+                  />
+                  <div
+                    style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: inherit; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class=" css-1hb7zxy-IndicatorsContainer"
+            >
+              <span
+                class=" css-1okebmr-indicatorSeparator"
+              />
+              <div
+                aria-hidden="true"
+                class=" css-tlfecz-indicatorContainer"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="css-6q0nyr-Svg"
+                  focusable="false"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  width="20"
+                >
+                  <path
+                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                  />
+                </svg>
               </div>
             </div>
           </div>
+        </div>
+      </span>
+    </div>
+    <div>
+      <div
+        class="row"
+        id="buttonRow"
+      >
+        <div
+          class="centered-buttons col"
+        >
           <div
-            class=" css-1hb7zxy-IndicatorsContainer"
+            hidden=""
+            id="confirmButton"
           >
-            <span
-              class=" css-1okebmr-indicatorSeparator"
-            />
-            <div
-              aria-hidden="true"
-              class=" css-tlfecz-indicatorContainer"
+            <a
+              href="/emptyLink"
             >
-              <svg
-                aria-hidden="true"
-                class="css-6q0nyr-Svg"
-                focusable="false"
-                height="20"
-                viewBox="0 0 20 20"
-                width="20"
+              <button
+                class="mediumbutton"
+                data-testid="ucpButton"
+                primary="True"
+                type="button"
               >
-                <path
-                  d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                />
-              </svg>
-            </div>
+                Apply Now​
+              </button>
+            </a>
+          </div>
+        </div>
+        <div
+          class="centered-buttons col"
+        >
+          <div
+            hidden=""
+            id="confirmButton1"
+          >
+            <a
+              href="/emptyLink"
+            >
+              <button
+                class="mediumbutton"
+                data-testid="ucpButton"
+                primary="True"
+                type="button"
+              >
+                Request Call Back​
+              </button>
+            </a>
+          </div>
+        </div>
+        <div
+          class="centered-buttons col"
+        >
+          <div
+            hidden=""
+            id="confirmButton2"
+          >
+            <a
+              href="/emptyLink"
+            >
+              <button
+                class="mediumbutton"
+                data-testid="ucpButton"
+                primary="True"
+                type="button"
+              >
+                Request Video Call Back​
+              </button>
+            </a>
           </div>
         </div>
       </div>

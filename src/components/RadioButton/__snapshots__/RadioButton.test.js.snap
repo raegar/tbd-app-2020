@@ -8,6 +8,7 @@ exports[`Renders Radio Button 1`] = `
     <h4>
       Nationality
     </h4>
+    <p />
     <div
       class="radio-group"
     >

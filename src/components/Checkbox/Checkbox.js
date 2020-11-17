@@ -1,18 +1,28 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Checkbox.css';
 
-export default class Checkbox extends React.Component{
-    render(){
-        return (    
-        
-            <div class="labelposition">    <br></br>
-                  <input className="checkbox" type="checkbox" id="checkboxexample" name="checkboxexample" value="Option"/>
-                  <div class="checkboxposition">
-            <label class="container">First Checkbox</label>
+
+export const Checkbox = ({className, checkboxText, ...props}) => {    
+    return(
+        <div class="labelposition">
+            <input className={className} type="checkbox" />
+            <div class="checkboxposition">
+                <label class="container">{checkboxText}</label>
             </div>           
-            </div>
+        </div>
+    )
+}
+  
+  
+Checkbox.propTypes = {
+    className:PropTypes.string,
+    checkboxText:PropTypes.string
+}
+
+  Checkbox.defaultProps = {
+
+  };
 
 
-            )
-        }
-    };
+  export default Checkbox

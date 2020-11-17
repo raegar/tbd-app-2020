@@ -12,8 +12,8 @@ const SelectRole = () => {
                 <Col className="mt-3 mb-3">
                     <UCPButton to="/login" buttonText="Staff Portal" className="extralargebutton" href="/login" />
                 </Col>
-                <Col className="mt-3 mb-3">
-                    <UCPButton to="/EssentialInfo" href="#" buttonText="Prospective Student" className="extralargebutton" />
+                 <Col className="mt-3 mb-3">
+                    <UCPButton to="/NewApplicationPage" href="#" buttonText="Prospective Student" className="extralargebutton" props="student" />
                 </Col>
             </Row>
         </Container>

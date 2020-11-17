@@ -2,9 +2,9 @@ import React from 'react';
 import './TextBox.css'
 import PropTypes from 'prop-types';
 
-const TextBox = ({backgroundColor, name, title, size, id, maxLength, minLength, placeholder, type, onChange, ...props}) => {
+const TextBox = ({backgroundColor, name, title, size, id, maxLength, minLength, placeholder, type, onChange, min, max, wrapID, ...props}) => {
 return (
-    <div className="textbox">
+    <div className="textbox" id={wrapID}>
         <label htmlFor={id}>{title}</label>
         <input
         name={name}
@@ -13,7 +13,10 @@ return (
         id= {id}
         maxLength = {maxLength}
         minLength = {minLength}
+        size={size}
         type={type}
+        min={min}
+        max={max}
         />
     </div>
 );
@@ -24,19 +27,19 @@ TextBox.propTypes = {
         /** What background colour to use */
     title: PropTypes.string,
         /** Input contents */
-    size: PropTypes.oneOf(['small', 'medium', 'large']),
+    size: PropTypes.number,
         /** How large should the input be? */
     maxLength: PropTypes.number,
     //Maximum input length
     minLength: PropTypes.number,
     //Minimum input length
     placeholder: PropTypes.string,
-    type: PropTypes.oneOf(['text', 'password', 'email', 'tel', 'number', 'date'])
+    type: PropTypes.oneOf(['text', 'password', 'email', 'tel', 'number', 'date']),
 };
 
 TextBox.defaultProps = {
     backgroundColor: null,
-    size: 'small',
+    size: 20,
     maxLength: 30,
     minLength: 0,
     placeholder: '',
