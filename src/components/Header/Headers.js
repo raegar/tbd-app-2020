@@ -1,12 +1,13 @@
 import React from 'react';
 import UCPLogo  from '../../images/UCPLogo.png';
 import './Headers.css';
-
+import {isMobile} from 'react-device-detect';
 export default class Headers extends React.Component{
     render(){
+        const className = isMobile ? "MobileUCPLogoBlue" : "UCPLogoBlue";
         return (
             <header>   
-                    <img data-testid="ucpLogoHeader" src={UCPLogo} className="UCPLogoBlue" alt="UCP official logo" />  
+                    <img data-testid="ucpLogoHeader" src={UCPLogo} className={className} alt="UCP official logo" />  
             </header>
         )
     }

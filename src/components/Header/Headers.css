@@ -3,9 +3,7 @@
     max-height: auto;
 }
 
-@media screen and (max-width: 600px) {
-    UCPLogoBlue {
-        max-width: 120px;
-        max-height: auto;
-    } 
-  } 
+.MobileUCPLogoBlue{
+    max-width: 250px;
+    max-height: auto;
+}
