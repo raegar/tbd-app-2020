@@ -5,7 +5,7 @@ import Disclaimer from './components/Disclaimer/Disclaimer';
 import {Container} from 'react-bootstrap';
                                                 
 function NewApplicationPage(props) {
-  if(props.staff === "true")
+  if(global.userType === "staff")
   {
     return (
       <Container >       

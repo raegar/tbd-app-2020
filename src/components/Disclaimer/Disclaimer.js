@@ -30,7 +30,7 @@ function Disclaimer(props) {
           }
     }
     var disclaimer;
-    if(props.staff === "true")
+    if(global.userType === "student")
     {
         disclaimer = studentDisclaimer; 
     }

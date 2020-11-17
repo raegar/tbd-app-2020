@@ -24,7 +24,8 @@ const EssentialApplicantInfo = (props) => {
   ];
 
   function UserTypeSelect() {
-    if (props.userType === "staff") {
+    console.log(global.userType);
+    if (global.userType === "staff") {
       return (
         <Row id="buttonRow">
           <Col className="centered-buttons">
