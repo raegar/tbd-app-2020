@@ -9,14 +9,14 @@ const Modal = ({id, btnText, btnClass, btnId, ...props}) => {
 
     if(!show) {
         return(
-            <UCPButton id={btnId} className={btnClass} buttonText={btnText}
+            <UCPButton to="none" id={btnId} className={btnClass} buttonText={btnText}
                             onClick={()=>setShow(true)}
                         />
         );
     } else {
         return (
             <>
-            <UCPButton id={btnId} className={btnClass} buttonText={btnText}
+            <UCPButton to="none" id={btnId} className={btnClass} buttonText={btnText}
                             onClick={()=>setShow(true)}
                         />
             <div 

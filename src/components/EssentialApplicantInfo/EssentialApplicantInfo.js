@@ -26,7 +26,14 @@ const EssentialApplicantInfo = (props) => {
 
   function ReturnModalData() {
     console.log("made it here!");
-    return <Modal id="callback" btnText="Submit" btnClass="mediumbutton"/>
+    return (
+    <Modal id="callback" btnText="Submit">
+    <div>
+        <h2>This is a modal</h2>
+        <p>Example modal</p>
+    </div>
+</Modal>
+)
   }
 
   function UserTypeSelect() {
@@ -64,12 +71,18 @@ const EssentialApplicantInfo = (props) => {
             </div>
           </Col>
           <Col className="centered-buttons">
-            <div id="confirmButton1" hidden onClick={ReturnModalData()}>
-              <UCPButton to="none"
-                primary="True"
-                className="mediumbutton"
-                buttonText="Request Call Back"
-              />
+            <div id="confirmButton1" hidden>
+              <Modal id="hello" btnText="Request a Call Back">
+                <div>
+                  <h2>This is a modal</h2>
+                  <p>Example modal</p>
+                  <UCPButton 
+                    to="none"
+                    primary="True"
+                    className="smallbutton"
+                    buttonText="Submit" />
+                </div>
+              </Modal>
             </div>
           </Col>
 
@@ -157,7 +170,6 @@ const EssentialApplicantInfo = (props) => {
             name="support"
             subtitle="Do you have any additional learning support needs or disabilities?"
           />
-
           <h4>Preferred Course</h4>
           <DropdownMenu />
         </span>
