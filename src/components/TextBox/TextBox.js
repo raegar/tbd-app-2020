@@ -1,10 +1,12 @@
 import React from 'react';
 import './TextBox.css'
 import PropTypes from 'prop-types';
+import {isMobile} from 'react-device-detect';
 
 const TextBox = ({backgroundColor, name, title, size, id, maxLength, minLength, placeholder, type, onChange, min, max, wrapID, ...props}) => {
+    const className = isMobile ? "mobiletextbox" : "textbox";
 return (
-    <div className="textbox" id={wrapID}>
+    <div className={`${className ? "mobiletextbox" : "textbox"}`} id={wrapID}>
         <label htmlFor={id}>{title}</label>
         <input
         name={name}
@@ -24,17 +26,15 @@ return (
 
 TextBox.propTypes = {
     backgroundColor: PropTypes.string,
-        /** What background colour to use */
     title: PropTypes.string,
-        /** Input contents */
     size: PropTypes.number,
-        /** How large should the input be? */
     maxLength: PropTypes.number,
-    //Maximum input length
     minLength: PropTypes.number,
-    //Minimum input length
     placeholder: PropTypes.string,
     type: PropTypes.oneOf(['text', 'password', 'email', 'tel', 'number', 'date']),
+    min: PropTypes.number,
+    max: PropTypes.number,
+    wrapID: PropTypes.string
 };
 
 TextBox.defaultProps = {

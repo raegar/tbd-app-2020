@@ -3,6 +3,7 @@ import { Container, Row , Col} from 'react-bootstrap';
 import TextBox from '../TextBox/TextBox'
 import UCPButton from '../Buttons/UCPButton';
 import './Login.css';
+import {isMobile} from 'react-device-detect';
 
 const initialState = {
     username: "",
@@ -74,8 +75,9 @@ export default class LoginForm extends React.Component {
      this.setState(initialState);
     };
     render() {
+        const className = isMobile ? "MobileContainerStyle" : "ContainerStyle";
         return(
-            <Container className="ContainerStyle">
+            <Container className={className}>
                 <form>
                 <Row>
                     <Col>

@@ -17,7 +17,7 @@ exports[`Renders Essential Applicant Info 1`] = `
         class="form-left"
       >
         <div
-          class="textbox"
+          class="mobiletextbox"
         >
           <label
             for="nameinput"
@@ -35,7 +35,7 @@ exports[`Renders Essential Applicant Info 1`] = `
           />
         </div>
         <div
-          class="textbox"
+          class="mobiletextbox"
         >
           <label
             for="emailinput"
@@ -53,7 +53,7 @@ exports[`Renders Essential Applicant Info 1`] = `
           />
         </div>
         <div
-          class="textbox"
+          class="mobiletextbox"
         >
           <label
             for="telinput"
@@ -71,7 +71,7 @@ exports[`Renders Essential Applicant Info 1`] = `
           />
         </div>
         <div
-          class="textbox"
+          class="mobiletextbox"
         >
           <label
             for="dobinput"
@@ -89,7 +89,7 @@ exports[`Renders Essential Applicant Info 1`] = `
           />
         </div>
         <div
-          class="textbox"
+          class="mobiletextbox"
         >
           <label
             for="ucasinput"

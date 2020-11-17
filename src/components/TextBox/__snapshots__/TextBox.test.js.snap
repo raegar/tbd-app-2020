@@ -3,7 +3,7 @@
 exports[`Renders TextBox 1`] = `
 <DocumentFragment>
   <div
-    class="textbox"
+    class="mobiletextbox"
   >
     <label
       for="input1"

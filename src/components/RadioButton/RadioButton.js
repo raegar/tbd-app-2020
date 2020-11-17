@@ -8,7 +8,7 @@ const RadioButton = ({name, options, heading, subtitle, oc, ...props}) => {
 
     var items = options.map((item) =>
         <div className="radio-group">
-            <input name={name} type="radio" id={item.id} value={item.value} onClick={(e) => oc(item.value)}/>
+            <input name={name} type="radio" id={item.id} value={item.value} onClick={oc ? (e) => oc(item.value) : ''}/>
             <label htmlFor={item.id}>{item.label}</label>
         </div>
     );
@@ -32,14 +32,16 @@ RadioButton.propTypes = {
     name: PropTypes.string.isRequired,
     options: PropTypes.array.isRequired,
     heading: PropTypes.string,
-    subtitle: PropTypes.string
+    subtitle: PropTypes.string,
+    oc: PropTypes.func
 }
 
 //Without providing a heading or subtitle, this values default to null
 
 RadioButton.defaultProps = {
     heading: null,
-    subtitle: null
+    subtitle: null,
+    oc: null
 }
 
 //Export
