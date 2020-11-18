@@ -3,7 +3,7 @@ import './TextBox.css'
 import PropTypes from 'prop-types';
 import {isMobile} from 'react-device-detect';
 
-const TextBox = ({backgroundColor, name, title, size, id, maxLength, minLength, placeholder, type, onChange, min, max, wrapID, ...props}) => {
+const TextBox = ({backgroundColor, name, title, size, id, maxLength, minLength, placeholder, type, onChange, min, max, wrapID, attribute, ...props}) => {
     const className = isMobile ? "mobiletextbox" : "textbox";
 return (
     <div className={`${className ? "mobiletextbox" : "textbox"}`} id={wrapID}>
@@ -19,6 +19,7 @@ return (
         type={type}
         min={min}
         max={max}
+        disabled={attribute}
         />
     </div>
 );
@@ -34,7 +35,8 @@ TextBox.propTypes = {
     type: PropTypes.oneOf(['text', 'password', 'email', 'tel', 'number', 'date']),
     min: PropTypes.number,
     max: PropTypes.number,
-    wrapID: PropTypes.string
+    wrapID: PropTypes.string,
+    attribute: PropTypes.string
 };
 
 TextBox.defaultProps = {
@@ -43,7 +45,8 @@ TextBox.defaultProps = {
     maxLength: 30,
     minLength: 0,
     placeholder: '',
-    type: "text"
+    type: "text",
+    attribute: ''
 };
 
 /* Example Use

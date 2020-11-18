@@ -10,14 +10,14 @@ const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
 function App() {
   return (
     <Router basename={baseUrl}>
-    <div className="App">
-      <Headers/>
-        <Switch>
-          <Route path='/' exact component={SelectRole} />
-          <Route path='/login' component={Login}/>
-          <Route path='/NewApplicationPage' component={NewApplicationPage}/>
-        </Switch>
-    </div>
+        <div className="App">
+          <Headers/>
+            <Switch>
+              <Route path='/' exact component={SelectRole} />
+              <Route path='/login' component={Login}/>
+              <Route path='/NewApplicationPage' component={NewApplicationPage}/>
+            </Switch>
+        </div>
     </Router>
   );
 }

@@ -4,19 +4,20 @@ import TextBox from '../TextBox/TextBox'
 import UCPButton from '../Buttons/UCPButton';
 import './Login.css';
 import {isMobile} from 'react-device-detect';
+import {  Redirect } from 'react-router';
 
 const initialState = {
     username: "",
     password: "",
     usernameError: "",
-    passwordError: ""
+    passwordError: "",
+    location: ""
     
 };
 
 export default class LoginForm extends React.Component {
     constructor(){
         super();
-
         this.state = initialState;
    }
     handleChangeUsername = event => {
@@ -30,8 +31,8 @@ export default class LoginForm extends React.Component {
         event.preventDefault();
         const isValid = this.validate();
         if(isValid){
-            console.log(this.state);
             this.setState(initialState);
+            this.setState({redirect: true});
         }
     };
     validateEmail(email){
@@ -69,12 +70,23 @@ export default class LoginForm extends React.Component {
             this.setState({usernameError, passwordError});
             return false;
         }
-        return true;
+        if(this.state.password === "Password")
+        {
+            global.staffFirstName = this.state.username.substring(0, this.state.username.indexOf('.'));
+            global.staffLastName = this.state.username.substring(this.state.username.indexOf('.')+1, this.state.username.indexOf('@'));
+            global.userType = "staff";
+            return true;
+        }
+
+        return false;
     };
     ClearForm = () => {
      this.setState(initialState);
     };
     render() {
+        if (this.state.redirect) {
+            return <Redirect push to="/NewApplicationPage" />;
+        }
         const className = isMobile ? "MobileContainerStyle" : "ContainerStyle";
         return(
             <Container className={className}>
@@ -112,15 +124,11 @@ export default class LoginForm extends React.Component {
                         </Col>
                     </Row>
                     <div className="UserInfo">
-                        <UCPButton className="smallbutton" buttonText="Submit"
-                            type="submit"
-                            onClick={this.handleSubmit}
-                        />
+                        <UCPButton onClick={this.handleSubmit} to="none" className="smallbutton" buttonText="Submit"
+                        />                   
                     </div>
                 </form>
             </Container>
             );
         }
     }
-
-   
