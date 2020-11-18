@@ -3,19 +3,14 @@
     width: fit-content !important;
 
 }
-.SelectRole .largebutton{
-width: 1000px;
-}
-.MobileSelectRole .largebutton{
-    width: 100px;
+
+.extralargebutton{
+    margin: 10px;
 }
 
-@media screen and (max-width: 768px) {
-    .extralargebutton
-    {
-
-
-                width: 100%;
-    }
-
-  }
+.largebutton{
+    width: 90%;
+margin-bottom: 10px;
+margin-left: 10px;
+margin-right:10px;
+}
