@@ -10,3 +10,12 @@ width: 1000px;
     width: 100px;
 }
 
+@media screen and (max-width: 768px) {
+    .extralargebutton
+    {
+
+
+                width: 100%;
+    }
+
+  }
