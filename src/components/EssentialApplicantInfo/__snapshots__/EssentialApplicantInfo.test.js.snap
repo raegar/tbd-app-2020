@@ -25,6 +25,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             Name
           </label>
           <input
+            disabled=""
             id="nameinput"
             maxlength="60"
             minlength="5"
@@ -43,6 +44,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             Email
           </label>
           <input
+            disabled=""
             id="emailinput"
             maxlength="60"
             minlength="5"
@@ -61,6 +63,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             Tel No
           </label>
           <input
+            disabled=""
             id="telinput"
             maxlength="12"
             minlength="5"
@@ -79,6 +82,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             Date of Birth
           </label>
           <input
+            disabled=""
             id="dobinput"
             maxlength="30"
             minlength="0"
@@ -97,6 +101,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             UCAS ID
           </label>
           <input
+            disabled=""
             id="ucasinput"
             maxlength="30"
             minlength="0"
@@ -121,6 +126,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             class="radio-group"
           >
             <input
+              disabled=""
               id="UK"
               name="nationality"
               type="radio"
@@ -136,6 +142,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             class="radio-group"
           >
             <input
+              disabled=""
               id="EU"
               name="nationality"
               type="radio"
@@ -151,6 +158,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             class="radio-group"
           >
             <input
+              disabled=""
               id="Other"
               name="nationality"
               type="radio"
@@ -176,6 +184,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             class="radio-group"
           >
             <input
+              disabled=""
               id="crimeYes"
               name="criminal"
               type="radio"
@@ -191,6 +200,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             class="radio-group"
           >
             <input
+              disabled=""
               id="crimeNo"
               name="criminal"
               type="radio"
@@ -216,6 +226,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             class="radio-group"
           >
             <input
+              disabled=""
               id="supportYes"
               name="support"
               type="radio"
@@ -231,6 +242,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             class="radio-group"
           >
             <input
+              disabled=""
               id="supportNo"
               name="support"
               type="radio"
@@ -322,7 +334,6 @@ exports[`Renders Essential Applicant Info 1`] = `
           class="centered-buttons col"
         >
           <div
-            hidden=""
             id="confirmButton"
           >
             <a
@@ -343,7 +354,6 @@ exports[`Renders Essential Applicant Info 1`] = `
           class="centered-buttons col"
         >
           <div
-            hidden=""
             id="confirmButton1"
           >
             <a
@@ -364,7 +374,6 @@ exports[`Renders Essential Applicant Info 1`] = `
           class="centered-buttons col"
         >
           <div
-            hidden=""
             id="confirmButton2"
           >
             <a
