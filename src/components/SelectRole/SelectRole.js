@@ -7,15 +7,15 @@ import {isMobile} from 'react-device-detect';
 //Must Set HREF attribute to use
 
 const SelectRole = () => {
-    let className;
+    
     let buttonClassName;
     if(isMobile)
     {
-        className = "MobileSelectRole"
+   
         buttonClassName = "largebutton";
     }
     else{
-        className = "SelectRole";
+      
         buttonClassName = "extralargebutton";
     }
     return(
