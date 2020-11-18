@@ -11,10 +11,10 @@ const SelectRole = () => {const className = isMobile ? "MobileSelectRole" : "Sel
         <Container className="mt-5 px-3 py-3 select-role-container">
             <Row className="text-center">
                 <Col className="mt-3 mb-3">
-                    <UCPButton to="/login" buttonText="Staff Portal" className="extralargebutton" href="/login" />
+                    <UCPButton to="/login" buttonText="Staff Portal" className="largebutton" href="/login" />
                 </Col>
                  <Col className="mt-3 mb-3">
-                    <UCPButton to="/NewApplicationPage" href="#" buttonText="Prospective Student" className="extralargebutton" props="student" />
+                    <UCPButton to="/NewApplicationPage" href="#" buttonText="Prospective Student" className="largebutton" props="student" />
                 </Col>
             </Row>
         </Container>
