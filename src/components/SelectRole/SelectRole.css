@@ -3,10 +3,10 @@
     width: fit-content !important;
 
 }
-.SelectRole{
-
+.SelectRole .largebutton{
+width: 1000px;
 }
-.MobileSelectRole{
-    
+.MobileSelectRole .largebutton{
+    width: 100px;
 }
 
