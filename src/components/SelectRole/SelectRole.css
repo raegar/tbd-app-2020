@@ -3,3 +3,14 @@
     width: fit-content !important;
 
 }
+
+.extralargebutton{
+    margin: 10px;
+}
+
+.largebutton{
+    width: 90%;
+margin-bottom: 10px;
+margin-left: 10px;
+margin-right:10px;
+}
