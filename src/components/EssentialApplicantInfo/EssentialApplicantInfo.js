@@ -24,7 +24,7 @@ const EssentialApplicantInfo = (props) => {
   ];
 
   function UserTypeSelect() {
-    if (props.userType === "staff") {
+    if (global.userType === "staff") {
       return (
         <Row id="buttonRow">
           <Col className="centered-buttons">
@@ -35,7 +35,7 @@ const EssentialApplicantInfo = (props) => {
             />
           </Col>
           <Col className="centered-buttons">
-            <div id="confirmButton" hidden>
+            <div id="confirmButton">
               <UCPButton
                 primary="True"
                 className="mediumbutton"
@@ -49,7 +49,7 @@ const EssentialApplicantInfo = (props) => {
       return (
         <Row id="buttonRow">
           <Col className="centered-buttons">
-            <div id="confirmButton" hidden>
+            <div id="confirmButton">
               <UCPButton
                 primary="True"
                 className="mediumbutton"
@@ -58,7 +58,7 @@ const EssentialApplicantInfo = (props) => {
             </div>
           </Col>
           <Col className="centered-buttons">
-            <div id="confirmButton1" hidden>
+            <div id="confirmButton1">
               <UCPButton
                 primary="True"
                 className="mediumbutton"
@@ -68,7 +68,7 @@ const EssentialApplicantInfo = (props) => {
           </Col>
 
           <Col className="centered-buttons">
-            <div id="confirmButton2" hidden>
+            <div id="confirmButton2">
               <UCPButton
                 primary="True"
                 className="mediumbutton"
@@ -93,6 +93,7 @@ const EssentialApplicantInfo = (props) => {
             id="nameinput"
             type="text"
             name="name"
+            attribute="disabled"
           />
 
           <TextBox
@@ -103,6 +104,7 @@ const EssentialApplicantInfo = (props) => {
             id="emailinput"
             type="email"
             name="email"
+            attribute="disabled"
           />
 
           <TextBox
@@ -113,6 +115,7 @@ const EssentialApplicantInfo = (props) => {
             id="telinput"
             type="tel"
             name="telno"
+            attribute="disabled"
           />
 
           <TextBox
@@ -121,6 +124,7 @@ const EssentialApplicantInfo = (props) => {
             id="dobinput"
             type="date"
             name="dob"
+            attribute="disabled"
           />
 
           <TextBox
@@ -129,6 +133,7 @@ const EssentialApplicantInfo = (props) => {
             id="ucasinput"
             type="text"
             name="ucas"
+            attribute="disabled"
           />
         </span>
         <span class="form-right">
@@ -136,6 +141,7 @@ const EssentialApplicantInfo = (props) => {
             heading="Nationality"
             options={nationalityOptions}
             name="nationality"
+            attribute="disabled"
           />
 
           <RadioButton
@@ -143,6 +149,7 @@ const EssentialApplicantInfo = (props) => {
             options={criminalOptions}
             name="criminal"
             subtitle="Do you have any unspent criminal convictions?"
+            attribute="disabled"
           />
 
           <RadioButton
@@ -150,6 +157,7 @@ const EssentialApplicantInfo = (props) => {
             options={supportOptions}
             name="support"
             subtitle="Do you have any additional learning support needs or disabilities?"
+            attribute="disabled"
           />
 
           <h4>Preferred Course</h4>
