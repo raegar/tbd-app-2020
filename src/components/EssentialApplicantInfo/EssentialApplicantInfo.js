@@ -5,8 +5,20 @@ import RadioButton from "../RadioButton/RadioButton";
 import "./EssentialApplicantInfo.css";
 import { Container, Row, Col } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
+import {isMobile} from 'react-device-detect';
 
 const EssentialApplicantInfo = (props) => {
+  let textboxClassName;
+  if(isMobile)
+  {
+ 
+    textboxClassName = "mobiletextbox";
+  }
+  else{
+    
+    textboxClassName = "desktoptextbox";
+  }
+
   var nationalityOptions = [
     { label: "UK National", id: "UK", value: "UK" },
     { label: "EU National", id: "EU", value: "EU" },
@@ -94,6 +106,8 @@ const EssentialApplicantInfo = (props) => {
             type="text"
             name="name"
             attribute="disabled"
+            className=  {textboxClassName}
+            
           />
 
           <TextBox
@@ -105,6 +119,8 @@ const EssentialApplicantInfo = (props) => {
             type="email"
             name="email"
             attribute="disabled"
+            className=  {textboxClassName}
+
           />
 
           <TextBox
@@ -116,6 +132,8 @@ const EssentialApplicantInfo = (props) => {
             type="tel"
             name="telno"
             attribute="disabled"
+            className=  {textboxClassName}
+
           />
 
           <TextBox
@@ -125,6 +143,9 @@ const EssentialApplicantInfo = (props) => {
             type="date"
             name="dob"
             attribute="disabled"
+            className=  {textboxClassName}
+            
+            
           />
 
           <TextBox
@@ -134,6 +155,8 @@ const EssentialApplicantInfo = (props) => {
             type="text"
             name="ucas"
             attribute="disabled"
+            className=  {textboxClassName}
+
           />
         </span>
         <span class="form-right">
