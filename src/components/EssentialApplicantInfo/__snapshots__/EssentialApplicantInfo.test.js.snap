@@ -79,7 +79,7 @@ exports[`Renders Essential Applicant Info 1`] = `
           <label
             for="dobinput"
           >
-            Date of Birth
+            D/O/B
           </label>
           <input
             disabled=""
