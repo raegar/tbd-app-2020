@@ -31,6 +31,9 @@
     padding-left: 40px;
 }
 
+.mobiletextbox input{
+    width: 200px;
+}
 .mobiletextbox{
     width: 200px;
 }
@@ -46,3 +49,7 @@
     }
 }
 
+.h3{
+    font-family: 'Montserrat', sans-serif;
+
+}

@@ -137,14 +137,15 @@ const EssentialApplicantInfo = (props) => {
           />
 
           <TextBox
-            title="Date of Birth"
+            title="D/O/B"
             placeholder="Enter date of birth"
             id="dobinput"
             type="date"
             name="dob"
             attribute="disabled"
             className=  {textboxClassName}
-            
+           
+        
             
           />
 
