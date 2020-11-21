@@ -5,11 +5,8 @@ import RadioButton from "../RadioButton/RadioButton";
 import "./EssentialApplicantInfo.css";
 import { Container, Row, Col } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
-<<<<<<< HEAD
 import Modal from "../Modal/Modal";
-=======
 import {isMobile} from 'react-device-detect';
->>>>>>> main
 
 const EssentialApplicantInfo = (props) => {
   let textboxClassName;
@@ -100,7 +97,7 @@ const EssentialApplicantInfo = (props) => {
             </div>
           </Col>
           <Col className="centered-buttons">
-            <div id="confirmButton1" hidden>
+            <div id="confirmButton1">
               <Modal id="hello" btnText="Request a Call Back">
                 <div>
                   <h2>This is a modal</h2>
