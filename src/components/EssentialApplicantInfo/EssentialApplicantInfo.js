@@ -6,7 +6,6 @@ import "./EssentialApplicantInfo.css";
 import { Container, Row, Col } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 import Modal from "../Modal/Modal";
-import DropdownMenu from "../DropdownMenu";
 
 const EssentialApplicantInfo = (props) => {
   var nationalityOptions = [
@@ -24,6 +23,20 @@ const EssentialApplicantInfo = (props) => {
     { label: "Yes", id: "supportYes", value: "yes" },
     { label: "No", id: "supportNo", value: "no" },
   ];
+
+  var time = [
+      {value: 'morning', label: '09:00am - 12:00pm'},
+      {value: 'monday', label: '12:00pm - 15:00pm'},
+      {value: 'monday', label: '15:00pm - 17:00pm'}
+    ];
+  
+  var days = [
+      {value: 'monday', label: 'Monday'},
+      {value: 'tuesday', label: 'Tuesday'},
+      {value: 'wednesday', label: 'Wednesday'},
+      {value: 'thursday', label: 'Thursday'},
+      {value: 'friday', label: 'Friday'}
+    ];
 
   function ReturnModalData() {
     console.log("made it here!");
@@ -77,10 +90,10 @@ const EssentialApplicantInfo = (props) => {
                 <div>
                   <h2>This is a modal</h2>
                   <p>Example modal</p>
-                  <DropdownMenu>
-                  <Select className="Dropdown" options={days} />
-                  <Select className="Dropdown" options={time} />
-                  </DropdownMenu>
+                  <DropdownMenu  options={days}/>
+                  <DropdownMenu  options={time}/>
+                  
+                  
                   <UCPButton 
                     to="none"
                     primary="True"
