@@ -1,6 +1,7 @@
 .textbox {
     margin: 0% 2% 10px 1%;
     max-width: 150px;
+
 }
 
 .textbox input {
@@ -9,6 +10,7 @@
     padding: 10px;
     border: 2px solid black;
     margin-left: 1.5%;
+
 }
 
 .textbox input:focus {
@@ -17,6 +19,8 @@
 }
 .mobiletextbox {
     margin: 0% 10% 10px 2%;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 .mobiletextbox input {
@@ -25,6 +29,8 @@
     padding: 5px;
     border: 2px solid black;
     margin-left: 3%;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 .mobiletextbox input:focus {

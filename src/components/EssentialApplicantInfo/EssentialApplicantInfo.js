@@ -5,9 +5,24 @@ import RadioButton from "../RadioButton/RadioButton";
 import "./EssentialApplicantInfo.css";
 import { Container, Row, Col } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
+<<<<<<< HEAD
 import Modal from "../Modal/Modal";
+=======
+import {isMobile} from 'react-device-detect';
+>>>>>>> main
 
 const EssentialApplicantInfo = (props) => {
+  let textboxClassName;
+  if(isMobile)
+  {
+ 
+    textboxClassName = "mobiletextbox";
+  }
+  else{
+    
+    textboxClassName = "desktoptextbox";
+  }
+
   var nationalityOptions = [
     { label: "UK National", id: "UK", value: "UK" },
     { label: "EU National", id: "EU", value: "EU" },
@@ -51,7 +66,7 @@ const EssentialApplicantInfo = (props) => {
   }
 
   function UserTypeSelect() {
-    if (props.userType === "staff") {
+    if (global.userType === "staff") {
       return (
         <Row id="buttonRow">
           <Col className="centered-buttons">
@@ -62,7 +77,7 @@ const EssentialApplicantInfo = (props) => {
             />
           </Col>
           <Col className="centered-buttons">
-            <div id="confirmButton" hidden>
+            <div id="confirmButton">
               <UCPButton
                 primary="True"
                 className="mediumbutton"
@@ -76,7 +91,7 @@ const EssentialApplicantInfo = (props) => {
       return (
         <Row id="buttonRow">
           <Col className="centered-buttons">
-            <div id="confirmButton" hidden>
+            <div id="confirmButton">
               <UCPButton
                 primary="True"
                 className="mediumbutton"
@@ -92,8 +107,6 @@ const EssentialApplicantInfo = (props) => {
                   <p>Example modal</p>
                   <DropdownMenu  options={days}/>
                   <DropdownMenu  options={time}/>
-                  
-                  
                   <UCPButton 
                     to="none"
                     primary="True"
@@ -105,7 +118,7 @@ const EssentialApplicantInfo = (props) => {
           </Col>
 
           <Col className="centered-buttons">
-            <div id="confirmButton2" hidden>
+            <div id="confirmButton2">
               <UCPButton
                 primary="True"
                 className="mediumbutton"
@@ -130,6 +143,9 @@ const EssentialApplicantInfo = (props) => {
             id="nameinput"
             type="text"
             name="name"
+            attribute="disabled"
+            className=  {textboxClassName}
+            
           />
 
           <TextBox
@@ -140,6 +156,9 @@ const EssentialApplicantInfo = (props) => {
             id="emailinput"
             type="email"
             name="email"
+            attribute="disabled"
+            className=  {textboxClassName}
+
           />
 
           <TextBox
@@ -150,14 +169,22 @@ const EssentialApplicantInfo = (props) => {
             id="telinput"
             type="tel"
             name="telno"
+            attribute="disabled"
+            className=  {textboxClassName}
+
           />
 
           <TextBox
-            title="Date of Birth"
+            title="D/O/B"
             placeholder="Enter date of birth"
             id="dobinput"
             type="date"
             name="dob"
+            attribute="disabled"
+            className=  {textboxClassName}
+           
+        
+            
           />
 
           <TextBox
@@ -166,6 +193,9 @@ const EssentialApplicantInfo = (props) => {
             id="ucasinput"
             type="text"
             name="ucas"
+            attribute="disabled"
+            className=  {textboxClassName}
+
           />
         </span>
         <span class="form-right">
@@ -173,6 +203,7 @@ const EssentialApplicantInfo = (props) => {
             heading="Nationality"
             options={nationalityOptions}
             name="nationality"
+            attribute="disabled"
           />
 
           <RadioButton
@@ -180,6 +211,7 @@ const EssentialApplicantInfo = (props) => {
             options={criminalOptions}
             name="criminal"
             subtitle="Do you have any unspent criminal convictions?"
+            attribute="disabled"
           />
 
           <RadioButton
@@ -187,6 +219,7 @@ const EssentialApplicantInfo = (props) => {
             options={supportOptions}
             name="support"
             subtitle="Do you have any additional learning support needs or disabilities?"
+            attribute="disabled"
           />
           <h4>Preferred Course</h4>
           <DropdownMenu />

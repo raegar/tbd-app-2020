@@ -3,7 +3,7 @@ import './Calendar.css';
 import UCPButton from '../Buttons/UCPButton';
 import DropdownMenu from '../DropdownMenu/DropdownMenu';
 import { Col, Container, Row} from 'react-bootstrap';
-import JumbotronComponent from '../Jumbotron Component/JumbotronComponent';
+import Jumbotron from '../Jumbotron/Jumbotron';
 
 const options = [
     { value: '0', label: '9:00' },
@@ -52,7 +52,7 @@ export default function Calendar (){
       <DropdownMenu className="Dropdown" options = {options}/>
       </Col>
       <Col>
-      <JumbotronComponent/>
+      <Jumbotron/>
       </Col>
       </Row>
 
