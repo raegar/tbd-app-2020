@@ -100,10 +100,17 @@ const EssentialApplicantInfo = (props) => {
             <div id="confirmButton1">
               <Modal id="hello" btnText="Request a Call Back">
                 <div>
-                  <h2>This is a modal</h2>
-                  <p>Example modal</p>
-                  <DropdownMenu  options={days}/>
-                  <DropdownMenu  options={time}/>
+                  <h2>Callback Request</h2>
+                  <p>Please select a day and time you would be available.</p>
+                  <Row id="dropdownRow">
+                    <Col className="dropdownOptions1">
+                  <DropdownMenu placeholder="Please select a day..." options={days}/>
+                  </Col>
+                  <Col className="dropdownOptions2">
+                  <DropdownMenu placeholder="Please select a time..." options={time}/>
+                  </Col>
+                  </Row>
+                  <br></br>
                   <UCPButton 
                     to="none"
                     primary="True"
