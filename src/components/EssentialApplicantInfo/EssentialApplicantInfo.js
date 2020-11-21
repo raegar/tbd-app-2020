@@ -6,6 +6,7 @@ import "./EssentialApplicantInfo.css";
 import { Container, Row, Col } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 import Modal from "../Modal/Modal";
+import DropdownMenu from "../DropdownMenu";
 
 const EssentialApplicantInfo = (props) => {
   var nationalityOptions = [
@@ -76,6 +77,10 @@ const EssentialApplicantInfo = (props) => {
                 <div>
                   <h2>This is a modal</h2>
                   <p>Example modal</p>
+                  <DropdownMenu>
+                  <Select className="Dropdown" options={days} />
+                  <Select className="Dropdown" options={time} />
+                  </DropdownMenu>
                   <UCPButton 
                     to="none"
                     primary="True"
