@@ -356,18 +356,13 @@ exports[`Renders Essential Applicant Info 1`] = `
           <div
             id="confirmButton1"
           >
-            <a
-              href="/emptyLink"
+            <button
+              class="mediumbutton"
+              data-testid="ucpButton"
+              type="button"
             >
-              <button
-                class="mediumbutton"
-                data-testid="ucpButton"
-                primary="True"
-                type="button"
-              >
-                Request Call Back​
-              </button>
-            </a>
+              Request a Call Back​
+            </button>
           </div>
         </div>
         <div
