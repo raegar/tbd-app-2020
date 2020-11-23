@@ -102,9 +102,8 @@ export default class LoginForm extends React.Component {
                     <Row>
                         <Col>
                         <div className="UserInfo">
-                            <span>Username:</span>
                             <TextBox
-                             type="text" value={this.state.username} 
+                             type="text" title="Username" value={this.state.username} 
                              onChange={this.handleChangeUsername}  placeholder="Enter Your Username"/> 
                         </div>
                         <div className="InvalidInput">
@@ -115,8 +114,7 @@ export default class LoginForm extends React.Component {
                     <Row>
                         <Col>
                         <div className="UserInfo">
-                            <span>Password:</span>
-                            <TextBox  type="password" value={this.state.password} 
+                            <TextBox title="Password" type="password" value={this.state.password} 
                              onChange={this.handleChangePassword} placeholder="Enter Your Password"/> 
                         </div>
                         <div className="InvalidInput">
