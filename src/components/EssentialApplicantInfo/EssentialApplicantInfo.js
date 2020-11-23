@@ -50,18 +50,6 @@ const EssentialApplicantInfo = (props) => {
       {value: 'friday', label: 'Friday'}
     ];
 
-  function ReturnModalData() {
-    console.log("made it here!");
-    return (
-    <Modal id="callback" btnText="Submit">
-    <div>
-        <h2>This is a modal</h2>
-        <p>Example modal</p>
-    </div>
-</Modal>
-)
-  }
-
   function UserTypeSelect() {
     if (global.userType === "staff") {
       return (
