@@ -1,5 +1,5 @@
 .UCPLogoBlue{
-    border-bottom: 3px solid teal;
+    border-bottom: 1px solid teal;
     display: block;
     margin-top: 5px;
     margin-left: auto;
@@ -9,12 +9,12 @@
 }
 
 .MobileUCPLogoBlue{
-    
-    border-bottom: 3px solid teal;
+    border-bottom: 1px solid teal;
     display: block;
     margin-top: 5px;
     margin-left: auto;
     margin-right: auto;
+    
     
     width: 90%;
 }
