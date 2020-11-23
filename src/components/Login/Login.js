@@ -87,6 +87,7 @@ export default class LoginForm extends React.Component {
         if (this.state.redirect) {
             return <Redirect push to="/NewApplicationPage" />;
         }
+
         const className = isMobile ? "MobileContainerStyle" : "ContainerStyle";
         return(
             <Container className={className}>
@@ -101,7 +102,7 @@ export default class LoginForm extends React.Component {
                     <Row>
                         <Col>
                         <div className="UserInfo">
-                            <span>Username: </span>
+                            <span>Username:</span>
                             <TextBox
                              type="text" value={this.state.username} 
                              onChange={this.handleChangeUsername}  placeholder="Enter Your Username"/> 
@@ -114,8 +115,8 @@ export default class LoginForm extends React.Component {
                     <Row>
                         <Col>
                         <div className="UserInfo">
-                            <span>Password: </span>
-                            <TextBox type="password" value={this.state.password} 
+                            <span>Password:</span>
+                            <TextBox  type="password" value={this.state.password} 
                              onChange={this.handleChangePassword} placeholder="Enter Your Password"/> 
                         </div>
                         <div className="InvalidInput">
