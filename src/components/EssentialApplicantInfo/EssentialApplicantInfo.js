@@ -38,8 +38,8 @@ const EssentialApplicantInfo = (props) => {
 
   var time = [
       {value: 'morning', label: '09:00am - 12:00pm'},
-      {value: 'monday', label: '12:00pm - 15:00pm'},
-      {value: 'monday', label: '15:00pm - 17:00pm'}
+      {value: 'afternoon', label: '12:00pm - 15:00pm'},
+      {value: 'evening', label: '15:00pm - 17:00pm'}
     ];
   
   var days = [
@@ -49,6 +49,7 @@ const EssentialApplicantInfo = (props) => {
       {value: 'thursday', label: 'Thursday'},
       {value: 'friday', label: 'Friday'}
     ];
+
 
   function UserTypeSelect() {
     if (global.userType === "staff") {
