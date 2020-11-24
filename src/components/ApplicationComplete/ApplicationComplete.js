@@ -1,7 +1,5 @@
 import React from 'react';
-import Header from '../../stories/Header';
 import {Container} from 'react-bootstrap';
-import Button from '../Buttons/UCPButton'
 import JumbotronComponent from '../../components/Jumbotron Component/JumbotronComponent';
 import './ApplicationComplete.css'
 function ApplicationComplete(){

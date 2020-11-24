@@ -5,6 +5,7 @@ import SelectRole from './components/SelectRole/SelectRole';
 import Login from './components/Login/Login';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NewApplicationPage from '../src/components/NewApplicationPage/NewApplicationPage';
+import ApplicationComplete from './components/ApplicationComplete/ApplicationComplete'
 
 const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path='/' exact component={SelectRole} />
           <Route path='/login' component={Login}/>
           <Route path='/NewApplicationPage' component={NewApplicationPage}/>
+          <Route path='/ApplicationComplete' component={ApplicationComplete}/>
         </Switch>
     </div>
     </Router>
