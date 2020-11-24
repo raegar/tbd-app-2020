@@ -6,6 +6,7 @@ import Login from './components/Login/Login';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NewApplicationPage from './NewApplicationPage';
 import LevelTwoQualifications from './components/LevelTwoQualifications/LevelTwoQualifications';
+import DegreeQualifications from './components/Degree Qualifications/DegreeQualifications'
 
 const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path='/login' component={Login}/>
           <Route path='/NewApplicationPage' component={NewApplicationPage}/>
           <Route path='/LevelTwoQualifications' component={LevelTwoQualifications}/>
+          <Route path='/test' component={DegreeQualifications} />
         </Switch>
     </div>
 
