@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import Headers from './components/Header/Headers';
-import Footer from './components/Footer/Footer';
 import SelectRole from './components/SelectRole/SelectRole';
 import Login from './components/Login/Login';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -12,6 +11,7 @@ const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
 function App() {
   return (
     <Router basename={baseUrl}>
+
     <div className="App">
       <Headers/>
         <Switch>
@@ -21,6 +21,7 @@ function App() {
           <Route path='/LevelTwoQualifications' component={LevelTwoQualifications}/>
         </Switch>
     </div>
+
     </Router>
   );
 }
