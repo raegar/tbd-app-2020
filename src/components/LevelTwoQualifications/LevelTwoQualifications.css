@@ -1,4 +1,4 @@
-.form-background {
+.l2-form-background {
     width: 92%;
     background-color: #B2DDDF;
     display: inline-block;
@@ -11,14 +11,14 @@
     text-align: center;
 }
 
-.form-container {
+.l2-form-container {
     position: absolute;
     width: 70%;
     left: 16%;
     padding-right: 0px !important;
     padding-left: 0px !important;
 }
-.mobile-form-container {
+.l2-mobile-form-container {
     position: absolute;
     width: 70%;
     left: 12.5%;
@@ -28,13 +28,13 @@
 .form-title {
     text-align: center;
 }
-.form-right {
+.l2-form-right {
     position: relative;
-    right: 30%;
+    left: 30%;
     text-align: center !important;
     max-width: 40% !important;
 }
-.mobile-form-right {
+.l2-mobile-form-right {
     position: relative;
     left: 20%;
     text-align: center !important;
