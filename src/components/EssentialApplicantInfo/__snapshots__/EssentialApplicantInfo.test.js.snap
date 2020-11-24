@@ -337,7 +337,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             id="confirmButton"
           >
             <a
-              href="/emptyLink"
+              href="/LevelTwoQualifications"
             >
               <button
                 class="mediumbutton"

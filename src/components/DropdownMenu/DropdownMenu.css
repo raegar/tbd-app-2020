@@ -1,6 +1,12 @@
 .Dropdown {
     max-width: 500px;
     color: #000000;
+}
+.MobileDropdown
+{
+    max-width: 250px !important;
+    margin-bottom: 10px !important;
     font-family: 'Montserrat', sans-serif;
+
 
 }
