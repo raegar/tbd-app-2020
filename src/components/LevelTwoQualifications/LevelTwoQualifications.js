@@ -7,17 +7,19 @@ import AlerDismissible from '../AlertDismissible/AlertDismissible';
 import {isMobile} from 'react-device-detect';
 const LevelTwoQualifications = (props) => {
   var gsceGrades = [
-    { label: "A*", id: "a*", value: "A*" },
-    { label: "A", id: "a", value: "A" },
-    { label: "B", id: "b", value: "B" },
-    { label: "C", id: "c", value: "C" },
-    { label: "D", id: "d", value: "D" },
-    { label: "E", id: "e", value: "E" },
-    { label: "F", id: "f", value: "F" },
-    { label: "G", id: "g", value: "G" },
-    { label: "N/A", id: "na", value: "N/A" },
+    { label: "9 - A*", id: "9", value: "9" },
+    { label: "8 - A*", id: "8", value: "8" },
+    { label: "7 - A", id: "7", value: "7" },
+    { label: "6 - B", id: "6", value: "6" },
+    { label: "5 - B", id: "5", value: "5" },
+    { label: "4 - C", id: "4", value: "4" },
+    { label: "3 - D", id: "3", value: "3" },
+    { label: "2 - E", id: "2", value: "2" },
+    { label: "2 - F", id: "2f", value: "1" },
+    { label: "1 -G", id: "1", value: "1" },
+    { label: "U", id: "u", value: "u" },
+    { label: "n/a", id: "na", value: "na" },
   ];
-
   function UserTypeSelect() {
     if (props.userType === "staff") {
       return (
@@ -76,12 +78,12 @@ const LevelTwoQualifications = (props) => {
     }
   }
   const className = isMobile ? "MobileTextArea" : "DesktopTextArea";  
-  const className1 = isMobile ? "mobile-form-right" : "form-right";
-  const className2 = isMobile ? "mobile-form-container" : "form-container";
+  const className1 = isMobile ? "l2-mobile-form-right" : "l2-form-right";
+  const className2 = isMobile ? "l2-mobile-form-container" : "l2-form-container";
   return (
   
     <div className={className2}>
-      <div className="form-background">
+      <div className="l2-form-background">
         <h3 className="form-title">Applicant Qualifications & Experience</h3>
         <AlerDismissible/>
         <div class={className1}>
