@@ -131,3 +131,8 @@ export default class LoginForm extends React.Component {
             );
         }
     }
+
+    function UnitTest()
+    {
+        console.log("Test Complete");
+    }
