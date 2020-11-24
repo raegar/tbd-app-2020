@@ -78,7 +78,7 @@ const LevelTwoQualifications = (props) => {
     }
   }
   const className = isMobile ? "MobileTextArea" : "DesktopTextArea";  
-  const className1 = isMobile ? "l2-mobile-form-right" : "l2-form-right";
+  const className1 = isMobile ? "l2-mobile-form-right" : "l2-form-right ";
   const className2 = isMobile ? "l2-mobile-form-container" : "l2-form-container";
   return (
   
