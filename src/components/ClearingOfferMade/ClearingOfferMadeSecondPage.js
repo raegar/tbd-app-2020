@@ -9,6 +9,15 @@ import {isMobile} from 'react-device-detect';
 const ClearingOfferMadeSecondPage = (props) => {
 <Container>
 
+
+
+
+
+
+
+    
+<Col><UCPButton></UCPButton></Col>
+    <Col><UCPButton></UCPButton></Col>
  </Container>
 
 }

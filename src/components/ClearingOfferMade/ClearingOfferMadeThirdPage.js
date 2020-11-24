@@ -11,6 +11,10 @@ const ClearingOfferMadePageThirdPage = (props) => {
     <h1>Not Offered Details</h1>
     <h3>38. If NO, please state reasons:</h3>
     <TextBox/>
+
+
+    <Col><UCPButton></UCPButton></Col>
+    <Col><UCPButton></UCPButton></Col>
     
  </Container>
 
