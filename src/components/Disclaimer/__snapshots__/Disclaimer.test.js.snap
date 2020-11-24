@@ -19,7 +19,7 @@ exports[`Renders Disclaimer 1`] = `
       >
         <p>
           <b>
-            Please Read
+            Hello undefined, Please Read!
           </b>
           <br />
           <b>

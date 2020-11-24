@@ -4,9 +4,11 @@ import './DropdownMenu.css'
 
 
 
-const DropdownMenu = ({options, ...props}) => (
+const DropdownMenu = ({options,...props}) => (
+
   <Select className="Dropdown" options={options} />
 )
+
 
 export default DropdownMenu;
 
@@ -18,3 +20,4 @@ DropdownMenu.defaultProps = {
       { value: 'digitalArts', label: 'FDA Digital Arts'}
     ]
 };
+

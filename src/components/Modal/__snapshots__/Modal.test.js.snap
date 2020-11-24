@@ -2,16 +2,12 @@
 
 exports[`Renders Modal 1`] = `
 <DocumentFragment>
-  <a
-    href="/emptyLink"
+  <button
+    class="mediumbutton"
+    data-testid="ucpButton"
+    type="button"
   >
-    <button
-      class="mediumbutton"
-      data-testid="ucpButton"
-      type="button"
-    >
-      This is a modal button​
-    </button>
-  </a>
+    This is a modal button​
+  </button>
 </DocumentFragment>
 `;

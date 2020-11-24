@@ -11,6 +11,7 @@ const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
 function App() {
   return (
     <Router basename={baseUrl}>
+
     <div className="App">
       <Headers/>
         <Switch>
@@ -20,10 +21,10 @@ function App() {
           <Route path='/LevelTwoQualifications' component={LevelTwoQualifications}/>
         </Switch>
     </div>
+
     </Router>
   );
 }
-
 export default App;
 
 
