@@ -5,14 +5,15 @@ import TextBox from "../components/TextBox/TextBox";
 import "./ClearingOfferMade.css";
 import { Container, Col } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
-import {isMobile} from 'react-device-detect';
 
-const ClearingOfferMadePageFour = (props) => {
+
+const ClearingOfferMadePageFive = (props) => {
 <Container>
-<p>Required</p>
-    <h1>Interview requeired of RPA</h1>
-    <p>Enter any details for decision made</p>
-    <h3>39. Please state reasons:</h3>
+    <h1>Before hanging up....</h1>
+    <p>Please state the following</p>
+    <h3>40. Please confirm email offer will be send to</h3>
+    <TextBox/>
+    <h3>41. Please enter course applied for</h3>
     <TextBox/>
 
 
@@ -22,4 +23,4 @@ const ClearingOfferMadePageFour = (props) => {
  </Container>
 
 }
-export default ClearingOfferMadePageFour;
+export default ClearingOfferMadePageFive;
