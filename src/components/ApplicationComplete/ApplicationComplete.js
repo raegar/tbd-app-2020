@@ -8,8 +8,7 @@ function ApplicationComplete(){
     return(
         <Container  className="mt-5 px-3 py-3 application-complete-container">
         
-<JumbotronComponent className='JumbotronComponent' jumbotronText="Application Complete You're details have been emailed
-to you.">
+<JumbotronComponent className='JumbotronComponent' jumbotronText="Your Application has been sent, someone will be intouch with you soon">
 </JumbotronComponent>
         </Container>
     )
