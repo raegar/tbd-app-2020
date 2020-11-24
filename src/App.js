@@ -18,8 +18,8 @@ function App() {
               <Route path='/login' component={Login}/>
               <Route path='/NewApplicationPage' component={NewApplicationPage}/>
             </Switch>
-          <Footer/>
         </div>
+      <Footer/>
     </Router>
   );
 }
