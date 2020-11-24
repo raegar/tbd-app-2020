@@ -20,6 +20,10 @@ const ClearingOfferMadeSecondPage = (props) => {
         
       ];
 <Container>
+<h1>Offer</h1>
+    <h1>* Required</h1>
+<h3>37. Offer made? (YES/NO)</h3>
+<p><i>Only UNCONDITIONAL Offers can be made (unless interview is needed)</i></p>
 <RadioButton
     heading="Yes"
     options={supportOptions}

@@ -7,6 +7,7 @@ import UCPButton from "../Buttons/UCPButton";
 import {isMobile} from 'react-device-detect';
 
 const ClearingOfferMade = (props) => {
+  return(
 <Container>
     <h1>Offer Note</h1>
     <p>Offers can only be made if applicant has acheived their qualifications and not if they are waiting for their grade to be published.They need to ring back once their grade has been confirmed </p>
@@ -17,6 +18,8 @@ const ClearingOfferMade = (props) => {
     <Col><UCPButton></UCPButton></Col>
 
  </Container>
-
+  )
 }
 export default ClearingOfferMade;
+
+   
