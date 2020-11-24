@@ -7,10 +7,10 @@ import { Container } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 import {isMobile} from 'react-device-detect';
 
-const ClearingOfferMadePageThree = (props) => {
+const ClearingOfferMadePageFour = (props) => {
 <Container>
  
  </Container>
 
 }
-export default ClearingOfferMadePageThree;
+export default ClearingOfferMadePageFour;
