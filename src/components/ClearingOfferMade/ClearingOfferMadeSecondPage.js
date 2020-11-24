@@ -10,15 +10,20 @@ import {isMobile} from 'react-device-detect';
 const ClearingOfferMadeSecondPage = (props) => {
 
     var offerOptions = [
-        { label: "Yes", id: "crimeYes", value: "yes" },
+        { label: "Yes", id: "offerYes", value: "yes" },
+        { label: "Yes (Partial Requirements met, this will be where student doesn't have all requirements)", id: "offerYesPart", value: "yespart" },
+        { label: "Yes (Subject to Ell Status)", id: "offerYesSubjectToStatus", value: "yesstatus" },
         { label: "No", id: "crimeNo", value: "no" },
+        { label: "No", id: "crimeNo", value: "no" },
+
+        
       ];
 <Container>
 <RadioButton
-    heading="Learning Support"
+    heading="Yes"
     options={supportOptions}
-    name="support"
-    subtitle="Do you have any additional learning support needs or disabilities?"
+    name="offer"
+
     attribute="disabled"
   />
 
