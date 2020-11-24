@@ -38,11 +38,11 @@ const DegreeQualifications = (props) => {
     }
 
     return (
-        <div className={className2}>
+        <div className="form-container">
             <div className="form-background">
                 <h3 className="form-title">Level 4 or Above Experience</h3>
                 <AlerDismissible/>
-                <div className={className1}>
+                <span className="form-left">
                     <RadioButton
                         subtitle="Do you have any level 4 or above qualifications?"
                         name="level-four"
@@ -55,17 +55,17 @@ const DegreeQualifications = (props) => {
                         : <span></span>
                     }
 
-                <div>
+                </span>
+                <span className="form-right">
                     <TextBox name="recent-school" title="What is the name of the most recent school/college attended?" size="25" type="text" />
                     <RadioButton 
                         subtitle="ELQ - is the applicant applying to study a qualification that is equivalent or lower to one they already hold?"
                         options={elq}
                         name="elq"
                     />
-                </div>
+                </span>
                 </div>
             </div>
-        </div>
     );
     
 }
