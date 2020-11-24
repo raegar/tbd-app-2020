@@ -5,6 +5,8 @@
     width: 100%;
     background-image: url('../../images/Footer.png');
     background-position: center;
+    bottom: 0;
+    position: fixed;
 }
 
 /*Applies styles to desktop footer*/
@@ -15,7 +17,7 @@
 
 /*Applies styles to mobile footer*/
 .MobileFooter{
-    height: 350px;
+    height: 150px;
     background-repeat: no-repeat;
     background-size: cover;
 }
