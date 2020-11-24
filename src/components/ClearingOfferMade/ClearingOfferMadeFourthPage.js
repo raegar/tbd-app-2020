@@ -1,5 +1,5 @@
 import React from "react";
-import RadioButton from "../RadioButton/RadioButton";
+
 
 
 import "./ClearingOfferMade.css";
@@ -9,7 +9,11 @@ import {isMobile} from 'react-device-detect';
 
 const ClearingOfferMadePageFour = (props) => {
 <Container>
- 
+<p>Required</p>
+    <h1>Interview requeired of RPA</h1>
+    <p>Enter any details for decision made</p>
+    <h3>39. Please state reasons:</h3>
+    <TextBox/>
 
 
 
