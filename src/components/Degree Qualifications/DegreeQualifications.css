@@ -1,8 +1,9 @@
 .form-background {
-    width: 92%;
+    width: 80%;
     background-color: #B2DDDF;
-    display: inline-block;
+   display: inline-block;
     padding: 20px;
+  /*text-align: left;*/
     border: 1px solid black;
     margin-bottom: 10px;
 }
@@ -12,37 +13,47 @@
 }
 
 .form-container {
-    position: absolute;
-    width: 70%;
-    left: 16%;
     padding-right: 0px !important;
     padding-left: 0px !important;
 }
-.mobile-form-container {
-    position: absolute;
-    width: 70%;
-    left: 12.5%;
-    padding-right: 0px !important;
-    padding-left: 0px !important;
-}
+
 .form-title {
     text-align: center;
 }
 .form-right {
-    position: relative;
-    right: 30%;
-    text-align: center !important;
-    max-width: 40% !important;
+    float: right;
+    width: 50%;
+    margin-top: 30px;
 }
-.mobile-form-right {
-    position: relative;
-    left: 20%;
-    text-align: center !important;
-    max-width: 60% !important;
+.form-left {
+    float:left;
+    width: 50%;
+    padding-left: 40px;
 }
-.MobileTextArea
-{
-    max-width: 120px;
-    max-height: 40px;
-   
+
+.mobiletextbox input{
+    width: 250px;
+    text-align: center;
+}
+.mobiletextbox{
+    width: 200px;
+}
+.mobiletextbox label{
+    margin-left: 5px;
+}
+@media only screen and (max-width: 768px){
+    .form-left {
+    width: 80%;
+    float: left;
+    padding-left: 0px;
+    }
+    .form-right {
+        width: 100%;
+        float: left;
+    }
+}
+
+.h3{
+    font-family: 'Montserrat', sans-serif;
+
 }

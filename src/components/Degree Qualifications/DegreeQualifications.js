@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import "./DegreeQualifications.css"; 
-import {Row, Col} from "react-bootstrap";
+import {Row, Col, Container} from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 import AlerDismissible from '../AlertDismissible/AlertDismissible';
 import {isMobile} from 'react-device-detect';
@@ -12,9 +12,16 @@ const DegreeQualifications = (props) => {
     
     
 
-    const className = isMobile ? "MobileTextArea" : "DesktopTextArea";  
-    const className1 = isMobile ? "mobile-form-right" : "form-right";
-    const className2 = isMobile ? "mobile-form-container" : "form-container";
+    let textboxClassName;
+  if(isMobile)
+  {
+ 
+    textboxClassName = "mobiletextbox";
+  }
+  else{
+    
+    textboxClassName = "desktoptextbox";
+  }
     
 
     var priorLevelFour = [
@@ -38,7 +45,7 @@ const DegreeQualifications = (props) => {
     }
 
     return (
-        <div className="form-container">
+        <Container className="form-container">
             <div className="form-background">
                 <h3 className="form-title">Level 4 or Above Experience</h3>
                 <AlerDismissible/>
@@ -65,7 +72,7 @@ const DegreeQualifications = (props) => {
                     />
                 </span>
                 </div>
-            </div>
+            </Container>
     );
     
 }
