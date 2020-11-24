@@ -8,7 +8,7 @@ import ApplicationComplete from '../ApplicationComplete/ApplicationComplete'
 const SelectRole = () => {
     return(
         <Container className="mt-5 px-3 py-3 select-role-container">
-            <ApplicationComplete></ApplicationComplete>
+            
             <Row className="text-center">
                 <Col className="mt-3 mb-3">
                     <UCPButton to="/login" buttonText="Staff Portal" className="extralargebutton" href="/login" />
