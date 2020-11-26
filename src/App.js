@@ -10,6 +10,9 @@ import LevelTwoQualifications from './components/LevelTwoQualifications/LevelTwo
 import ClearingOfferMade from './components/ClearingOfferMade/ClearingOfferMade';
 import DegreeQualifications from './components/Degree Qualifications/DegreeQualifications';
 import ClearingOfferMadeSecondPage from './components/ClearingOfferMade/ClearingOfferMadeSecondPage';
+import ClearingOfferMadeThirdPage from './components/ClearingOfferMade/ClearingOfferMadeThirdPage';
+import ClearingOfferMadeFourthPage from './components/ClearingOfferMade/ClearingOfferMadeFourthPage';
+import ClearingOfferMadeFifthPage from './components/ClearingOfferMade/ClearingOfferMadeFifthPage';
 
 
 const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
