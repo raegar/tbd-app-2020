@@ -7,7 +7,7 @@ import {isMobile} from 'react-device-detect';
 import { components } from "react-select";
 
 const ClearingOfferMadePageThirdPage = (props) => {
-<Container>
+return ( <Container>
     <p>Required</p>
     <h1>Not Offered Details</h1>
     <h3>38. If NO, please state reasons:</h3>
@@ -18,6 +18,7 @@ const ClearingOfferMadePageThirdPage = (props) => {
     <Col><UCPButton></UCPButton></Col>
     
  </Container>
-
+)
 }
+
 export default ClearingOfferMadePageThirdPage;

@@ -6,20 +6,41 @@ exports[`Renders ClearingOfferMadeFifthPage 1`] = `
     class="container"
   >
     <h1>
-      Offer Note
+      Before hanging up....
     </h1>
     <p>
-      Offers can only be made if applicant has acheived their qualifications and not if they are waiting for their grade to be published.They need to ring back once their grade has been confirmed 
+      Please state the following
     </p>
-    <p>
-      If applicant has declared a criminal conviction or applied with prior credit, an offer cannot be made. Inform applicant we will arrange a telephone interview.
-    </p>
-    <p>
-      ALL verbal offers must be prefaced with the words "On the basis of the information you have provided, I am pleased to offer you a place on ..."
-    </p>
-    <p>
-       • The applicant must then add UCP as their Clearing Choice via UCAS Track (ideally within 24 hours). If the applicant does not have a UCAS application and they are only wishing to apply to UCP, an RPA form can be completed in place of UCAS - speak to Zoe Rumball 
-    </p>
+    <h3>
+      40. Please confirm email offer will be send to
+    </h3>
+    <div
+      class="mobiletextbox"
+    >
+      <label />
+      <input
+        maxlength="30"
+        minlength="0"
+        placeholder=""
+        size="20"
+        type="text"
+      />
+    </div>
+    <h3>
+      41. Please enter course applied for
+    </h3>
+    <div
+      class="mobiletextbox"
+    >
+      <label />
+      <input
+        maxlength="30"
+        minlength="0"
+        placeholder=""
+        size="20"
+        type="text"
+      />
+    </div>
     <div
       class="col"
     >

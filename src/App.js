@@ -9,6 +9,7 @@ import NewApplicationPage from './NewApplicationPage';
 import LevelTwoQualifications from './components/LevelTwoQualifications/LevelTwoQualifications';
 import ClearingOfferMade from './components/ClearingOfferMade/ClearingOfferMade';
 import DegreeQualifications from './components/Degree Qualifications/DegreeQualifications';
+import ClearingOfferMadeSecondPage from './components/ClearingOfferMade/ClearingOfferMadeSecondPage';
 
 
 const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
@@ -24,6 +25,10 @@ function App() {
           <Route path='/LevelTwoQualifications' component={LevelTwoQualifications}/>
 
           <Route path='/ClearingOfferMade' component={ClearingOfferMade}/>
+          <Route path='/ClearingOfferSecondPage' component={ClearingOfferMadeSecondPage}/>
+          <Route path='/ClearingOfferMadeThirdPage' component={ClearingOfferMadeThirdPage}/>
+          <Route path='/ClearingOfferMadeFourthPage' component={ClearingOfferMadeFourthPage}/>
+          <Route path='/ClearingOfferMadeFifthPage' component={ClearingOfferMadeFifthPage}/>
 
           <Route path='/DegreeQualifications' component={DegreeQualifications} />
 

@@ -5,8 +5,8 @@ import { Container, Col } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 import {isMobile} from 'react-device-detect';
 
-const ClearingOfferMadePageFour = (props) => {
-<Container>
+const ClearingOfferMadeFourthPage = (props) => {
+return (<Container>
 <p>Required</p>
     <h1>Interview requeired of RPA</h1>
     <p>Enter any details for decision made</p>
@@ -18,6 +18,6 @@ const ClearingOfferMadePageFour = (props) => {
 <Col><UCPButton></UCPButton></Col>
     <Col><UCPButton></UCPButton></Col>
  </Container>
-
+)
 }
-export default ClearingOfferMadePageFour;
+export default ClearingOfferMadeFourthPage;

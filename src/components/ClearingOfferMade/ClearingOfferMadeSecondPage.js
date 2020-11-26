@@ -1,8 +1,8 @@
 import React from "react";
 import RadioButton from "../RadioButton/RadioButton";
-import TextBox from "../components/TextBox/TextBox";
+import TextBox from "../../components/TextBox/TextBox";
 import "./ClearingOfferMade.css";
-import { Container, Col } from "react-bootstrap";
+import { Container, Col, Row } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 import {isMobile} from 'react-device-detect';
 
@@ -18,14 +18,14 @@ const ClearingOfferMadeSecondPage = (props) => {
 
         
       ];
-<Container>
+return ( <Container>
 <h1>Offer</h1>
     <h1>* Required</h1>
 <h3>37. Offer made? (YES/NO)</h3>
 <p><i>Only UNCONDITIONAL Offers can be made (unless interview is needed)</i></p>
 <RadioButton
     heading="Yes"
-    options={supportOptions}
+    options={offerOptions}
     name="offer"
 
     attribute="disabled"
@@ -40,6 +40,6 @@ const ClearingOfferMadeSecondPage = (props) => {
 <Col><UCPButton></UCPButton></Col>
 </Row>
  </Container>
-
+)
 }
 export default ClearingOfferMadeSecondPage;
