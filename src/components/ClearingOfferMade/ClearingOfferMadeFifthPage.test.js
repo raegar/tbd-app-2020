@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ClearingOfferMadeFifthPage from './ClearingOfferMade';
+import ClearingOfferMadeFifthPage from './ClearingOfferMadeFifthPage';
 import { BrowserRouter as Router} from 'react-router-dom';
 
 //cleans up 

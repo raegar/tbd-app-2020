@@ -1,5 +1,4 @@
 import React from "react";
-
 import RadioButton from "../RadioButton/RadioButton";
 import TextBox from "../components/TextBox/TextBox";
 import "./ClearingOfferMade.css";
