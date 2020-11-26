@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Degree Qual 1`] = `
+<DocumentFragment>
+  <div
+    class="degree-form d-flex justify-content-center container"
+  >
+    <div
+      class="form-background"
+    >
+      <h3
+        class="form-title"
+      >
+        Level 4 or Above Experience
+      </h3>
+      <div
+        class="row"
+      >
+        <div
+          class="col"
+        >
+          <div
+            class="radio-buttons"
+          >
+            <h4 />
+            <p>
+              Do you have any level 4 or above qualifications?
+            </p>
+            <div
+              class="radio-group"
+            >
+              <input
+                id="prior-yes"
+                name="level-four"
+                type="radio"
+                value="yes"
+              />
+              <label
+                for="prior-yes"
+              >
+                Yes
+              </label>
+            </div>
+            <div
+              class="radio-group"
+            >
+              <input
+                id="prior-no"
+                name="level-four"
+                type="radio"
+                value="no"
+              />
+              <label
+                for="prior-no"
+              >
+                No
+              </label>
+            </div>
+          </div>
+          <span />
+        </div>
+        <div
+          class="col"
+        >
+          <div
+            class="mobiletextbox"
+          >
+            <label>
+              What is the name of the most recent school/college attended?
+            </label>
+            <input
+              maxlength="30"
+              minlength="0"
+              name="recent-school"
+              placeholder=""
+              size="25"
+              type="text"
+            />
+          </div>
+          <div
+            class="radio-buttons"
+          >
+            <h4 />
+            <p>
+              ELQ - is the applicant applying to study a qualification that is equivalent or lower to one they already hold?
+            </p>
+            <div
+              class="radio-group"
+            >
+              <input
+                id="elq-yes"
+                name="elq"
+                type="radio"
+                value="yes"
+              />
+              <label
+                for="elq-yes"
+              >
+                Yes
+              </label>
+            </div>
+            <div
+              class="radio-group"
+            >
+              <input
+                id="elq-no"
+                name="elq"
+                type="radio"
+                value="no"
+              />
+              <label
+                for="elq-no"
+              >
+                No
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

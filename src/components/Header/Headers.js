@@ -7,7 +7,7 @@ export default class Headers extends React.Component{
         const className = isMobile ? "MobileUCPLogoBlue" : "UCPLogoBlue";
         return (
             <header>   
-                    <img data-testid="ucpLogoHeader" src={UCPLogo} className={className} alt="UCP official logo" />  
+                    <a href="/"><img data-testid="ucpLogoHeader" src={UCPLogo} className={className} alt="UCP official logo" /></a>  
             </header>
         )
     }
