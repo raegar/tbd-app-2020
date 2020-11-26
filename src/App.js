@@ -20,7 +20,7 @@ function App() {
           <Route path='/login' component={Login}/>
           <Route path='/NewApplicationPage' component={NewApplicationPage}/>
           <Route path='/LevelTwoQualifications' component={LevelTwoQualifications}/>
-          <Route path='/test' component={DegreeQualifications} />
+          <Route path='/DegreeQualifications' component={DegreeQualifications} />
         </Switch>
         <Footer/>
     </div>
