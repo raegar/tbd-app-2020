@@ -3,8 +3,7 @@ import TextBox from "../../components/TextBox/TextBox";
 import "./ClearingOfferMade.css";
 import { Container, Col } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
-import {isMobile} from 'react-device-detect';
-import { components } from "react-select";
+
 
 const ClearingOfferMadePageThirdPage = (props) => {
 return ( <Container>
