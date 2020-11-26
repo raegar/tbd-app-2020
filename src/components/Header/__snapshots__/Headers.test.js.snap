@@ -3,12 +3,16 @@
 exports[`Renders Header 1`] = `
 <DocumentFragment>
   <header>
-    <img
-      alt="UCP official logo"
-      class="UCPLogoBlue"
-      data-testid="ucpLogoHeader"
-      src="UCPLogo.png"
-    />
+    <a
+      href="/"
+    >
+      <img
+        alt="UCP official logo"
+        class="UCPLogoBlue"
+        data-testid="ucpLogoHeader"
+        src="UCPLogo.png"
+      />
+    </a>
   </header>
 </DocumentFragment>
 `;
