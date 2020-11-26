@@ -1,27 +1,10 @@
 import React, { useState } from 'react'
-import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import "./DegreeQualifications.css"; 
 import {Row, Col, Container} from "react-bootstrap";
-import UCPButton from "../Buttons/UCPButton";
-import AlerDismissible from '../AlertDismissible/AlertDismissible';
-import {isMobile} from 'react-device-detect';
 import RadioButton from '../RadioButton/RadioButton';
 import TextBox from '../TextBox/TextBox';
 
 const DegreeQualifications = (props) => {
-    
-    
-
-    let textboxClassName;
-  if(isMobile)
-  {
- 
-    textboxClassName = "mobiletextbox";
-  }
-  else{
-    
-    textboxClassName = "desktoptextbox";
-  }
     
 
     var priorLevelFour = [
@@ -45,34 +28,35 @@ const DegreeQualifications = (props) => {
     }
 
     return (
-        <Container className="form-container">
+        <Container className="degree-form d-flex justify-content-center">
             <div className="form-background">
                 <h3 className="form-title">Level 4 or Above Experience</h3>
-                <AlerDismissible/>
-                <span className="form-left">
-                    <RadioButton
-                        subtitle="Do you have any level 4 or above qualifications?"
-                        name="level-four"
-                        options={priorLevelFour}
-                        oc={handleClick}
-                    />
-                    {
-                        (levelFour)
-                        ? <TextBox title="Enter qualification name and grade" name="l-4-qual" size="30" />
-                        : <span></span>
-                    }
+                <Row>
+                    <Col>
+                        <RadioButton
+                            subtitle="Do you have any level 4 or above qualifications?"
+                            name="level-four"
+                            options={priorLevelFour}
+                            oc={handleClick}
+                        />
+                        {
+                            (levelFour)
+                            ? <TextBox title="Enter qualification name and grade" name="l-4-qual" size="30" />
+                            : <span></span>
+                        }
 
-                </span>
-                <span className="form-right">
-                    <TextBox name="recent-school" title="What is the name of the most recent school/college attended?" size="25" type="text" />
-                    <RadioButton 
-                        subtitle="ELQ - is the applicant applying to study a qualification that is equivalent or lower to one they already hold?"
-                        options={elq}
-                        name="elq"
-                    />
-                </span>
-                </div>
-            </Container>
+                    </Col>
+                    <Col>
+                        <TextBox name="recent-school" title="What is the name of the most recent school/college attended?" size="25" type="text" />
+                        <RadioButton 
+                            subtitle="ELQ - is the applicant applying to study a qualification that is equivalent or lower to one they already hold?"
+                            options={elq}
+                            name="elq"
+                        />
+                    </Col>
+                </Row>
+            </div>
+        </Container>
     );
     
 }
