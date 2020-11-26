@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders ClearingOfferMadeFifthPage 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+  >
+    <h1>
+      Before hanging up....
+    </h1>
+    <p>
+      Please state the following
+    </p>
+    <h3>
+      40. Please confirm email offer will be send to
+    </h3>
+    <div
+      class="mobiletextbox"
+    >
+      <label />
+      <input
+        maxlength="30"
+        minlength="0"
+        placeholder=""
+        size="20"
+        type="text"
+      />
+    </div>
+    <h3>
+      41. Please enter course applied for
+    </h3>
+    <div
+      class="mobiletextbox"
+    >
+      <label />
+      <input
+        maxlength="30"
+        minlength="0"
+        placeholder=""
+        size="20"
+        type="text"
+      />
+    </div>
+    <div
+      class="col"
+    >
+      <a
+        href="/emptyLink"
+      >
+        <button
+          data-testid="ucpButton"
+          type="button"
+        >
+          ​
+        </button>
+      </a>
+    </div>
+    <div
+      class="col"
+    >
+      <a
+        href="/emptyLink"
+      >
+        <button
+          data-testid="ucpButton"
+          type="button"
+        >
+          ​
+        </button>
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;

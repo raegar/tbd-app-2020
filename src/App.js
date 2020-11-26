@@ -7,7 +7,13 @@ import Login from './components/Login/Login';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NewApplicationPage from './NewApplicationPage';
 import LevelTwoQualifications from './components/LevelTwoQualifications/LevelTwoQualifications';
-import DegreeQualifications from './components/Degree Qualifications/DegreeQualifications'
+import ClearingOfferMade from './components/ClearingOfferMade/ClearingOfferMade';
+import DegreeQualifications from './components/Degree Qualifications/DegreeQualifications';
+import ClearingOfferMadeSecondPage from './components/ClearingOfferMade/ClearingOfferMadeSecondPage';
+import ClearingOfferMadeThirdPage from './components/ClearingOfferMade/ClearingOfferMadeThirdPage';
+import ClearingOfferMadeFourthPage from './components/ClearingOfferMade/ClearingOfferMadeFourthPage';
+import ClearingOfferMadeFifthPage from './components/ClearingOfferMade/ClearingOfferMadeFifthPage';
+
 
 const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
 function App() {
@@ -20,7 +26,15 @@ function App() {
           <Route path='/login' component={Login}/>
           <Route path='/NewApplicationPage' component={NewApplicationPage}/>
           <Route path='/LevelTwoQualifications' component={LevelTwoQualifications}/>
+
+          <Route path='/ClearingOfferMade' component={ClearingOfferMade}/>
+          <Route path='/ClearingOfferSecondPage' component={ClearingOfferMadeSecondPage}/>
+          <Route path='/ClearingOfferMadeThirdPage' component={ClearingOfferMadeThirdPage}/>
+          <Route path='/ClearingOfferMadeFourthPage' component={ClearingOfferMadeFourthPage}/>
+          <Route path='/ClearingOfferMadeFifthPage' component={ClearingOfferMadeFifthPage}/>
+
           <Route path='/DegreeQualifications' component={DegreeQualifications} />
+
         </Switch>
         <Footer/>
     </div>

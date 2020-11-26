@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders ClearingOfferMadeFourthPage 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+  >
+    <p>
+      Required
+    </p>
+    <h1>
+      Interview requeired of RPA
+    </h1>
+    <p>
+      Enter any details for decision made
+    </p>
+    <h3>
+      39. Please state reasons:
+    </h3>
+    <div
+      class="mobiletextbox"
+    >
+      <label />
+      <input
+        maxlength="30"
+        minlength="0"
+        placeholder=""
+        size="20"
+        type="text"
+      />
+    </div>
+    <div
+      class="col"
+    >
+      <a
+        href="/emptyLink"
+      >
+        <button
+          data-testid="ucpButton"
+          type="button"
+        >
+          ​
+        </button>
+      </a>
+    </div>
+    <div
+      class="col"
+    >
+      <a
+        href="/emptyLink"
+      >
+        <button
+          data-testid="ucpButton"
+          type="button"
+        >
+          ​
+        </button>
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;
