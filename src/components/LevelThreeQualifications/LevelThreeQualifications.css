@@ -1,0 +1,48 @@
+.form-background {
+    width: 92%;
+    background-color: #B2DDDF;
+    display: inline-block;
+    padding: 20px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+.centered-buttons
+{
+    text-align: center;
+}
+
+.l3-form-container {
+    position: absolute;
+    width: 70%;
+    left: 16%;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+.l3-mobile-form-container {
+    position: absolute;
+    width: 70%;
+    left: 12.5%;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+.form-title {
+    text-align: center;
+}
+.l3-form-right {
+    position: relative;
+    left: 30%;
+    text-align: center !important;
+    max-width: 40% !important;
+}
+.l3-mobile-form-right {
+    position: relative;
+    left: 10% !important;
+    text-align: center !important;
+    max-width: 90% !important;
+}
+.MobileTextArea
+{
+    max-width: 120px;
+    max-height: 40px;
+   
+}
