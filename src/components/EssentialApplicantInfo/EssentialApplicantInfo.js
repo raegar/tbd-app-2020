@@ -192,7 +192,7 @@ const EssentialApplicantInfo = (props) => {
 
           />
         </span>
-        <span class="form-right">
+        <span class="es-form-right">
           <RadioButton
             heading="Nationality"
             options={nationalityOptions}

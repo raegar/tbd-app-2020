@@ -14,15 +14,15 @@ import ClearingOfferMadeSecondPage from './components/ClearingOfferMade/Clearing
 import ClearingOfferMadeThirdPage from './components/ClearingOfferMade/ClearingOfferMadeThirdPage';
 import ClearingOfferMadeFourthPage from './components/ClearingOfferMade/ClearingOfferMadeFourthPage';
 import ClearingOfferMadeFifthPage from './components/ClearingOfferMade/ClearingOfferMadeFifthPage';
-import {isMobile} from 'react-device-detect';
 
 const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
 
 function App() {
-  const className1 = isMobile ? "mobile-App" : "App";
+ /* const className1 = isMobile ? "mobile-App" : "App"; */
   return (
     <Router basename={baseUrl}>
-    <div className={className1}>
+    <div className="App">
+      <div className="main-app">
       <Headers/>
         <Switch>
           <Route path='/' exact component={SelectRole} />
@@ -36,8 +36,8 @@ function App() {
           <Route path='/ClearingOfferMadeFourthPage' component={ClearingOfferMadeFourthPage}/>
           <Route path='/ClearingOfferMadeFifthPage' component={ClearingOfferMadeFifthPage}/>
           <Route path='/DegreeQualifications' component={DegreeQualifications} />
-
         </Switch>
+      </div>
         <Footer/>
     </div>
     </Router>
