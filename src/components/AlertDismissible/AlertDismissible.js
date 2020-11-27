@@ -7,7 +7,7 @@ function AlertDismissible() {
     if (show) {
       return (
         <Alert className="Alert" onClose={() => setShow(false)} dismissible>
-          <Alert.Heading>Please request grades for the folowing GCSE / Level qualifiactions:</Alert.Heading>
+          <Alert.Heading>Please request GCSE grades</Alert.Heading>
         </Alert>
       );
     }
