@@ -8,11 +8,11 @@ exports[`Renders LevelTwoQualifications 1`] = `
     <div
       class="l2-form-background"
     >
-      <h3
+      <h4
         class="form-title"
       >
         Applicant Qualifications
-      </h3>
+      </h4>
       <div
         class="fade Alert alert alert-dismissible show"
         role="alert"
