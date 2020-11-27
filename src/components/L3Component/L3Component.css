@@ -1,0 +1,26 @@
+.form-right {
+    position: relative;
+    left: 30%;
+    text-align: center !important;
+    max-width: 40% !important;
+}
+.mobile-form-right {
+    position: relative;
+    left: 20%;
+    text-align: center !important;
+    max-width: 60% !important;
+}
+.l3component
+{
+    font-size: 13px;
+}
+l3component p
+{
+    margin-bottom: 5px;
+}
+.mobilel3component
+{ 
+    font-size: 12 px;   
+  
+    text-align: center !important;
+}
