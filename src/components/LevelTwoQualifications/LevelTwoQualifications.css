@@ -40,13 +40,13 @@
 }
 .l2-mobile-form-right {
     position: relative;
-    left: 5%;
+    left: 7%;
     text-align: center !important;
-    max-width: 80% !important;
+    max-width: 70% !important;
 }
 .MobileTextArea
 {
-    max-width: 240px;
-    max-height: 80px;
+    max-width: 400px;
+    max-height: 100px;
    
 }

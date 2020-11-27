@@ -14,7 +14,7 @@ exports[`Renders Essential Applicant Info 1`] = `
         CLEARING APPLICATION
       </h3>
       <span
-        class="es-form-left"
+        class="ess-form-left"
       >
         <div
           class="mobiletextbox"
@@ -113,7 +113,7 @@ exports[`Renders Essential Applicant Info 1`] = `
         </div>
       </span>
       <span
-        class="es-form-right"
+        class="ess-form-right"
       >
         <div
           class="radio-buttons"
