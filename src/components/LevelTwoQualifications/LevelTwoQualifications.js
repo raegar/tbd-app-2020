@@ -84,7 +84,7 @@ const LevelTwoQualifications = (props) => {
   
     <div className={className2}>
       <div className="l2-form-background">
-        <h3 className="form-title">Applicant Qualifications & Experience</h3>
+        <h3 className="form-title">Applicant Qualifications</h3>
         <AlerDismissible/>
         <div class={className1}>
           <p>GCSE English Language</p>
