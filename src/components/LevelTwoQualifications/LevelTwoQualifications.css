@@ -1,10 +1,10 @@
 .l2-form-background {
-    width: 92%;
+    width: 100%;
     background-color: #B2DDDF;
     display: inline-block;
     padding: 20px;
     border: 1px solid black;
-    margin-bottom: 10px;
+    margin-bottom: 200px !important;
 }
 .centered-buttons
 {
@@ -17,12 +17,13 @@
     left: 16%;
     padding-right: 0px !important;
     padding-left: 0px !important;
-    margin-top: 5%;
+    margin-top: 2%;
+    margin-bottom: 5%  !important;
 }
 .l2-mobile-form-container {
     position: absolute;
     width: 95%;
-    left: 7.5%;
+    left: 6.5%;
     margin-top: 10%;
     padding-right: 0px !important;
     padding-left: 0px !important;
@@ -39,9 +40,9 @@
 }
 .l2-mobile-form-right {
     position: relative;
-    left: 20%;
+    left: 10%;
     text-align: center !important;
-    max-width: 80% !important;
+    max-width: 100% !important;
 }
 .MobileTextArea
 {

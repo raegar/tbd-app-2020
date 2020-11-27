@@ -113,7 +113,7 @@ exports[`Renders Essential Applicant Info 1`] = `
         </div>
       </span>
       <span
-        class="form-right"
+        class="es-form-right"
       >
         <div
           class="radio-buttons"

@@ -1,7 +1,11 @@
 
 .App {
   position: relative;
-  min-height: 165vh;
+
+}
+.main-app
+{
+  margin-bottom: 200px !important;
 }
 .mobile-App {
   position: relative;
