@@ -1,5 +1,5 @@
 .l2-form-background {
-    width: 100%;
+    width: 95%;
     background-color: #B2DDDF;
     display: inline-block;
     padding: 20px;
@@ -22,7 +22,7 @@
 }
 .l2-mobile-form-container {
     position: absolute;
-    width: 95%;
+    width: 92%;
     left: 6.5%;
     margin-top: 10%;
     padding-right: 0px !important;
@@ -40,13 +40,13 @@
 }
 .l2-mobile-form-right {
     position: relative;
-    left: 10%;
+    left: 5%;
     text-align: center !important;
-    max-width: 100% !important;
+    max-width: 80% !important;
 }
 .MobileTextArea
 {
-    max-width: 120px;
-    max-height: 60px;
+    max-width: 240px;
+    max-height: 80px;
    
 }
