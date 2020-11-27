@@ -14,13 +14,15 @@ import ClearingOfferMadeSecondPage from './components/ClearingOfferMade/Clearing
 import ClearingOfferMadeThirdPage from './components/ClearingOfferMade/ClearingOfferMadeThirdPage';
 import ClearingOfferMadeFourthPage from './components/ClearingOfferMade/ClearingOfferMadeFourthPage';
 import ClearingOfferMadeFifthPage from './components/ClearingOfferMade/ClearingOfferMadeFifthPage';
-
+import {isMobile} from 'react-device-detect';
 
 const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
+
 function App() {
+  const className1 = isMobile ? "mobile-App" : "App";
   return (
     <Router basename={baseUrl}>
-    <div className="App">
+    <div className={className1}>
       <Headers/>
         <Switch>
           <Route path='/' exact component={SelectRole} />

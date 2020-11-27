@@ -3,7 +3,10 @@
   position: relative;
   min-height: 165vh;
 }
-
+.mobile-App {
+  position: relative;
+  min-height: 175vh;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
