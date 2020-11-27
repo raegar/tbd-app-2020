@@ -7,6 +7,7 @@ export default class Footers extends React.Component{
     render(){
         const className = isMobile ? "MobileFooter" : "ucpFooter";
         return (
+            
             <footer className={className}/>   
         )
     }

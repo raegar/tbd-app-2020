@@ -125,8 +125,8 @@ const EssentialApplicantInfo = (props) => {
     }
   }
   return (
-    <Container className="form-container">
-      <div className="form-background">
+    <Container className="es-form-container">
+      <div className="es-form-background">
         <h3 className="form-title">CLEARING APPLICATION</h3>
         <span class="form-left">
           <TextBox
