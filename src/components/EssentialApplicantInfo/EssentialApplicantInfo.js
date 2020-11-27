@@ -128,7 +128,7 @@ const EssentialApplicantInfo = (props) => {
     <Container className="es-form-container">
       <div className="es-form-background">
         <h3 className="form-title">CLEARING APPLICATION</h3>
-        <span class="form-left">
+        <span class="es-form-left">
           <TextBox
             title="Name"
             placeholder="Enter your name"

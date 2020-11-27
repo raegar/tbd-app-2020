@@ -14,7 +14,7 @@ exports[`Renders Essential Applicant Info 1`] = `
         CLEARING APPLICATION
       </h3>
       <span
-        class="form-left"
+        class="es-form-left"
       >
         <div
           class="mobiletextbox"
