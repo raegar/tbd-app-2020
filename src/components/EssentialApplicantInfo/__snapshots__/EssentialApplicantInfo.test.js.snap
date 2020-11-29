@@ -3,10 +3,10 @@
 exports[`Renders Essential Applicant Info 1`] = `
 <DocumentFragment>
   <div
-    class="form-container container"
+    class="es-form-container container"
   >
     <div
-      class="form-background"
+      class="es-form-background"
     >
       <h3
         class="form-title"
@@ -14,7 +14,7 @@ exports[`Renders Essential Applicant Info 1`] = `
         CLEARING APPLICATION
       </h3>
       <span
-        class="form-left"
+        class="ess-form-left"
       >
         <div
           class="mobiletextbox"
@@ -113,7 +113,7 @@ exports[`Renders Essential Applicant Info 1`] = `
         </div>
       </span>
       <span
-        class="form-right"
+        class="ess-form-right"
       >
         <div
           class="radio-buttons"
@@ -337,7 +337,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             id="confirmButton"
           >
             <a
-              href="/emptyLink"
+              href="/LevelTwoQualifications"
             >
               <button
                 class="mediumbutton"
@@ -356,18 +356,13 @@ exports[`Renders Essential Applicant Info 1`] = `
           <div
             id="confirmButton1"
           >
-            <a
-              href="/emptyLink"
+            <button
+              class="mediumbutton"
+              data-testid="ucpButton"
+              type="button"
             >
-              <button
-                class="mediumbutton"
-                data-testid="ucpButton"
-                primary="True"
-                type="button"
-              >
-                Request Call Back​
-              </button>
-            </a>
+              Request a Call Back​
+            </button>
           </div>
         </div>
         <div

@@ -1,0 +1,33 @@
+.Alert
+{
+    background-color: #F08575;
+    color: white;
+    padding: 15px !important;
+}
+.close
+{
+    float: right;
+    background-color: white;
+    color: red !important;
+    border-color: white;   
+}
+.close span
+{
+    float: right;
+    background-color: white !important;
+    color: red !important;
+    border-color: white;   
+    padding: 2px;
+    width: 28px;
+   
+}
+.alert-heading
+{
+    text-align: center !important;
+    font-size: 12px !important;
+    font-weight: bolder;
+}
+.sr-only
+{
+    display: none;
+}

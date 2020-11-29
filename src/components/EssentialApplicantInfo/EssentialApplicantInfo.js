@@ -5,6 +5,7 @@ import RadioButton from "../RadioButton/RadioButton";
 import "./EssentialApplicantInfo.css";
 import { Container, Row, Col } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
+import Modal from "../Modal/Modal";
 import {isMobile} from 'react-device-detect';
 
 const EssentialApplicantInfo = (props) => {
@@ -35,6 +36,21 @@ const EssentialApplicantInfo = (props) => {
     { label: "No", id: "supportNo", value: "no" },
   ];
 
+  var time = [
+      {value: 'morning', label: '09:00am - 12:00pm'},
+      {value: 'afternoon', label: '12:00pm - 15:00pm'},
+      {value: 'evening', label: '15:00pm - 17:00pm'}
+    ];
+  
+  var days = [
+      {value: 'monday', label: 'Monday'},
+      {value: 'tuesday', label: 'Tuesday'},
+      {value: 'wednesday', label: 'Wednesday'},
+      {value: 'thursday', label: 'Thursday'},
+      {value: 'friday', label: 'Friday'}
+    ];
+
+
   function UserTypeSelect() {
     if (global.userType === "staff") {
       return (
@@ -63,6 +79,7 @@ const EssentialApplicantInfo = (props) => {
           <Col className="centered-buttons">
             <div id="confirmButton">
               <UCPButton
+                to = "/LevelTwoQualifications"
                 primary="True"
                 className="mediumbutton"
                 buttonText="Apply Now"
@@ -71,11 +88,26 @@ const EssentialApplicantInfo = (props) => {
           </Col>
           <Col className="centered-buttons">
             <div id="confirmButton1">
-              <UCPButton
-                primary="True"
-                className="mediumbutton"
-                buttonText="Request Call Back"
-              />
+              <Modal id="hello" btnText="Request a Call Back">
+                <div>
+                  <h2>Callback Request</h2>
+                  <p>Please select a day and time you would be available.</p>
+                  <Row id="dropdownRow">
+                    <Col className="dropdownOptions1">
+                  <DropdownMenu placeholder="Please select a day..." options={days}/>
+                  </Col>
+                  <Col className="dropdownOptions2">
+                  <DropdownMenu placeholder="Please select a time..." options={time}/>
+                  </Col>
+                  </Row>
+                  <br></br>
+                  <UCPButton 
+                    to="none"
+                    primary="True"
+                    className="smallbutton"
+                    buttonText="Submit" />
+                </div>
+              </Modal>
             </div>
           </Col>
 
@@ -93,10 +125,10 @@ const EssentialApplicantInfo = (props) => {
     }
   }
   return (
-    <Container className="form-container">
-      <div className="form-background">
+    <Container className="es-form-container">
+      <div className="es-form-background">
         <h3 className="form-title">CLEARING APPLICATION</h3>
-        <span class="form-left">
+        <span class="ess-form-left">
           <TextBox
             title="Name"
             placeholder="Enter your name"
@@ -160,7 +192,7 @@ const EssentialApplicantInfo = (props) => {
 
           />
         </span>
-        <span class="form-right">
+        <span class="ess-form-right">
           <RadioButton
             heading="Nationality"
             options={nationalityOptions}
@@ -183,7 +215,6 @@ const EssentialApplicantInfo = (props) => {
             subtitle="Do you have any additional learning support needs or disabilities?"
             attribute="disabled"
           />
-
           <h4>Preferred Course</h4>
           <DropdownMenu />
         </span>

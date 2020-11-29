@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders L3Component 1`] = `
+<DocumentFragment>
+  <div
+    class="l3component"
+  >
+    <p>
+      Qualification : #undefined 
+    </p>
+    <p>
+      (E.g. A Level, BTEC, Access)
+    </p>
+    <div
+      class="mobiletextbox"
+    >
+      <label
+        for="qualificationundefined"
+      />
+      <input
+        id="qualificationundefined"
+        maxlength="30"
+        minlength="0"
+        placeholder="Enter qualification #undefined"
+        type="text"
+      />
+    </div>
+    <p>
+      Subject: (E.g. Bussiness Studies)
+    </p>
+    <div
+      class="mobiletextbox"
+    >
+      <label
+        for="subjectundefined"
+      />
+      <input
+        id="subjectundefined"
+        maxlength="30"
+        minlength="0"
+        placeholder="Enter subject #undefined"
+        type="text"
+      />
+    </div>
+    <p>
+      Grade Achieved
+    </p>
+    <div
+      class="mobiletextbox"
+    >
+      <label
+        for="gradeundefined"
+      />
+      <input
+        id="gradeundefined"
+        maxlength="30"
+        minlength="0"
+        placeholder="Enter grade #undefined"
+        type="text"
+      />
+    </div>
+    <p>
+      Year Achieved
+    </p>
+    <div
+      class="mobiletextbox"
+    >
+      <label
+        for="yearundefined"
+      />
+      <input
+        id="yearundefined"
+        maxlength="30"
+        minlength="0"
+        placeholder=""
+        type="date"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,7 +1,16 @@
-.App {
-  text-align: left;
-}
 
+.App {
+  position: relative;
+
+}
+.main-app
+{
+  margin-bottom: 200px !important;
+}
+.mobile-App {
+  position: relative;
+  min-height: 365vh;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

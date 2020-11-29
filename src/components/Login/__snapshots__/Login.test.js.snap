@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Login 1`] = `
+<DocumentFragment>
+  <div
+    class="ContainerStyle container"
+  >
+    <form>
+      <div
+        class="row"
+      >
+        <div
+          class="col"
+        >
+          <div
+            class="UserInfo"
+          >
+            <h2>
+              Login
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div
+        class="row"
+      >
+        <div
+          class="col"
+        >
+          <div
+            class="UserInfo"
+          >
+            <div
+              class="mobiletextbox"
+            >
+              <label>
+                Username
+              </label>
+              <input
+                maxlength="30"
+                minlength="0"
+                placeholder="Enter Your Username"
+                size="20"
+                type="text"
+              />
+            </div>
+          </div>
+          <div
+            class="InvalidInput"
+          >
+            <span />
+          </div>
+        </div>
+      </div>
+      <div
+        class="row"
+      >
+        <div
+          class="col"
+        >
+          <div
+            class="UserInfo"
+          >
+            <div
+              class="mobiletextbox"
+            >
+              <label>
+                Password
+              </label>
+              <input
+                maxlength="30"
+                minlength="0"
+                placeholder="Enter Your Password"
+                size="20"
+                type="password"
+              />
+            </div>
+          </div>
+          <div
+            class="InvalidInput"
+          >
+            <span />
+          </div>
+        </div>
+      </div>
+      <div
+        class="UserInfo"
+      >
+        <button
+          class="smallbutton"
+          data-testid="ucpButton"
+          type="button"
+        >
+          Submit​
+        </button>
+      </div>
+    </form>
+  </div>
+</DocumentFragment>
+`;
