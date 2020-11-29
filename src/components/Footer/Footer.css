@@ -15,11 +15,13 @@
 .ucpFooter{
     height: 80px;
     background-repeat: repeat-x;
+
 }
 
 /*Applies styles to mobile footer*/
 .MobileFooter{
-    height: 150px;
+    height: 180px;
     background-repeat: no-repeat;
     background-size: cover;
+  
 }
