@@ -1,0 +1,25 @@
+/*Applies styles to both footers*/
+.ucpFooter, .MobileFooter {
+    border-bottom: 1px solid teal;  
+    margin-top: 12%;  
+    width: 100%;
+    background-image: url('../../images/Footer.png');
+    background-position: center;
+    bottom: 0;
+    position: fixed;
+    
+   
+}
+
+/*Applies styles to desktop footer*/
+.ucpFooter{
+    height: 80px;
+    background-repeat: repeat-x;
+}
+
+/*Applies styles to mobile footer*/
+.MobileFooter{
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

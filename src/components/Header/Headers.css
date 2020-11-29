@@ -1,9 +1,18 @@
+.UCPLogoBlue, .MobileUCPLogoBlue{
+    border-bottom: 1px solid teal;
+    display: block;
+
+}
+
 .UCPLogoBlue{
-    max-width: 350px;
-    max-height: auto;
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 25%;
 }
 
 .MobileUCPLogoBlue{
-    max-width: 250px;
-    max-height: auto;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
 }
