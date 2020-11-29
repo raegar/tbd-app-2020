@@ -111,16 +111,7 @@ const EssentialApplicantInfo = (props) => {
             </div>
           </Col>
 
-          <Col className="centered-buttons">
-            <div id="confirmButton2">
-              <UCPButton
-                primary="True"
-                className="mediumbutton"
-                buttonText="Request Video Call Back"
-              />
-            </div>
-          </Col>
-        </Row>
+         </Row>
       );
     }
   }

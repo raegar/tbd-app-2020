@@ -20,63 +20,8 @@ const LevelTwoQualifications = (props) => {
     { label: "U", id: "u", value: "u" },
     { label: "n/a", id: "na", value: "na" },
   ];
-  function UserTypeSelect() {
-    if (props.userType === "staff") {
-      return (
-        <Row id="buttonRow">
-          <Col className="centered-buttons">
-            <UCPButton
-              primary="True"
-              className="mediumbutton"
-              buttonText="Go Back"
-            />
-          </Col>
-          <Col className="centered-buttons">
-            <div id="confirmButton" hidden>
-              <UCPButton
-                primary="True"
-                className="mediumbutton"
-                buttonText="Confirm and Go"
-              />
-            </div>
-          </Col>
-        </Row>
-      );
-    } else {
-      return (
-        <Row id="buttonRow">
-          <Col className="centered-buttons">
-            <div id="confirmButton" hidden>
-              <UCPButton
-                primary="True"
-                className="mediumbutton"
-                buttonText="Apply Now"
-              />
-            </div>
-          </Col>
-          <Col className="centered-buttons">
-            <div id="confirmButton1" hidden>
-              <UCPButton
-                primary="True"
-                className="mediumbutton"
-                buttonText="Request Call Back"
-              />
-            </div>
-          </Col>
-
-          <Col className="centered-buttons">
-            <div id="confirmButton2" hidden>
-              <UCPButton
-                primary="True"
-                className="mediumbutton"
-                buttonText="Request Video Call Back"
-              />
-            </div>
-          </Col>
-        </Row>
-      );
-    }
-  }
+  
+ 
   const className = isMobile ? "MobileTextArea" : "DesktopTextArea";  
   const className1 = isMobile ? "l2-mobile-form-right" : "l2-form-right ";
   const className2 = isMobile ? "l2-mobile-form-container" : "l2-form-container";
@@ -98,9 +43,29 @@ const LevelTwoQualifications = (props) => {
           <p>L2 Qualifications</p>
           <textarea className = {className} name="l2qualificaitons" placeholder="Enter level 2 qualifications"  rows={6} cols={45}/>
         </div>
+
       </div>
-      <div>{UserTypeSelect()}</div>
+      <Row id="buttonRow">
+          <Col className="centered-buttons">
+            <UCPButton
+              primary="True"
+              className="mediumbutton"
+              buttonText="Go Back"
+            />
+          </Col>
+          <Col className="centered-buttons">
+            <div id="confirmButton">
+              <UCPButton
+                primary="True"
+                className="mediumbutton"
+                buttonText="Confirm and Go"
+              />
+            </div>
+          </Col>
+        </Row>
     </div>
+
+    
   );
 };
 
