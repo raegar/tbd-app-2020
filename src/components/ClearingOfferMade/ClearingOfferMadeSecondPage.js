@@ -47,7 +47,7 @@ return (
             options={offerOptions}
             name="offer"
             oc={GetTestData()}
-            onchange={}
+            onchange={GetNextPage()}
   />
 <Row>
 <Col><UCPButton to='/ClearingOfferMade'
