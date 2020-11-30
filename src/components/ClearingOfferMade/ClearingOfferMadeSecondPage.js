@@ -34,8 +34,12 @@ return ( <Container>
 
 
 <Row>
-<Col><UCPButton></UCPButton></Col>
-<Col><UCPButton></UCPButton></Col>
+<Col><UCPButton primary="True"
+                className="mediumbutton"
+                buttonText="Go Back"></UCPButton></Col>
+    <Col><UCPButton primary="True"
+                className="mediumbutton"
+                buttonText="Confirm and Continue"></UCPButton></Col>
 </Row>
  </Container>
 )

@@ -14,8 +14,12 @@ const ClearingOfferMade = (props) => {
     <p>If applicant has declared a criminal conviction or applied with prior credit, an offer cannot be made. Inform applicant we will arrange a telephone interview.</p>
     <p>ALL verbal offers must be prefaced with the words "On the basis of the information you have provided, I am pleased to offer you a place on ..."</p>
     <p> • The applicant must then add UCP as their Clearing Choice via UCAS Track (ideally within 24 hours). If the applicant does not have a UCAS application and they are only wishing to apply to UCP, an RPA form can be completed in place of UCAS - speak to Zoe Rumball </p>
-    <Col><UCPButton></UCPButton></Col>
-    <Col><UCPButton></UCPButton></Col>
+    <Col><UCPButton primary="True"
+                className="mediumbutton"
+                buttonText="Go Back"></UCPButton></Col>
+    <Col><UCPButton primary="True"
+                className="mediumbutton"
+                buttonText="Confirm and Continue"></UCPButton></Col>
 
  </Container>
   )
