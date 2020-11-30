@@ -1,7 +1,7 @@
 import React from "react";
 import TextBox from "../../components/TextBox/TextBox";
 import "./ClearingOfferMade.css";
-import { Container, Col } from "react-bootstrap";
+import { Container, Col, Row } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 
 
@@ -14,13 +14,16 @@ return ( <Container>
     <h3>41. Please enter course applied for</h3>
     <TextBox/>
 
-
-    <Col><UCPButton primary="True"
+<Row>
+    <Col><UCPButton to='/ClearingOfferMadeForthPage'
+                primary="True"
                 className="mediumbutton"
-                buttonText="Go Back"></UCPButton></Col>
+                buttonText="Go Back"
+                href="/ClearingOfferMadeFourthPage"></UCPButton></Col>
     <Col><UCPButton primary="True"
                 className="mediumbutton"
                 buttonText="Confirm and Continue"></UCPButton></Col>
+                </Row>
  </Container>
 )
 }

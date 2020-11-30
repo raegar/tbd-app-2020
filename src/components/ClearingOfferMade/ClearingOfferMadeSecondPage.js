@@ -4,46 +4,63 @@ import "./ClearingOfferMade.css";
 import { Container, Col, Row } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 
+
+
+var NAME = false;
+function GetTestData(selectedValue) {
+    if (selectedValue === "No") {
+        NAME = true;
+    }
+};
+
+function GetNextPage(){
+  if(NAME)
+  {
+      return "/ClearingOfferMadeThirdPage";
+  }
+  else{
+
+     return "/ClearingOfferMadeFourthPage";
+};
+} 
 const ClearingOfferMadeSecondPages = (props) => {
 
     var offerOptions = [
         { label: "Yes", id: "offerYes", value: "yes" },
         { label: "Yes (Partial Requirements met, this will be where student doesn't have all requirements)", id: "offerYesPart", value: "yespart" },
-        { label: "Yes (Subject to Ell Status)", id: "offerYesSubjectToStatus", value: "yesstatus" },
-        { label: "No", id: "offerNo", value: "no" },
-        { label: "Interview Required (this may be due to students having industry experience rather than qualifications) O RPA (Highlight this with Emma Cave or Zoe)", id: "offerInterviewRequired", value: "interviewrequired" },
-        { label: "RPA (Highlight this with Emma Cave or Zoe", id: "offerInterviewRequired", value: "interviewrequired" },
-
-        
-      ];
+        { label: "Yes (Subject to Ell Status)", id:"Status", value: "yesstatus" },
+        { label: "No", id: "offerNo",value: "No" },
+        { label: "Interview Required (this may be due to students having industry experience rather than qualifications)", id: "offerInterviewRequired", value: "interviewrequired" },
+        { label: "RPA (Highlight this with Emma Cave or Zoe", id: "offerInterviewRequired", value: "interviewrequired" }      
+      ]
+    ;
+   
 return ( 
 
 <Container>
 <h1>Offer</h1>
-    <h1>* Required</h1>
+    <h4>* Required</h4>
 <h3>37. Offer made? (YES/NO)</h3>
 <p><i>Only UNCONDITIONAL Offers can be made (unless interview is needed)</i></p>
 <RadioButton
-    heading="Yes"
-    options={offerOptions}
-    name="offer"
-
-    attribute="disabled"
+            heading="Yes"
+            options={offerOptions}
+            name="offer"
+            oc={GetTestData()}
+            onchange={}
   />
-
-
-
-
-
 <Row>
-<Col><UCPButton primary="True"
+<Col><UCPButton to='/ClearingOfferMade'
+                primary="True"
                 className="mediumbutton"
-                buttonText="Go Back"></UCPButton></Col>
-    <Col><UCPButton to='/ClearingOfferMadeThirdPage'
+                buttonText="Go Back"
+                href="/ClearingOfferMade"></UCPButton></Col>
+                
+    <Col><UCPButton to={GetNextPage()}
                 primary="True"
                 className="mediumbutton"
                 buttonText="Confirm and Continue"
-                href="/ClearingOfferMadeThirdPage"></UCPButton></Col>
+                ></UCPButton></Col>
 </Row>
 </Container>
 )

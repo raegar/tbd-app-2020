@@ -2,13 +2,13 @@ import React from 'react'
 import './RadioButton.css'
 import PropTypes from 'prop-types'
 
-const RadioButton = ({name, options, heading, subtitle,  attribute, oc, ...props}) => {
+
+const RadioButton = ({name, options, heading, subtitle,  attribute, oc, onchange, ...props}) => {
 
     //Iterate through options array and create an input + label for each
-
     var items = options.map((item) =>
         <div className="radio-group">
-            <input disabled={attribute} name={name} type="radio" id={item.id} value={item.value} onClick={oc ? (e) => oc(item.value) : ''}/>
+            <input disabled={attribute} name={name} type="radio" id={item.id} value={item.value} onClick={oc ? (e) => oc(item.value) : ''} OnChange={onchange}/>
             <label htmlFor={item.id}>{item.label}</label>
         </div>
     );
