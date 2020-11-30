@@ -56,6 +56,7 @@ const LevelTwoQualifications = (props) => {
           <Col className="centered-buttons">
             <div id="confirmButton">
               <UCPButton
+               to = "/LevelThreeQualifications"
                 primary="True"
                 className="mediumbutton"
                 buttonText="Confirm and Go"

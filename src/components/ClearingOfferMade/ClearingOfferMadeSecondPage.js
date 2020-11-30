@@ -4,7 +4,7 @@ import "./ClearingOfferMade.css";
 import { Container, Col, Row } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 
-const ClearingOfferMadeSecondPage = (props) => {
+const ClearingOfferMadeSecondPages = (props) => {
 
     var offerOptions = [
         { label: "Yes", id: "offerYes", value: "yes" },
@@ -16,7 +16,9 @@ const ClearingOfferMadeSecondPage = (props) => {
 
         
       ];
-return ( <Container>
+return ( 
+
+<Container>
 <h1>Offer</h1>
     <h1>* Required</h1>
 <h3>37. Offer made? (YES/NO)</h3>
@@ -43,7 +45,7 @@ return ( <Container>
                 buttonText="Confirm and Continue"
                 href="/ClearingOfferMadeThirdPage"></UCPButton></Col>
 </Row>
- </Container>
+</Container>
 )
 }
-export default ClearingOfferMadeSecondPage;
+export default ClearingOfferMadeSecondPages;
