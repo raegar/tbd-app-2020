@@ -42,32 +42,41 @@ exports[`Renders ClearingOfferMadeFifthPage 1`] = `
       />
     </div>
     <div
-      class="col"
+      class="row"
     >
-      <a
-        href="/emptyLink"
+      <div
+        class="col"
       >
-        <button
-          data-testid="ucpButton"
-          type="button"
+        <a
+          href="/ClearingOfferMadeForthPage"
         >
-          ​
-        </button>
-      </a>
-    </div>
-    <div
-      class="col"
-    >
-      <a
-        href="/emptyLink"
+          <button
+            class="mediumbutton"
+            data-testid="ucpButton"
+            href="/ClearingOfferMadeFourthPage"
+            primary="True"
+            type="button"
+          >
+            Go Back​
+          </button>
+        </a>
+      </div>
+      <div
+        class="col"
       >
-        <button
-          data-testid="ucpButton"
-          type="button"
+        <a
+          href="/emptyLink"
         >
-          ​
-        </button>
-      </a>
+          <button
+            class="mediumbutton"
+            data-testid="ucpButton"
+            primary="True"
+            type="button"
+          >
+            Confirm and Continue​
+          </button>
+        </a>
+      </div>
     </div>
   </div>
 </DocumentFragment>

@@ -318,7 +318,7 @@ exports[`Renders LevelTwoQualifications 1`] = `
         </p>
         <textarea
           class="DesktopTextArea"
-          cols="45"
+          cols="30"
           name="l2qualificaitons"
           placeholder="Enter level 2 qualifications"
           rows="6"
@@ -352,7 +352,7 @@ exports[`Renders LevelTwoQualifications 1`] = `
           id="confirmButton"
         >
           <a
-            href="/emptyLink"
+            href="/LevelThreeQualifications"
           >
             <button
               class="mediumbutton"
