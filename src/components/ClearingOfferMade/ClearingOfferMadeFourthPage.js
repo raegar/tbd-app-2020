@@ -1,7 +1,7 @@
 import React from "react";
 import TextBox from "../../components/TextBox/TextBox";
 import "./ClearingOfferMade.css";
-import { Container, Col } from "react-bootstrap";
+import { Container, Col , Row} from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 
 
@@ -13,11 +13,20 @@ return (<Container>
     <h3>39. Please state reasons:</h3>
     <TextBox/>
 
-
-
-<Col><UCPButton></UCPButton></Col>
-    <Col><UCPButton></UCPButton></Col>
+<Row>
+    <Col><UCPButton to='/ClearingOfferMadeThirdPage'
+                primary="True"
+                className="mediumbutton"
+                buttonText="Go Back"
+                href="/ClearingOfferMadeThirdPage"></UCPButton></Col>
+    <Col><UCPButton to='/ClearingOfferMadeFifthPage'
+                primary="True"
+                className="mediumbutton"
+                buttonText="Confirm and Continue"
+                href="/ClearingOfferMadeFifthPage"></UCPButton></Col>
+                </Row>
  </Container>
+ 
 )
 }
 export default ClearingOfferMadeFourthPage;

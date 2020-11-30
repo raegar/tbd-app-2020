@@ -8,9 +8,9 @@ exports[`Renders ClearingOfferMadeSecondPage 1`] = `
     <h1>
       Offer
     </h1>
-    <h1>
+    <h4>
       * Required
-    </h1>
+    </h4>
     <h3>
       37. Offer made? (YES/NO)
     </h3>
@@ -30,7 +30,6 @@ exports[`Renders ClearingOfferMadeSecondPage 1`] = `
         class="radio-group"
       >
         <input
-          disabled=""
           id="offerYes"
           name="offer"
           type="radio"
@@ -46,7 +45,6 @@ exports[`Renders ClearingOfferMadeSecondPage 1`] = `
         class="radio-group"
       >
         <input
-          disabled=""
           id="offerYesPart"
           name="offer"
           type="radio"
@@ -62,14 +60,13 @@ exports[`Renders ClearingOfferMadeSecondPage 1`] = `
         class="radio-group"
       >
         <input
-          disabled=""
-          id="offerYesSubjectToStatus"
+          id="Status"
           name="offer"
           type="radio"
           value="yesstatus"
         />
         <label
-          for="offerYesSubjectToStatus"
+          for="Status"
         >
           Yes (Subject to Ell Status)
         </label>
@@ -78,11 +75,10 @@ exports[`Renders ClearingOfferMadeSecondPage 1`] = `
         class="radio-group"
       >
         <input
-          disabled=""
           id="offerNo"
           name="offer"
           type="radio"
-          value="no"
+          value="No"
         />
         <label
           for="offerNo"
@@ -94,7 +90,6 @@ exports[`Renders ClearingOfferMadeSecondPage 1`] = `
         class="radio-group"
       >
         <input
-          disabled=""
           id="offerInterviewRequired"
           name="offer"
           type="radio"
@@ -103,14 +98,13 @@ exports[`Renders ClearingOfferMadeSecondPage 1`] = `
         <label
           for="offerInterviewRequired"
         >
-          Interview Required (this may be due to students having industry experience rather than qualifications) O RPA (Highlight this with Emma Cave or Zoe)
+          Interview Required (this may be due to students having industry experience rather than qualifications)
         </label>
       </div>
       <div
         class="radio-group"
       >
         <input
-          disabled=""
           id="offerInterviewRequired"
           name="offer"
           type="radio"
@@ -130,13 +124,16 @@ exports[`Renders ClearingOfferMadeSecondPage 1`] = `
         class="col"
       >
         <a
-          href="/emptyLink"
+          href="/ClearingOfferMade"
         >
           <button
+            class="mediumbutton"
             data-testid="ucpButton"
+            href="/ClearingOfferMade"
+            primary="True"
             type="button"
           >
-            ​
+            Go Back​
           </button>
         </a>
       </div>
@@ -144,13 +141,15 @@ exports[`Renders ClearingOfferMadeSecondPage 1`] = `
         class="col"
       >
         <a
-          href="/emptyLink"
+          href="/ClearingOfferMadeFourthPage"
         >
           <button
+            class="mediumbutton"
             data-testid="ucpButton"
+            primary="True"
             type="button"
           >
-            ​
+            Confirm and Continue​
           </button>
         </a>
       </div>

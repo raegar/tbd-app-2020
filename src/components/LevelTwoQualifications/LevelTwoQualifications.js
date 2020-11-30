@@ -41,7 +41,7 @@ const LevelTwoQualifications = (props) => {
           <p>GCSE Science / Additional Science</p>
           <DropdownMenu placeholder="Select Grade" options={gsceGrades} />
           <p>L2 Qualifications</p>
-          <textarea className = {className} name="l2qualificaitons" placeholder="Enter level 2 qualifications"  rows={6} cols={45}/>
+          <textarea className = {className} name="l2qualificaitons" placeholder="Enter level 2 qualifications"  rows={6} cols={30}/>
         </div>
 
       </div>
@@ -56,6 +56,7 @@ const LevelTwoQualifications = (props) => {
           <Col className="centered-buttons">
             <div id="confirmButton">
               <UCPButton
+               to = "/LevelThreeQualifications"
                 primary="True"
                 className="mediumbutton"
                 buttonText="Confirm and Go"

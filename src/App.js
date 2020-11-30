@@ -31,7 +31,7 @@ function App() {
           <Route path='/LevelTwoQualifications' component={LevelTwoQualifications}/>
           <Route path='/LevelThreeQualifications' component={LevelThreeQualifications}/>
           <Route path='/ClearingOfferMade' component={ClearingOfferMade}/>
-          <Route path='/ClearingOfferSecondPage' component={ClearingOfferMadeSecondPage}/>
+          <Route path='/ClearingOfferMadeSecondPage' component={ClearingOfferMadeSecondPage}/>
           <Route path='/ClearingOfferMadeThirdPage' component={ClearingOfferMadeThirdPage}/>
           <Route path='/ClearingOfferMadeFourthPage' component={ClearingOfferMadeFourthPage}/>
           <Route path='/ClearingOfferMadeFifthPage' component={ClearingOfferMadeFifthPage}/>

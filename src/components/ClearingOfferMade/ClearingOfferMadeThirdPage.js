@@ -1,7 +1,7 @@
 import React from "react";
 import TextBox from "../../components/TextBox/TextBox";
 import "./ClearingOfferMade.css";
-import { Container, Col } from "react-bootstrap";
+import { Container, Col, Row } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 
 
@@ -11,11 +11,18 @@ return ( <Container>
     <h1>Not Offered Details</h1>
     <h3>38. If NO, please state reasons:</h3>
     <TextBox/>
-
-
-    <Col><UCPButton></UCPButton></Col>
-    <Col><UCPButton></UCPButton></Col>
-    
+<Row>
+    <Col><UCPButton to='/ClearingOfferMadeSecondPage'
+                primary="True"
+                className="mediumbutton"
+                buttonText="Go Back"
+                href="/ClearingOfferMadeSecondPage"></UCPButton></Col>
+    <Col><UCPButton to='/ClearingOfferMadeFourthPage'
+                primary="True"
+                className="mediumbutton"
+                buttonText="Confirm and Continue"
+                href="/ClearingOfferMadeFourthPage"></UCPButton></Col>
+    </Row>
  </Container>
 )
 }
