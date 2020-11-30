@@ -3,7 +3,7 @@ import "./LevelThreeQualifications.css";
 import RadioButton from '../RadioButton/RadioButton';
 import L3Component from '../L3Component/L3Component';
 import { isMobile } from 'react-device-detect';
-import {Row, Col, Container} from "react-bootstrap";
+import {Row, Col} from "react-bootstrap";
 import UCPButton from '../Buttons/UCPButton'
 var l3QualificationsOptions = [
   { label: "Yes", id: "qualificationYes", value: "yes" },
@@ -28,7 +28,7 @@ const LevelThreeQualifications = () => {
   }
   const className1 = isMobile ? "l3-mobile-form-right" : "l3-form-right";
   return (
-    <Container>
+  
     <div className={className2}>
       <div className="form-background">
         <h3 className="form-title">Level 3 Qualifications</h3>
@@ -66,7 +66,7 @@ const LevelThreeQualifications = () => {
           </Col>
         </Row>
     </div>
-    </Container>
+   
   );
 
 };
