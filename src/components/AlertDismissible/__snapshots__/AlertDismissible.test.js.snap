@@ -24,7 +24,7 @@ exports[`Renders AlertDismissible 1`] = `
     <div
       class="alert-heading h4"
     >
-      Please request grades for the folowing GCSE / Level qualifiactions:
+      Please request GCSE grades
     </div>
   </div>
 </DocumentFragment>

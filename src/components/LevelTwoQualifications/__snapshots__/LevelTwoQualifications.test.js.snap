@@ -8,11 +8,11 @@ exports[`Renders LevelTwoQualifications 1`] = `
     <div
       class="l2-form-background"
     >
-      <h3
+      <h4
         class="form-title"
       >
-        Applicant Qualifications & Experience
-      </h3>
+        Applicant Qualifications
+      </h4>
       <div
         class="fade Alert alert alert-dismissible show"
         role="alert"
@@ -35,7 +35,7 @@ exports[`Renders LevelTwoQualifications 1`] = `
         <div
           class="alert-heading h4"
         >
-          Please request grades for the folowing GCSE / Level qualifiactions:
+          Please request GCSE grades
         </div>
       </div>
       <div
@@ -325,73 +325,44 @@ exports[`Renders LevelTwoQualifications 1`] = `
         />
       </div>
     </div>
-    <div>
+    <div
+      class="row"
+      id="buttonRow"
+    >
       <div
-        class="row"
-        id="buttonRow"
+        class="centered-buttons col"
+      >
+        <a
+          href="/emptyLink"
+        >
+          <button
+            class="mediumbutton"
+            data-testid="ucpButton"
+            primary="True"
+            type="button"
+          >
+            Go Back​
+          </button>
+        </a>
+      </div>
+      <div
+        class="centered-buttons col"
       >
         <div
-          class="centered-buttons col"
+          id="confirmButton"
         >
-          <div
-            hidden=""
-            id="confirmButton"
+          <a
+            href="/emptyLink"
           >
-            <a
-              href="/emptyLink"
+            <button
+              class="mediumbutton"
+              data-testid="ucpButton"
+              primary="True"
+              type="button"
             >
-              <button
-                class="mediumbutton"
-                data-testid="ucpButton"
-                primary="True"
-                type="button"
-              >
-                Apply Now​
-              </button>
-            </a>
-          </div>
-        </div>
-        <div
-          class="centered-buttons col"
-        >
-          <div
-            hidden=""
-            id="confirmButton1"
-          >
-            <a
-              href="/emptyLink"
-            >
-              <button
-                class="mediumbutton"
-                data-testid="ucpButton"
-                primary="True"
-                type="button"
-              >
-                Request Call Back​
-              </button>
-            </a>
-          </div>
-        </div>
-        <div
-          class="centered-buttons col"
-        >
-          <div
-            hidden=""
-            id="confirmButton2"
-          >
-            <a
-              href="/emptyLink"
-            >
-              <button
-                class="mediumbutton"
-                data-testid="ucpButton"
-                primary="True"
-                type="button"
-              >
-                Request Video Call Back​
-              </button>
-            </a>
-          </div>
+              Confirm and Go​
+            </button>
+          </a>
         </div>
       </div>
     </div>

@@ -111,24 +111,15 @@ const EssentialApplicantInfo = (props) => {
             </div>
           </Col>
 
-          <Col className="centered-buttons">
-            <div id="confirmButton2">
-              <UCPButton
-                primary="True"
-                className="mediumbutton"
-                buttonText="Request Video Call Back"
-              />
-            </div>
-          </Col>
-        </Row>
+         </Row>
       );
     }
   }
   return (
-    <Container className="form-container">
-      <div className="form-background">
+    <Container className="es-form-container">
+      <div className="es-form-background">
         <h3 className="form-title">CLEARING APPLICATION</h3>
-        <span class="form-left">
+        <span class="ess-form-left">
           <TextBox
             title="Name"
             placeholder="Enter your name"
@@ -192,7 +183,7 @@ const EssentialApplicantInfo = (props) => {
 
           />
         </span>
-        <span class="form-right">
+        <span class="ess-form-right">
           <RadioButton
             heading="Nationality"
             options={nationalityOptions}
