@@ -37,9 +37,11 @@ return ( <Container>
 <Col><UCPButton primary="True"
                 className="mediumbutton"
                 buttonText="Go Back"></UCPButton></Col>
-    <Col><UCPButton primary="True"
+    <Col><UCPButton to='/ClearingOfferMadeThirdPage'
+                primary="True"
                 className="mediumbutton"
-                buttonText="Confirm and Continue"></UCPButton></Col>
+                buttonText="Confirm and Continue"
+                href="/ClearingOfferMadeThirdPage"></UCPButton></Col>
 </Row>
  </Container>
 )

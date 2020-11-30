@@ -12,13 +12,14 @@ return ( <Container>
     <h3>38. If NO, please state reasons:</h3>
     <TextBox/>
 
-
     <Col><UCPButton primary="True"
                 className="mediumbutton"
                 buttonText="Go Back"></UCPButton></Col>
-    <Col><UCPButton primary="True"
+    <Col><UCPButton to='/ClearingOfferMadeFourthPage'
+                primary="True"
                 className="mediumbutton"
-                buttonText="Confirm and Continue"></UCPButton></Col>
+                buttonText="Confirm and Continue"
+                href="/ClearingOfferMadeFourthPage"></UCPButton></Col>
     
  </Container>
 )

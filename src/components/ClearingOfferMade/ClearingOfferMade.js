@@ -17,9 +17,11 @@ const ClearingOfferMade = (props) => {
     <Col><UCPButton primary="True"
                 className="mediumbutton"
                 buttonText="Go Back"></UCPButton></Col>
-    <Col><UCPButton primary="True"
+    <Col><UCPButton to='/ClearingOfferMadeSecondPage'
+                primary="True"
                 className="mediumbutton"
-                buttonText="Confirm and Continue"></UCPButton></Col>
+                buttonText="Confirm and Continue"
+                href="/ClearingOfferMadeSecondPage"></UCPButton></Col>
 
  </Container>
   )
