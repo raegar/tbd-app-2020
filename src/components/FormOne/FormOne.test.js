@@ -3,7 +3,6 @@ import { render, cleanup, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import FormOne from './FormOne';
 import { BrowserRouter as Router} from 'react-router-dom';
-import userEvent from '@testing-library/user-event';
 
 //cleans up 
 afterEach(cleanup);
@@ -13,7 +12,7 @@ it("Renders Form One", () => {
     expect(asFragment()).toMatchSnapshot();
 });
 
-test('Prior Credit Conditional Rendering', async() => {
+test('Prior Credit Conditional Rendering', () => {
     render (
         <Router>
             <FormOne />
