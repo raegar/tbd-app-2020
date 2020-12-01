@@ -9,7 +9,7 @@ const Headers = () => {
 
     return (
         <header>   
-                <a href="/"><img data-testid="ucpLogoHeader" src={UCPLogo} className={className} alt="UCP official logo" /></a>  
+                <a href="/tbd-app-2020"><img data-testid="ucpLogoHeader" src={UCPLogo} className={className} alt="UCP official logo" /></a>  
         </header>
     )
 }
