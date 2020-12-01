@@ -1,18 +1,18 @@
 .UCPLogoBlue, .MobileUCPLogoBlue{
-    border-bottom: 1px solid teal;
+    border-bottom: 1px solid white;
     display: block;
-
 }
 
 .UCPLogoBlue{
-    margin-top: 5px;
-    margin-left: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
     width: 25%;
 }
 
 .MobileUCPLogoBlue{
-    margin-top: 5px;
+    margin-top: 25px;
     margin-left: auto;
     margin-right: auto;
     width: 95%;
+    display: block;
 }
