@@ -141,7 +141,7 @@ exports[`Renders ClearingOfferMadeSecondPage 1`] = `
         class="col"
       >
         <a
-          href="/ClearingOfferMadeFourthPage"
+          href="/ClearingOfferMadeThirdPage"
         >
           <button
             class="mediumbutton"

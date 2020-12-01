@@ -56,7 +56,7 @@ return (
                 buttonText="Go Back"
                 href="/ClearingOfferMade"></UCPButton></Col>
                 
-    <Col><UCPButton to={GetNextPage()}
+    <Col><UCPButton to='/ClearingOfferMadeThirdPage'
                 primary="True"
                 className="mediumbutton"
                 buttonText="Confirm and Continue"
