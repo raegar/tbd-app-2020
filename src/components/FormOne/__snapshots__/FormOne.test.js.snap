@@ -3,18 +3,13 @@
 exports[`Renders Form One 1`] = `
 <DocumentFragment>
   <div
-    class="form-container container"
+    class="form-container d-flex justify-content-center container"
   >
     <div
-      class="form-background"
+      class="form-background row"
     >
-      <h3
-        class="form-title"
-      >
-        CLEARING FORM
-      </h3>
-      <span
-        class="form-left"
+      <div
+        class="col"
       >
         <h4>
           Address
@@ -123,6 +118,7 @@ exports[`Renders Form One 1`] = `
             class="radio-group"
           >
             <input
+              data-testid="full"
               id="full"
               name="full-part"
               type="radio"
@@ -138,6 +134,7 @@ exports[`Renders Form One 1`] = `
             class="radio-group"
           >
             <input
+              data-testid="part"
               id="part"
               name="full-part"
               type="radio"
@@ -150,9 +147,9 @@ exports[`Renders Form One 1`] = `
             </label>
           </div>
         </div>
-      </span>
-      <span
-        class="form-right"
+      </div>
+      <div
+        class="col"
       >
         <div>
           <div
@@ -168,6 +165,7 @@ exports[`Renders Form One 1`] = `
               class="radio-group"
             >
               <input
+                data-testid="prior-yes"
                 id="prior-yes"
                 name="prior-credit"
                 type="radio"
@@ -183,6 +181,7 @@ exports[`Renders Form One 1`] = `
               class="radio-group"
             >
               <input
+                data-testid="prior-no"
                 id="prior-no"
                 name="prior-credit"
                 type="radio"
@@ -210,6 +209,7 @@ exports[`Renders Form One 1`] = `
             class="radio-group"
           >
             <input
+              data-testid="year-1"
               id="year-1"
               name="year-of-entry"
               type="radio"
@@ -225,6 +225,7 @@ exports[`Renders Form One 1`] = `
             class="radio-group"
           >
             <input
+              data-testid="year-2"
               id="year-2"
               name="year-of-entry"
               type="radio"
@@ -240,6 +241,7 @@ exports[`Renders Form One 1`] = `
             class="radio-group"
           >
             <input
+              data-testid="year-3"
               id="year-3"
               name="year-of-entry"
               type="radio"
@@ -265,6 +267,7 @@ exports[`Renders Form One 1`] = `
             class="radio-group"
           >
             <input
+              data-testid="study-yes"
               id="study-yes"
               name="prior-study"
               type="radio"
@@ -280,6 +283,7 @@ exports[`Renders Form One 1`] = `
             class="radio-group"
           >
             <input
+              data-testid="study-no"
               id="study-no"
               name="prior-study"
               type="radio"
@@ -293,7 +297,7 @@ exports[`Renders Form One 1`] = `
           </div>
         </div>
         <span />
-      </span>
+      </div>
     </div>
   </div>
 </DocumentFragment>

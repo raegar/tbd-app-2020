@@ -103,6 +103,7 @@ exports[`Renders LevelThreeQualifications 1`] = `
             class="radio-group"
           >
             <input
+              data-testid="qualificationYes"
               id="qualificationYes"
               name="l3qualifications"
               type="radio"
@@ -118,6 +119,7 @@ exports[`Renders LevelThreeQualifications 1`] = `
             class="radio-group"
           >
             <input
+              data-testid="qualificationNo"
               id="qualificationNo"
               name="l3qualifications"
               type="radio"

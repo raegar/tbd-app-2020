@@ -58,9 +58,9 @@ const FormOne = () => {
                 name="address_line_1"
                 title="Address Line 1"
                 placeholder="Address Line 1"
-                minLength="10"
-                maxLength="100"
-                size="35"
+                minLength={10}
+                maxLength={100}
+                size={35}
                 id="address-1"
                 type="text"
             />
@@ -69,9 +69,9 @@ const FormOne = () => {
                 name="address_line_2"
                 title="Address Line 2"
                 placeholder="Address Line 2"
-                minLength="10"
-                maxLength="100"
-                size="35"
+                minLength={10}
+                maxLength={100}
+                size={35}
                 id="address-2"
                 type="text"
             />
@@ -80,9 +80,9 @@ const FormOne = () => {
                 name="town_city"
                 title="Town/City"
                 placeholder="Town/City"
-                minLength="10"
-                maxLength="100"
-                size="35"
+                minLength={10}
+                maxLength={100}
+                size={35}
                 id="town-city"
                 type="text"
             />
@@ -91,9 +91,9 @@ const FormOne = () => {
                 name="region"
                 title="Region"
                 placeholder="Region"
-                minLength="3"
-                maxLength="30"
-                size="25"
+                minLength={3}
+                maxLength={30}
+                size={25}
                 id="region"
                 type="text"
             />
@@ -102,9 +102,9 @@ const FormOne = () => {
                 name="postcode"
                 title="Postcode"
                 placeholder="Postcode"
-                minLength="6"
-                maxLength="9"
-                size="10"
+                minLength={6}
+                maxLength={9}
+                size={10}
                 id="postcode"
                 type="text"
             />
@@ -133,7 +133,7 @@ const FormOne = () => {
 
             {
                 (showPrior)
-                ? <TextBox name="prior-credits" title="How Many Credits?" size="5" type="number" minLength="1" maxLength="4" min="0" max="360" />
+                ? <div><TextBox data-testid="prior-credit-text" name="prior-credits" title="How Many Credits?" size={5} type="number" minLength={1} maxLength={4} min={0} max={360} /><br /></div>
                 : <span></span>
             }
 
@@ -154,7 +154,7 @@ const FormOne = () => {
 
             {
                 (whenStudy)
-                ? <TextBox name="when-study" title="When did they last study at UCP/ARU?" size="20" type="text" minLength="2" maxLength="20" />
+                ? <TextBox name="when-study" title="When did they last study at UCP/ARU?" size={20} type="text" minLength={2} maxLength={20} />
                 : <span></span>
             }
             

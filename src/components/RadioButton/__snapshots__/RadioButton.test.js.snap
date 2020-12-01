@@ -13,6 +13,7 @@ exports[`Renders Radio Button 1`] = `
       class="radio-group"
     >
       <input
+        data-testid="UK"
         id="UK"
         name="test"
         type="radio"
@@ -28,6 +29,7 @@ exports[`Renders Radio Button 1`] = `
       class="radio-group"
     >
       <input
+        data-testid="EU"
         id="EU"
         name="test"
         type="radio"
@@ -43,6 +45,7 @@ exports[`Renders Radio Button 1`] = `
       class="radio-group"
     >
       <input
+        data-testid="Other"
         id="Other"
         name="test"
         type="radio"
