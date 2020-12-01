@@ -1,11 +1,11 @@
 
 .App {
   position: relative;
-
 }
 .main-app
 {
-  margin-bottom: 50px !important;
+  margin-bottom: 150px !important;
+  z-index: -2;
 }
 .mobile-App {
   position: relative;
