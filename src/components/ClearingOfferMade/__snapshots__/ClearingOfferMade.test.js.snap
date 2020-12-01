@@ -33,7 +33,7 @@ exports[`Renders ClearingOfferMade 1`] = `
         class="col"
       >
         <a
-          href="/emptyLink"
+          href="/LevelThreeQualifications"
         >
           <button
             class="mediumbutton"

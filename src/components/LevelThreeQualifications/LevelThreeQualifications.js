@@ -47,7 +47,7 @@ const LevelThreeQualifications = () => {
       </div>
       <Row id="buttonRow">
           <Col className="centered-buttons">
-            <UCPButton
+            <UCPButton to='/LevelTwoQualifications'
               primary="True"
               className="mediumbutton"
               buttonText="Go Back"
