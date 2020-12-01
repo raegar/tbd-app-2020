@@ -77,17 +77,7 @@ const EssentialApplicantInfo = (props) => {
       return (
         <Row id="buttonRow">
           <Col className="centered-buttons">
-            <div id="confirmButton">
-              <UCPButton
-                to = "/LevelTwoQualifications"
-                primary="True"
-                className="mediumbutton"
-                buttonText="Apply Now"
-              />
-            </div>
-          </Col>
-          <Col className="centered-buttons">
-            <div id="confirmButton1">
+          <div id="confirmButton1">
               <Modal id="hello" btnText="Request a Call Back">
                 <div>
                   <h2>Callback Request</h2>
@@ -108,6 +98,17 @@ const EssentialApplicantInfo = (props) => {
                     buttonText="Submit" />
                 </div>
               </Modal>
+            </div>
+            
+          </Col>
+          <Col className="centered-buttons">
+          <div id="confirmButton">
+              <UCPButton
+                to = "/LevelTwoQualifications"
+                primary="True"
+                className="mediumbutton"
+                buttonText="Apply Now"
+              />
             </div>
           </Col>
 
