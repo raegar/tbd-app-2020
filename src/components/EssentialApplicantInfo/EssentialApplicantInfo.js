@@ -56,7 +56,7 @@ const EssentialApplicantInfo = (props) => {
       return (
         <Row id="buttonRow">
           <Col className="centered-buttons">
-            <UCPButton
+            <UCPButton  to = "/Login"
               primary="True"
               className="mediumbutton"
               buttonText="Go Back"
@@ -64,7 +64,7 @@ const EssentialApplicantInfo = (props) => {
           </Col>
           <Col className="centered-buttons">
             <div id="confirmButton">
-              <UCPButton
+              <UCPButton  to = "/LevelTwoQualifications"
                 primary="True"
                 className="mediumbutton"
                 buttonText="Confirm and Go"
