@@ -11,15 +11,17 @@ return (<Container>
     <h1>Interview requeired of RPA</h1>
     <p>Enter any details for decision made</p>
     <h3>39. Please state reasons:</h3>
-    <TextBox/>
 
+
+    <TextBox/>
 <Row>
-    <Col><UCPButton to='/ClearingOfferMadeThirdPage'
+
+    <Col><br></br><UCPButton to='/ClearingOfferMadeThirdPage'
                 primary="True"
                 className="mediumbutton"
                 buttonText="Go Back"
                 href="/ClearingOfferMadeThirdPage"></UCPButton></Col>
-    <Col><UCPButton to='/ClearingOfferMadeFifthPage'
+    <Col><br></br><UCPButton to='/ClearingOfferMadeFifthPage'
                 primary="True"
                 className="mediumbutton"
                 buttonText="Confirm and Continue"
