@@ -64,7 +64,7 @@ const EssentialApplicantInfo = (props) => {
           </Col>
           <Col className="centered-buttons">
             <div id="confirmButton">
-              <UCPButton  to = "/LevelTwoQualifications"
+              <UCPButton  to = "/MoreInfo"
                 primary="True"
                 className="mediumbutton"
                 buttonText="Confirm and Go"

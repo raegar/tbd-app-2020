@@ -333,7 +333,7 @@ exports[`Renders LevelTwoQualifications 1`] = `
         class="centered-buttons col"
       >
         <a
-          href="/NewApplicationPage"
+          href="/MoreInfo"
         >
           <button
             class="mediumbutton"

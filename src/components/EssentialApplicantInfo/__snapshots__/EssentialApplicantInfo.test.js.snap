@@ -126,6 +126,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             class="radio-group"
           >
             <input
+              data-testid="UK"
               disabled=""
               id="UK"
               name="nationality"
@@ -142,6 +143,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             class="radio-group"
           >
             <input
+              data-testid="EU"
               disabled=""
               id="EU"
               name="nationality"
@@ -158,6 +160,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             class="radio-group"
           >
             <input
+              data-testid="Other"
               disabled=""
               id="Other"
               name="nationality"
@@ -184,6 +187,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             class="radio-group"
           >
             <input
+              data-testid="crimeYes"
               disabled=""
               id="crimeYes"
               name="criminal"
@@ -200,6 +204,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             class="radio-group"
           >
             <input
+              data-testid="crimeNo"
               disabled=""
               id="crimeNo"
               name="criminal"
@@ -226,6 +231,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             class="radio-group"
           >
             <input
+              data-testid="supportYes"
               disabled=""
               id="supportYes"
               name="support"
@@ -242,6 +248,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             class="radio-group"
           >
             <input
+              data-testid="supportNo"
               disabled=""
               id="supportNo"
               name="support"
