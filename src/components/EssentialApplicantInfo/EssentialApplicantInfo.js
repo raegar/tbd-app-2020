@@ -50,7 +50,14 @@ const EssentialApplicantInfo = (props) => {
       {value: 'friday', label: 'Friday'}
     ];
 
-
+  function SaveSelectedData() {
+    global.ApplicationFormData.name = document.getElementById("nameinput").value;
+    global.ApplicationFormData.email = document.getElementById("emailinput").value;
+    global.ApplicationFormData.telephone = document.getElementById("telinput").value;
+    global.ApplicationFormData.dob = document.getElementById("dobinput").value;
+    global.ApplicationFormData.ucasNumber = document.getElementById("ucasinput").value;
+    console.log(global.ApplicationFormData);
+  }
   function UserTypeSelect() {
     if (global.userType === "staff") {
       return (
@@ -63,7 +70,7 @@ const EssentialApplicantInfo = (props) => {
             />
           </Col>
           <Col className="centered-buttons">
-            <div id="confirmButton">
+            <div id="confirmButton" onClick={SaveSelectedData}>
               <UCPButton  to = "/LevelTwoQualifications"
                 primary="True"
                 className="mediumbutton"
@@ -77,7 +84,7 @@ const EssentialApplicantInfo = (props) => {
       return (
         <Row id="buttonRow">
           <Col className="centered-buttons">
-            <div id="confirmButton">
+            <div id="confirmButton" onClick={SaveSelectedData}>
               <UCPButton
                 to = "/LevelTwoQualifications"
                 primary="True"
@@ -134,6 +141,7 @@ const EssentialApplicantInfo = (props) => {
           />
 
           <TextBox
+
             title="Email"
             placeholder="Enter your email"
             minLength="5"

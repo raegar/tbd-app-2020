@@ -46,6 +46,7 @@ exports[`Renders LevelTwoQualifications 1`] = `
         </p>
         <div
           class="Dropdown css-2b097c-container"
+          id="EngLanguage"
         >
           <div
             class=" css-yk16xz-control"
@@ -114,6 +115,7 @@ exports[`Renders LevelTwoQualifications 1`] = `
         </p>
         <div
           class="Dropdown css-2b097c-container"
+          id="EngLiterature"
         >
           <div
             class=" css-yk16xz-control"
@@ -182,6 +184,7 @@ exports[`Renders LevelTwoQualifications 1`] = `
         </p>
         <div
           class="Dropdown css-2b097c-container"
+          id="Maths"
         >
           <div
             class=" css-yk16xz-control"
@@ -250,6 +253,7 @@ exports[`Renders LevelTwoQualifications 1`] = `
         </p>
         <div
           class="Dropdown css-2b097c-container"
+          id="Science"
         >
           <div
             class=" css-yk16xz-control"
