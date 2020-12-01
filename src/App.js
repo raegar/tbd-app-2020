@@ -29,6 +29,7 @@ function App() {
           <Route path='/' exact component={SelectRole} />
           <Route path='/login' component={Login}/>
           <Route path='/NewApplicationPage' component={NewApplicationPage}/>
+          <Route path="/MoreInfo" component={FormOne} />
           <Route path='/LevelTwoQualifications' component={LevelTwoQualifications}/>
           <Route path='/LevelThreeQualifications' component={LevelThreeQualifications}/>
           <Route path='/ClearingOfferMade' component={ClearingOfferMade}/>
@@ -37,7 +38,6 @@ function App() {
           <Route path='/ClearingOfferMadeFourthPage' component={ClearingOfferMadeFourthPage}/>
           <Route path='/ClearingOfferMadeFifthPage' component={ClearingOfferMadeFifthPage}/>
           <Route path='/DegreeQualifications' component={DegreeQualifications} />
-          <Route path="/MoreInfo" component={FormOne} />
         </Switch>
       </div>
         <Footer/>

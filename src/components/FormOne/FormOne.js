@@ -3,6 +3,7 @@ import TextBox from '../TextBox/TextBox'
 import RadioButton from '../RadioButton/RadioButton'
 import { Container, Row, Col } from "react-bootstrap";
 import './FormOne.css'
+import UCPButton from '../Buttons/UCPButton'
 
 const FormOne = () => {
 
@@ -48,6 +49,7 @@ const FormOne = () => {
     ];
 
     return(
+        <div>
         <Container className="form-container d-flex justify-content-center">
         <Row className="form-background">
         <Col>
@@ -163,6 +165,29 @@ const FormOne = () => {
 
         </Row>
         </Container>
+        <Container>
+            <Row id="buttonRow">
+          <Col className="centered-buttons">
+            <UCPButton to='/NewApplicationPage'
+              primary="True"
+              className="mediumbutton"
+              buttonText="Go Back"
+            />
+          </Col>
+          <Col className="centered-buttons">
+            <div id="confirmButton">
+              <UCPButton
+               to = "/LevelTwoQualifications"
+                primary="True"
+                className="mediumbutton"
+                buttonText="Next"
+                href="ClearingOfferMade"
+              />
+            </div>
+          </Col>
+        </Row>
+        </Container>
+        </div>
     )
 
 }
