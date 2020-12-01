@@ -22,7 +22,7 @@ const SelectRole = () => {
         <Container className="mt-5 px-3 py-3 select-role-container">
             <Row className="text-center">
                 <Col className="mt-3 mb-3">
-                    <UCPButton to="/NewApplicationPage" buttonText="Perspective Student" className={buttonClassName} href="/NewApplicationPage" />
+                    <UCPButton to="/NewApplicationPage" buttonText="Prospective Student" className={buttonClassName} href="/NewApplicationPage" />
                     <UCPButton to="/login" buttonText="Staff Portal" className={buttonClassName} href="/login" />
 
                 </Col>
