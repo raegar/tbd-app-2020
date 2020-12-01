@@ -4,7 +4,7 @@ exports[`Renders Header 1`] = `
 <DocumentFragment>
   <header>
     <a
-      href="/"
+      href="/tbd-app-2020"
     >
       <img
         alt="UCP official logo"
