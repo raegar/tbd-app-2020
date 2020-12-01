@@ -47,7 +47,7 @@ const LevelTwoQualifications = (props) => {
       </div>
       <Row id="buttonRow">
           <Col className="centered-buttons">
-            <UCPButton
+            <UCPButton to='/NewApplicationPage'
               primary="True"
               className="mediumbutton"
               buttonText="Go Back"
