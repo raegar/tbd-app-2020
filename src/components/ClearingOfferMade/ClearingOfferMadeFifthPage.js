@@ -15,7 +15,7 @@ return ( <Container>
     <TextBox/>
 
 <Row>
-    <Col><br></br><UCPButton to='/ClearingOfferMadeForthPage'
+    <Col><br></br><UCPButton to='/ClearingOfferMadeFourthPage'
                 primary="True"
                 className="mediumbutton"
                 buttonText="Go Back"
