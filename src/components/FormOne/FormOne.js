@@ -48,10 +48,9 @@ const FormOne = () => {
     ];
 
     return(
-        <Container className="form-container">
-        <div className="form-background">
-            <h3 className="form-title">CLEARING FORM</h3>
-        <span className="form-left">
+        <Container className="form-container d-flex justify-content-center">
+        <Row className="form-background">
+        <Col>
 
             <h4>Address</h4>
 
@@ -119,8 +118,8 @@ const FormOne = () => {
                 subtitle="Will the student study the course full-time or part-time?"
             />
 
-        </span>
-        <span className="form-right">
+        </Col>
+        <Col>
 
             <div>
             <RadioButton
@@ -159,10 +158,10 @@ const FormOne = () => {
                 : <span></span>
             }
             
-        </span>
+        </Col>
 
 
-        </div>
+        </Row>
         </Container>
     )
 
