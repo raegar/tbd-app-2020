@@ -47,8 +47,9 @@ exports[`Renders ClearingOfferMadeFifthPage 1`] = `
       <div
         class="col"
       >
+        <br />
         <a
-          href="/ClearingOfferMadeForthPage"
+          href="/ClearingOfferMadeFourthPage"
         >
           <button
             class="mediumbutton"
@@ -64,6 +65,7 @@ exports[`Renders ClearingOfferMadeFifthPage 1`] = `
       <div
         class="col"
       >
+        <br />
         <a
           href="/emptyLink"
         >
