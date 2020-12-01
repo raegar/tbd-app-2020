@@ -20,9 +20,12 @@ return ( <Container>
                 className="mediumbutton"
                 buttonText="Go Back"
                 href="/ClearingOfferMadeFourthPage"></UCPButton></Col>
-    <Col><br></br><UCPButton primary="True"
+
+    <Col><br></br><UCPButton to ='/'
+                 primary="True"
                 className="mediumbutton"
-                buttonText="Confirm and Continue"></UCPButton></Col>
+                buttonText="Confirm and Continue"
+                href="/"></UCPButton></Col>
                 </Row>
  </Container>
 )
