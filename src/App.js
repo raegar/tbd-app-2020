@@ -14,6 +14,7 @@ import ClearingOfferMadeSecondPage from './components/ClearingOfferMade/Clearing
 import ClearingOfferMadeThirdPage from './components/ClearingOfferMade/ClearingOfferMadeThirdPage';
 import ClearingOfferMadeFourthPage from './components/ClearingOfferMade/ClearingOfferMadeFourthPage';
 import ClearingOfferMadeFifthPage from './components/ClearingOfferMade/ClearingOfferMadeFifthPage';
+import FormOne from './components/FormOne/FormOne'
 
 const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
 
@@ -36,6 +37,7 @@ function App() {
           <Route path='/ClearingOfferMadeFourthPage' component={ClearingOfferMadeFourthPage}/>
           <Route path='/ClearingOfferMadeFifthPage' component={ClearingOfferMadeFifthPage}/>
           <Route path='/DegreeQualifications' component={DegreeQualifications} />
+          <Route path="/MoreInfo" component={FormOne} />
         </Switch>
       </div>
         <Footer/>
