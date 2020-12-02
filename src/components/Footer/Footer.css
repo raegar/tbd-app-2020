@@ -1,14 +1,11 @@
 /*Applies styles to both footers*/
 .ucpFooter, .MobileFooter {
-    border-bottom: 1px solid teal;  
-    margin-top: 12%;  
-    width: 100%;
+    border-bottom: 1px solid teal;
+    width: 99%;
     background-image: url('../../images/Footer.png');
     background-position: center;
     bottom: 0;
-
-    
-   
+    position: fixed;
 }
 
 /*Applies styles to desktop footer*/
