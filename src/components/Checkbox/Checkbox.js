@@ -8,7 +8,7 @@ export const Checkbox = ({className, checkboxText, ...props}) => {
         <div class="labelposition">
             <input className={className} type="checkbox" />
             <div class="checkboxposition">
-                <label class="container">{checkboxText}</label>
+                <label className="container">{checkboxText}</label>
             </div>           
         </div>
     )
