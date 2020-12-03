@@ -341,6 +341,26 @@ exports[`Renders Essential Applicant Info 1`] = `
           class="centered-buttons col"
         >
           <div
+            id="confirmButton"
+          >
+            <a
+              href="/LevelTwoQualifications"
+            >
+              <button
+                class="mediumbutton"
+                data-testid="ucpButton"
+                primary="True"
+                type="button"
+              >
+                Apply Now​
+              </button>
+            </a>
+          </div>
+        </div>
+        <div
+          class="centered-buttons col"
+        >
+          <div
             id="confirmButton1"
           >
             <button
