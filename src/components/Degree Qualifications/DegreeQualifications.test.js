@@ -12,7 +12,7 @@ it("Renders Degree Qual", () => {
     expect(asFragment()).toMatchSnapshot();
 });
 
-test("Conditional rendering", () => {
+test("Level 4 Qualification Conditional rendering", () => {
     render(
         <Router>
             <DegreeQualifications />
