@@ -29,6 +29,7 @@ const DegreeQualifications = (props) => {
 
     return (
         <Container className="degree-form d-flex justify-content-center">
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet"></link>
             <div className="form-background">
                 <h3 className="form-title">Level 4 or Above Experience</h3>
                 <Row>
