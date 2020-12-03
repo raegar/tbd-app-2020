@@ -32,12 +32,12 @@ function App() {
           <Route path="/MoreInfo" component={FormOne} />
           <Route path='/LevelTwoQualifications' component={LevelTwoQualifications}/>
           <Route path='/LevelThreeQualifications' component={LevelThreeQualifications}/>
+          <Route path='/DegreeQualifications' component={DegreeQualifications} />
           <Route path='/ClearingOfferMade' component={ClearingOfferMade}/>
           <Route path='/ClearingOfferMadeSecondPage' component={ClearingOfferMadeSecondPage}/>
           <Route path='/ClearingOfferMadeThirdPage' component={ClearingOfferMadeThirdPage}/>
           <Route path='/ClearingOfferMadeFourthPage' component={ClearingOfferMadeFourthPage}/>
           <Route path='/ClearingOfferMadeFifthPage' component={ClearingOfferMadeFifthPage}/>
-          <Route path='/DegreeQualifications' component={DegreeQualifications} />
         </Switch>
       </div>
         <Footer/>

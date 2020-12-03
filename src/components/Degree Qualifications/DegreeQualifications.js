@@ -3,6 +3,7 @@ import "./DegreeQualifications.css";
 import {Row, Col, Container} from "react-bootstrap";
 import RadioButton from '../RadioButton/RadioButton';
 import TextBox from '../TextBox/TextBox';
+import UCPButton from '../Buttons/UCPButton'
 
 const DegreeQualifications = (props) => {
     
@@ -28,6 +29,7 @@ const DegreeQualifications = (props) => {
     }
 
     return (
+        <>
         <Container className="degree-form d-flex justify-content-center">
             <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet"></link>
             <div className="form-background">
@@ -63,6 +65,29 @@ const DegreeQualifications = (props) => {
                 </Row>
             </div>
         </Container>
+        <Container>
+            <Row id="buttonRow">
+          <Col className="centered-buttons">
+            <UCPButton to='/LevelThreeQualifications'
+              primary="True"
+              className="mediumbutton"
+              buttonText="Go Back"
+            />
+          </Col>
+          <Col className="centered-buttons">
+            <div id="confirmButton">
+              <UCPButton
+               to = "/ClearingOfferMade"
+                primary="True"
+                className="mediumbutton"
+                buttonText="Confirm and Go"
+          
+              />
+            </div>
+          </Col>
+        </Row>
+        </Container>
+        </>
     );
     
 }
