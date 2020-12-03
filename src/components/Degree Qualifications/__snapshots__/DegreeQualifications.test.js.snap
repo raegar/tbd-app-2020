@@ -5,6 +5,10 @@ exports[`Renders Degree Qual 1`] = `
   <div
     class="degree-form d-flex justify-content-center container"
   >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
     <div
       class="form-background"
     >
@@ -119,6 +123,51 @@ exports[`Renders Degree Qual 1`] = `
               </label>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="container"
+  >
+    <div
+      class="row"
+      id="buttonRow"
+    >
+      <div
+        class="centered-buttons col"
+      >
+        <a
+          href="/LevelThreeQualifications"
+        >
+          <button
+            class="mediumbutton"
+            data-testid="ucpButton"
+            primary="True"
+            type="button"
+          >
+            Go Back​
+          </button>
+        </a>
+      </div>
+      <div
+        class="centered-buttons col"
+      >
+        <div
+          id="confirmButton"
+        >
+          <a
+            href="/ClearingOfferMade"
+          >
+            <button
+              class="mediumbutton"
+              data-testid="ucpButton"
+              primary="True"
+              type="button"
+            >
+              Confirm and Go​
+            </button>
+          </a>
         </div>
       </div>
     </div>

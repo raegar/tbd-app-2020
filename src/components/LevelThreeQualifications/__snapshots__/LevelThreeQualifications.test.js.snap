@@ -161,12 +161,11 @@ exports[`Renders LevelThreeQualifications 1`] = `
           id="confirmButton"
         >
           <a
-            href="/ClearingOfferMade"
+            href="/DegreeQualifications"
           >
             <button
               class="mediumbutton"
               data-testid="ucpButton"
-              href="ClearingOfferMade"
               primary="True"
               type="button"
             >

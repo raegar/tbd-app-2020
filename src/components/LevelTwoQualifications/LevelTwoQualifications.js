@@ -35,7 +35,7 @@ function LevelTwoQualifications (props) {
       <div className="l2-form-background">
         <h4 className="form-title">Applicant Qualifications</h4>
         <AlerDismissible/>
-        <div class={className1}>
+        <div className={className1}>
           <p>GCSE English Language</p>
           <DropdownMenu placeholder="Select Grade" options={gsceGrades} id="EngLanguage"/>
           <p>GCSE English Literature</p>

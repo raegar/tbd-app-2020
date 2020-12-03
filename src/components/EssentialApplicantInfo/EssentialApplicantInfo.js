@@ -83,16 +83,7 @@ const EssentialApplicantInfo = (props) => {
     } else {
       return (
         <Row id="buttonRow">
-          <Col className="centered-buttons">
-            <div id="confirmButton" onClick={SaveSelectedData}>
-              <UCPButton
-                to = "/LevelTwoQualifications"
-                primary="True"
-                className="mediumbutton"
-                buttonText="Apply Now"
-              />
-            </div>
-          </Col>
+      
           <Col className="centered-buttons">
             <div id="confirmButton1">
               <Modal id="hello" btnText="Request a Call Back">
@@ -119,9 +110,9 @@ const EssentialApplicantInfo = (props) => {
             
           </Col>
           <Col className="centered-buttons">
-          <div id="confirmButton">
+          <div id="confirmButton" onClick={SaveSelectedData}>
               <UCPButton
-                to = "/LevelTwoQualifications"
+                to = "/MoreInfo"
                 primary="True"
                 className="mediumbutton"
                 buttonText="Apply Now"
@@ -137,12 +128,12 @@ const EssentialApplicantInfo = (props) => {
     <Container className="es-form-container">
       <div className="es-form-background">
         <h3 className="form-title">CLEARING APPLICATION</h3>
-        <span class="ess-form-left">
+        <span className="ess-form-left">
           <TextBox
             title="Name"
             placeholder="Enter your name"
-            minLength="5"
-            maxLength="60"
+            minLength={5}
+            maxLength={60}
             id="nameinput"
             type="text"
             name="name"
@@ -155,8 +146,8 @@ const EssentialApplicantInfo = (props) => {
 
             title="Email"
             placeholder="Enter your email"
-            minLength="5"
-            maxLength="60"
+            minLength={5}
+            maxLength={60}
             id="emailinput"
             type="email"
             name="email"
@@ -202,7 +193,7 @@ const EssentialApplicantInfo = (props) => {
 
           />
         </span>
-        <span class="ess-form-right">
+        <span className="ess-form-right">
           <RadioButton
             heading="Nationality"
             options={nationalityOptions}

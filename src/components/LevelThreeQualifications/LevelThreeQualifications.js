@@ -56,11 +56,11 @@ const LevelThreeQualifications = () => {
           <Col className="centered-buttons">
             <div id="confirmButton">
               <UCPButton
-               to = "/ClearingOfferMade"
+               to = "/DegreeQualifications"
                 primary="True"
                 className="mediumbutton"
                 buttonText="Confirm and Go"
-                href="ClearingOfferMade"
+          
               />
             </div>
           </Col>
