@@ -21,7 +21,7 @@ exports[`Renders ClearingOfferMadeFifthPage 1`] = `
       <input
         maxlength="30"
         minlength="0"
-        placeholder=""
+        placeholder="Test@email.com"
         size="20"
         type="text"
       />

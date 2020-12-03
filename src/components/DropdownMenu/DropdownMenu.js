@@ -4,9 +4,9 @@ import './DropdownMenu.css'
 
 
 
-const DropdownMenu = ({options,onChange,...props}) => (
+const DropdownMenu = ({options,onChange,id,...props}) => (
 
-  <Select className="Dropdown" options={options} onChange={onChange}/>
+  <Select id={id} className="Dropdown" options={options} onChange={onChange}/>
 )
 
 

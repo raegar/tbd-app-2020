@@ -3,8 +3,9 @@ import './TextBox.css'
 import PropTypes from 'prop-types';
 import {isMobile} from 'react-device-detect';
 
-const TextBox = ({backgroundColor, name, title, size, id, maxLength, minLength, placeholder, type, onChange, min, max, wrapID, attribute, ...props}) => {
+const TextBox = ({backgroundColor, name, title, size, id, maxLength, minLength, placeholder, type, onChange, min, max, wrapID, attribute,  ...props}) => {
     const className = isMobile ? "mobiletextbox" : "textbox";
+ 
 return (
     <div className={`${className ? "mobiletextbox" : "textbox"}`} id={wrapID}>
         <label htmlFor={id}>{title}</label>

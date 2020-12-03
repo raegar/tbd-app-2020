@@ -5,7 +5,12 @@ import {Row, Col } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 import AlerDismissible from '../AlertDismissible/AlertDismissible';
 import {isMobile} from 'react-device-detect';
-const LevelTwoQualifications = (props) => {
+
+
+
+
+function LevelTwoQualifications (props) {
+  
   var gsceGrades = [
     { label: "9 - A*", id: "9", value: "9" },
     { label: "8 - A*", id: "8", value: "8" },
@@ -21,7 +26,6 @@ const LevelTwoQualifications = (props) => {
     { label: "n/a", id: "na", value: "na" },
   ];
   
- 
   const className = isMobile ? "MobileTextArea" : "DesktopTextArea";  
   const className1 = isMobile ? "l2-mobile-form-right" : "l2-form-right ";
   const className2 = isMobile ? "l2-mobile-form-container" : "l2-form-container";
@@ -33,13 +37,13 @@ const LevelTwoQualifications = (props) => {
         <AlerDismissible/>
         <div class={className1}>
           <p>GCSE English Language</p>
-          <DropdownMenu placeholder="Select Grade" options={gsceGrades} />
+          <DropdownMenu placeholder="Select Grade" options={gsceGrades} id="EngLanguage"/>
           <p>GCSE English Literature</p>
-          <DropdownMenu  placeholder="Select Grade" options={gsceGrades}/>
+          <DropdownMenu  placeholder="Select Grade" options={gsceGrades} id="EngLiterature"/>
           <p>GCSE English Mathematics</p>
-          <DropdownMenu placeholder="Select Grade" options={gsceGrades} />
+          <DropdownMenu placeholder="Select Grade" options={gsceGrades} id="Maths"/>
           <p>GCSE Science / Additional Science</p>
-          <DropdownMenu placeholder="Select Grade" options={gsceGrades} />
+          <DropdownMenu placeholder="Select Grade" options={gsceGrades} id="Science"/>
           <p>L2 Qualifications</p>
           <textarea className = {className} name="l2qualificaitons" placeholder="Enter level 2 qualifications"  rows={6} cols={30}/>
         </div>
