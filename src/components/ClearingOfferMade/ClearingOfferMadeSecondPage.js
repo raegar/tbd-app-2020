@@ -5,15 +5,15 @@ import { Container, Col, Row } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 
 
-
-var NAME = false;
+/*
+//var NAME = false;
 function GetTestData(selectedValue) {
     if (selectedValue === "No") {
         NAME = true;
     }
 };
 
-/*
+
 
 function GetNextPage(){
   if(NAME)
@@ -50,8 +50,8 @@ return (
             heading="Yes"
             options={offerOptions}
             name="offer"
-            oc={GetTestData()}
-         /*   onchange={GetNextPage()} */
+           /*  oc={GetTestData()}
+           onchange={GetNextPage()} */
   />
 <Row>
 <Col><UCPButton to='/ClearingOfferMade'
