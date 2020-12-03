@@ -41,6 +41,7 @@ const DegreeQualifications = (props) => {
                             name="level-four"
                             options={priorLevelFour}
                             oc={handleClick}
+                            data-testid="level-4-radio"
                         />
                         {
                             (levelFour)

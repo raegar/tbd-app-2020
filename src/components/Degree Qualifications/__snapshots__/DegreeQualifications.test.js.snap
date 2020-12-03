@@ -127,5 +127,50 @@ exports[`Renders Degree Qual 1`] = `
       </div>
     </div>
   </div>
+  <div
+    class="container"
+  >
+    <div
+      class="row"
+      id="buttonRow"
+    >
+      <div
+        class="centered-buttons col"
+      >
+        <a
+          href="/LevelThreeQualifications"
+        >
+          <button
+            class="mediumbutton"
+            data-testid="ucpButton"
+            primary="True"
+            type="button"
+          >
+            Go Back​
+          </button>
+        </a>
+      </div>
+      <div
+        class="centered-buttons col"
+      >
+        <div
+          id="confirmButton"
+        >
+          <a
+            href="/ClearingOfferMade"
+          >
+            <button
+              class="mediumbutton"
+              data-testid="ucpButton"
+              primary="True"
+              type="button"
+            >
+              Confirm and Go​
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </DocumentFragment>
 `;
