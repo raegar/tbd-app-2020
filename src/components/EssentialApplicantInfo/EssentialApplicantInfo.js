@@ -141,8 +141,8 @@ const EssentialApplicantInfo = (props) => {
           <TextBox
             title="Name"
             placeholder="Enter your name"
-            minLength="5"
-            maxLength="60"
+            minLength={5}
+            maxLength={60}
             id="nameinput"
             type="text"
             name="name"
@@ -155,8 +155,8 @@ const EssentialApplicantInfo = (props) => {
 
             title="Email"
             placeholder="Enter your email"
-            minLength="5"
-            maxLength="60"
+            minLength={5}
+            maxLength={60}
             id="emailinput"
             type="email"
             name="email"

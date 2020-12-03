@@ -13,6 +13,8 @@ function GetTestData(selectedValue) {
     }
 };
 
+/*
+
 function GetNextPage(){
   if(NAME)
   {
@@ -22,7 +24,9 @@ function GetNextPage(){
 
      return "/ClearingOfferMadeFourthPage";
 };
-} 
+
+
+}*/ 
 const ClearingOfferMadeSecondPages = (props) => {
 
     var offerOptions = [
@@ -47,7 +51,7 @@ return (
             options={offerOptions}
             name="offer"
             oc={GetTestData()}
-            onchange={GetNextPage()}
+         /*   onchange={GetNextPage()} */
   />
 <Row>
 <Col><UCPButton to='/ClearingOfferMade'

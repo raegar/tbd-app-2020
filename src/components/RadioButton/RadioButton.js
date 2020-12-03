@@ -40,8 +40,7 @@ RadioButton.propTypes = {
 
 RadioButton.defaultProps = {
     heading: null,
-    subtitle: null,
-    oc: null
+    subtitle: null
 }
 
 //Export
