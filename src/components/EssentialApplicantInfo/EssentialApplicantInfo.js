@@ -83,16 +83,7 @@ const EssentialApplicantInfo = (props) => {
     } else {
       return (
         <Row id="buttonRow">
-          <Col className="centered-buttons">
-            <div id="confirmButton" onClick={SaveSelectedData}>
-              <UCPButton
-                to = "/LevelTwoQualifications"
-                primary="True"
-                className="mediumbutton"
-                buttonText="Apply Now"
-              />
-            </div>
-          </Col>
+      
           <Col className="centered-buttons">
             <div id="confirmButton1">
               <Modal id="hello" btnText="Request a Call Back">
@@ -119,7 +110,7 @@ const EssentialApplicantInfo = (props) => {
             
           </Col>
           <Col className="centered-buttons">
-          <div id="confirmButton">
+          <div id="confirmButton" onClick={SaveSelectedData}>
               <UCPButton
                 to = "/MoreInfo"
                 primary="True"
