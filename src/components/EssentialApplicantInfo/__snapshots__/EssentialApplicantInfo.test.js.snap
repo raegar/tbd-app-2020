@@ -126,6 +126,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             class="radio-group"
           >
             <input
+              data-testid="UK"
               disabled=""
               id="UK"
               name="nationality"
@@ -142,6 +143,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             class="radio-group"
           >
             <input
+              data-testid="EU"
               disabled=""
               id="EU"
               name="nationality"
@@ -158,6 +160,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             class="radio-group"
           >
             <input
+              data-testid="Other"
               disabled=""
               id="Other"
               name="nationality"
@@ -184,6 +187,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             class="radio-group"
           >
             <input
+              data-testid="crimeYes"
               disabled=""
               id="crimeYes"
               name="criminal"
@@ -200,6 +204,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             class="radio-group"
           >
             <input
+              data-testid="crimeNo"
               disabled=""
               id="crimeNo"
               name="criminal"
@@ -226,6 +231,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             class="radio-group"
           >
             <input
+              data-testid="supportYes"
               disabled=""
               id="supportYes"
               name="support"
@@ -242,6 +248,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             class="radio-group"
           >
             <input
+              data-testid="supportNo"
               disabled=""
               id="supportNo"
               name="support"
@@ -334,6 +341,21 @@ exports[`Renders Essential Applicant Info 1`] = `
           class="centered-buttons col"
         >
           <div
+            id="confirmButton1"
+          >
+            <button
+              class="mediumbutton"
+              data-testid="ucpButton"
+              type="button"
+            >
+              Request a Call Back​
+            </button>
+          </div>
+        </div>
+        <div
+          class="centered-buttons col"
+        >
+          <div
             id="confirmButton"
           >
             <a
@@ -348,21 +370,6 @@ exports[`Renders Essential Applicant Info 1`] = `
                 Apply Now​
               </button>
             </a>
-          </div>
-        </div>
-        <div
-          class="centered-buttons col"
-        >
-          <div
-            id="confirmButton1"
-          >
-            <button
-              class="mediumbutton"
-              data-testid="ucpButton"
-              type="button"
-            >
-              Request a Call Back​
-            </button>
           </div>
         </div>
       </div>

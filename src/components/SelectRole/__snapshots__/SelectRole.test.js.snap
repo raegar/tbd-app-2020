@@ -20,7 +20,7 @@ exports[`Render SelectRole 1`] = `
             href="/NewApplicationPage"
             type="button"
           >
-            Perspective Student​
+            Prospective Student​
           </button>
         </a>
         <a
@@ -28,7 +28,7 @@ exports[`Render SelectRole 1`] = `
         >
           <button
             class="extralargebutton"
-            data-testid="ucpButton"
+            data-testid="staff-portal"
             href="/login"
             type="button"
           >

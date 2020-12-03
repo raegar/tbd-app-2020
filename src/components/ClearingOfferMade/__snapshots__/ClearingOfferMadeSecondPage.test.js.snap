@@ -30,6 +30,7 @@ exports[`Renders ClearingOfferMadeSecondPage 1`] = `
         class="radio-group"
       >
         <input
+          data-testid="offerYes"
           id="offerYes"
           name="offer"
           type="radio"
@@ -45,6 +46,7 @@ exports[`Renders ClearingOfferMadeSecondPage 1`] = `
         class="radio-group"
       >
         <input
+          data-testid="offerYesPart"
           id="offerYesPart"
           name="offer"
           type="radio"
@@ -60,6 +62,7 @@ exports[`Renders ClearingOfferMadeSecondPage 1`] = `
         class="radio-group"
       >
         <input
+          data-testid="Status"
           id="Status"
           name="offer"
           type="radio"
@@ -75,6 +78,7 @@ exports[`Renders ClearingOfferMadeSecondPage 1`] = `
         class="radio-group"
       >
         <input
+          data-testid="offerNo"
           id="offerNo"
           name="offer"
           type="radio"
@@ -90,6 +94,7 @@ exports[`Renders ClearingOfferMadeSecondPage 1`] = `
         class="radio-group"
       >
         <input
+          data-testid="offerInterviewRequired"
           id="offerInterviewRequired"
           name="offer"
           type="radio"
@@ -105,6 +110,7 @@ exports[`Renders ClearingOfferMadeSecondPage 1`] = `
         class="radio-group"
       >
         <input
+          data-testid="offerInterviewRequired"
           id="offerInterviewRequired"
           name="offer"
           type="radio"

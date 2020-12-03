@@ -30,6 +30,7 @@ exports[`Renders Degree Qual 1`] = `
               class="radio-group"
             >
               <input
+                data-testid="prior-yes"
                 id="prior-yes"
                 name="level-four"
                 type="radio"
@@ -45,6 +46,7 @@ exports[`Renders Degree Qual 1`] = `
               class="radio-group"
             >
               <input
+                data-testid="prior-no"
                 id="prior-no"
                 name="level-four"
                 type="radio"
@@ -88,6 +90,7 @@ exports[`Renders Degree Qual 1`] = `
               class="radio-group"
             >
               <input
+                data-testid="elq-yes"
                 id="elq-yes"
                 name="elq"
                 type="radio"
@@ -103,6 +106,7 @@ exports[`Renders Degree Qual 1`] = `
               class="radio-group"
             >
               <input
+                data-testid="elq-no"
                 id="elq-no"
                 name="elq"
                 type="radio"
