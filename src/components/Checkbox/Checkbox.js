@@ -5,9 +5,9 @@ import './Checkbox.css';
 
 export const Checkbox = ({className, checkboxText, ...props}) => {    
     return(
-        <div class="labelposition">
+        <div className="labelposition">
             <input className={className} type="checkbox" />
-            <div class="checkboxposition">
+            <div className="checkboxposition">
                 <label className="container">{checkboxText}</label>
             </div>           
         </div>
