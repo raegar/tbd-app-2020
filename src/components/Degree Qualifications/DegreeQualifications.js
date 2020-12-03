@@ -42,13 +42,18 @@ const DegreeQualifications = (props) => {
                         />
                         {
                             (levelFour)
-                            ? <TextBox title="Enter qualification name and grade" name="l-4-qual" size="30" />
+                            ? <TextBox title="Enter qualification name and grade" name="l-4-qual" size={30} />
                             : <span></span>
                         }
 
                     </Col>
                     <Col>
-                        <TextBox name="recent-school" title="What is the name of the most recent school/college attended?" size="25" type="text" />
+                        <TextBox 
+                            name="recent-school" 
+                            title="What is the name of the most recent school/college attended?" 
+                            size={25} 
+                            type="text" 
+                        />
                         <RadioButton 
                             subtitle="ELQ - is the applicant applying to study a qualification that is equivalent or lower to one they already hold?"
                             options={elq}
