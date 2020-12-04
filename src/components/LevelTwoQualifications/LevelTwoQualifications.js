@@ -11,21 +11,39 @@ import {isMobile} from 'react-device-detect';
 
 function LevelTwoQualifications (props) {
   
+
   var gsceGrades = [
-    { label: "9 - A*", id: "9", value: "9" },
-    { label: "8 - A*", id: "8", value: "8" },
-    { label: "7 - A", id: "7", value: "7" },
-    { label: "6 - B", id: "6", value: "6" },
-    { label: "5 - B", id: "5", value: "5" },
-    { label: "4 - C", id: "4", value: "4" },
-    { label: "3 - D", id: "3", value: "3" },
-    { label: "2 - E", id: "2", value: "2" },
-    { label: "2 - F", id: "2f", value: "1" },
-    { label: "1 -G", id: "1", value: "1" },
-    { label: "U", id: "u", value: "u" },
-    { label: "n/a", id: "na", value: "na" },
+    { value: "9", label: "9 - A*" },
+    { value: "8", label: "8 - A*" },
+    { value: "7", label: "7 - A" },
+    { value: "6", label: "6 - B" },
+    { value: "5", label: "5 - B" },
+    { value: "4", label: "4 - C" },
+    { value: "3", label: "3 - D" },
+    { value: "2", label: "2 - E" },
+    { value: "1", label: "2 - F"  },
+    { value: "1", label: "1 -G"  },
+    { value: "u", label: "U"  },
+    { value: "na", label: "n/a"},
   ];
   
+
+  function SaveSelectedData() {
+    var course = document.getElementById("EngLanguage");
+    global.ApplicationFormData.GCSEEnglishLanguage = course.options[course.selectedIndex].value;
+    course = document.getElementById("EngLiterature");
+    global.ApplicationFormData.GCSEEnglishLiterature = course.options[course.selectedIndex].value;
+    course = document.getElementById("Maths");
+    global.ApplicationFormData.GCSEMaths = course.options[course.selectedIndex].value;
+    course = document.getElementById("Science");
+    global.ApplicationFormData.GCSEScience = course.options[course.selectedIndex].value;
+    course = document.getElementById("l2details");
+    global.ApplicationFormData.GCSElevelTwoDetails = course.value;
+    console.log(global.ApplicationFormData);
+  }
+
+
+
   const className = isMobile ? "MobileTextArea" : "DesktopTextArea";  
   const className1 = isMobile ? "l2-mobile-form-right" : "l2-form-right ";
   const className2 = isMobile ? "l2-mobile-form-container" : "l2-form-container";
@@ -45,7 +63,7 @@ function LevelTwoQualifications (props) {
           <p>GCSE Science / Additional Science</p>
           <DropdownMenu placeholder="Select Grade" options={gsceGrades} id="Science"/>
           <p>L2 Qualifications</p>
-          <textarea className = {className} name="l2qualificaitons" placeholder="Enter level 2 qualifications"  rows={6} cols={30}/>
+          <textarea id="l2details" className = {className} name="l2qualificaitons" placeholder="Enter level 2 qualifications"  rows={6} cols={30}/>
         </div>
 
       </div>
@@ -58,7 +76,7 @@ function LevelTwoQualifications (props) {
             />
           </Col>
           <Col className="centered-buttons">
-            <div id="confirmButton">
+            <div id="confirmButton" onClick={SaveSelectedData}>
               <UCPButton
                to = "/LevelThreeQualifications"
                 primary="True"

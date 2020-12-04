@@ -27,6 +27,51 @@ const FormOne = () => {
         }
     }
 
+    function SaveSelectedData() {
+        global.ApplicationFormData.addressLineOne = document.getElementById("address-1").value;
+        global.ApplicationFormData.addressLineTwo = document.getElementById("address-2").value;
+        global.ApplicationFormData.city = document.getElementById("town-city").value;
+        global.ApplicationFormData.region = document.getElementById("region").value;
+        global.ApplicationFormData.postcode = document.getElementById("postcode").value;
+ 
+         // get course length selection from radio button
+        if (document.getElementById("full").checked) {
+            global.ApplicationFormData.courseLength = document.getElementById("full").value;
+        }
+        if (document.getElementById("part").checked) {
+            global.ApplicationFormData.courseLength = document.getElementById("pull").value;
+        }
+
+        if (document.getElementById("prior-yes").checked) {
+            global.ApplicationFormData.priorCredit = document.getElementById("prior-yes").value;
+            global.ApplicationFormData.priorCreditValue = document.getElementById("priorCred").value;
+        }
+        if (document.getElementById("prior-no").checked) {
+            global.ApplicationFormData.priorCredit = document.getElementById("prior-no").value;
+        }
+
+        if (document.getElementById("year-1").checked) {
+            global.ApplicationFormData.startYear = document.getElementById("year-1").value;
+        }
+        if (document.getElementById("year-2").checked) {
+            global.ApplicationFormData.startYear = document.getElementById("year-2").value;
+        }
+        if (document.getElementById("year-3").checked) {
+            global.ApplicationFormData.startYear = document.getElementById("year-3").value;
+        }
+
+        if (document.getElementById("study-yes").checked) {
+            global.ApplicationFormData.priorStudy = document.getElementById("study-yes").value;
+            global.ApplicationFormData.priorStudyDate = document.getElementById("priorStudyDate").value;
+        }
+        if (document.getElementById("study-no").checked) {
+            global.ApplicationFormData.priorStudy = document.getElementById("study-no").value;
+        }
+        console.log(global.ApplicationFormData);
+      }
+
+
+
     var fullPartOptions = [
         {label: "Full Time", id: "full", value:"full"},
         {label: "Part Time", id: "part", value: "part"}
@@ -135,7 +180,7 @@ const FormOne = () => {
 
             {
                 (showPrior)
-                ? <div><TextBox data-testid="prior-credit-text" name="prior-credits" title="How Many Credits?" size={5} type="number" minLength={1} maxLength={4} min={0} max={360} /><br /></div>
+                ? <div><TextBox id="priorCred" data-testid="prior-credit-text" name="prior-credits" title="How Many Credits?" size={5} type="number" minLength={1} maxLength={4} min={0} max={360} /><br /></div>
                 : <span></span>
             }
 
@@ -156,7 +201,7 @@ const FormOne = () => {
 
             {
                 (whenStudy)
-                ? <TextBox name="when-study" title="When did they last study at UCP/ARU?" size={20} type="text" minLength={2} maxLength={20} />
+                ? <TextBox id="priorStudyDate" name="when-study" title="When did they last study at UCP/ARU?" size={20} type="text" minLength={2} maxLength={20} />
                 : <span></span>
             }
             
@@ -175,13 +220,12 @@ const FormOne = () => {
             />
           </Col>
           <Col className="centered-buttons">
-            <div id="confirmButton">
+            <div id="confirmButton" onClick={SaveSelectedData}>
               <UCPButton
                to = "/LevelTwoQualifications"
                 primary="True"
                 className="mediumbutton"
                 buttonText="Next"
-                href="ClearingOfferMade"
               />
             </div>
           </Col>
@@ -189,7 +233,6 @@ const FormOne = () => {
         </Container>
         </div>
     )
-
 }
 
 export default FormOne;
