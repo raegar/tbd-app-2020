@@ -17,8 +17,11 @@ exports[`Renders ClearingOfferMadeFifthPage 1`] = `
     <div
       class="mobiletextbox"
     >
-      <label />
+      <label
+        for="emailConfirm"
+      />
       <input
+        id="emailConfirm"
         maxlength="30"
         minlength="0"
         placeholder="Test@email.com"
@@ -32,8 +35,11 @@ exports[`Renders ClearingOfferMadeFifthPage 1`] = `
     <div
       class="mobiletextbox"
     >
-      <label />
+      <label
+        for="courseApplied"
+      />
       <input
+        id="courseApplied"
         maxlength="30"
         minlength="0"
         placeholder=""
@@ -66,19 +72,21 @@ exports[`Renders ClearingOfferMadeFifthPage 1`] = `
         class="col"
       >
         <br />
-        <a
-          href="/"
-        >
-          <button
-            class="mediumbutton"
-            data-testid="ucpButton"
+        <div>
+          <a
             href="/"
-            primary="True"
-            type="button"
           >
-            Confirm and Continue​
-          </button>
-        </a>
+            <button
+              class="mediumbutton"
+              data-testid="ucpButton"
+              href="/"
+              primary="True"
+              type="button"
+            >
+              Confirm and Continue​
+            </button>
+          </a>
+        </div>
       </div>
     </div>
   </div>

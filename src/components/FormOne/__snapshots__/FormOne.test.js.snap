@@ -336,7 +336,6 @@ exports[`Renders Form One 1`] = `
               <button
                 class="mediumbutton"
                 data-testid="ucpButton"
-                href="ClearingOfferMade"
                 primary="True"
                 type="button"
               >
