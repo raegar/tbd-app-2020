@@ -35,10 +35,38 @@ const ClearingOfferMadeSecondPages = (props) => {
         { label: "Yes (Subject to Ell Status)", id:"Status", value: "yesstatus" },
         { label: "No", id: "offerNo",value: "No" },
         { label: "Interview Required (this may be due to students having industry experience rather than qualifications)", id: "offerInterviewRequired", value: "interviewrequired" },
-        { label: "RPA (Highlight this with Emma Cave or Zoe", id: "offerInterviewRequired", value: "interviewrequired" }      
+        { label: "RPA (Highlight this with Emma Cave or Zoe", id: "offerInterviewRequiredHighlight", value: "highlightinterviewrequired" }      
       ]
     ;
    
+
+    function SaveSelectedData() {
+
+        if (document.getElementById("offerYes").checked) {
+            global.ApplicationFormData.offerMade = document.getElementById("offerYes").value;
+          }
+          if (document.getElementById("offerYesPart").checked) {
+            global.ApplicationFormData.offerMade = document.getElementById("offerYesPart").value;
+          }    
+
+        if (document.getElementById("Status").checked) {
+            global.ApplicationFormData.offerMade = document.getElementById("Status").value;
+        }
+        if (document.getElementById("offerNo").checked) {
+            global.ApplicationFormData.offerMade = document.getElementById("offerNo").value;
+        }
+        if (document.getElementById("offerInterviewRequired").checked) {
+            global.ApplicationFormData.offerMade = document.getElementById("offerInterviewRequired").value;
+        }
+        if (document.getElementById("offerInterviewRequiredHighlight").checked) {
+            global.ApplicationFormData.offerMade = document.getElementById("offerInterviewRequiredHighlight").value;
+        }
+
+    
+        console.log(global.ApplicationFormData);
+      }
+
+
 return ( 
 
 <Container>
@@ -60,11 +88,15 @@ return (
                 buttonText="Go Back"
                 href="/ClearingOfferMade"></UCPButton></Col>
                 
-    <Col><UCPButton to='/ClearingOfferMadeThirdPage'
+    <Col>
+    <div id="confirmButton" onClick={SaveSelectedData}>
+        <UCPButton to='/ClearingOfferMadeThirdPage'
                 primary="True"
                 className="mediumbutton"
                 buttonText="Confirm and Continue"
-                ></UCPButton></Col>
+                ></UCPButton>
+    </div>
+    </Col>
 </Row>
 </Container>
 )

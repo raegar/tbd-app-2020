@@ -56,6 +56,33 @@ const EssentialApplicantInfo = (props) => {
     global.ApplicationFormData.telephone = document.getElementById("telinput").value;
     global.ApplicationFormData.dob = document.getElementById("dobinput").value;
     global.ApplicationFormData.ucasNumber = document.getElementById("ucasinput").value;
+    // get Nationality
+    if (document.getElementById("UK").checked) {
+      global.ApplicationFormData.Nationality = document.getElementById("UK").value;
+    }
+    if (document.getElementById("EU").checked) {
+      global.ApplicationFormData.Nationality = document.getElementById("EU").value;
+    }
+    if (document.getElementById("Other").checked) {
+      global.ApplicationFormData.Nationality = document.getElementById("Other").value;
+    }
+    // Criminal Conviction
+    if (document.getElementById("crimeYes").checked) {
+      global.ApplicationFormData.Convictions = document.getElementById("crimeYes").value;
+    }
+    if (document.getElementById("crimeNo").checked) {
+      global.ApplicationFormData.Convictions = document.getElementById("crimeNo").value;
+    }
+    // Learning Support
+    if (document.getElementById("supportYes").checked) {
+      global.ApplicationFormData.Support = document.getElementById("supportYes").value;
+    }
+    if (document.getElementById("supportNo").checked) {
+      global.ApplicationFormData.Support = document.getElementById("supportNo").value;
+    }
+    var course = document.getElementById("courseSelection");
+    global.ApplicationFormData.selectedCourse = course.options[course.selectedIndex].value;
+    //
     console.log(global.ApplicationFormData);
   }
   function UserTypeSelect() {
@@ -217,7 +244,7 @@ const EssentialApplicantInfo = (props) => {
             attribute="disabled"
           />
           <h4>Preferred Course</h4>
-          <DropdownMenu />
+          <DropdownMenu id="courseSelection"/>
         </span>
       </div>
       <div>{UserTypeSelect()}</div>

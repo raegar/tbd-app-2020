@@ -71,10 +71,13 @@ exports[`Renders Degree Qual 1`] = `
           <div
             class="mobiletextbox"
           >
-            <label>
+            <label
+              for="schoolDetail"
+            >
               What is the name of the most recent school/college attended?
             </label>
             <input
+              id="schoolDetail"
               maxlength="30"
               minlength="0"
               name="recent-school"

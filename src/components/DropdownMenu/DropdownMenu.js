@@ -1,15 +1,20 @@
 import React from 'react'
-import Select from 'react-select'
 import './DropdownMenu.css'
 
 
 
-const DropdownMenu = ({options,onChange,id,...props}) => (
-
-  <Select id={id} className="Dropdown" options={options} onChange={onChange}/>
-)
-
-
+function DropdownMenu(props) {
+  return (
+  <select id={props.id} 
+  className="Dropdown" 
+  onChange={props.onChange}>
+    <option value="">{props.placeholder}</option>
+      {props.options.map((value, i) => (
+        <option key={i} value={value.value}>{value.label}</option>
+      ))}
+  </select>
+  );
+}
 export default DropdownMenu;
 
 DropdownMenu.defaultProps = {

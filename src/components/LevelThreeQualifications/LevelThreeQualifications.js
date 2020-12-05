@@ -26,6 +26,17 @@ const LevelThreeQualifications = () => {
       setCounter(counter + 1);
     }
   }
+
+  function SaveSelectedData() {
+
+    global.ApplicationFormData.levelThreeQualifications1 = document.getElementById("qualification1").value;
+    global.ApplicationFormData.levelThreeSubject1 = document.getElementById("subject1").value;
+    global.ApplicationFormData.levelThreeGrade1 = document.getElementById("grade1").value;
+    global.ApplicationFormData.levelThreeStart1 = document.getElementById("year1").value;
+
+    console.log(global.ApplicationFormData);
+  }
+
   const className1 = isMobile ? "l3-mobile-form-right" : "l3-form-right";
   return (
   
@@ -54,7 +65,7 @@ const LevelThreeQualifications = () => {
             />
           </Col>
           <Col className="centered-buttons">
-            <div id="confirmButton">
+            <div id="confirmButton" onClick={SaveSelectedData}>
               <UCPButton
                to = "/DegreeQualifications"
                 primary="True"

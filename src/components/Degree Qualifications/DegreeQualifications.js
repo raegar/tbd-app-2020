@@ -27,6 +27,27 @@ const DegreeQualifications = (props) => {
             setLevelFour(false);
         }
     }
+    function SaveSelectedData() {
+
+        if (document.getElementById("prior-yes").checked) {
+            global.ApplicationFormData.anyLevelFourQualification = document.getElementById("prior-yes").value;
+            global.ApplicationFormData.levelFourQualificationDetails = document.getElementById("nameGrade").value;
+          }
+          if (document.getElementById("prior-no").checked) {
+            global.ApplicationFormData.AnyLevelFourQualification = document.getElementById("prior-no").value;
+          }    
+        global.ApplicationFormData.mostRecentSchool = document.getElementById("schoolDetail").value;
+
+        if (document.getElementById("elq-yes").checked) {
+            global.ApplicationFormData.elqQualification = document.getElementById("elq-yes").value;
+        }
+        if (document.getElementById("elq-no").checked) {
+            global.ApplicationFormData.elqQualification = document.getElementById("elq-no").value;
+        }
+
+    
+        console.log(global.ApplicationFormData);
+      }
 
     return (
         <>
@@ -45,13 +66,14 @@ const DegreeQualifications = (props) => {
                         />
                         {
                             (levelFour)
-                            ? <TextBox title="Enter qualification name and grade" name="l-4-qual" size={30} />
+                            ? <TextBox id="nameGrade" title="Enter qualification name and grade" name="l-4-qual" size={30} />
                             : <span></span>
                         }
 
                     </Col>
                     <Col>
                         <TextBox 
+                            id="schoolDetail"
                             name="recent-school" 
                             title="What is the name of the most recent school/college attended?" 
                             size={25} 
@@ -75,7 +97,7 @@ const DegreeQualifications = (props) => {
               buttonText="Go Back"
             />
           </Col>
-          <Col className="centered-buttons">
+          <Col className="centered-buttons" onClick={SaveSelectedData}>
             <div id="confirmButton">
               <UCPButton
                to = "/ClearingOfferMade"

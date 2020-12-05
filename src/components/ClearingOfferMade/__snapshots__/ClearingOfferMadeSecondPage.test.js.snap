@@ -110,14 +110,14 @@ exports[`Renders ClearingOfferMadeSecondPage 1`] = `
         class="radio-group"
       >
         <input
-          data-testid="offerInterviewRequired"
-          id="offerInterviewRequired"
+          data-testid="offerInterviewRequiredHighlight"
+          id="offerInterviewRequiredHighlight"
           name="offer"
           type="radio"
-          value="interviewrequired"
+          value="highlightinterviewrequired"
         />
         <label
-          for="offerInterviewRequired"
+          for="offerInterviewRequiredHighlight"
         >
           RPA (Highlight this with Emma Cave or Zoe
         </label>
@@ -146,18 +146,22 @@ exports[`Renders ClearingOfferMadeSecondPage 1`] = `
       <div
         class="col"
       >
-        <a
-          href="/ClearingOfferMadeThirdPage"
+        <div
+          id="confirmButton"
         >
-          <button
-            class="mediumbutton"
-            data-testid="ucpButton"
-            primary="True"
-            type="button"
+          <a
+            href="/ClearingOfferMadeThirdPage"
           >
-            Confirm and Continue​
-          </button>
-        </a>
+            <button
+              class="mediumbutton"
+              data-testid="ucpButton"
+              primary="True"
+              type="button"
+            >
+              Confirm and Continue​
+            </button>
+          </a>
+        </div>
       </div>
     </div>
   </div>
