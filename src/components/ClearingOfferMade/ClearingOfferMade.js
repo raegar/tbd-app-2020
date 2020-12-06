@@ -7,7 +7,10 @@ import UCPButton from "../Buttons/UCPButton";
 
 
 const ClearingOfferMade = (props) => {
-  return(
+
+    if (global.userType === "staff") {
+      return (
+       
 <Container>
     <h1>Offer Note</h1>
     <p>Offers can only be made if applicant has acheived their qualifications and not if they are waiting for their grade to be published. <br/>They need to ring back once their grade has been confirmed </p>
@@ -26,6 +29,8 @@ const ClearingOfferMade = (props) => {
 </Row>
  </Container>
   )
+
+}
 }
 export default ClearingOfferMade;
 
