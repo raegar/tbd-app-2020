@@ -13,7 +13,7 @@
 }
 
 .es-form-container {
-    padding-right: 0px !important;
+    padding-right: 0px  ;
     padding-left: 0px !important;
 }
 
@@ -51,6 +51,8 @@
         width: 100%;
         float: left;
     }
+
+
 }
 
 .h3{
