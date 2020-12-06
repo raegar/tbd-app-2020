@@ -3,10 +3,10 @@
 exports[`Renders LevelTwoQualifications 1`] = `
 <DocumentFragment>
   <div
-    class="l2-form-container"
+    class="container"
   >
     <div
-      class="l2-form-background"
+      class="l2-form-container container"
     >
       <h4
         class="form-title"

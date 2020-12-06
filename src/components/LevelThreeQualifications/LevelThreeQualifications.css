@@ -10,7 +10,14 @@
 {
     text-align: center;
 }
-
+.form-background h3
+{
+    margin-left: 60px;
+}
+.form-background h5
+{
+    margin-left: 60px;
+}
 .l3-form-container {
     text-align: center;
     margin: auto;
