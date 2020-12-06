@@ -1,7 +1,7 @@
 import React from "react";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import "./LevelTwoQualifications.css";
-import {Row, Col } from "react-bootstrap";
+import {Row, Col, Container } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 import AlerDismissible from '../AlertDismissible/AlertDismissible';
 import {isMobile} from 'react-device-detect';
@@ -49,8 +49,8 @@ function LevelTwoQualifications (props) {
   const className2 = isMobile ? "l2-mobile-form-container" : "l2-form-container";
   return (
   
-    <div className={className2}>
-      <div className="l2-form-background">
+ <Container>
+ <Container className={className2}>
         <h4 className="form-title">Applicant Qualifications</h4>
         <AlerDismissible/>
         <div className={className1}>
@@ -65,9 +65,8 @@ function LevelTwoQualifications (props) {
           <p>L2 Qualifications</p>
           <textarea id="l2details" className = {className} name="l2qualificaitons" placeholder="Enter level 2 qualifications"  rows={6} cols={30}/>
         </div>
-
-      </div>
-      <Row id="buttonRow">
+    </Container>
+    <Row id="buttonRow">
           <Col className="centered-buttons">
             <UCPButton to='/MoreInfo'
               primary="True"
@@ -86,9 +85,7 @@ function LevelTwoQualifications (props) {
             </div>
           </Col>
         </Row>
-    </div>
-
-    
+    </Container>
   );
 };
 

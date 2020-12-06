@@ -3,165 +3,154 @@
 exports[`Renders LevelThreeQualifications 1`] = `
 <DocumentFragment>
   <div
-    class="l3-form-container"
+    class="container"
   >
     <div
-      class="form-background"
+      class="l3-form-container"
     >
-      <h3
-        class="form-title"
-      >
-        Level 3 Qualifications
-      </h3>
       <div
-        class="l3-form-right"
+        class="form-background"
       >
         <div
-          class="l3component"
+          class="l3-form-right"
         >
-          <p>
-            Qualification : #1 
-          </p>
-          <p>
-            (E.g. A Level, BTEC, Access)
-          </p>
-          <div
-            class="mobiletextbox"
+          <h3
+            class="form-title"
           >
-            <label
-              for="qualification1"
-            />
-            <input
-              id="qualification1"
-              maxlength="30"
-              minlength="0"
-              placeholder="Enter qualification #1"
-              type="text"
-            />
-          </div>
-          <p>
-            Subject: (E.g. Bussiness Studies)
-          </p>
+            Level 3 Qualifications
+          </h3>
           <div
-            class="mobiletextbox"
+            class="l3component"
           >
-            <label
-              for="subject1"
-            />
-            <input
-              id="subject1"
-              maxlength="30"
-              minlength="0"
-              placeholder="Enter subject #1"
-              type="text"
-            />
-          </div>
-          <p>
-            Grade Achieved
-          </p>
-          <div
-            class="mobiletextbox"
-          >
-            <label
-              for="grade1"
-            />
-            <input
-              id="grade1"
-              maxlength="30"
-              minlength="0"
-              placeholder="Enter grade #1"
-              type="text"
-            />
-          </div>
-          <p>
-            Year Achieved
-          </p>
-          <div
-            class="mobiletextbox"
-          >
-            <label
-              for="year1"
-            />
-            <input
-              id="year1"
-              maxlength="30"
-              minlength="0"
-              placeholder=""
-              type="date"
-            />
-          </div>
-        </div>
-        <p>
-          Other L3 Qualifications
-        </p>
-        <div
-          class="radio-buttons"
-        >
-          <h4 />
-          <p />
-          <div
-            class="radio-group"
-          >
-            <input
-              data-testid="qualificationYes"
-              id="qualificationYes"
-              name="l3qualifications"
-              type="radio"
-              value="yes"
-            />
-            <label
-              for="qualificationYes"
+            <h5>
+              Qualification : #1 
+            </h5>
+            <p>
+              (E.g. A Level, BTEC, Access)
+            </p>
+            <div
+              class="mobiletextbox"
             >
-              Yes
-            </label>
-          </div>
-          <div
-            class="radio-group"
-          >
-            <input
-              data-testid="qualificationNo"
-              id="qualificationNo"
-              name="l3qualifications"
-              type="radio"
-              value="no"
-            />
-            <label
-              for="qualificationNo"
+              <label
+                for="qualification1"
+              />
+              <input
+                id="qualification1"
+                maxlength="30"
+                minlength="0"
+                placeholder="Enter qualification #1"
+                type="text"
+                value=""
+              />
+            </div>
+            <h5>
+              Subject: (E.g. Bussiness Studies)
+            </h5>
+            <div
+              class="mobiletextbox"
             >
-              No
-            </label>
+              <label
+                for="subject1"
+              />
+              <input
+                id="subject1"
+                maxlength="30"
+                minlength="0"
+                placeholder="Enter subject #1"
+                type="text"
+                value=""
+              />
+            </div>
+            <h5>
+              Grade Achieved
+            </h5>
+            <div
+              class="mobiletextbox"
+            >
+              <label
+                for="grade1"
+              />
+              <input
+                id="grade1"
+                maxlength="30"
+                minlength="0"
+                placeholder="Enter grade #1"
+                type="text"
+                value=""
+              />
+            </div>
+            <h5>
+              Year Achieved
+            </h5>
+            <div
+              class="mobiletextbox"
+            >
+              <label
+                for="year1"
+              />
+              <input
+                id="year1"
+                maxlength="30"
+                minlength="0"
+                placeholder=""
+                type="date"
+                value=""
+              />
+            </div>
+          </div>
+          <br />
+          <h5>
+            Other L3 Qualifications
+          </h5>
+          <div
+            class="radio-buttons"
+          >
+            <h4 />
+            <p />
+            <div
+              class="radio-group"
+            >
+              <input
+                data-testid="qualificationYes"
+                id="qualificationYes"
+                name="l3qualifications"
+                type="radio"
+                value="yes"
+              />
+              <label
+                for="qualificationYes"
+              >
+                Yes
+              </label>
+            </div>
+            <div
+              class="radio-group"
+            >
+              <input
+                data-testid="qualificationNo"
+                id="qualificationNo"
+                name="l3qualifications"
+                type="radio"
+                value="no"
+              />
+              <label
+                for="qualificationNo"
+              >
+                No
+              </label>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      class="row"
-      id="buttonRow"
-    >
       <div
-        class="centered-buttons col"
-      >
-        <a
-          href="/LevelTwoQualifications"
-        >
-          <button
-            class="mediumbutton"
-            data-testid="ucpButton"
-            primary="True"
-            type="button"
-          >
-            Go Back​
-          </button>
-        </a>
-      </div>
-      <div
-        class="centered-buttons col"
+        class="row"
+        id="buttonRow"
       >
         <div
-          id="confirmButton"
+          class="centered-buttons col"
         >
           <a
-            href="/DegreeQualifications"
+            href="/LevelTwoQualifications"
           >
             <button
               class="mediumbutton"
@@ -169,9 +158,29 @@ exports[`Renders LevelThreeQualifications 1`] = `
               primary="True"
               type="button"
             >
-              Confirm and Go​
+              Go Back​
             </button>
           </a>
+        </div>
+        <div
+          class="centered-buttons col"
+        >
+          <div
+            id="confirmButton"
+          >
+            <a
+              href="/DegreeQualifications"
+            >
+              <button
+                class="mediumbutton"
+                data-testid="ucpButton"
+                primary="True"
+                type="button"
+              >
+                Confirm and Go​
+              </button>
+            </a>
+          </div>
         </div>
       </div>
     </div>

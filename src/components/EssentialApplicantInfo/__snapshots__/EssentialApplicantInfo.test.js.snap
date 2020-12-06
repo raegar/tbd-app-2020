@@ -33,6 +33,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             placeholder="Enter your name"
             size="20"
             type="text"
+            value=""
           />
         </div>
         <div
@@ -52,6 +53,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             placeholder="Enter your email"
             size="20"
             type="email"
+            value=""
           />
         </div>
         <div
@@ -71,6 +73,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             placeholder="Enter phone number"
             size="20"
             type="tel"
+            value=""
           />
         </div>
         <div
@@ -90,6 +93,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             placeholder="Enter date of birth"
             size="20"
             type="date"
+            value=""
           />
         </div>
         <div
@@ -109,6 +113,7 @@ exports[`Renders Essential Applicant Info 1`] = `
             placeholder="Enter UCAS ID"
             size="20"
             type="text"
+            value=""
           />
         </div>
       </span>

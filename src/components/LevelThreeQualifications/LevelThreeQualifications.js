@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "./LevelThreeQualifications.css";
-import RadioButton from '../RadioButton/RadioButton';
+import RadioButton1 from '../RadioButton/RadioButton1';
 import L3Component from '../L3Component/L3Component';
 import { isMobile } from 'react-device-detect';
-import {Row, Col} from "react-bootstrap";
+import {Row, Col, Container} from "react-bootstrap";
+import {Redirect} from "react-router-dom";
 import UCPButton from '../Buttons/UCPButton'
 var l3QualificationsOptions = [
   { label: "Yes", id: "qualificationYes", value: "yes" },
@@ -39,22 +40,24 @@ const LevelThreeQualifications = () => {
 
   const className1 = isMobile ? "l3-mobile-form-right" : "l3-form-right";
   return (
-  
-    <div className={className2}>
+  <Container>
+<div className={className2}>
       <div className="form-background">
-        <h3 className="form-title">Level 3 Qualifications</h3>
+        
         {counter < 6 ?
           <div className={className1}>
+            <h3 className="form-title">Level 3 Qualifications</h3>
             <L3Component id={counter} clearInput= {emptyInput}  />
-              <p>Other L3 Qualifications</p>
-              <RadioButton
+            <br/>
+              <h5>Other L3 Qualifications</h5>
+              <RadioButton1
                 options={l3QualificationsOptions}
                 name="l3qualifications"
                 value={value}
                 onChange={handleChange}
               />
           </div>
-          : <div>Next Page </div>}
+          : <Redirect to={{ pathname: "/DegreeQualifications" }} />}
       </div>
       <Row id="buttonRow">
           <Col className="centered-buttons">
@@ -77,7 +80,7 @@ const LevelThreeQualifications = () => {
           </Col>
         </Row>
     </div>
-   
+  </Container>
   );
 
 };

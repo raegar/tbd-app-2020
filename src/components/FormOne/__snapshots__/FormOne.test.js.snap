@@ -31,6 +31,7 @@ exports[`Renders Form One 1`] = `
               placeholder="Address Line 1"
               size="35"
               type="text"
+              value=""
             />
           </div>
           <div
@@ -49,6 +50,7 @@ exports[`Renders Form One 1`] = `
               placeholder="Address Line 2"
               size="35"
               type="text"
+              value=""
             />
           </div>
           <div
@@ -67,6 +69,7 @@ exports[`Renders Form One 1`] = `
               placeholder="Town/City"
               size="35"
               type="text"
+              value=""
             />
           </div>
           <div
@@ -85,6 +88,7 @@ exports[`Renders Form One 1`] = `
               placeholder="Region"
               size="25"
               type="text"
+              value=""
             />
           </div>
           <div
@@ -103,6 +107,7 @@ exports[`Renders Form One 1`] = `
               placeholder="Postcode"
               size="10"
               type="text"
+              value=""
             />
           </div>
           <br />

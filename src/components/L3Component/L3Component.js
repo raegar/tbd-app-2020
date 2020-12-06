@@ -7,7 +7,7 @@ const L3Component = ({ name, id,key, onChange,placeholder,value,clearInput, ...p
     const className1 = isMobile ? "mobilel3component" : "l3component";
     return (
         <div className={className1}>
-            <p>Qualification : {"#"+id} </p>
+            <h5>Qualification : {"#"+id} </h5>
             <p>(E.g. A Level, BTEC, Access)</p>
             <TextBox
             onChange = {onChange}    
@@ -17,7 +17,7 @@ const L3Component = ({ name, id,key, onChange,placeholder,value,clearInput, ...p
                 value ={value} 
                 clearInput = {clearInput}
                 />
-            <p>Subject: (E.g. Bussiness Studies)</p>
+            <h5>Subject: (E.g. Bussiness Studies)</h5>
             <TextBox
                 id={"subject" +id}
                 key = {"3000" + id}
@@ -25,14 +25,14 @@ const L3Component = ({ name, id,key, onChange,placeholder,value,clearInput, ...p
                 value ={value} 
                 clearInput = {clearInput}
                 />
-            <p>Grade Achieved</p>
+            <h5>Grade Achieved</h5>
             <TextBox
                 id={"grade"+id}
                 key = {"4000" + id}
                 placeholder={ "Enter grade #"+id}
                 value ={value} 
                 clearInput = {clearInput} />
-            <p>Year Achieved</p>
+            <h5>Year Achieved</h5>
             <TextBox
                 id={"year"+id}
                 key = {"5000" + id}
