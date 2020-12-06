@@ -50,11 +50,11 @@ return ( <Container>
     <h3>41. Please enter course applied for</h3>
     <TextBox id="courseApplied"/>
 <Row>
-    <Col><br></br><UCPButton to='/ClearingOfferMadeFourthPage'
+    <Col><br></br><UCPButton to='/ClearingOfferMadeSecondPage'
                 primary="True"
                 className="mediumbutton"
                 buttonText="Go Back"
-                href="/ClearingOfferMadeFourthPage"></UCPButton></Col>
+                href="/ClearingOfferMadeSecondPage"></UCPButton></Col>
 
     <Col><br></br>
     <div onClick={DownloadFile}>

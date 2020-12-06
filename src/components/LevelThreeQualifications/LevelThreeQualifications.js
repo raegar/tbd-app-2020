@@ -8,7 +8,6 @@ import {Redirect} from "react-router-dom";
 import UCPButton from '../Buttons/UCPButton'
 var l3QualificationsOptions = [
   { label: "Yes", id: "qualificationYes", value: "yes" },
-  { label: "No", id: "qualificationNo", value: "no" },
 ];
 const LevelThreeQualifications = () => {
   const className2 = isMobile ? "l3-mobile-form-container" : "l3-form-container";
@@ -25,16 +24,16 @@ const LevelThreeQualifications = () => {
     else {
       setClearInput(true);
       setCounter(counter + 1);
+      SaveSelectedData();
     }
   }
 
   function SaveSelectedData() {
 
-    global.ApplicationFormData.levelThreeQualifications1 = document.getElementById("qualification"+counter).value;
-    global.ApplicationFormData.levelThreeSubject1 = document.getElementById("subject"+counter).value;
-    global.ApplicationFormData.levelThreeGrade1 = document.getElementById("grade"+counter).value;
-    global.ApplicationFormData.levelThreeStart1 = document.getElementById("year"+counter).value;
-
+    global.ApplicationFormData.levelThreeQualifications.qual[counter-1] = document.getElementById("qualification"+counter).value;
+    global.ApplicationFormData.levelThreeQualifications.subject[counter-1] = document.getElementById("subject"+counter).value;
+    global.ApplicationFormData.levelThreeQualifications.grade[counter-1] = document.getElementById("grade"+counter).value;
+    global.ApplicationFormData.levelThreeQualifications.date[counter-1] = document.getElementById("year"+counter).value;
     console.log(global.ApplicationFormData);
   }
 
