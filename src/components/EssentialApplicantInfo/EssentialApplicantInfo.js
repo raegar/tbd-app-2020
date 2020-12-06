@@ -10,14 +10,11 @@ import {isMobile} from 'react-device-detect';
 
 const EssentialApplicantInfo = (props) => {
   let textboxClassName;
-  let dropdownClassName
   if(isMobile)
   {
-    dropdownClassName = "MobileDropdown";
     textboxClassName = "mobiletextbox";
   }
   else{
-    dropdownClassName = "Dropdown";
     textboxClassName = "desktoptextbox";
   }
 
@@ -245,7 +242,7 @@ const EssentialApplicantInfo = (props) => {
             attribute="disabled"
           />
           <h4>Preferred Course</h4>
-          <DropdownMenu className={dropdownClassName} id="courseSelection"/>
+          <DropdownMenu id="courseSelection"/>
         </span>
       </div>
       <div>{UserTypeSelect()}</div>
