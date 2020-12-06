@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import RadioButton from "../RadioButton/RadioButton";
-import "./ClearingOfferMade.css";
+import "./ClearingOfferMade2.css";
 import { Container, Col, Row } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
+import {Redirect} from "react-router-dom";
 
 
 /*
@@ -28,14 +29,41 @@ function GetNextPage(){
 
 }*/ 
 const ClearingOfferMadeSecondPages = (props) => {
+    const[whenNo, setWhenNo] = useState(false);
+    const[whenRPA, setWhenRPA] = useState(false);
+    const[whenInterview, setwhenInterview] = useState(false);
 
+    function handleWhenClick(v) {
+        if (v === 'No') {
+            setWhenNo(true);
+            setWhenRPA(false);
+            setwhenInterview(false);
+        } else if (v==="RPARequired"){
+            setWhenRPA(true);
+            setWhenNo(false);
+            setwhenInterview(false);
+
+        
+        } else if (v==="InterviewRequired"){
+            setWhenRPA(false);
+            setWhenNo(false);
+            setwhenInterview(true);
+
+        }
+        else  {
+            setWhenNo(false);
+            setWhenRPA(false);
+            setwhenInterview(false);
+
+        }
+    }
     var offerOptions = [
-        { label: "Yes", id: "offerYes", value: "yes" },
+        { label: "Yes", id: "offerYes", value: "Yes" },
         { label: "Yes (Partial Requirements met, this will be where student doesn't have all requirements)", id: "offerYesPart", value: "yespart" },
         { label: "Yes (Subject to Ell Status)", id:"Status", value: "yesstatus" },
         { label: "No", id: "offerNo",value: "No" },
-        { label: "Interview Required (this may be due to students having industry experience rather than qualifications)", id: "offerInterviewRequired", value: "interviewrequired" },
-        { label: "RPA (Highlight this with Emma Cave or Zoe", id: "offerInterviewRequiredHighlight", value: "highlightinterviewrequired" }      
+        { label: "Interview Required (this may be due to students having industry experience rather than qualifications)", id: "offerInterviewRequired", value: "InterviewRequired" },
+        { label: "RPA (Highlight this with Emma Cave or Zoe", id: "offerInterviewRequiredHighlight", value: "RPARequired" }      
       ]
     ;
    
@@ -78,9 +106,32 @@ return (
             heading="Yes"
             options={offerOptions}
             name="offer"
+            oc={handleWhenClick}
+
            /*  oc={GetTestData()}
            onchange={GetNextPage()} */
   />
+
+{
+                (whenNo)
+                ? <Redirect to={{ pathname: "/ClearingOfferMadeThirdPage" }} />
+                
+                : <span></span>
+            }
+
+{
+                (whenRPA)
+                ? <Redirect to={{ pathname: "/ClearingOfferMadeFourthPage" }} />
+                
+                : <span></span>
+            }
+
+{
+                (whenInterview)
+                ? <Redirect to={{ pathname: "/ClearingOfferMadeFourthPage" }} />
+                
+                : <span></span>
+            }
 <Row>
 <Col><UCPButton to='/ClearingOfferMade'
                 primary="True"
