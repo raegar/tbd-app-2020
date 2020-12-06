@@ -43,25 +43,24 @@ var fileName = "studentDetails.json";
 
 
 return ( <Container>
-    <h1>Before hanging up....</h1>
-    <p>Please state the following</p>
-    <h3>40. Please confirm email offer will be send to</h3>
+    <h1>Thank you for using the form</h1>
+    <p>Please press confirm to complete</p>
+    <h3>Please confirm email that your application will be sent to</h3>
     <TextBox id="emailConfirm" placeholder={global.ApplicationFormData.email}/>
-    <h3>41. Please enter course applied for</h3>
-    <TextBox id="courseApplied"/>
+   
 <Row>
-    <Col><br></br><UCPButton to='/ClearingOfferMadeSecondPage'
+    <Col><br></br><UCPButton to='/ClearingOfferMadeFourthPage'
                 primary="True"
                 className="mediumbutton"
                 buttonText="Go Back"
-                href="/ClearingOfferMadeSecondPage"></UCPButton></Col>
+                href="/ClearingOfferMadeFourthPage"></UCPButton></Col>
 
     <Col><br></br>
     <div onClick={DownloadFile}>
         <UCPButton to ='/'
                  primary="True"
                 className="mediumbutton"
-                buttonText="Confirm and Continue"
+                buttonText="Confirm"
                 href="/"></UCPButton>
     </div>
         </Col>

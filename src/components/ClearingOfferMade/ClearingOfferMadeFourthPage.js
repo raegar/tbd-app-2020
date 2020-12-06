@@ -16,11 +16,11 @@ return (<Container>
     <TextBox/>
 <Row>
 
-    <Col><br></br><UCPButton to='/ClearingOfferMadeThirdPage'
+    <Col><br></br><UCPButton to='/ClearingOfferMadeSecondPage'
                 primary="True"
                 className="mediumbutton"
                 buttonText="Go Back"
-                href="/ClearingOfferMadeThirdPage"></UCPButton></Col>
+                href="/ClearingOfferMadeSecondPage"></UCPButton></Col>
     <Col><br></br><UCPButton to='/ClearingOfferMadeFifthPage'
                 primary="True"
                 className="mediumbutton"

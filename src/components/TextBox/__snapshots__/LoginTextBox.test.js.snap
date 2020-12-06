@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders LoginTextBox 1`] = `
+<DocumentFragment>
+  <div
+    class="mobiletextbox"
+  >
+    <label
+      for="input1"
+    >
+      First Name
+    </label>
+    <input
+      id="input1"
+      maxlength="30"
+      minlength="5"
+      placeholder="Enter your firstname"
+      size="20"
+      type="text"
+    />
+  </div>
+</DocumentFragment>
+`;

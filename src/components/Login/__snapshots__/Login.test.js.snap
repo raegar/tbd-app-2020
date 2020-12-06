@@ -42,7 +42,6 @@ exports[`Renders Login 1`] = `
                 placeholder="Enter Your Username"
                 size="20"
                 type="text"
-                value=""
               />
             </div>
           </div>
@@ -74,7 +73,6 @@ exports[`Renders Login 1`] = `
                 placeholder="Enter Your Password"
                 size="20"
                 type="password"
-                value=""
               />
             </div>
           </div>

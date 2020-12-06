@@ -17,7 +17,7 @@ return ( <Container>
                 className="mediumbutton"
                 buttonText="Go Back"
                 href="/ClearingOfferMadeSecondPage"></UCPButton></Col>
-    <Col><br></br><UCPButton to='/ClearingOfferMadeFourthPage'
+    <Col><br></br><UCPButton to='/ClearingOfferMadeFifthPage'
                 primary="True"
                 className="mediumbutton"
                 buttonText="Confirm and Continue"

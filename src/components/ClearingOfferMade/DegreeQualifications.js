@@ -12,7 +12,7 @@ const DegreeQualifications = (props) => {
     }
     else
     {
-        nextpage = "/ClearingOfferMadeStudentEnd" 
+        nextpage = "/" 
 
     }
 

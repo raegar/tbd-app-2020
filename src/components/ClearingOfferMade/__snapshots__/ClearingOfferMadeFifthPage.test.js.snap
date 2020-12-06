@@ -57,12 +57,12 @@ exports[`Renders ClearingOfferMadeFifthPage 1`] = `
       >
         <br />
         <a
-          href="/ClearingOfferMadeFourthPage"
+          href="/ClearingOfferMadeSecondPage"
         >
           <button
             class="mediumbutton"
             data-testid="ucpButton"
-            href="/ClearingOfferMadeFourthPage"
+            href="/ClearingOfferMadeSecondPage"
             primary="True"
             type="button"
           >

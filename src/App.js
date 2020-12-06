@@ -14,6 +14,7 @@ import ClearingOfferMadeSecondPage from './components/ClearingOfferMade/Clearing
 import ClearingOfferMadeThirdPage from './components/ClearingOfferMade/ClearingOfferMadeThirdPage';
 import ClearingOfferMadeFourthPage from './components/ClearingOfferMade/ClearingOfferMadeFourthPage';
 import ClearingOfferMadeFifthPage from './components/ClearingOfferMade/ClearingOfferMadeFifthPage';
+import ClearingOfferMadeStudentEnd from './components/ClearingOfferMade/ClearingOfferMadeStudentEnd';
 import FormOne from './components/FormOne/FormOne'
 
 const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
@@ -38,6 +39,8 @@ function App() {
           <Route path='/ClearingOfferMadeThirdPage' component={ClearingOfferMadeThirdPage}/>
           <Route path='/ClearingOfferMadeFourthPage' component={ClearingOfferMadeFourthPage}/>
           <Route path='/ClearingOfferMadeFifthPage' component={ClearingOfferMadeFifthPage}/>
+          <Route path='/ClearingOfferMadeStudentEnd' component={ClearingOfferMadeStudentEnd}/>
+
         </Switch>
       </div>
         <Footer/>

@@ -161,7 +161,7 @@ exports[`Renders Degree Qual 1`] = `
           id="confirmButton"
         >
           <a
-            href="/ClearingOfferMade"
+            href="/ClearingOfferMadeStudentEnd"
           >
             <button
               class="mediumbutton"
