@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row , Col} from 'react-bootstrap';
-import TextBox from '../TextBox/TextBox'
+import TextBox from '../TextBox/LoginTextBox'
 import UCPButton from '../Buttons/UCPButton';
 import './Login.css';
 import {isMobile} from 'react-device-detect';

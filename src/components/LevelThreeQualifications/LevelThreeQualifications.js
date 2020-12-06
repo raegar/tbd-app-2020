@@ -30,10 +30,10 @@ const LevelThreeQualifications = () => {
 
   function SaveSelectedData() {
 
-    global.ApplicationFormData.levelThreeQualifications1 = document.getElementById("qualification1").value;
-    global.ApplicationFormData.levelThreeSubject1 = document.getElementById("subject1").value;
-    global.ApplicationFormData.levelThreeGrade1 = document.getElementById("grade1").value;
-    global.ApplicationFormData.levelThreeStart1 = document.getElementById("year1").value;
+    global.ApplicationFormData.levelThreeQualifications1 = document.getElementById("qualification"+counter).value;
+    global.ApplicationFormData.levelThreeSubject1 = document.getElementById("subject"+counter).value;
+    global.ApplicationFormData.levelThreeGrade1 = document.getElementById("grade"+counter).value;
+    global.ApplicationFormData.levelThreeStart1 = document.getElementById("year"+counter).value;
 
     console.log(global.ApplicationFormData);
   }
@@ -57,7 +57,7 @@ const LevelThreeQualifications = () => {
                 onChange={handleChange}
               />
           </div>
-          : <Redirect to={{ pathname: "/DegreeQualifications" }} />}
+          : <Redirect  to={{ pathname: "/DegreeQualifications" }} />}
       </div>
       <Row id="buttonRow">
           <Col className="centered-buttons">

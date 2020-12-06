@@ -8,8 +8,8 @@ import '../../global/GlobalVariables.js';
 //cleans up 
 afterEach(cleanup);
 
-it("Renders ClearingOfferMadeFifthPage", () => {
+it("Renders ClearingOfferMadeStudentEnd", () => {
     global.ApplicationFormData.email = "Test@email.com";
-    const { asFragment } = render(<Router><ClearingOfferMadeFifthPage /></Router>);
+    const { asFragment } = render(<Router><ClearingOfferMadeStudentEnd /></Router>);
     expect(asFragment()).toMatchSnapshot();
 });

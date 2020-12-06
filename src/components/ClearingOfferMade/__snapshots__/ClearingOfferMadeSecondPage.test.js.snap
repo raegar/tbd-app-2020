@@ -34,7 +34,7 @@ exports[`Renders ClearingOfferMadeSecondPage 1`] = `
           id="offerYes"
           name="offer"
           type="radio"
-          value="yes"
+          value="Yes"
         />
         <label
           for="offerYes"
@@ -98,7 +98,7 @@ exports[`Renders ClearingOfferMadeSecondPage 1`] = `
           id="offerInterviewRequired"
           name="offer"
           type="radio"
-          value="interviewrequired"
+          value="InterviewRequired"
         />
         <label
           for="offerInterviewRequired"
@@ -114,7 +114,7 @@ exports[`Renders ClearingOfferMadeSecondPage 1`] = `
           id="offerInterviewRequiredHighlight"
           name="offer"
           type="radio"
-          value="highlightinterviewrequired"
+          value="RPARequired"
         />
         <label
           for="offerInterviewRequiredHighlight"
@@ -123,6 +123,9 @@ exports[`Renders ClearingOfferMadeSecondPage 1`] = `
         </label>
       </div>
     </div>
+    <span />
+    <span />
+    <span />
     <div
       class="row"
     >
@@ -150,7 +153,7 @@ exports[`Renders ClearingOfferMadeSecondPage 1`] = `
           id="confirmButton"
         >
           <a
-            href="/ClearingOfferMadeThirdPage"
+            href="/ClearingOfferMadeFifthPage"
           >
             <button
               class="mediumbutton"

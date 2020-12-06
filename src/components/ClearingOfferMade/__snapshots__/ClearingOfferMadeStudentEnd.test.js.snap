@@ -1,30 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Renders ClearingOfferMadeFourthPage 1`] = `
+exports[`Renders ClearingOfferMadeStudentEnd 1`] = `
 <DocumentFragment>
   <div
     class="container"
   >
-    <p>
-      Required
-    </p>
     <h1>
-      Interview or RPA required
+      Thank you for using the form
     </h1>
     <p>
-      Enter any details for decision made
+      Please press confirm to complete
     </p>
     <h3>
-      39. Please state reasons:
+      Please confirm email that your application will be sent to
     </h3>
     <div
       class="mobiletextbox"
     >
-      <label />
+      <label
+        for="emailConfirm"
+      />
       <input
+        id="emailConfirm"
         maxlength="30"
         minlength="0"
-        placeholder=""
+        placeholder="Test@email.com"
         size="20"
         type="text"
         value=""
@@ -38,12 +38,12 @@ exports[`Renders ClearingOfferMadeFourthPage 1`] = `
       >
         <br />
         <a
-          href="/ClearingOfferMadeSecondPage"
+          href="/ClearingOfferMadeFourthPage"
         >
           <button
             class="mediumbutton"
             data-testid="ucpButton"
-            href="/ClearingOfferMadeSecondPage"
+            href="/ClearingOfferMadeFourthPage"
             primary="True"
             type="button"
           >
@@ -55,19 +55,21 @@ exports[`Renders ClearingOfferMadeFourthPage 1`] = `
         class="col"
       >
         <br />
-        <a
-          href="/ClearingOfferMadeFifthPage"
-        >
-          <button
-            class="mediumbutton"
-            data-testid="ucpButton"
-            href="/ClearingOfferMadeFifthPage"
-            primary="True"
-            type="button"
+        <div>
+          <a
+            href="/"
           >
-            Confirm and Continue​
-          </button>
-        </a>
+            <button
+              class="mediumbutton"
+              data-testid="ucpButton"
+              href="/"
+              primary="True"
+              type="button"
+            >
+              Confirm​
+            </button>
+          </a>
+        </div>
       </div>
     </div>
   </div>

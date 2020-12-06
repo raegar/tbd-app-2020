@@ -141,7 +141,7 @@ return (
                 
     <Col>
     <div id="confirmButton" onClick={SaveSelectedData}>
-        <UCPButton to='/ClearingOfferMadeThirdPage'
+        <UCPButton to='/ClearingOfferMadeFifthPage'
                 primary="True"
                 className="mediumbutton"
                 buttonText="Confirm and Continue"
