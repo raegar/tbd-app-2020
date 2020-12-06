@@ -123,22 +123,6 @@ exports[`Renders LevelThreeQualifications 1`] = `
                 Yes
               </label>
             </div>
-            <div
-              class="radio-group"
-            >
-              <input
-                data-testid="qualificationNo"
-                id="qualificationNo"
-                name="l3qualifications"
-                type="radio"
-                value="no"
-              />
-              <label
-                for="qualificationNo"
-              >
-                No
-              </label>
-            </div>
           </div>
         </div>
       </div>
