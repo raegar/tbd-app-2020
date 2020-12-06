@@ -16,6 +16,7 @@ const EssentialApplicantInfo = (props) => {
   }
   else{
     textboxClassName = "desktoptextbox";
+
   }
 
   var nationalityOptions = [
