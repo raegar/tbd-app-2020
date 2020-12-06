@@ -41,6 +41,7 @@
 .mobiletextbox label{
     margin-left: 5px;
 }
+
 @media only screen and (max-width: 768px){
     .ess-form-left {
     width: 100%;
@@ -51,6 +52,9 @@
         width: 100%;
         float: left;
     }
+
+
+
 
 
 }

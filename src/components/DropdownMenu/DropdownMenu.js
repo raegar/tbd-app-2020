@@ -1,12 +1,22 @@
 import React from 'react'
 import './DropdownMenu.css'
+import {isMobile} from 'react-device-detect';
 
 
 
 function DropdownMenu(props) {
+  let dropdownClassName;
+  if(isMobile)
+  {
+    dropdownClassName = "MobileDropdown";
+  }
+  else{
+    dropdownClassName = "Dropdown";
+
+  }  
   return (
   <select id={props.id} 
-  className="Dropdown" 
+  className={dropdownClassName} 
   onChange={props.onChange}>
     <option value="">{props.placeholder}</option>
       {props.options.map((value, i) => (
