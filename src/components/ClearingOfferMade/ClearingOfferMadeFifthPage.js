@@ -43,7 +43,7 @@ var fileName = "studentDetails.json";
 
 
 return ( <Container>
-    <h1>Before hanging up....</h1>
+    <h1>Before completing the offer....</h1>
     <p>Please state the following</p>
     <h3>40. Please confirm email offer will be send to</h3>
     <TextBox id="emailConfirm" placeholder={global.ApplicationFormData.email}/>
