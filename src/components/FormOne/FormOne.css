@@ -8,6 +8,8 @@
     margin-bottom: 10px;
 }
 .form-background h4{text-align: center;}
+.form-background p{text-align: center;}
+.form-background, label{text-align: center;}
 .centered-buttons
 {
     text-align: center;
