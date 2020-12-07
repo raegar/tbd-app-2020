@@ -49,11 +49,11 @@ return ( <Container>
     <TextBox id="emailConfirm" placeholder={global.ApplicationFormData.email}/>
    
 <Row>
-    <Col><br></br><UCPButton to='/ClearingOfferMadeFourthPage'
+    <Col><br></br><UCPButton to='/DegreeQualifications'
                 primary="True"
                 className="mediumbutton"
                 buttonText="Go Back"
-                href="/ClearingOfferMadeFourthPage"></UCPButton></Col>
+                href="/DegreeQualifications"></UCPButton></Col>
 
     <Col><br></br>
     <div onClick={DownloadFile}>
