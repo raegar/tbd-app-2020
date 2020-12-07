@@ -38,12 +38,12 @@ exports[`Renders ClearingOfferMadeStudentEnd 1`] = `
       >
         <br />
         <a
-          href="/ClearingOfferMadeFourthPage"
+          href="/DegreeQualifications"
         >
           <button
             class="mediumbutton"
             data-testid="ucpButton"
-            href="/ClearingOfferMadeFourthPage"
+            href="/DegreeQualifications"
             primary="True"
             type="button"
           >
