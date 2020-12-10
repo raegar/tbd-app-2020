@@ -1,10 +1,15 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './DropdownMenu.css'
 import {isMobile} from 'react-device-detect';
 
 
 
 function DropdownMenu(props) {
+  const [input, setInput] = useState('');
+  const handleChange = event => {
+    console.log(event.target.value);
+    setInput(event.target.value);
+  }
   let dropdownClassName;
   if(isMobile)
   {
@@ -17,7 +22,7 @@ function DropdownMenu(props) {
   return (
   <select id={props.id} 
   className={dropdownClassName} 
-  onChange={props.onChange}>
+  onChange={handleChange}>
     <option value="">{props.placeholder}</option>
       {props.options.map((value, i) => (
         <option key={i} value={value.value}>{value.label}</option>

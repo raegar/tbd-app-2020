@@ -40,7 +40,6 @@ exports[`Renders LevelThreeQualifications 1`] = `
                 minlength="0"
                 placeholder="Enter qualification #1"
                 type="text"
-                value=""
               />
             </div>
             <h5>
@@ -58,7 +57,6 @@ exports[`Renders LevelThreeQualifications 1`] = `
                 minlength="0"
                 placeholder="Enter subject #1"
                 type="text"
-                value=""
               />
             </div>
             <h5>
@@ -76,7 +74,6 @@ exports[`Renders LevelThreeQualifications 1`] = `
                 minlength="0"
                 placeholder="Enter grade #1"
                 type="text"
-                value=""
               />
             </div>
             <h5>
@@ -94,7 +91,6 @@ exports[`Renders LevelThreeQualifications 1`] = `
                 minlength="0"
                 placeholder=""
                 type="date"
-                value=""
               />
             </div>
           </div>

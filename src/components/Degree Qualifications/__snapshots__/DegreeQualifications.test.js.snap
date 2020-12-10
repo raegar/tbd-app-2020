@@ -84,7 +84,6 @@ exports[`Renders Degree Qual 1`] = `
               placeholder=""
               size="25"
               type="text"
-              value=""
             />
           </div>
           <div

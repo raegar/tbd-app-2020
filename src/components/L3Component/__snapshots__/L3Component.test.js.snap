@@ -23,7 +23,6 @@ exports[`Renders L3Component 1`] = `
         minlength="0"
         placeholder="Enter qualification #undefined"
         type="text"
-        value=""
       />
     </div>
     <h5>
@@ -41,7 +40,6 @@ exports[`Renders L3Component 1`] = `
         minlength="0"
         placeholder="Enter subject #undefined"
         type="text"
-        value=""
       />
     </div>
     <h5>
@@ -59,7 +57,6 @@ exports[`Renders L3Component 1`] = `
         minlength="0"
         placeholder="Enter grade #undefined"
         type="text"
-        value=""
       />
     </div>
     <h5>
@@ -77,7 +74,6 @@ exports[`Renders L3Component 1`] = `
         minlength="0"
         placeholder=""
         type="date"
-        value=""
       />
     </div>
   </div>

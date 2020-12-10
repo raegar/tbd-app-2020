@@ -27,7 +27,6 @@ exports[`Renders ClearingOfferMadeFifthPage 1`] = `
         placeholder="Test@email.com"
         size="20"
         type="text"
-        value=""
       />
     </div>
     <h3>
@@ -46,7 +45,6 @@ exports[`Renders ClearingOfferMadeFifthPage 1`] = `
         placeholder=""
         size="20"
         type="text"
-        value=""
       />
     </div>
     <div

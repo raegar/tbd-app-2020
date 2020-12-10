@@ -1,14 +1,18 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './RadioButton.css'
 import PropTypes from 'prop-types'
 
 
 const RadioButton = ({name, options, heading, subtitle,  attribute, oc, onchange,checked, ...props}) => {
-
+    const [input, setInput] = useState('');
+    const handleChange = event => {
+      console.log(event.target.value);
+      setInput(event.target.value);
+    }
     //Iterate through options array and create an input + label for each
     var items = options.map((item, i) =>
         <div key={i} className="radio-group">
-            <input disabled={attribute} name={name} type="radio" id={item.id} data-testid={item.id} value={item.value} onClick={oc ? (e) => oc(item.value) : ''} onChange={onchange}/>
+            <input disabled={attribute} name={name} type="radio" id={item.id} data-testid={item.id} value={item.value} onClick={oc ? (e) => oc(item.value) : ''} onChange={handleChange}/>
             <label htmlFor={item.id}>{item.label}</label>
         </div>
     );
