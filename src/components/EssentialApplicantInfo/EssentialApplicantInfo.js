@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import TextBox from "../TextBox/TextBox";
 import RadioButton from "../RadioButton/RadioButton";
@@ -18,7 +18,11 @@ const EssentialApplicantInfo = (props) => {
     textboxClassName = "desktoptextbox";
 
   }
-
+  const [input, setInput] = useState('');
+  const handleChange = event => {
+    console.log(event.target.value);
+    setInput(event.target.value);
+  }
   var nationalityOptions = [
     { label: "UK National", id: "UK", value: "UK" },
     { label: "EU National", id: "EU", value: "EU" },
@@ -165,11 +169,11 @@ const EssentialApplicantInfo = (props) => {
             name="name"
             attribute="disabled"
             className=  {textboxClassName}
-            
+            onChange = {handleChange}
+            value = {input}
           />
 
           <TextBox
-
             title="Email"
             placeholder="Enter your email"
             minLength={5}
@@ -179,7 +183,8 @@ const EssentialApplicantInfo = (props) => {
             name="email"
             attribute="disabled"
             className=  {textboxClassName}
-
+            onChange = {handleChange}
+            value = {input}
           />
 
           <TextBox
@@ -192,7 +197,8 @@ const EssentialApplicantInfo = (props) => {
             name="telno"
             attribute="disabled"
             className=  {textboxClassName}
-
+            onChange = {handleChange}
+            value = {input}
           />
 
           <TextBox
@@ -203,9 +209,8 @@ const EssentialApplicantInfo = (props) => {
             name="dob"
             attribute="disabled"
             className=  {textboxClassName}
-           
-        
-            
+            onChange = {handleChange}
+            value = {input}
           />
 
           <TextBox
@@ -216,6 +221,8 @@ const EssentialApplicantInfo = (props) => {
             name="ucas"
             attribute="disabled"
             className=  {textboxClassName}
+            onChange = {handleChange}
+            value = {input}
 
           />
         </span>
@@ -225,6 +232,7 @@ const EssentialApplicantInfo = (props) => {
             options={nationalityOptions}
             name="nationality"
             attribute="disabled"
+            onClick = {handleChange}
           />
 
           <RadioButton

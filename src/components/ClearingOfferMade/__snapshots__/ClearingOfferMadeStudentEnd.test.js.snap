@@ -27,7 +27,6 @@ exports[`Renders ClearingOfferMadeStudentEnd 1`] = `
         placeholder="Test@email.com"
         size="20"
         type="text"
-        value=""
       />
     </div>
     <div

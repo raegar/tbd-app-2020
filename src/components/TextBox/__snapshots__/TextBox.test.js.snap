@@ -17,7 +17,6 @@ exports[`Renders TextBox 1`] = `
       placeholder="Enter your firstname"
       size="20"
       type="text"
-      value=""
     />
   </div>
 </DocumentFragment>

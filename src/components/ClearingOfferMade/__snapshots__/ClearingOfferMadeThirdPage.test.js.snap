@@ -24,7 +24,6 @@ exports[`Renders ClearingOfferMadeThirdPage 1`] = `
         placeholder=""
         size="20"
         type="text"
-        value=""
       />
     </div>
     <div
