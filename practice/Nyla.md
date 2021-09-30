@@ -1,3 +1,1 @@
-Hello, this is Nyla!~
-
-c:
+Heya, it's Nyla. c:
