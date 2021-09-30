@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/tbd-app-2020/static/css/main.0bca1f66.chunk.css",
+    "main.js": "/tbd-app-2020/static/js/main.d39795bf.chunk.js",
+    "main.js.map": "/tbd-app-2020/static/js/main.d39795bf.chunk.js.map",
+    "runtime-main.js": "/tbd-app-2020/static/js/runtime-main.9c11f291.js",
+    "runtime-main.js.map": "/tbd-app-2020/static/js/runtime-main.9c11f291.js.map",
+    "static/css/2.d9ad5f5c.chunk.css": "/tbd-app-2020/static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.0b527636.chunk.js": "/tbd-app-2020/static/js/2.0b527636.chunk.js",
+    "static/js/2.0b527636.chunk.js.map": "/tbd-app-2020/static/js/2.0b527636.chunk.js.map",
+    "index.html": "/tbd-app-2020/index.html",
+    "precache-manifest.371cbf0d9c915b996b7afaef4483ef56.js": "/tbd-app-2020/precache-manifest.371cbf0d9c915b996b7afaef4483ef56.js",
+    "service-worker.js": "/tbd-app-2020/service-worker.js",
+    "static/css/2.d9ad5f5c.chunk.css.map": "/tbd-app-2020/static/css/2.d9ad5f5c.chunk.css.map",
+    "static/css/main.0bca1f66.chunk.css.map": "/tbd-app-2020/static/css/main.0bca1f66.chunk.css.map",
+    "static/js/2.0b527636.chunk.js.LICENSE.txt": "/tbd-app-2020/static/js/2.0b527636.chunk.js.LICENSE.txt",
+    "static/media/Footer.css": "/tbd-app-2020/static/media/Footer.ab926c9f.png",
+    "static/media/UCPLogo.png": "/tbd-app-2020/static/media/UCPLogo.0c430578.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9c11f291.js",
+    "static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.0b527636.chunk.js",
+    "static/css/main.0bca1f66.chunk.css",
+    "static/js/main.d39795bf.chunk.js"
+  ]
+}
