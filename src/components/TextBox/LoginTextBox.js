@@ -1,53 +1,61 @@
 import React from 'react';
-import './TextBox.css'
+import './TextBox.css';
 import PropTypes from 'prop-types';
 import {isMobile} from 'react-device-detect';
 
-const TextBox = ({backgroundColor, name, title, size, id, maxLength, minLength, placeholder, type, onChange, min, max, wrapID, attribute,  ...props}) => {
-    const className = isMobile ? "mobiletextbox" : "textbox";
+class LoginTextBox extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.props = props;
+	}
+
+    render = () => {
+    	const className = isMobile ? "mobiletextbox" : "textbox";
  
-return (
-    <div className={`${className ? "mobiletextbox" : "textbox"}`} id={wrapID}>
-        <label htmlFor={id}>{title}</label>
-        <input
-        name={name}
-        onChange={onChange}
-        placeholder={placeholder}
-        id= {id}
-        maxLength = {maxLength}
-        minLength = {minLength}
-        size={size}
-        type={type}
-        min={min}
-        max={max}
-        disabled={attribute}
-        />
-    </div>
-);
+    	return (
+    		<div className={`${className ? "mobiletextbox" : "textbox"}`} id={this.props.wrapID}>
+    			<label htmlFor={this.props.id}>{this.props.title}</label>
+    			<input
+    				name={this.props.name}
+    				onChange={this.props.onChange}
+    				placeholder={this.props.placeholder}
+    				id={this.props.id}
+    				maxLength={this.props.maxLength}
+    				minLength={this.props.minLength}
+    				size={this.props.size}
+    				type={this.props.type}
+    				min={this.props.min}
+    				max={this.props.max}
+    				disabled={this.props.attribute}
+    			/>
+    		</div>
+    	);
+    }
+}
+
+LoginTextBox.propTypes = {
+	backgroundColor: PropTypes.string,
+	title: PropTypes.string,
+	size: PropTypes.number,
+	maxLength: PropTypes.number,
+	minLength: PropTypes.number,
+	placeholder: PropTypes.string,
+	type: PropTypes.oneOf(['text', 'password', 'email', 'tel', 'number', 'date']),
+	min: PropTypes.number,
+	max: PropTypes.number,
+	wrapID: PropTypes.string,
+	attribute: PropTypes.string
 };
 
-TextBox.propTypes = {
-    backgroundColor: PropTypes.string,
-    title: PropTypes.string,
-    size: PropTypes.number,
-    maxLength: PropTypes.number,
-    minLength: PropTypes.number,
-    placeholder: PropTypes.string,
-    type: PropTypes.oneOf(['text', 'password', 'email', 'tel', 'number', 'date']),
-    min: PropTypes.number,
-    max: PropTypes.number,
-    wrapID: PropTypes.string,
-    attribute: PropTypes.string
-};
-
-TextBox.defaultProps = {
-    backgroundColor: null,
-    size: 20,
-    maxLength: 30,
-    minLength: 0,
-    placeholder: '',
-    type: "text",
-    attribute: ''
+LoginTextBox.defaultProps = {
+	backgroundColor: null,
+	size: 20,
+	maxLength: 30,
+	minLength: 0,
+	placeholder: '',
+	type: "text",
+	attribute: ''
 };
 
 /* Example Use
@@ -63,4 +71,4 @@ TextBox.defaultProps = {
 
 */
 
-export default TextBox;
+export default LoginTextBox;

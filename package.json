@@ -38,7 +38,11 @@
       "max-len": ["error", {"code": 130}],
       "semi-style": ["error", "last"]
     },
-    "ignorePatterns": ["src/serviceWorker.js", "src/index.js"]
+    "ignorePatterns": [
+      "src/serviceWorker.js", 
+      "src/index.js",
+      "src/components/**/*.test.js"
+    ]
   },
   "browserslist": {
     "production": [

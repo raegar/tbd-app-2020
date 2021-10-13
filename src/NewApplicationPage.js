@@ -5,11 +5,11 @@ import Disclaimer from './components/Disclaimer/Disclaimer';
 import {Container} from 'react-bootstrap';
                                                 
 function NewApplicationPage() {
-    return (
-      <Container >       
-         <Disclaimer staff={global.userType}/>
-         <EssentialApplicantInfo/>
-         </Container>
-       );
+	return (
+		<Container >       
+			<Disclaimer staff={global.userType}/>
+			<EssentialApplicantInfo/>
+		</Container>
+	);
 }
 export default NewApplicationPage;
