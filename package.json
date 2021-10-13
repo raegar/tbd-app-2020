@@ -34,8 +34,12 @@
       "indent": ["error", "tab"],
       "semi": ["error", "always"],
       "curly": ["error", "all"],
-      "max-len": ["error", {"code": 130}]
-    }
+      "brace-style": ["error", "1tbs"],
+      "max-len": ["error", {"code": 130}],
+      "camelcase": ["error", {"ignoreGlobals": true, "ignoreImports": true}],
+      "semi-style": ["error", "last"]
+    },
+    "ignorePatterns": ["src/serviceWorker.js", "src/index.js"]
   },
   "browserslist": {
     "production": [
