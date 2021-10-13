@@ -12,7 +12,6 @@
 .ucpFooter{
     height: 80px;
     background-repeat: repeat-x;
-
 }
 
 /*Applies styles to mobile footer*/
@@ -20,5 +19,4 @@
     height: 150px;
     background-repeat: no-repeat;
     background-size: cover;
-  
 }

@@ -1,15 +1,19 @@
 .form-background {
     width: 100%;
     background-color: #B2DDDF;
-   display: inline-block;
+    display: inline-block;
     padding: 20px;
-  /*text-align: left;*/
+    /*text-align: left;*/
     border: 1px solid black;
     margin-bottom: 10px;
 }
+
 .form-background h4{text-align: center;}
+
 .form-background p{text-align: center;}
+
 .form-background, label{text-align: center;}
+
 .centered-buttons
 {
     text-align: center;
@@ -23,11 +27,13 @@
 .form-title {
     text-align: center;
 }
+
 .form-right {
     float: right;
     width: 50%;
     margin-top: 30px;
 }
+
 .form-left {
     float:left;
     width: 50%;
@@ -44,13 +50,14 @@
     float: left;
     padding-left: 0px;
     }
+
     .form-right {
         width: 100%;
         float: left;
     }
+
     .form-background {
         width: 90%;
-      
     }
 }
 
