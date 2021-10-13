@@ -28,7 +28,14 @@
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "rules": {
+      "eqeqeq": "warn",
+      "indent": ["error", "tab"],
+      "semi": ["error", "always"],
+      "curly": ["error", "all"],
+      "max-len": ["error", {"code": 130}]
+    }
   },
   "browserslist": {
     "production": [
