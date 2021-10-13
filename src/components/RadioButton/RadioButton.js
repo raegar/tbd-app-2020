@@ -30,9 +30,9 @@ class RadioButton extends React.Component {
     				disabled={this.props.attribute} 
     				name={this.props.name} 
     				type="radio" 
-    				id={this.props.item.id} 
-    				data-testid={this.props.item.id} 
-    				value={this.props.item.value} 
+    				id={item.id} 
+    				data-testid={item.id} 
+    				value={item.value} 
     				onClick={this.props.oc ? (e) => this.props.oc(item.value) : ''} 
     				onChange={this.handleChange}
     			/>

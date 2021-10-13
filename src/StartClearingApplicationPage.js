@@ -1,10 +1,10 @@
 import React from 'react';
-import './NewApplicationPage.css';
+import './StartClearingApplicationPage.css';
 import EssentialApplicantInfo from './components/EssentialApplicantInfo/EssentialApplicantInfo';
 import Disclaimer from './components/Disclaimer/Disclaimer';
 import {Container} from 'react-bootstrap';
                                                 
-function NewApplicationPage() {
+function StartClearingApplicationPage() {
 	return (
 		<Container >       
 			<Disclaimer staff={global.userType}/>
@@ -12,4 +12,4 @@ function NewApplicationPage() {
 		</Container>
 	);
 }
-export default NewApplicationPage;
+export default StartClearingApplicationPage;
