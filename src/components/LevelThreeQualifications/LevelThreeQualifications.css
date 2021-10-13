@@ -69,17 +69,17 @@
     margin: 0 auto;
 }
 
-@media only screen and (max-width: 600px) {.mobiletextbox{
-    margin-left: 0%;
-}
+@media only screen and (max-width: 600px) {
+    .mobiletextbox {
+        margin-left: 0%;
+    }
 
-.form-background h3 {
-    margin-left: 0px;
+    .form-background h3 {
+        margin-left: 0px;
+    }
+
+    .form-background h5 {
+        margin-top: 15px;
+        margin-left: 0px;
+    }
 }
-  .form-background h5
-  {
-      margin-top: 15px;
-      margin-left: 0px;
-  }
-}
-  
