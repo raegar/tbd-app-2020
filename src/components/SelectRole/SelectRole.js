@@ -6,30 +6,38 @@ import {isMobile} from 'react-device-detect';
 
 //Must Set HREF attribute to use
 
-const SelectRole = () => {
-    
-    let buttonClassName;
-    if(isMobile)
-    {
-   
-        buttonClassName = "largebutton";
-    }
-    else{
-      
-        buttonClassName = "extralargebutton";
-    }
-    return(
-        <Container className="mt-5 px-3 py-3 select-role-container">
-            <Row className="text-center">
-                <Col className="mt-3 mb-3">
-                    <UCPButton to="/NewApplicationPage" buttonText="Prospective Student" className={buttonClassName} href="/NewApplicationPage" />
-                    <UCPButton to="/login" buttonText="Staff Portal" className={buttonClassName} href="/login" data-testid="staff-portal" />
+class SelectRole extends React.Component {
+    render = () => {
+    	let buttonClassName;
 
-                </Col>
-                 
-            </Row>
-        </Container>
-    );
+    	if (isMobile) {
+    		buttonClassName = "largebutton";
+    	} else {
+    		buttonClassName = "extralargebutton";
+    	}
+
+    	return (
+    		<Container className="mt-5 px-3 py-3 select-role-container">
+    			<Row className="text-center">
+    				<Col className="mt-3 mb-3">
+    					<UCPButton 
+    						to="/NewApplicationPage" 
+    						buttonText="Prospective Student" 
+    						className={buttonClassName} 
+    						href="/NewApplicationPage" 
+    					/>
+    					<UCPButton 
+    						to="/login" 
+    						buttonText="Staff Portal" 
+    						className={buttonClassName} 
+    						href="/login" 
+    						data-testid="staff-portal" 
+    					/>
+    				</Col>
+    			</Row>
+    		</Container>
+    	);
+    }
 }
 
 export default SelectRole;
