@@ -15,38 +15,38 @@ import ClearingOfferMadeThirdPage from './components/ClearingOfferMade/ClearingO
 import ClearingOfferMadeFourthPage from './components/ClearingOfferMade/ClearingOfferMadeFourthPage';
 import ClearingOfferMadeFifthPage from './components/ClearingOfferMade/ClearingOfferMadeFifthPage';
 import ClearingOfferMadeStudentEnd from './components/ClearingOfferMade/ClearingOfferMadeStudentEnd';
-import FormOne from './components/FormOne/FormOne'
+import FormOne from './components/FormOne/FormOne';
 
 const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
 
 function App() {
- /* const className1 = isMobile ? "mobile-App" : "App"; */
-  return (
-    <Router basename={baseUrl}>
-    <div className="App">
-      <div className="main-app">
-      <Headers/>
-        <Switch>
-          <Route path='/' exact component={SelectRole} />
-          <Route path='/login' component={Login}/>
-          <Route path='/NewApplicationPage' component={NewApplicationPage}/>
-          <Route path="/MoreInfo" component={FormOne} />
-          <Route path='/LevelTwoQualifications' component={LevelTwoQualifications}/>
-          <Route path='/LevelThreeQualifications' component={LevelThreeQualifications}/>
-          <Route path='/DegreeQualifications' component={DegreeQualifications} />
-          <Route path='/ClearingOfferMade' component={ClearingOfferMade}/>
-          <Route path='/ClearingOfferMadeSecondPage' component={ClearingOfferMadeSecondPage}/>
-          <Route path='/ClearingOfferMadeThirdPage' component={ClearingOfferMadeThirdPage}/>
-          <Route path='/ClearingOfferMadeFourthPage' component={ClearingOfferMadeFourthPage}/>
-          <Route path='/ClearingOfferMadeFifthPage' component={ClearingOfferMadeFifthPage}/>
-          <Route path='/ClearingOfferMadeStudentEnd' component={ClearingOfferMadeStudentEnd}/>
+	/* const className1 = isMobile ? "mobile-App" : "App"; */
+	return (
+		<Router basename={baseUrl}>
+			<div className="App">
+				<div className="main-app">
+					<Headers/>
+					<Switch>
+						<Route path='/' exact component={SelectRole} />
+						<Route path='/login' component={Login}/>
+						<Route path='/NewApplicationPage' component={NewApplicationPage}/>
+						<Route path="/MoreInfo" component={FormOne} />
+						<Route path='/LevelTwoQualifications' component={LevelTwoQualifications}/>
+						<Route path='/LevelThreeQualifications' component={LevelThreeQualifications}/>
+						<Route path='/DegreeQualifications' component={DegreeQualifications} />
+						<Route path='/ClearingOfferMade' component={ClearingOfferMade}/>
+						<Route path='/ClearingOfferMadeSecondPage' component={ClearingOfferMadeSecondPage}/>
+						<Route path='/ClearingOfferMadeThirdPage' component={ClearingOfferMadeThirdPage}/>
+						<Route path='/ClearingOfferMadeFourthPage' component={ClearingOfferMadeFourthPage}/>
+						<Route path='/ClearingOfferMadeFifthPage' component={ClearingOfferMadeFifthPage}/>
+						<Route path='/ClearingOfferMadeStudentEnd' component={ClearingOfferMadeStudentEnd}/>
 
-        </Switch>
-      </div>
-        <Footer/>
-    </div>
-    </Router>
-  );
+					</Switch>
+				</div>
+				<Footer/>
+			</div>
+		</Router>
+	);
 }
 export default App;
 
