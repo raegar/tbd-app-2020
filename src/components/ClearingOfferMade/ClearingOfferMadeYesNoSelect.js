@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import RadioButton from "../RadioButton/RadioButton";
 import "./ClearingOfferMade2.css";
 import { Container, Col, Row } from "react-bootstrap";
