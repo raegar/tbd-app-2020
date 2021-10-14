@@ -5,16 +5,6 @@ import RadioButton from '../RadioButton/RadioButton';
 import TextBox from '../TextBox/TextBox';
 import UCPButton from '../Buttons/UCPButton';
 
-const PriorLevelFour = [
-	{label: 'Yes', id: 'prior-yes', value: 'yes'},
-	{label: 'No', id: 'prior-no', value: 'no'}
-];
-
-const ELQ = [
-	{label: 'Yes', id: 'elq-yes', value: "yes"},
-	{label: 'No', id: 'elq-no', value: "no"}
-];
-
 function DegreeQualifications() {
 	const [levelFour, setLevelFour] = useState(false);
 	const [nameGrade, setNameGrade] = useState("");
@@ -76,10 +66,17 @@ function DegreeQualifications() {
 		});
 	}
 
-	//TODO: currently unused
+	const PriorLevelFour = [
+		{label: 'Yes', id: 'prior-yes', value: 'yes', handleChange: onPriorYesChanged},
+		{label: 'No', id: 'prior-no', value: 'no', handleChange: onPriorNoChanged}
+	];
+	
+	const ELQ = [
+		{label: 'Yes', id: 'elq-yes', value: 'yes', handleChange: elqYesChanged},
+		{label: 'No', id: 'elq-no', value: 'no', handleChange: elqNoChanged}
+	];
+
 	function saveSelectedData() {
-		//TODO: should the checkboxes have these IDs (prior-yes, prior-no, elq-yes, elq-no)? 
-		//They currently do not but the code and tests references them as if they do.
     	if (priorYesState.checked) {
     		global.ApplicationFormData.anyLevelFourQualification = priorYesState.value;
     		global.ApplicationFormData.levelFourQualificationDetails = nameGrade;

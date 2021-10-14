@@ -22,7 +22,11 @@ function RadioButton({options, attribute, name, oc, heading, subtitle, ...props}
 				data-testid={item.id} 
 				value={item.value} 
 				onClick={oc ? (e) => oc(item.value) : ''} 
-				onChange={handleChange}
+				onChange={item.handleChange ? (e) => {
+					item.handleChange(e); 
+					handleChange(e);
+				} 
+					: handleChange}
 			/>
 			<label htmlFor={item.id}>{item.label}</label>
 		</div>
