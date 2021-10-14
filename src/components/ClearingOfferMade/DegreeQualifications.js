@@ -19,6 +19,22 @@ function DegreeQualifications() {
 	const [levelFour, setLevelFour] = useState(false);
 	const [nameGrade, setNameGrade] = useState("");
 	const [recentSchool, setRecentSchool] = useState("");
+	const [priorYesState, setPriorYesState] = useState({
+		checked: false,
+		value: "",
+	});
+	const [priorNoState, setPriorNoState] = useState({
+		checked: false,
+		value: "",
+	});
+	const [elqYesState, setElqYesState] = useState({
+		checked: false,
+		value: "",
+	});
+	const [elqNoState, setElqNoState] = useState({
+		checked: false,
+		value: "",
+	});
 
 	function handleClick(e) {
     	setLevelFour(e === 'yes');
@@ -32,25 +48,55 @@ function DegreeQualifications() {
 		setRecentSchool(e.target.value);
 	}
 
+	function onPriorYesChanged(e) {
+		setPriorYesState({
+			checked: e.target.checked,
+			value: e.target.value,
+		});
+	}
+
+	function onPriorNoChanged(e) {
+		setPriorNoState({
+			checked: e.target.checked,
+			value: e.target.value,
+		});
+	}
+
+	function elqYesChanged(e) {
+		setElqYesState({
+			checked: e.target.checked,
+			value: e.target.value,
+		});
+	}
+
+	function elqNoChanged(e) {
+		setElqNoState({
+			checked: e.target.checked,
+			value: e.target.value,
+		});
+	}
+
+	//TODO: currently unused
 	function saveSelectedData() {
-		//TODO: should the checkboxes have these IDs? They currently do not
-    	if (document.getElementById("prior-yes").checked) {
-    		global.ApplicationFormData.anyLevelFourQualification = document.getElementById("prior-yes").value;
-    		global.ApplicationFormData.levelFourQualificationDetails = nameGrade; //document.getElementById("nameGrade").value;
+		//TODO: should the checkboxes have these IDs (prior-yes, prior-no, elq-yes, elq-no)? 
+		//They currently do not but the code and tests references them as if they do.
+    	if (priorYesState.checked) {
+    		global.ApplicationFormData.anyLevelFourQualification = priorYesState.value;
+    		global.ApplicationFormData.levelFourQualificationDetails = nameGrade;
     	}
 
-    	if (document.getElementById("prior-no").checked) {
-    		global.ApplicationFormData.AnyLevelFourQualification = document.getElementById("prior-no").value;
+    	if (priorNoState.checked) {
+    		global.ApplicationFormData.anyLevelFourQualification = priorNoState.value;
     	}  
 
-    	global.ApplicationFormData.mostRecentSchool = recentSchool;//document.getElementById("schoolDetail").value;
+    	global.ApplicationFormData.mostRecentSchool = recentSchool;
 
-    	if (document.getElementById("elq-yes").checked) {
-    		global.ApplicationFormData.elqQualification = document.getElementById("elq-yes").value;
+    	if (elqYesState.checked) {
+    		global.ApplicationFormData.elqQualification = elqYesState.value;
     	}
 
-    	if (document.getElementById("elq-no").checked) {
-    		global.ApplicationFormData.elqQualification = document.getElementById("elq-no").value;
+    	if (elqNoState.checked) {
+    		global.ApplicationFormData.elqQualification = elqNoState.value;
     	}
 
     	console.log(global.ApplicationFormData);
