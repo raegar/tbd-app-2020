@@ -1,55 +1,42 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './RadioButton.css';
 import PropTypes from 'prop-types';
 
 
-class RadioButton extends React.Component {
-	constructor(props) {
-		super(props);
+function RadioButton(options, attribute, name, oc, heading, subtitle, ...props) {
+	const [input, setInput] = useState('');
 
-		this.props = props;
-		this.state = {
-			input: ''
-		};
+	function handleChange(event) {
+    	console.log(event.target.value);
+     	setInput(event.target.value);
 	}
 
-    setInput = (input) => {
-    	this.setState({input: input});
-    }
+	//Iterate through options array and create an input + label for each
+	var items = options.map((item, i) =>
+		<div key={i} className="radio-group">
+			<input 
+				disabled={attribute} 
+				name={name} 
+				type="radio" 
+				id={item.id} 
+				data-testid={item.id} 
+				value={item.value} 
+				onClick={oc ? (e) => oc(item.value) : ''} 
+				onChange={handleChange}
+			/>
+			<label htmlFor={item.id}>{item.label}</label>
+		</div>
+	);
 
-    handleChange = (event) => {
-    	console.log(event.target.value);
-    	this.setInput(event.target.value);
-    }
+	//Return div with heading, subtitle and then the items variable which is created in the loop above
 
-    render = () => {
-    	//Iterate through options array and create an input + label for each
-    	var items = this.props.options.map((item, i) =>
-    		<div key={i} className="radio-group">
-    			<input 
-    				disabled={this.props.attribute} 
-    				name={this.props.name} 
-    				type="radio" 
-    				id={item.id} 
-    				data-testid={item.id} 
-    				value={item.value} 
-    				onClick={this.props.oc ? (e) => this.props.oc(item.value) : ''} 
-    				onChange={this.handleChange}
-    			/>
-    			<label htmlFor={item.id}>{item.label}</label>
-    		</div>
-    	);
-
-    	//Return div with heading, subtitle and then the items variable which is created in the loop above
-
-    	return (
-    		<div className="radio-buttons">
-    			<h4>{this.props.heading}</h4>
-    			<p>{this.props.subtitle}</p>
-    			{items}
-    		</div>
-    	);
-    }
+	return (
+		<div className="radio-buttons">
+			<h4>{heading}</h4>
+			<p>{subtitle}</p>
+			{items}
+		</div>
+	);
 }
 
 //Prop Types:

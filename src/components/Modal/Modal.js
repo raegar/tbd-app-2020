@@ -1,56 +1,43 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import UCPButton from '../Buttons/UCPButton';
 import './Modal.css';
 
-class Modal extends React.Component {
-	constructor(props) {
-		super(props);
+function Modal(btnId, btnClass, btnText, id, children, ...props) {
+	const [show, setShow] = useState(false);
 
-		this.props = props;
-		this.state = {
-			show: false
-		};
+	if (!show) {
+		return(
+			<UCPButton 
+				to="none" 
+				id={btnId} 
+				className={btnClass} 
+				buttonText={btnText}
+				onClick={()=>setShow(true)}
+			/>
+		);
+	} else {
+		return (
+			<>
+				<UCPButton 
+					to="none" 
+					id={btnId} 
+					className={btnClass} 
+					buttonText={btnText}
+					onClick={()=>setShow(true)}
+				/>
+				<div 
+					className="main-modal" 
+					id={id}>
+					<span className="close" onClick={() => setShow(false)}>&times;</span>
+					<div className="main-modal-content">
+						{children}
+					</div>
+				</div>
+				<div className="modal-overlay" onClick={() => setShow(false)}></div>
+			</>
+		);   
 	}
-
-    setShow = (show) => {
-    	this.setState({show: show});
-    }
-
-    render = () => {
-    	if (!this.state.show) {
-    		return(
-    			<UCPButton 
-    				to="none" 
-    				id={this.props.btnId} 
-    				className={this.props.btnClass} 
-    				buttonText={this.props.btnText}
-    				onClick={()=>this.setShow(true)}
-    			/>
-    		);
-    	} else {
-    		return (
-    			<>
-    				<UCPButton 
-    					to="none" 
-    					id={this.props.btnId} 
-    					className={this.props.btnClass} 
-    					buttonText={this.props.btnText}
-    					onClick={()=>this.setShow(true)}
-    				/>
-    				<div 
-    					className="main-modal" 
-    					id={this.props.id}>
-    					<span className="close" onClick={() => this.setShow(false)}>&times;</span>
-    					<div className="main-modal-content">
-    						{this.props.children}
-    					</div>
-    				</div>
-    				<div className="modal-overlay" onClick={() => this.setShow(false)}></div>
-    			</>
-    		);   
-    	}
-    }
 }
 
 Modal.propTypes = {

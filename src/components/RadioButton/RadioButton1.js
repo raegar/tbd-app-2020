@@ -3,40 +3,32 @@ import './RadioButton.css';
 import PropTypes from 'prop-types';
 
 
-class RadioButton1 extends React.Component {
-	constructor(props) {
-		super(props);
+function RadioButton1(options, attribute, name, value, onChange, oc, heading, subtitle, ...props) {
+	//Iterate through options array and create an input + label for each
+	let items = options.map((item, i) =>
+		<div key={i} className="radio-group">
+			<input 
+				disabled={attribute} 
+				name={name} 
+				type="radio" id={item.id} 
+				checked={value === item.value} 
+				onChange={onChange}  
+				data-testid={item.id} 
+				value={item.value} 
+				onClick={oc ? (e) => oc(item.value) : ''} 
+			/>
+			<label htmlFor={item.id}>{item.label}</label>
+		</div>
+	);
 
-		this.props = props;
-	}
-
-    render = () => {
-    	//Iterate through options array and create an input + label for each
-    	let items = this.props.options.map((item, i) =>
-    		<div key={i} className="radio-group">
-    			<input 
-    				disabled={this.props.attribute} 
-    				name={this.props.name} 
-    				type="radio" id={item.id} 
-    				checked={this.props.value === item.value} 
-    				onChange={this.props.onChange}  
-    				data-testid={item.id} 
-    				value={item.value} 
-    				onClick={this.props.oc ? (e) => this.props.oc(item.value) : ''} 
-    			/>
-    			<label htmlFor={item.id}>{item.label}</label>
-    		</div>
-    	);
-
-    	//Return div with heading, subtitle and then the items variable which is created in the loop above
-    	return (
-    		<div className="radio-buttons">
-    			<h4>{this.props.heading}</h4>
-    			<p>{this.props.subtitle}</p>
-    			{items}
-    		</div>
-    	);        
-    }
+	//Return div with heading, subtitle and then the items variable which is created in the loop above
+	return (
+		<div className="radio-buttons">
+			<h4>{heading}</h4>
+			<p>{subtitle}</p>
+			{items}
+		</div>
+	);
 }
 
 // const RadioButton1 = ({name, options, heading, subtitle,  attribute, oc,value, onChange,checked, ...props}) => {

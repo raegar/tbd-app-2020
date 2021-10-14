@@ -1,65 +1,64 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './TextBox.css';
 import PropTypes from 'prop-types';
 import {isMobile} from 'react-device-detect';
 
-class L3TextBox extends React.Component {
-	constructor(props) {
-		super(props);
+//TODO: fix this awful awful formatting here
+function L3TextBox(
+	clearInput, 
+	wrapID, 
+	id, 
+	title, 
+	name, 
+	placeholder, 
+	key, 
+	maxLength, 
+	minLength, 
+	size, 
+	type, 
+	min, 
+	max, 
+	attribute, 
+	...props) {
+	const [emptyInput, setEmptyInput] = useState(clearInput);
+	const [input, setInput] = useState('');
 
-		this.props = props;
-		this.state = {
-			emptyInput: this.props.clearInput,
-			input: '',
-		};
-	}
-
-    handleChange = (e) => {
-    	if (this.state.emptyInput) {
-    		this.setEmptyInput(false);
+	function handleChange(e) {
+    	if (emptyInput) {
+    		setEmptyInput(false);
     	}
         
-    	this.setInput(e.currentTarget.value);
-    	console.log(this.state.input);  
-    }
+    	setInput(e.currentTarget.value);
+    	console.log(input);  
+	}
 
-    setEmptyInput = (input) => {
-    	this.setState({emptyInput: input});
-    }
+	function clearInputField(e) {
+    	setEmptyInput(!clearInput);
+	}
 
-    setInput = (input) => {
-    	this.setState({input: input});
-    }
+	const className = isMobile ? "mobiletextbox" : "textbox";
 
-    clearInputField = (e) => {
-    	this.setEmptyInput(!this.props.clearInput);
-    }
-
-    render = () => {
-    	const className = isMobile ? "mobiletextbox" : "textbox";
-	
-    	return (
-    		<div className={`${className ? "mobiletextbox" : "textbox"}`} id={this.props.wrapID}>
-    			<label htmlFor={this.props.id}>{this.props.title}</label>
-    			<input
-    				name={this.props.name}
-    				placeholder={this.props.placeholder}
-    				id={this.props.id}
-    				key={this.props.key}
-    				maxLength={this.props.maxLength}
-    				minLength={this.props.minLength}
-    				size={this.props.size}
-    				type={this.props.type}
-    				min={this.props.min}
-    				max={this.props.max}
-    				value={this.state.emptyInput ? '': this.state.input}
-    				disabled={this.props.attribute}
-    				onChange={this.handleChange}
-    				clearInput={this.clearInputField}
-    			/>
-    		</div>
-    	);
-    }
+	return (
+		<div className={`${className ? "mobiletextbox" : "textbox"}`} id={wrapID}>
+			<label htmlFor={id}>{title}</label>
+			<input
+				name={name}
+				placeholder={placeholder}
+				id={id}
+				key={key}
+				maxLength={maxLength}
+				minLength={minLength}
+				size={size}
+				type={type}
+				min={min}
+				max={max}
+				value={emptyInput ? '' : input}
+				disabled={attribute}
+				onChange={handleChange}
+				clearInput={clearInputField}
+			/>
+		</div>
+	);
 }
 
 L3TextBox.propTypes = {

@@ -4,54 +4,46 @@ import PropTypes from 'prop-types';
 import TextBox from '../TextBox/TextBox';
 import {isMobile} from 'react-device-detect';
 
-class L3Component extends React.Component {
-	constructor(props) {
-		super(props);
-		this.props = props;
-	}
-
-    render = () => {
-    	const className1 = isMobile ? "mobilel3component" : "l3component";
-        
-    	return (
-    		<div className={className1}>
-    			<h5>Qualification : {"#" + this.props.id} </h5>
-    			<p>(E.g. A Level, BTEC, Access)</p>
-    			<TextBox
-    				onChange = {this.onChange}    
-    				id={"qualification" + this.props.id}
-    				key={"2000" + this.props.id}
-    				placeholder={"Enter qualification #" + this.props.id} 
-    				value={this.props.value} 
-    				clearInput={this.props.clearInput}
-    			/>
-    			<h5>Subject: (E.g. Bussiness Studies)</h5>
-    			<TextBox
-    				id={"subject" + this.props.id}
-    				key={"3000" + this.props.id}
-    				placeholder={"Enter subject #" + this.props.id }
-    				value={this.props.value} 
-    				clearInput={this.props.clearInput}
-    			/>
-    			<h5>Grade Achieved</h5>
-    			<TextBox
-    				id={"grade" + this.props.id}
-    				key={"4000" + this.props.id}
-    				placeholder={"Enter grade #" + this.props.id}
-    				value={this.props.value} 
-    				clearInput={this.props.clearInput} />
-    			<h5>Year Achieved</h5>
-    			<TextBox
-    				id={"year" + this.props.id}
-    				key={"5000" + this.props.id}
-    				type="date" 
-    				value={this.props.value} 
-    				clearInput={this.props.clearInput}
-    			/>
-    		</div>
-
-    	);
-    }
+function L3Component(name, id, key, onChange, placeholder, clearInput, value, ...props) {
+	const className1 = isMobile ? "mobilel3component" : "l3component";
+	
+	return (
+		<div className={className1}>
+			<h5>Qualification : {"#" + id} </h5>
+			<p>(E.g. A Level, BTEC, Access)</p>
+			<TextBox
+				onChange = {onChange}    
+				id={"qualification" + id}
+				key={"2000" + id}
+				placeholder={"Enter qualification #" + id} 
+				value={value} 
+				clearInput={clearInput}
+			/>
+			<h5>Subject: (E.g. Bussiness Studies)</h5>
+			<TextBox
+				id={"subject" + id}
+				key={"3000" + id}
+				placeholder={"Enter subject #" + id }
+				value={value} 
+				clearInput={clearInput}
+			/>
+			<h5>Grade Achieved</h5>
+			<TextBox
+				id={"grade" + id}
+				key={"4000" + id}
+				placeholder={"Enter grade #" + id}
+				value={value} 
+				clearInput={clearInput} />
+			<h5>Year Achieved</h5>
+			<TextBox
+				id={"year" + id}
+				key={"5000" + id}
+				type="date" 
+				value={value} 
+				clearInput={clearInput}
+			/>
+		</div>
+	);
 }
 
 // const L3Component = ({ name, id,key, onChange,placeholder,value,clearInput, ...props }) => {

@@ -3,35 +3,27 @@ import './TextBox.css';
 import PropTypes from 'prop-types';
 import {isMobile} from 'react-device-detect';
 
-class TextBox extends React.Component {
-	constructor(props) {
-		super(props);
+function TextBox(wrapID, id, title, name, onChange, placeholder, maxLength, minLength, size, type, min, max, attribute) {
+	const className = isMobile ? "mobiletextbox" : "textbox";
 
-		this.props = props;
-	}
-
-    render = () => {
-    	const className = isMobile ? "mobiletextbox" : "textbox";
- 
-    	return (
-    		<div className={`${className ? "mobiletextbox" : "textbox"}`} id={this.props.wrapID}>
-    			<label htmlFor={this.props.id}>{this.props.title}</label>
-    			<input
-    				name={this.props.name}
-    				onChange={this.props.onChange}
-    				placeholder={this.props.placeholder}
-    				id={this.props.id}
-    				maxLength={this.props.maxLength}
-    				minLength={this.props.minLength}
-    				size={this.props.size}
-    				type={this.props.type}
-    				min={this.props.min}
-    				max={this.props.max}
-    				disabled={this.props.attribute}
-    			/>
-    		</div>
-    	);
-    }
+	return (
+		<div className={`${className ? "mobiletextbox" : "textbox"}`} id={wrapID}>
+			<label htmlFor={id}>{title}</label>
+			<input
+				name={name}
+				onChange={onChange}
+				placeholder={placeholder}
+				id={id}
+				maxLength={maxLength}
+				minLength={minLength}
+				size={size}
+				type={type}
+				min={min}
+				max={max}
+				disabled={attribute}
+			/>
+		</div>
+	);
 }
 
 TextBox.propTypes = {

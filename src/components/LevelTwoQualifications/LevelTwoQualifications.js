@@ -22,24 +22,23 @@ const gsceGrades = [
 	{ value: "na", label: "n/a"},
 ];
 
-class LevelTwoQualifications extends React.Component {
+function LevelTwoQualifications() {
 
-  saveSelectedData = () => {
-  	//TODO: Fix to make more Reacty and not horrible bad raw HTML method
-  	let course = document.getElementById("EngLanguage");
-  	global.ApplicationFormData.GCSEEnglishLanguage = course.options[course.selectedIndex].value;
-  	course = document.getElementById("EngLiterature");
-  	global.ApplicationFormData.GCSEEnglishLiterature = course.options[course.selectedIndex].value;
-  	course = document.getElementById("Maths");
-  	global.ApplicationFormData.GCSEMaths = course.options[course.selectedIndex].value;
-  	course = document.getElementById("Science");
-  	global.ApplicationFormData.GCSEScience = course.options[course.selectedIndex].value;
-  	course = document.getElementById("l2details");
-  	global.ApplicationFormData.GCSElevelTwoDetails = course.value;
-  	console.log(global.ApplicationFormData);
-  }
+	function saveSelectedData() {
+		//TODO: Fix to make more Reacty and not horrible bad raw HTML method
+		let course = document.getElementById("EngLanguage");
+		global.ApplicationFormData.GCSEEnglishLanguage = course.options[course.selectedIndex].value;
+		course = document.getElementById("EngLiterature");
+		global.ApplicationFormData.GCSEEnglishLiterature = course.options[course.selectedIndex].value;
+		course = document.getElementById("Maths");
+		global.ApplicationFormData.GCSEMaths = course.options[course.selectedIndex].value;
+		course = document.getElementById("Science");
+		global.ApplicationFormData.GCSEScience = course.options[course.selectedIndex].value;
+		course = document.getElementById("l2details");
+		global.ApplicationFormData.GCSElevelTwoDetails = course.value;
+		console.log(global.ApplicationFormData);
+	}
 
-  render = () => {
   	const className = isMobile ? "MobileTextArea" : "DesktopTextArea";  
   	const className1 = isMobile ? "l2-mobile-form-right" : "l2-form-right ";
   	const className2 = isMobile ? "l2-mobile-form-container" : "l2-form-container";
@@ -78,7 +77,7 @@ class LevelTwoQualifications extends React.Component {
   					/>
   				</Col>
   				<Col className="centered-buttons">
-  					<div id="confirmButton" onClick={this.saveSelectedData}>
+  					<div id="confirmButton" onClick={saveSelectedData}>
   						<UCPButton
   							to = "/LevelThreeQualifications"
   							primary="True"
@@ -90,7 +89,6 @@ class LevelTwoQualifications extends React.Component {
   			</Row>
   		</Container>
   	);
-  }
 }
 
 export default LevelTwoQualifications;
