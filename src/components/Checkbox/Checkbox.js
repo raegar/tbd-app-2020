@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import './Checkbox.css';
 
 
-function Checkbox(className, checkboxText, ...props) {
-	return(
+function Checkbox({className, checkboxText, ...props}) {
+	return (
 		<div className="labelposition">
 			<input className={className} type="checkbox" />
 			<div className="checkboxposition">

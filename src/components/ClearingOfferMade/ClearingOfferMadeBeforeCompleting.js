@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import TextBox from "../TextBox/TextBox";
 import "./ClearingOfferMade.css";
 import { Container, Col, Row } from "react-bootstrap";
@@ -6,17 +6,8 @@ import UCPButton from "../Buttons/UCPButton";
 
 
 function ClearingOfferMadeBeforeCompleting() {
-	function autoInputData() {
-    	if (global.ApplicationFormData.email !== "") {
-    		let email = document.getElementById("emailConfirm");
-    		email.value = global.ApplicationFormData.email;
-    	}
-
-    	if (global.ApplicationFormData.selectedCourse !== "") {
-    		let course = document.getElementById("courseApplied");
-    		course.value = global.ApplicationFormData.email;
-    	}
-	}
+	const [email, setEmail] = useState(global.ApplicationFormData.email);
+	const [course, setCourse] = useState(global.ApplicationFormData.course);
 
 	function downloadFile() {
     	let fileName = "studentDetails.json"; 
@@ -43,9 +34,9 @@ function ClearingOfferMadeBeforeCompleting() {
 			<h1>Before completing the offer....</h1>
 			<p>Please state the following</p>
 			<h3>40. Please confirm email offer will be send to</h3>
-			<TextBox id="emailConfirm" placeholder={global.ApplicationFormData.email}/>
+			<TextBox id="emailConfirm" placeholder={global.ApplicationFormData.email} value={email}/>
 			<h3>41. Please enter course applied for</h3>
-			<TextBox id="courseApplied"/>
+			<TextBox id="courseApplied" value={course}/>
 			<Row>
 				<Col>
 					<br></br>
@@ -69,7 +60,6 @@ function ClearingOfferMadeBeforeCompleting() {
 					</div>
 				</Col>
 			</Row>
-			{autoInputData}
 		</Container>
 	);
 }
