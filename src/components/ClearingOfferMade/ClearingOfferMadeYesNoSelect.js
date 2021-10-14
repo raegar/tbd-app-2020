@@ -95,6 +95,7 @@ function ClearingOfferMadeYesNoSelect() {
 	}
 
 	function saveSelectedData() {
+		//TODO: see if this is actually needed and not just remnants of a mindless copy paste
     	if (document.getElementById("offerYes").checked) {
     		global.ApplicationFormData.offerMade = document.getElementById("offerYes").value;
     	}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import TextBox from "../../components/TextBox/TextBox";
 import "./ClearingOfferMade.css";
 import { Container, Col, Row } from "react-bootstrap";
@@ -6,17 +6,7 @@ import UCPButton from "../Buttons/UCPButton";
 
 
 function ClearingOfferMadeStudentEnd() {
-	function autoInputData() {
-    	if (global.ApplicationFormData.email !== "") {
-    		let email = document.getElementById("emailConfirm");
-    		email.value = global.ApplicationFormData.email;
-    	}
-		
-    	if (global.ApplicationFormData.selectedCourse !== "") {
-    		let course = document.getElementById("courseApplied");
-    		course.value = global.ApplicationFormData.email;
-    	}
-	}
+	const [email, setEmail] = useState(global.ApplicationFormData.email);
 
 	function downloadFile() {
     	const fileName = "studentDetails.json"; 
@@ -41,7 +31,7 @@ function ClearingOfferMadeStudentEnd() {
 		<h1>Thank you for using the form</h1>
 		<p>Please press confirm to complete</p>
 		<h3>Please confirm email that your application will be sent to</h3>
-		<TextBox id="emailConfirm" placeholder={global.ApplicationFormData.email}/>
+		<TextBox id="emailConfirm" placeholder={global.ApplicationFormData.email} value={email}/>
 
 		<Row>
 			<Col><br></br><UCPButton to='/DegreeQualifications'
@@ -62,7 +52,6 @@ function ClearingOfferMadeStudentEnd() {
 				</div>
 			</Col>
 		</Row>
-		{autoInputData}
 	</Container>
 	);
 }

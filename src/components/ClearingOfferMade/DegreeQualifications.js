@@ -17,22 +17,33 @@ const ELQ = [
 
 function DegreeQualifications() {
 	const [levelFour, setLevelFour] = useState(false);
+	const [nameGrade, setNameGrade] = useState("");
+	const [recentSchool, setRecentSchool] = useState("");
 
 	function handleClick(e) {
     	setLevelFour(e === 'yes');
 	}
 
+	function onUpdateNameGrade(e) {
+		setNameGrade(e.target.value);
+	}
+
+	function onUpdateRecentSchool(e) {
+		setRecentSchool(e.target.value);
+	}
+
 	function saveSelectedData() {
+		//TODO: should the checkboxes have these IDs? They currently do not
     	if (document.getElementById("prior-yes").checked) {
     		global.ApplicationFormData.anyLevelFourQualification = document.getElementById("prior-yes").value;
-    		global.ApplicationFormData.levelFourQualificationDetails = document.getElementById("nameGrade").value;
+    		global.ApplicationFormData.levelFourQualificationDetails = nameGrade; //document.getElementById("nameGrade").value;
     	}
 
     	if (document.getElementById("prior-no").checked) {
     		global.ApplicationFormData.AnyLevelFourQualification = document.getElementById("prior-no").value;
     	}  
 
-    	global.ApplicationFormData.mostRecentSchool = document.getElementById("schoolDetail").value;
+    	global.ApplicationFormData.mostRecentSchool = recentSchool;//document.getElementById("schoolDetail").value;
 
     	if (document.getElementById("elq-yes").checked) {
     		global.ApplicationFormData.elqQualification = document.getElementById("elq-yes").value;
@@ -77,7 +88,9 @@ function DegreeQualifications() {
 										id="nameGrade" 
 										title="Enter qualification name and grade" 
 										name="l-4-qual" 
-										size={30} />
+										size={30}
+										onChange={onUpdateNameGrade}
+									/>
 									: <span></span>
 							}
 
@@ -88,7 +101,8 @@ function DegreeQualifications() {
 								name="recent-school" 
 								title="What is the name of the most recent school/college attended?" 
 								size={25} 
-								type="text" 
+								type="text"
+								onChange={onUpdateRecentSchool}
 							/>
 							<RadioButton 
 								subtitle={"ELQ - is the applicant applying to study a qualification that is equivalent or" +
