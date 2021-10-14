@@ -4,36 +4,29 @@ import { Link } from 'react-router-dom';
 
 import './UCPButton.css';
 
-class UCPButton extends React.Component {
-	constructor(props) {
-		super(props);
-		this.props = props;
-	}
-
-  render = () => {
-  	if (this.props.to === undefined) {
-  		this.props.to = "/emptyLink";
-  	} else if (this.props.to === "none") {
-  		return(
-  			<button data-testid="ucpButton"
-  				type="button"
-  				className={this.props.className}
-  				{...this.props}>
-  				{this.props.buttonText}​
-  			</button>
-  		);
-  	}  
-  	return (
-  		<Link to={this.props.to}>
-  			<button data-testid="ucpButton"
-  				type="button"
-  				className={this.props.className}
-  				{...this.props}>
-  				{this.props.buttonText}​
-  			</button>
-  		</Link>
-  	);
-  }
+function UCPButton(to, className, buttonText, ...props) {
+	if (to === undefined) {
+		to = "/emptyLink";
+	} else if (to === "none") {
+		return(
+			<button data-testid="ucpButton"
+				type="button"
+				className={className}
+				{...props}>
+				{buttonText}​
+			</button>
+		);
+	}  
+	return (
+		<Link to={to}>
+			<button data-testid="ucpButton"
+				type="button"
+				className={className}
+				{...props}>
+				{buttonText}​
+			</button>
+		</Link>
+	);
 }
 
 UCPButton.propTypes = {

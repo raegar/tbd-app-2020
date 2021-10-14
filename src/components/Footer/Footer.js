@@ -3,13 +3,11 @@ import './Footer.css';
 import {isMobile} from 'react-device-detect';
 
 
-class Footers extends React.Component {
-	render = () => {
-		const className = isMobile ? "MobileFooter" : "ucpFooter";
-		return (
-			<footer className={className}/>   
-		);
-	}
+function Footers() {
+	const className = isMobile ? "MobileFooter" : "ucpFooter";
+	return (
+		<footer className={className}/>   
+	);
 };
 
 export default Footers;

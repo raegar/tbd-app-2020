@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import TextBox from '../TextBox/TextBox';
 import RadioButton from '../RadioButton/RadioButton';
 import { Container, Row, Col } from "react-bootstrap";
@@ -26,34 +26,19 @@ const priorStudyOptions = [
 	{label: "No", id: "study-no", value: "no"}
 ];
 
-class AddressAndPriorsForm extends React.Component {
-	constructor(props) {
-		super(props);
+function AddressAndPriorsForm() {
+	const [showPrior, setShowPrior] = useState(false);
+	const [whenStudy, setWhenStudy] = useState(false);
 
-		this.props = props;
-		this.state = {
-			showPrior: false,
-			whenStudy: false,
-		};
+	function handlePriorClick(v) {
+    	setShowPrior(v === 'yes');
 	}
 
-    setShowPrior = (prior) => {
-    	this.setState({showPrior: prior});
-    }
+	function handleWhenClick(v) {
+    	setWhenStudy(v === 'yes');
+	}
 
-    setWhenStudy = (study) => {
-    	this.setState({whenStudy: study});
-    }
-
-    handlePriorClick = (v) => {
-    	this.setShowPrior(v === 'yes');
-    }
-
-    handleWhenClick = (v) => {
-    	this.setWhenStudy(v === 'yes');
-    }
-
-    saveSelectedData = () => {
+	function saveSelectedData() {
     	//TODO: Fix to make more Reacty and not horrible bad raw HTML method
     	global.ApplicationFormData.addressLineOne = document.getElementById("address-1").value;
     	global.ApplicationFormData.addressLineTwo = document.getElementById("address-2").value;
@@ -95,164 +80,162 @@ class AddressAndPriorsForm extends React.Component {
     		global.ApplicationFormData.priorStudy = document.getElementById("study-no").value;
     	}
     	console.log(global.ApplicationFormData);
-    }
+	}
 
-    render = () => {
-    	return (
-    		<div>
-    			<Container className="form-container d-flex justify-content-center">
-    				<Row className="form-background">
-    					<Col>
-    						<h4>Address</h4>
-    
-    						<TextBox 
-    							name="address_line_1"
-    							title="Address Line 1"
-    							placeholder="Address Line 1"
-    							minLength={10}
-    							maxLength={100}
-    							size={35}
-    							id="address-1"
-    							type="text"
-    						/>
-    
-    						<TextBox 
-    							name="address_line_2"
-    							title="Address Line 2"
-    							placeholder="Address Line 2"
-    							minLength={10}
-    							maxLength={100}
-    							size={35}
-    							id="address-2"
-    							type="text"
-    						/>
-                
-    						<TextBox 
-    							name="town_city"
-    							title="Town/City"
-    							placeholder="Town/City"
-    							minLength={10}
-    							maxLength={100}
-    							size={35}
-    							id="town-city"
-    							type="text"
-    						/>
-    
-    						<TextBox 
-    							name="region"
-    							title="Region"
-    							placeholder="Region"
-    							minLength={3}
-    							maxLength={30}
-    							size={25}
-    							id="region"
-    							type="text"
-    						/>
-    
-    						<TextBox 
-    							name="postcode"
-    							title="Postcode"
-    							placeholder="Postcode"
-    							minLength={6}
-    							maxLength={9}
-    							size={10}
-    							id="postcode"
-    							type="text"
-    						/>
-                            
-    						<br/>
-    
-    						<RadioButton
-    							heading="Full/Part Time"
-    							options={fullPartOptions}
-    							name="full-part"
-    							subtitle="Will the student study the course full-time or part-time?"
-    						/>
-    					</Col>
-    					<Col>
-    						<div>
-    							<RadioButton
-    								heading="Prior Credit"
-    								options={priorCreditOptions}
-    								name="prior-credit"
-    								subtitle="Does the student wish to enrol with prior credit?"
-    								oc={this.handlePriorClick}
-    							/>
-    						</div>
-    						{
-    							(this.state.showPrior)
-    								? <div><TextBox 
-    									id="priorCred" 
-    									data-testid="prior-credit-text" 
-    									name="prior-credits" 
-    									title="How Many Credits?" 
-    									size={5} 
-    									type="number" 
-    									minLength={1} 
-    									maxLength={4} 
-    									min={0} 
-    									max={360}
-    								/><br/></div>
-    								: <span></span>
-    						}
-    
-    						<RadioButton
-    							heading="Year of Entry"
-    							options={yearOptions}
-    							name="year-of-entry"
-    							subtitle="In what year does the student want to begin their study?"
-    						/>
-    
-    						<RadioButton
-    							heading="Prior Study"
-    							options={priorStudyOptions}
-    							name="prior-study"
-    							subtitle="Has the student studied at UCP/ARU before?"
-    							oc={this.handleWhenClick}
-    						/>
-    
-    						{
-    							(this.state.whenStudy)
-    								? <TextBox 
-    									id="priorStudyDate" 
-    									name="when-study" 
-    									title="When did they last study at UCP/ARU?" 
-    									size={20} 
-    									type="text" 
-    									minLength={2} 
-    									maxLength={20} 
-    								/>
-    								: <span></span>
-    						}
-                
-    					</Col>
-    
-    
-    				</Row>
-    			</Container>
-    			<Container>
-    				<Row id="buttonRow">
-    					<Col className="centered-buttons">
-    						<UCPButton to='/NewApplicationPage'
-    							primary="True"
-    							className="mediumbutton"
-    							buttonText="Go Back"
-    						/>
-    					</Col>
-    					<Col className="centered-buttons">
-    						<div id="confirmButton" onClick={this.saveSelectedData}>
-    							<UCPButton
-    								to = "/LevelTwoQualifications"
-    								primary="True"
-    								className="mediumbutton"
-    								buttonText="Next"
-    							/>
-    						</div>
-    					</Col>
-    				</Row>
-    			</Container>
-    		</div>
-    	);
-    }
+	return (
+		<div>
+			<Container className="form-container d-flex justify-content-center">
+				<Row className="form-background">
+					<Col>
+						<h4>Address</h4>
+
+						<TextBox 
+							name="address_line_1"
+							title="Address Line 1"
+							placeholder="Address Line 1"
+							minLength={10}
+							maxLength={100}
+							size={35}
+							id="address-1"
+							type="text"
+						/>
+
+						<TextBox 
+							name="address_line_2"
+							title="Address Line 2"
+							placeholder="Address Line 2"
+							minLength={10}
+							maxLength={100}
+							size={35}
+							id="address-2"
+							type="text"
+						/>
+			
+						<TextBox 
+							name="town_city"
+							title="Town/City"
+							placeholder="Town/City"
+							minLength={10}
+							maxLength={100}
+							size={35}
+							id="town-city"
+							type="text"
+						/>
+
+						<TextBox 
+							name="region"
+							title="Region"
+							placeholder="Region"
+							minLength={3}
+							maxLength={30}
+							size={25}
+							id="region"
+							type="text"
+						/>
+
+						<TextBox 
+							name="postcode"
+							title="Postcode"
+							placeholder="Postcode"
+							minLength={6}
+							maxLength={9}
+							size={10}
+							id="postcode"
+							type="text"
+						/>
+						
+						<br/>
+
+						<RadioButton
+							heading="Full/Part Time"
+							options={fullPartOptions}
+							name="full-part"
+							subtitle="Will the student study the course full-time or part-time?"
+						/>
+					</Col>
+					<Col>
+						<div>
+							<RadioButton
+								heading="Prior Credit"
+								options={priorCreditOptions}
+								name="prior-credit"
+								subtitle="Does the student wish to enrol with prior credit?"
+								oc={handlePriorClick}
+							/>
+						</div>
+						{
+							(showPrior)
+								? <div><TextBox 
+									id="priorCred" 
+									data-testid="prior-credit-text" 
+									name="prior-credits" 
+									title="How Many Credits?" 
+									size={5} 
+									type="number" 
+									minLength={1} 
+									maxLength={4} 
+									min={0} 
+									max={360}
+								/><br/></div>
+								: <span></span>
+						}
+
+						<RadioButton
+							heading="Year of Entry"
+							options={yearOptions}
+							name="year-of-entry"
+							subtitle="In what year does the student want to begin their study?"
+						/>
+
+						<RadioButton
+							heading="Prior Study"
+							options={priorStudyOptions}
+							name="prior-study"
+							subtitle="Has the student studied at UCP/ARU before?"
+							oc={handleWhenClick}
+						/>
+
+						{
+							(whenStudy)
+								? <TextBox 
+									id="priorStudyDate" 
+									name="when-study" 
+									title="When did they last study at UCP/ARU?" 
+									size={20} 
+									type="text" 
+									minLength={2} 
+									maxLength={20} 
+								/>
+								: <span></span>
+						}
+			
+					</Col>
+
+
+				</Row>
+			</Container>
+			<Container>
+				<Row id="buttonRow">
+					<Col className="centered-buttons">
+						<UCPButton to='/NewApplicationPage'
+							primary="True"
+							className="mediumbutton"
+							buttonText="Go Back"
+						/>
+					</Col>
+					<Col className="centered-buttons">
+						<div id="confirmButton" onClick={saveSelectedData}>
+							<UCPButton
+								to = "/LevelTwoQualifications"
+								primary="True"
+								className="mediumbutton"
+								buttonText="Next"
+							/>
+						</div>
+					</Col>
+				</Row>
+			</Container>
+		</div>
+	);
 }
 export default AddressAndPriorsForm;

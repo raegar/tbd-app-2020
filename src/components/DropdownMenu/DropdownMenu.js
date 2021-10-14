@@ -2,13 +2,7 @@ import React from 'react';
 import './DropdownMenu.css';
 import {isMobile} from 'react-device-detect';
 
-class DropdownMenu extends React.Component {
-	constructor(props) {
-		super(props);
-		this.props = props;
-	}
-
-  render = () => {
+function DropdownMenu(id, placeholder, options, ...props) {
   	let dropdownClassName;
 
   	if (isMobile) {
@@ -18,15 +12,14 @@ class DropdownMenu extends React.Component {
   	}  
 
   	return (
-  		<select id={this.props.id} 
+  		<select id={id} 
   			className={dropdownClassName} >
-  			<option value="">{this.props.placeholder}</option>
-  			{this.props.options.map((value, i) => (
+  			<option value="">{placeholder}</option>
+  			{options.map((value, i) => (
   				<option key={i} value={value.value}>{value.label}</option>
   			))}
   		</select>
   	);
-  }
 }
 
 //TODO: put subjects in a consts/global file and convert them to ReactProps here

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import TextBox from "../TextBox/TextBox";
 import RadioButton from "../RadioButton/RadioButton";
@@ -38,131 +38,120 @@ const days = [
 	{value: 'friday', label: 'Friday'}
 ];
 
-class EssentialApplicantInfo extends React.Component {
-	constructor(props) {
-		super(props);
-		this.props = props;
+function EssentialApplicantInfo() {
+	const [input, setInput] = useState("");
 
-		this.state = {
-			input: ""
-		};
+	function handleChange(event) {
+		console.log(event.target.value);
+		setInput(event.target.value);
 	}
 
-  setInput = (input) => {
-  	this.setState({input: input});
-  }
+	function saveSelectedData() {
+		//TODO: Fix to make more Reacty and not horrible bad raw HTML method
+		global.ApplicationFormData.name = document.getElementById("nameinput").value;
+		global.ApplicationFormData.email = document.getElementById("emailinput").value;
+		global.ApplicationFormData.telephone = document.getElementById("telinput").value;
+		global.ApplicationFormData.dob = document.getElementById("dobinput").value;
+		global.ApplicationFormData.ucasNumber = document.getElementById("ucasinput").value;
+		// get Nationality
+		if (document.getElementById("UK").checked) {
+			global.ApplicationFormData.Nationality = document.getElementById("UK").value;
+		}
+		if (document.getElementById("EU").checked) {
+			global.ApplicationFormData.Nationality = document.getElementById("EU").value;
+		}
+		if (document.getElementById("Other").checked) {
+			global.ApplicationFormData.Nationality = document.getElementById("Other").value;
+		}
+		// Criminal Conviction
+		if (document.getElementById("crimeYes").checked) {
+			global.ApplicationFormData.Convictions = document.getElementById("crimeYes").value;
+		}
+		if (document.getElementById("crimeNo").checked) {
+			global.ApplicationFormData.Convictions = document.getElementById("crimeNo").value;
+		}
+		// Learning Support
+		if (document.getElementById("supportYes").checked) {
+			global.ApplicationFormData.Support = document.getElementById("supportYes").value;
+		}
+		if (document.getElementById("supportNo").checked) {
+			global.ApplicationFormData.Support = document.getElementById("supportNo").value;
+		}
+		var course = document.getElementById("courseSelection");
+		global.ApplicationFormData.selectedCourse = course.options[course.selectedIndex].value;
+		//
+		console.log(global.ApplicationFormData);
+	}
 
-  handleChange = (event) => {
-  	console.log(event.target.value);
-  	this.setInput(event.target.value);
-  }
+	function userTypeSelect() {
+		if (global.userType === "staff") {
+			return (
+				<Row id="buttonRow">
+					<Col className="centered-buttons">
+						<UCPButton to="/Login"
+							primary="True"
+							className="mediumbutton"
+							buttonText="Go Back"
+						/>
+					</Col>
+					<Col className="centered-buttons">
+						<div id="confirmButton" onClick={saveSelectedData}>
+							<UCPButton to="/MoreInfo"
+								primary="True"
+								className="mediumbutton"
+								buttonText="Confirm and Go"
+							/>
+						</div>
+					</Col>
+				</Row>
+			);
+		} else {
+			return (
+				<Row id="buttonRow">
+		
+					<Col className="centered-buttons">
+						<div id="confirmButton1">
+							<Modal id="hello" btnText="Request a Call Back">
+								<div>
+									<h2>Callback Request</h2>
+									<p>Please select a day and time you would be available.</p>
+									<Row id="dropdownRow">
+										<Col className="dropdownOptions1">
+											<DropdownMenu placeholder="Please select a day..." options={days}/>
+										</Col>
+										<Col className="dropdownOptions2">
+											<DropdownMenu placeholder="Please select a time..." options={time}/>
+										</Col>
+									</Row>
+									<br></br>
+									<UCPButton 
+										to="none"
+										primary="True"
+										className="smallbutton"
+										buttonText="Submit" />
+								</div>
+							</Modal>
+						</div>
+				
+					</Col>
+					<Col className="centered-buttons">
+						<div id="confirmButton" onClick={saveSelectedData}>
+							<UCPButton
+								to="/MoreInfo"
+								primary="True"
+								className="mediumbutton"
+								buttonText="Apply Now"
+							/>
+						</div>
+					</Col>
 
-  saveSelectedData = () => {
-  	//TODO: Fix to make more Reacty and not horrible bad raw HTML method
-  	global.ApplicationFormData.name = document.getElementById("nameinput").value;
-  	global.ApplicationFormData.email = document.getElementById("emailinput").value;
-  	global.ApplicationFormData.telephone = document.getElementById("telinput").value;
-  	global.ApplicationFormData.dob = document.getElementById("dobinput").value;
-  	global.ApplicationFormData.ucasNumber = document.getElementById("ucasinput").value;
-  	// get Nationality
-  	if (document.getElementById("UK").checked) {
-  		global.ApplicationFormData.Nationality = document.getElementById("UK").value;
-  	}
-  	if (document.getElementById("EU").checked) {
-  		global.ApplicationFormData.Nationality = document.getElementById("EU").value;
-  	}
-  	if (document.getElementById("Other").checked) {
-  		global.ApplicationFormData.Nationality = document.getElementById("Other").value;
-  	}
-  	// Criminal Conviction
-  	if (document.getElementById("crimeYes").checked) {
-  		global.ApplicationFormData.Convictions = document.getElementById("crimeYes").value;
-  	}
-  	if (document.getElementById("crimeNo").checked) {
-  		global.ApplicationFormData.Convictions = document.getElementById("crimeNo").value;
-  	}
-  	// Learning Support
-  	if (document.getElementById("supportYes").checked) {
-  		global.ApplicationFormData.Support = document.getElementById("supportYes").value;
-  	}
-  	if (document.getElementById("supportNo").checked) {
-  		global.ApplicationFormData.Support = document.getElementById("supportNo").value;
-  	}
-  	var course = document.getElementById("courseSelection");
-  	global.ApplicationFormData.selectedCourse = course.options[course.selectedIndex].value;
-  	//
-  	console.log(global.ApplicationFormData);
-  }
+				</Row>
+			);
+		}
+	}
 
-  userTypeSelect = () => {
-  	if (global.userType === "staff") {
-  		return (
-  			<Row id="buttonRow">
-  				<Col className="centered-buttons">
-  					<UCPButton to="/Login"
-  						primary="True"
-  						className="mediumbutton"
-  						buttonText="Go Back"
-  					/>
-  				</Col>
-  				<Col className="centered-buttons">
-  					<div id="confirmButton" onClick={this.saveSelectedData}>
-  						<UCPButton to="/MoreInfo"
-  							primary="True"
-  							className="mediumbutton"
-  							buttonText="Confirm and Go"
-  						/>
-  					</div>
-  				</Col>
-  			</Row>
-  		);
-  	} else {
-  		return (
-  			<Row id="buttonRow">
-      
-  				<Col className="centered-buttons">
-  					<div id="confirmButton1">
-  						<Modal id="hello" btnText="Request a Call Back">
-  							<div>
-  								<h2>Callback Request</h2>
-  								<p>Please select a day and time you would be available.</p>
-  								<Row id="dropdownRow">
-  									<Col className="dropdownOptions1">
-  										<DropdownMenu placeholder="Please select a day..." options={days}/>
-  									</Col>
-  									<Col className="dropdownOptions2">
-  										<DropdownMenu placeholder="Please select a time..." options={time}/>
-  									</Col>
-  								</Row>
-  								<br></br>
-  								<UCPButton 
-  									to="none"
-  									primary="True"
-  									className="smallbutton"
-  									buttonText="Submit" />
-  							</div>
-  						</Modal>
-  					</div>
-            
-  				</Col>
-  				<Col className="centered-buttons">
-  					<div id="confirmButton" onClick={this.saveSelectedData}>
-  						<UCPButton
-  							to="/MoreInfo"
-  							primary="True"
-  							className="mediumbutton"
-  							buttonText="Apply Now"
-  						/>
-  					</div>
-  				</Col>
-
-  			</Row>
-  		);
-  	}
-  }
-
-  render = () => {
   	let textboxClassName;
+
   	if (isMobile) {
   		textboxClassName = "mobiletextbox";
   	} else {
@@ -184,8 +173,8 @@ class EssentialApplicantInfo extends React.Component {
   						name="name"
   						attribute="disabled"
   						className={textboxClassName}
-  						onChange={this.handleChange}
-  						value={this.state.input}
+  						onChange={handleChange}
+  						value={input}
   					/>
   
   					<TextBox
@@ -198,8 +187,8 @@ class EssentialApplicantInfo extends React.Component {
   						name="email"
   						attribute="disabled"
   						className={textboxClassName}
-  						onChange={this.handleChange}
-  						value={this.state.input}
+  						onChange={handleChange}
+  						value={input}
   					/>
   
   					<TextBox
@@ -212,8 +201,8 @@ class EssentialApplicantInfo extends React.Component {
   						name="telno"
   						attribute="disabled"
   						className={textboxClassName}
-  						onChange={this.handleChange}
-  						value={this.state.input}
+  						onChange={handleChange}
+  						value={input}
   					/>
   
   					<TextBox
@@ -224,8 +213,8 @@ class EssentialApplicantInfo extends React.Component {
   						name="dob"
   						attribute="disabled"
   						className={textboxClassName}
-  						onChange={this.handleChange}
-  						value={this.state.input}
+  						onChange={handleChange}
+  						value={input}
   					/>
   
   					<TextBox
@@ -236,8 +225,8 @@ class EssentialApplicantInfo extends React.Component {
   						name="ucas"
   						attribute="disabled"
   						className={textboxClassName}
-  						onChange={this.handleChange}
-  						value={this.state.input}
+  						onChange={handleChange}
+  						value={input}
   
   					/>
   				</span>
@@ -247,7 +236,7 @@ class EssentialApplicantInfo extends React.Component {
   						options={nationalityOptions}
   						name="nationality"
   						attribute="disabled"
-  						onClick={this.handleChange}
+  						onClick={handleChange}
   					/>
   
   					<RadioButton
@@ -269,10 +258,9 @@ class EssentialApplicantInfo extends React.Component {
   					<DropdownMenu id="courseSelection"/>
   				</span>
   			</div>
-  			<div>{this.userTypeSelect()}</div>
+  			<div>{userTypeSelect()}</div>
   		</Container>
   	);
-  }
 }
 
 export default EssentialApplicantInfo;

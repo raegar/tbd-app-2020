@@ -16,8 +16,7 @@ const options = [
 	{ value: '7', label: '16:00'},
 ];
 
-class Calendar extends React.Component {
-  render = () => {
+function Calendar() {
   	return (
   		<Container >
   			<Row className="WeeksButton">
@@ -59,7 +58,6 @@ class Calendar extends React.Component {
   			</Row >
   		</Container>
   	);
-  }
 }
 
 export default Calendar;

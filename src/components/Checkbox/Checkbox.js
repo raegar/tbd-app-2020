@@ -3,22 +3,15 @@ import PropTypes from 'prop-types';
 import './Checkbox.css';
 
 
-class Checkbox extends React.Component {
-	constructor(props) {
-		super(props);
-		this.props = props;
-	}
-
-    render = () => {
-    	return(
-    		<div className="labelposition">
-    			<input className={this.props.className} type="checkbox" />
-    			<div className="checkboxposition">
-    				<label className="container">{this.props.checkboxText}</label>
-    			</div>           
-    		</div>
-    	);
-    }
+function Checkbox(className, checkboxText, ...props) {
+	return(
+		<div className="labelposition">
+			<input className={className} type="checkbox" />
+			<div className="checkboxposition">
+				<label className="container">{checkboxText}</label>
+			</div>           
+		</div>
+	);
 }
   
   
