@@ -5,20 +5,20 @@ import { Container, Col, Row } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 
 
-class ClearingOfferMadeStudentEnd extends React.Component {
-    autoInputData = () => {
+function ClearingOfferMadeStudentEnd() {
+	function autoInputData() {
     	if (global.ApplicationFormData.email !== "") {
-    		var email = document.getElementById("emailConfirm");
+    		let email = document.getElementById("emailConfirm");
     		email.value = global.ApplicationFormData.email;
     	}
 		
     	if (global.ApplicationFormData.selectedCourse !== "") {
-    		var course = document.getElementById("courseApplied");
+    		let course = document.getElementById("courseApplied");
     		course.value = global.ApplicationFormData.email;
     	}
-    }
+	}
 
-    downloadFile = () => {
+	function downloadFile() {
     	const fileName = "studentDetails.json"; 
     	let saveData = (function () { 
     		let a = document.createElement("a"); 
@@ -35,38 +35,36 @@ class ClearingOfferMadeStudentEnd extends React.Component {
     		}; 
     	}()); 
     	saveData(fileName);
-    }
+	}
 
-    render = () => {
-    	return (<Container>
-    		<h1>Thank you for using the form</h1>
-    		<p>Please press confirm to complete</p>
-    		<h3>Please confirm email that your application will be sent to</h3>
-    		<TextBox id="emailConfirm" placeholder={global.ApplicationFormData.email}/>
-    
-    		<Row>
-    			<Col><br></br><UCPButton to='/DegreeQualifications'
-    				primary="True"
-    				className="mediumbutton"
-    				buttonText="Go Back"
-    				href="/DegreeQualifications"/>
-    			</Col>
+	return (<Container>
+		<h1>Thank you for using the form</h1>
+		<p>Please press confirm to complete</p>
+		<h3>Please confirm email that your application will be sent to</h3>
+		<TextBox id="emailConfirm" placeholder={global.ApplicationFormData.email}/>
 
-    			<Col>
-    				<br></br>
-    				<div onClick={this.downloadFile}>
-    					<UCPButton to ='/'
-    						primary="True"
-    						className="mediumbutton"
-    						buttonText="Confirm"
-    						href="/"/>
-    				</div>
-    			</Col>
-    		</Row>
-    		{this.autoInputData}
-    	</Container>
-    	);
-    }
+		<Row>
+			<Col><br></br><UCPButton to='/DegreeQualifications'
+				primary="True"
+				className="mediumbutton"
+				buttonText="Go Back"
+				href="/DegreeQualifications"/>
+			</Col>
+
+			<Col>
+				<br></br>
+				<div onClick={downloadFile}>
+					<UCPButton to ='/'
+						primary="True"
+						className="mediumbutton"
+						buttonText="Confirm"
+						href="/"/>
+				</div>
+			</Col>
+		</Row>
+		{autoInputData}
+	</Container>
+	);
 }
 
 export default ClearingOfferMadeStudentEnd;

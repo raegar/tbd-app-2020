@@ -2,7 +2,7 @@ import React from 'react';
 import './DropdownMenu.css';
 import {isMobile} from 'react-device-detect';
 
-function DropdownMenu(id, placeholder, options, ...props) {
+function DropdownMenu({id, placeholder, options, ...props}) {
   	let dropdownClassName;
 
   	if (isMobile) {

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import TextBox from '../TextBox/TextBox';
 import {isMobile} from 'react-device-detect';
 
-function L3Component(name, id, key, onChange, placeholder, clearInput, value, ...props) {
+function L3Component({name, id, key, onChange, placeholder, clearInput, value, ...props}) {
 	const className1 = isMobile ? "mobilel3component" : "l3component";
 	
 	return (

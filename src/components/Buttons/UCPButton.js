@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import './UCPButton.css';
 
-function UCPButton(to, className, buttonText, ...props) {
+function UCPButton({to, className, buttonText, ...props}) {
 	if (to === undefined) {
 		to = "/emptyLink";
 	} else if (to === "none") {

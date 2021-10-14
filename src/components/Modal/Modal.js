@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import UCPButton from '../Buttons/UCPButton';
 import './Modal.css';
 
-function Modal(btnId, btnClass, btnText, id, children, ...props) {
+function Modal({btnId, btnClass, btnText, id, children, ...props}) {
 	const [show, setShow] = useState(false);
 
 	if (!show) {

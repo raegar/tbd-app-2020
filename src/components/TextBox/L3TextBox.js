@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import {isMobile} from 'react-device-detect';
 
 //TODO: fix this awful awful formatting here
-function L3TextBox(
+function L3TextBox({
 	clearInput, 
 	wrapID, 
 	id, 
@@ -19,7 +19,7 @@ function L3TextBox(
 	min, 
 	max, 
 	attribute, 
-	...props) {
+	...props}) {
 	const [emptyInput, setEmptyInput] = useState(clearInput);
 	const [input, setInput] = useState('');
 

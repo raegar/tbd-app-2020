@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import RadioButton from "../RadioButton/RadioButton";
 import "./ClearingOfferMade2.css";
 import { Container, Col, Row } from "react-bootstrap";
@@ -62,57 +62,39 @@ const offerOptions = [
 	}      
 ];
 
-class ClearingOfferMadeYesNoSelect extends React.Component {
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			whenNo: false,
-			whenRPA: false,
-			whenInterview: false,
-		};
-	}
-
-    setWhenNo = (whenNo) => {
-    	this.setState({whenNo: whenNo});
-    }
-
-    setWhenRPA = (whenRPA) => {
-    	this.setState({whenRPA: whenRPA});
-    }
-
-    setWhenInterview = (whenInterview) => {
-    	this.setState({whenInterview: whenInterview});
-    }
-
-    handleWhenClick = (v) => {
+function ClearingOfferMadeYesNoSelect() {
+	const [whenNo, setWhenNo] = useState(false);
+	const [whenRPA, setWhenRPA] = useState(false);
+	const [whenInterview, setWhenInterview] = useState(false);
+	
+	function handleWhenClick(v) {
     	switch (v) {
     		case 'No':
-    			this.setWhenNo(true);
-    			this.setWhenRPA(false);
-    			this.setWhenInterview(false);
+    			setWhenNo(true);
+    			setWhenRPA(false);
+    			setWhenInterview(false);
     			break;
                 
     		case 'RPARequired':
-    			this.setWhenRPA(true);
-    		    this.setWhenNo(false);
-    			this.setWhenInterview(false);
+    			setWhenRPA(true);
+    		    setWhenNo(false);
+    			setWhenInterview(false);
     			break;
 
     	    case 'InterviewRequired':
-    			this.setWhenRPA(false);
-    			this.setWhenNo(false);
-    			this.setWhenInterview(true);
+    			setWhenRPA(false);
+    			setWhenNo(false);
+    			setWhenInterview(true);
     			break;
                 
     		default:
-    			this.setWhenNo(false);
-    			this.setWhenRPA(false);
-    			this.setWhenInterview(false);
+    			setWhenNo(false);
+    			setWhenRPA(false);
+    			setWhenInterview(false);
     	}
-    }
+	}
 
-    saveSelectedData = () => {
+	function saveSelectedData() {
     	if (document.getElementById("offerYes").checked) {
     		global.ApplicationFormData.offerMade = document.getElementById("offerYes").value;
     	}
@@ -138,62 +120,60 @@ class ClearingOfferMadeYesNoSelect extends React.Component {
     	}
 
     	console.log(global.ApplicationFormData);
-    }
+	}
 
-    render = () => {
-    	return ( 
-    		<Container>
-    			<h1>Offer</h1>
-    			<h4>* Required</h4>
-    			<h3>37. Offer made? (YES/NO)</h3>
-    			<p><i>Only UNCONDITIONAL Offers can be made (unless interview is needed)</i></p>
-    			<RadioButton
-    				heading="Yes"
-    				options={offerOptions}
-    				name="offer"
-    				oc={this.handleWhenClick}
-    			/>
-    
-    			{
-    				(this.state.whenNo)
-    					? <Redirect to={{ pathname: "/ClearingOfferMadeThirdPage" }} />
-    					: <span></span>
-    			}
-    
-    			{
-    				(this.state.whenRPA)
-    					? <Redirect to={{ pathname: "/ClearingOfferMadeFourthPage" }} />
-    					: <span></span>
-    			}
-    
-    			{
-    				(this.state.whenInterview)
-    					? <Redirect to={{ pathname: "/ClearingOfferMadeFourthPage" }} />
-    					: <span></span>
-    			}
-    			<Row>
-    				<Col>
-    					<UCPButton to='/ClearingOfferMade'
-    						primary="True"
-    						className="mediumbutton"
-    						buttonText="Go Back"
-    						href="/ClearingOfferMade"
-    					/>
-    				</Col>
-                    
-    				<Col>
-    					<div id="confirmButton" onClick={this.saveSelectedData}>
-    						<UCPButton to='/ClearingOfferMadeFifthPage'
-    							primary="True"
-    							className="mediumbutton"
-    							buttonText="Confirm and Continue"
-    						/>
-    					</div>
-    				</Col>
-    			</Row>
-    		</Container>
-    	);
-    }
+	return ( 
+		<Container>
+			<h1>Offer</h1>
+			<h4>* Required</h4>
+			<h3>37. Offer made? (YES/NO)</h3>
+			<p><i>Only UNCONDITIONAL Offers can be made (unless interview is needed)</i></p>
+			<RadioButton
+				heading="Yes"
+				options={offerOptions}
+				name="offer"
+				oc={handleWhenClick}
+			/>
+
+			{
+				(whenNo)
+					? <Redirect to={{ pathname: "/ClearingOfferMadeThirdPage" }} />
+					: <span></span>
+			}
+
+			{
+				(whenRPA)
+					? <Redirect to={{ pathname: "/ClearingOfferMadeFourthPage" }} />
+					: <span></span>
+			}
+
+			{
+				(whenInterview)
+					? <Redirect to={{ pathname: "/ClearingOfferMadeFourthPage" }} />
+					: <span></span>
+			}
+			<Row>
+				<Col>
+					<UCPButton to='/ClearingOfferMade'
+						primary="True"
+						className="mediumbutton"
+						buttonText="Go Back"
+						href="/ClearingOfferMade"
+					/>
+				</Col>
+				
+				<Col>
+					<div id="confirmButton" onClick={saveSelectedData}>
+						<UCPButton to='/ClearingOfferMadeFifthPage'
+							primary="True"
+							className="mediumbutton"
+							buttonText="Confirm and Continue"
+						/>
+					</div>
+				</Col>
+			</Row>
+		</Container>
+	);
 }
 
 export default ClearingOfferMadeYesNoSelect;
