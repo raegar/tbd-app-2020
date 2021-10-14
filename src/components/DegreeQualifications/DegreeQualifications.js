@@ -30,11 +30,7 @@ class DegreeQualifications extends React.Component {
     }
 
     handleClick = (e) => {
-    	if (e === 'yes') {
-    		this.setLevelFour(true);
-    	} else {
-    		this.setLevelFour(false);
-    	}
+    	this.setLevelFour(e === 'yes');
     }
 
     saveSelectedData = () => {
@@ -65,6 +61,7 @@ class DegreeQualifications extends React.Component {
     	const radioButtonSubtitle = 
             "ELQ - is the applicant applying to study a qualification that is equivalent or lower to one they already hold?";
     	let nextpage;
+
     	if (global.userType === "staff") {
     		nextpage = "/ClearingOfferMade" ;
     	} else {
@@ -76,7 +73,8 @@ class DegreeQualifications extends React.Component {
     			<Container className="degree-form d-flex justify-content-center">
     				<link 
     					href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" 
-    					rel="stylesheet"/>
+    					rel="stylesheet"
+    				/>
     				<div className="form-background">
     					<h3 className="form-title">Level 4 or Above Experience</h3>
     					<Row>
@@ -129,7 +127,7 @@ class DegreeQualifications extends React.Component {
     					<Col className="centered-buttons" onClick={this.saveSelectedData}>
     						<div id="confirmButton">
     							<UCPButton
-    								to = {nextpage}
+    								to={nextpage}
     								primary="True"
     								className="mediumbutton"
     								buttonText="Confirm and Go"

@@ -9,7 +9,7 @@ import StartClearingApplicationPage from './StartClearingApplicationPage';
 import LevelTwoQualifications from './components/LevelTwoQualifications/LevelTwoQualifications';
 import LevelThreeQualifications from './components/LevelThreeQualifications/LevelThreeQualifications';
 import ClearingOfferMade from './components/ClearingOfferMade/ClearingOfferMade';
-import DegreeQualifications from './components/Degree Qualifications/DegreeQualifications';
+import DegreeQualifications from './components/DegreeQualifications/DegreeQualifications';
 import ClearingOfferMadeYesNoSelect from './components/ClearingOfferMade/ClearingOfferMadeYesNoSelect';
 import ClearingOfferMadeReasonIfNo from './components/ClearingOfferMade/ClearingOfferMadeReasonIfNo';
 import ClearingOfferMadeInterviewRPA from './components/ClearingOfferMade/ClearingOfferMadeInterviewRPA';

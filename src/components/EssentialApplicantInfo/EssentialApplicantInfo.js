@@ -99,7 +99,7 @@ class EssentialApplicantInfo extends React.Component {
   		return (
   			<Row id="buttonRow">
   				<Col className="centered-buttons">
-  					<UCPButton  to="/Login"
+  					<UCPButton to="/Login"
   						primary="True"
   						className="mediumbutton"
   						buttonText="Go Back"
@@ -107,7 +107,7 @@ class EssentialApplicantInfo extends React.Component {
   				</Col>
   				<Col className="centered-buttons">
   					<div id="confirmButton" onClick={this.saveSelectedData}>
-  						<UCPButton  to="/MoreInfo"
+  						<UCPButton to="/MoreInfo"
   							primary="True"
   							className="mediumbutton"
   							buttonText="Confirm and Go"
@@ -148,7 +148,7 @@ class EssentialApplicantInfo extends React.Component {
   				<Col className="centered-buttons">
   					<div id="confirmButton" onClick={this.saveSelectedData}>
   						<UCPButton
-  							to = "/MoreInfo"
+  							to="/MoreInfo"
   							primary="True"
   							className="mediumbutton"
   							buttonText="Apply Now"

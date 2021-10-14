@@ -61,7 +61,13 @@ class Disclaimer extends React.Component {
     			</link>
     			<form action="https://canvas.anglia.ac.uk/courses/17176/modules">
     				<div className="disclaimer" data-testid="ucpDisclaimer">
-    					<p><b>{disclaimer.title}</b><br/><b>{disclaimer.intro}</b><br/>{disclaimer.body}</p> 
+    					<p>
+    						<b>{disclaimer.title}</b>
+    						<br/>
+    						<b>{disclaimer.intro}</b>
+    						<br/>
+    						{disclaimer.body}
+    					</p> 
     					<div id="acceptButton">        
     						<UCPButton 
     							primary="True" 

@@ -46,19 +46,11 @@ class AddressAndPriorsForm extends React.Component {
     }
 
     handlePriorClick = (v) => {
-    	if (v === 'yes') {
-    		this.setShowPrior(true);
-    	} else {
-    		this.setShowPrior(false);
-    	}
+    	this.setShowPrior(v === 'yes');
     }
 
     handleWhenClick = (v) => {
-    	if (v === 'yes') {
-    		this.setWhenStudy(true);
-    	} else {
-    		this.setWhenStudy(false);
-    	}
+    	this.setWhenStudy(v === 'yes');
     }
 
     saveSelectedData = () => {

@@ -10,6 +10,7 @@ class DropdownMenu extends React.Component {
 
   render = () => {
   	let dropdownClassName;
+
   	if (isMobile) {
   		dropdownClassName = "MobileDropdown";
   	} else {
@@ -28,8 +29,9 @@ class DropdownMenu extends React.Component {
   }
 }
 
+//TODO: put subjects in a consts/global file and convert them to ReactProps here
 DropdownMenu.defaultProps = {
-	options:[
+	options: [
 		{ value: 'computing', label: 'BSc (Hons) Computing and Information Systems' },
 		{ value: 'criminoloy', label: 'BA (Hons) Crimonology'},
 		{ value: 'digitalArts', label: 'FDA Digital Arts'}
