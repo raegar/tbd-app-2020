@@ -63,34 +63,65 @@ const offerOptions = [
 ];
 
 function ClearingOfferMadeYesNoSelect() {
-	const [whenNo, setWhenNo] = useState(false);
-	const [whenRPA, setWhenRPA] = useState(false);
-	const [whenInterview, setWhenInterview] = useState(false);
+	const [state, setState] = useState({
+		whenNo: false,
+		whenRPA: false,
+		whenInterview: false,
+	});
+
+	function setWhenNo(whenNo) {
+		setState({
+			...state,
+			whenNo: whenNo
+		});
+	}
+	
+	function setWhenRPA(whenRPA) {
+		setState({
+			...state,
+			whenRPA: whenRPA
+		});
+	}
+
+	function setWhenInterview(whenInterview) {
+		setState({
+			...state,
+			whenInterview: whenInterview
+		});
+	}
 	
 	function handleWhenClick(v) {
     	switch (v) {
     		case 'No':
-    			setWhenNo(true);
-    			setWhenRPA(false);
-    			setWhenInterview(false);
+    			setState({
+    				whenNo: true,
+    				whenRPA: false,
+    				whenInterview: false,
+    			});
     			break;
                 
     		case 'RPARequired':
-    			setWhenRPA(true);
-    		    setWhenNo(false);
-    			setWhenInterview(false);
+    			setState({
+    				whenNo: true,
+    				whenRPA: false,
+    				whenInterview: false,
+    			});
     			break;
 
     	    case 'InterviewRequired':
-    			setWhenRPA(false);
-    			setWhenNo(false);
-    			setWhenInterview(true);
+    			setState({
+    				whenNo: false,
+    				whenRPA: false,
+    				whenInterview: true,
+    			});
     			break;
                 
     		default:
-    			setWhenNo(false);
-    			setWhenRPA(false);
-    			setWhenInterview(false);
+    			setState({
+    				whenNo: false,
+    				whenRPA: false,
+    				whenInterview: false,
+    			});
     	}
 	}
 
@@ -137,19 +168,19 @@ function ClearingOfferMadeYesNoSelect() {
 			/>
 
 			{
-				(whenNo)
+				(state.whenNo)
 					? <Redirect to={{ pathname: "/ClearingOfferMadeThirdPage" }} />
 					: <span></span>
 			}
 
 			{
-				(whenRPA)
+				(state.whenRPA)
 					? <Redirect to={{ pathname: "/ClearingOfferMadeFourthPage" }} />
 					: <span></span>
 			}
 
 			{
-				(whenInterview)
+				(state.whenInterview)
 					? <Redirect to={{ pathname: "/ClearingOfferMadeFourthPage" }} />
 					: <span></span>
 			}
