@@ -6,11 +6,8 @@ function Disclaimer({enableMethod, ...props}) {
 	const [acceptHidden, setAcceptHidden] = useState(false);
 	
 	function handleClick() {
-    	//TODO: Fix to make more Reacty and not horrible bad raw HTML method
-    	if (document.getElementById('nameinput') !== undefined) {
-			enableMethod();
-			setAcceptHidden(true);
-    	}
+		enableMethod();
+		setAcceptHidden(true);
 	}
 
 	let disclaimer;

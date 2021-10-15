@@ -8,22 +8,6 @@ import UCPButton from "../Buttons/UCPButton";
 import Modal from "../Modal/Modal";
 import {isMobile} from 'react-device-detect';
 
-const nationalityOptions = [
-	{ label: "UK National", id: "UK", value: "UK" },
-	{ label: "EU National", id: "EU", value: "EU" },
-	{ label: "Other", id: "Other", value: "Other" },
-];
-
-const criminalOptions = [
-	{ label: "Yes", id: "crimeYes", value: "yes" },
-	{ label: "No", id: "crimeNo", value: "no" },
-];
-
-const supportOptions = [
-	{ label: "Yes", id: "supportYes", value: "yes" },
-	{ label: "No", id: "supportNo", value: "no" },
-];
-
 const time = [
 	{value: 'morning', label: '09:00am - 12:00pm'},
 	{value: 'afternoon', label: '12:00pm - 15:00pm'},
@@ -39,45 +23,107 @@ const days = [
 ];
 
 function EssentialApplicantInfo({disabled, ...props}) {
-	const [input, setInput] = useState("");
+	const [nameInput, setNameInput] = useState("");
+	const [emailInput, setEmailInput] = useState("");
+	const [telInput, setTelInput] = useState("");
+	const [dobInput, setDobInput] = useState("");
+	const [ucasInput, setUcasInput] = useState("");
+	//I refuse to copypaste 10 state setting things.
+	const [nationalityState, setNationalityState] = useState({
+		value: "",
+		anyChecked: false,
+	});
+	const [criminalConvState, setCriminalConvState] = useState({
+		value: "",
+		anyChecked: false,
+	});
+	const [supportState, setSupportState] = useState({
+		value: "",
+		anyChecked: false,
+	});
 	const disabledInputs = disabled ? "disabled" : null;
 
-	function handleChange(event) {
+	function handleNameChange(event) {
 		console.log(event.target.value);
-		setInput(event.target.value);
+		setNameInput(event.target.value);
 	}
+
+	function handleEmailChange(e) {
+		setEmailInput(e.target.value);
+	}
+
+	function handleTelChange(e) {
+		setTelInput(e.target.value);
+	}
+
+	function handleDobChange(e) {
+		setDobInput(e.target.value);
+	}
+
+	function handleUcasChange(e) {
+		setUcasInput(e.target.value);
+	}
+
+	function anyNationalityChecked(e) {
+		setNationalityState({
+			value: e.target.value,
+			anyChecked: true,
+		});
+	}
+
+	function anyCriminalConvChecked(e) {
+		setCriminalConvState({
+			value: e.target.value,
+			anyChecked: true,
+		});	
+	}
+
+	function anySupportChecked(e) {
+		setSupportState({
+			value: e.target.value,
+			anyChecked: true,
+		});	
+	}
+
+	const nationalityOptions = [
+		{ label: "UK National", id: "UK", value: "UK", handleChange: anyNationalityChecked },
+		{ label: "EU National", id: "EU", value: "EU", handleChange: anyNationalityChecked },
+		{ label: "Other", id: "Other", value: "Other", handleChange: anyNationalityChecked },
+	];
+	
+	const criminalOptions = [
+		{ label: "Yes", id: "crimeYes", value: "yes", handleChange: anyCriminalConvChecked },
+		{ label: "No", id: "crimeNo", value: "no", handleChange: anyCriminalConvChecked },
+	];
+	
+	const supportOptions = [
+		{ label: "Yes", id: "supportYes", value: "yes", handleChange: anySupportChecked },
+		{ label: "No", id: "supportNo", value: "no", handleChange: anySupportChecked },
+	];
 
 	function saveSelectedData() {
 		//TODO: Fix to make more Reacty and not horrible bad raw HTML method
-		global.ApplicationFormData.name = document.getElementById("nameinput").value;
-		global.ApplicationFormData.email = document.getElementById("emailinput").value;
-		global.ApplicationFormData.telephone = document.getElementById("telinput").value;
-		global.ApplicationFormData.dob = document.getElementById("dobinput").value;
-		global.ApplicationFormData.ucasNumber = document.getElementById("ucasinput").value;
+		global.ApplicationFormData.name = nameInput;
+		global.ApplicationFormData.email = emailInput;
+		global.ApplicationFormData.telephone = telInput;
+		global.ApplicationFormData.dob = dobInput;
+		global.ApplicationFormData.ucasNumber = ucasInput;
+
 		// get Nationality
-		if (document.getElementById("UK").checked) {
-			global.ApplicationFormData.Nationality = document.getElementById("UK").value;
+		if (nationalityState.anyChecked) {
+			global.ApplicationFormData.Nationality = nationalityState.value;
 		}
-		if (document.getElementById("EU").checked) {
-			global.ApplicationFormData.Nationality = document.getElementById("EU").value;
-		}
-		if (document.getElementById("Other").checked) {
-			global.ApplicationFormData.Nationality = document.getElementById("Other").value;
-		}
+
 		// Criminal Conviction
-		if (document.getElementById("crimeYes").checked) {
-			global.ApplicationFormData.Convictions = document.getElementById("crimeYes").value;
+		if (criminalConvState.anyChecked) {
+			global.ApplicationFormData.Convictions = criminalConvState.value;
 		}
-		if (document.getElementById("crimeNo").checked) {
-			global.ApplicationFormData.Convictions = document.getElementById("crimeNo").value;
-		}
+
 		// Learning Support
-		if (document.getElementById("supportYes").checked) {
-			global.ApplicationFormData.Support = document.getElementById("supportYes").value;
+		if (supportState.anyChecked) {
+			global.ApplicationFormData.Support = supportState.value;
 		}
-		if (document.getElementById("supportNo").checked) {
-			global.ApplicationFormData.Support = document.getElementById("supportNo").value;
-		}
+
 		var course = document.getElementById("courseSelection");
 		global.ApplicationFormData.selectedCourse = course.options[course.selectedIndex].value;
 		//
@@ -174,8 +220,8 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						name="name"
   						attribute={disabledInputs}
   						className={textboxClassName}
-  						onChange={handleChange}
-  						value={input}
+  						onChange={handleNameChange}
+  						value={nameInput}
   					/>
   
   					<TextBox
@@ -188,8 +234,8 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						name="email"
   						attribute={disabledInputs}
   						className={textboxClassName}
-  						onChange={handleChange}
-  						value={input}
+  						onChange={handleEmailChange}
+  						value={nameInput}
   					/>
   
   					<TextBox
@@ -202,8 +248,8 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						name="telno"
   						attribute={disabledInputs}
   						className={textboxClassName}
-  						onChange={handleChange}
-  						value={input}
+  						onChange={handleTelChange}
+  						value={nameInput}
   					/>
   
   					<TextBox
@@ -214,8 +260,8 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						name="dob"
   						attribute={disabledInputs}
   						className={textboxClassName}
-  						onChange={handleChange}
-  						value={input}
+  						onChange={handleDobChange}
+  						value={nameInput}
   					/>
   
   					<TextBox
@@ -226,8 +272,8 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						name="ucas"
   						attribute={disabledInputs}
   						className={textboxClassName}
-  						onChange={handleChange}
-  						value={input}
+  						onChange={handleUcasChange}
+  						value={nameInput}
   
   					/>
   				</span>
@@ -237,7 +283,7 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						options={nationalityOptions}
   						name="nationality"
   						attribute={disabledInputs}
-  						onClick={handleChange}
+  						onClick={handleNameChange}
   					/>
   
   					<RadioButton
