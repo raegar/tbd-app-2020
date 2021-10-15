@@ -1,13 +1,13 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ClearingOfferMadeFourthPage from './ClearingOfferMadeFourthPage';
+import ClearingOfferMadeInterviewRPA from './ClearingOfferMadeInterviewRPA';
 import { BrowserRouter as Router} from 'react-router-dom';
 
 //cleans up 
 afterEach(cleanup);
 
-it("Renders ClearingOfferMadeFourthPage", () => {
-    const { asFragment } = render(<Router><ClearingOfferMadeFourthPage /></Router>);
+it("Renders ClearingOfferMadeInterviewRPA", () => {
+    const { asFragment } = render(<Router><ClearingOfferMadeInterviewRPA /></Router>);
     expect(asFragment()).toMatchSnapshot();
 });

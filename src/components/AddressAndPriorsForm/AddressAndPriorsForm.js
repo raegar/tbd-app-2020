@@ -118,7 +118,6 @@ function AddressAndPriorsForm() {
 	];
 
 	function saveSelectedData() {
-    	//TODO: Fix to make more Reacty and not horrible bad raw HTML method
     	global.ApplicationFormData.addressLineOne = addressLineOne;
     	global.ApplicationFormData.addressLineTwo = addressLineTwo;
     	global.ApplicationFormData.city = townCity;
