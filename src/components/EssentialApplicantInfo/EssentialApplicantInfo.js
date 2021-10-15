@@ -38,8 +38,9 @@ const days = [
 	{value: 'friday', label: 'Friday'}
 ];
 
-function EssentialApplicantInfo() {
+function EssentialApplicantInfo({disabled, ...props}) {
 	const [input, setInput] = useState("");
+	const disabledInputs = disabled ? "disabled" : null;
 
 	function handleChange(event) {
 		console.log(event.target.value);
@@ -171,7 +172,7 @@ function EssentialApplicantInfo() {
   						id="nameinput"
   						type="text"
   						name="name"
-  						attribute="disabled"
+  						attribute={disabledInputs}
   						className={textboxClassName}
   						onChange={handleChange}
   						value={input}
@@ -185,7 +186,7 @@ function EssentialApplicantInfo() {
   						id="emailinput"
   						type="email"
   						name="email"
-  						attribute="disabled"
+  						attribute={disabledInputs}
   						className={textboxClassName}
   						onChange={handleChange}
   						value={input}
@@ -199,7 +200,7 @@ function EssentialApplicantInfo() {
   						id="telinput"
   						type="tel"
   						name="telno"
-  						attribute="disabled"
+  						attribute={disabledInputs}
   						className={textboxClassName}
   						onChange={handleChange}
   						value={input}
@@ -211,7 +212,7 @@ function EssentialApplicantInfo() {
   						id="dobinput"
   						type="date"
   						name="dob"
-  						attribute="disabled"
+  						attribute={disabledInputs}
   						className={textboxClassName}
   						onChange={handleChange}
   						value={input}
@@ -223,7 +224,7 @@ function EssentialApplicantInfo() {
   						id="ucasinput"
   						type="text"
   						name="ucas"
-  						attribute="disabled"
+  						attribute={disabledInputs}
   						className={textboxClassName}
   						onChange={handleChange}
   						value={input}
@@ -235,7 +236,7 @@ function EssentialApplicantInfo() {
   						heading="Nationality"
   						options={nationalityOptions}
   						name="nationality"
-  						attribute="disabled"
+  						attribute={disabledInputs}
   						onClick={handleChange}
   					/>
   
@@ -244,7 +245,7 @@ function EssentialApplicantInfo() {
   						options={criminalOptions}
   						name="criminal"
   						subtitle="Do you have any unspent criminal convictions?"
-  						attribute="disabled"
+  						attribute={disabledInputs}
   					/>
   
   					<RadioButton
@@ -252,7 +253,7 @@ function EssentialApplicantInfo() {
   						options={supportOptions}
   						name="support"
   						subtitle="Do you have any additional learning support needs or disabilities?"
-  						attribute="disabled"
+  						attribute={disabledInputs}
   					/>
   					<h4>Preferred Course</h4>
   					<DropdownMenu id="courseSelection"/>

@@ -1,28 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Disclaimer.css';
 import UCPButton from '../Buttons/UCPButton';
 
-function Disclaimer() {
+function Disclaimer({enableMethod, ...props}) {
+	const [acceptHidden, setAcceptHidden] = useState(false);
+	
 	function handleClick() {
     	//TODO: Fix to make more Reacty and not horrible bad raw HTML method
     	if (document.getElementById('nameinput') !== undefined) {
-    		document.getElementById('nameinput').removeAttribute('disabled');
-    		document.getElementById('emailinput').removeAttribute('disabled');
-    		document.getElementById('telinput').removeAttribute('disabled');
-    		document.getElementById('dobinput').removeAttribute('disabled');
-    		document.getElementById('ucasinput').removeAttribute('disabled');
-
-    		document.getElementById('UK').removeAttribute('disabled');
-    		document.getElementById('EU').removeAttribute('disabled');
-    		document.getElementById('Other').removeAttribute('disabled');
-
-    		document.getElementById('crimeYes').removeAttribute('disabled');
-    		document.getElementById('crimeNo').removeAttribute('disabled');
-
-    		document.getElementById('supportYes').removeAttribute('disabled');
-    		document.getElementById('supportNo').removeAttribute('disabled');
-
-    		document.getElementById('acceptButton').setAttribute("hidden", true);
+			enableMethod();
+			setAcceptHidden(true);
     	}
 	}
 
@@ -61,16 +48,19 @@ function Disclaimer() {
 						<b>{disclaimer.intro}</b>
 						<br/>
 						{disclaimer.body}
-					</p> 
-					<div id="acceptButton">        
-						<UCPButton 
-							primary="True" 
-							className="smallbutton" 
-							buttonText="Accept" 
-							onClick={handleClick} 
-							to="none"
-						/>
-					</div>
+					</p>
+					{!acceptHidden ? 
+						<div id="acceptButton">        
+							<UCPButton 
+								primary="True" 
+								className="smallbutton" 
+								buttonText="Accept" 
+								onClick={handleClick} 
+								to="none"
+							/>
+						</div>
+						: null
+					}
 				</div>
 			</form>
 		</div>

@@ -85,7 +85,6 @@ function DegreeQualifications() {
 	];
 
 	function saveSelectedData() {
-    	//TODO: make this Reacty because this is bad.
     	if (priorYesState.checked) {
     		global.ApplicationFormData.anyLevelFourQualification = priorYesState.value;
     		global.ApplicationFormData.levelFourQualificationDetails = nameGrade;
