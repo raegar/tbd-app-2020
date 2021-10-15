@@ -1,5 +1,75 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Renders ClearingOfferMadeReasonIfNo 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+  >
+    <p>
+      Required
+    </p>
+    <h1>
+      Not Offered Details
+    </h1>
+    <h3>
+      38. If NO, please state reasons:
+    </h3>
+    <div
+      class="mobiletextbox"
+    >
+      <label />
+      <input
+        maxlength="30"
+        minlength="0"
+        placeholder=""
+        size="20"
+        type="text"
+      />
+    </div>
+    <div
+      class="row"
+    >
+      <div
+        class="col"
+      >
+        <br />
+        <a
+          href="/ClearingOfferMadeSecondPage"
+        >
+          <button
+            class="mediumbutton"
+            data-testid="ucpButton"
+            href="/ClearingOfferMadeSecondPage"
+            primary="True"
+            type="button"
+          >
+            Go Back​
+          </button>
+        </a>
+      </div>
+      <div
+        class="col"
+      >
+        <br />
+        <a
+          href="/ClearingOfferMadeFifthPage"
+        >
+          <button
+            class="mediumbutton"
+            data-testid="ucpButton"
+            href="/ClearingOfferMadeFourthPage"
+            primary="True"
+            type="button"
+          >
+            Confirm and Continue​
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Renders ClearingOfferMadeThirdPage 1`] = `
 <DocumentFragment>
   <div

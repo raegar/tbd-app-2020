@@ -1,5 +1,98 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Renders ClearingOfferMadeBeforeCompleting 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+  >
+    <h1>
+      Before completing the offer....
+    </h1>
+    <p>
+      Please state the following
+    </p>
+    <h3>
+      40. Please confirm email offer will be send to
+    </h3>
+    <div
+      class="mobiletextbox"
+    >
+      <label
+        for="emailConfirm"
+      />
+      <input
+        id="emailConfirm"
+        maxlength="30"
+        minlength="0"
+        placeholder="Test@email.com"
+        size="20"
+        type="text"
+      />
+    </div>
+    <h3>
+      41. Please enter course applied for
+    </h3>
+    <div
+      class="mobiletextbox"
+    >
+      <label
+        for="courseApplied"
+      />
+      <input
+        id="courseApplied"
+        maxlength="30"
+        minlength="0"
+        placeholder=""
+        size="20"
+        type="text"
+      />
+    </div>
+    <div
+      class="row"
+    >
+      <div
+        class="col"
+      >
+        <br />
+        <a
+          href="/ClearingOfferMadeSecondPage"
+        >
+          <button
+            class="mediumbutton"
+            data-testid="ucpButton"
+            href="/ClearingOfferMadeSecondPage"
+            primary="True"
+            type="button"
+          >
+            Go Back​
+          </button>
+        </a>
+      </div>
+      <div
+        class="col"
+      >
+        <br />
+        <div>
+          <a
+            href="/"
+          >
+            <button
+              class="mediumbutton"
+              data-testid="ucpButton"
+              href="/"
+              primary="True"
+              type="button"
+            >
+              Confirm and Continue​
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Renders ClearingOfferMadeFifthPage 1`] = `
 <DocumentFragment>
   <div
