@@ -5,42 +5,104 @@ import RadioButton from '../RadioButton/RadioButton';
 import TextBox from '../TextBox/TextBox';
 import UCPButton from '../Buttons/UCPButton';
 
-const ELQ = [
-	{label:'Yes', id:'elq-yes', value:"yes"},
-	{label:'No', id:'elq-no', value:"no"}
-];
-
-const PriorLevelFour = [
-	{label: 'Yes', id: 'prior-yes', value: 'yes'},
-	{label: 'No', id: 'prior-no', value: 'no'}
-];
-
+/*TODO: is this a clone of DegreeQualifications in the ClearingOfferMade folder?
+  or is the other the clone? for the time being I just copypasted the changes in
+  the other one to here but I should do something better later, or at least rename
+  this one.*/
 function DegreeQualifications() {
 	const [levelFour, setLevelFour] = useState(false);
+	const [nameGrade, setNameGrade] = useState("");
+	const [recentSchool, setRecentSchool] = useState("");
+	const [priorYesState, setPriorYesState] = useState({
+		checked: false,
+		value: "",
+	});
+	const [priorNoState, setPriorNoState] = useState({
+		checked: false,
+		value: "",
+	});
+	const [elqYesState, setElqYesState] = useState({
+		checked: false,
+		value: "",
+	});
+	const [elqNoState, setElqNoState] = useState({
+		checked: false,
+		value: "",
+	});
 
 	function handleClick(e) {
     	setLevelFour(e === 'yes');
 	}
 
+	function onUpdateNameGrade(e) {
+		setNameGrade(e.target.value);
+	}
+
+	function onUpdateRecentSchool(e) {
+		setRecentSchool(e.target.value);
+	}
+
+	/*I could compress these into a single method and pass the state update method to it
+	  in a lambda for each thing, but that makes the code less readable. As much as it
+	  irritates me that I'm not doing that.*/
+	function onPriorYesChanged(e) {
+		setPriorYesState({
+			checked: e.target.checked,
+			value: e.target.value,
+		});
+	}
+
+	function onPriorNoChanged(e) {
+		setPriorNoState({
+			checked: e.target.checked,
+			value: e.target.value,
+		});
+	}
+
+	function elqYesChanged(e) {
+		setElqYesState({
+			checked: e.target.checked,
+			value: e.target.value,
+		});
+	}
+
+	function elqNoChanged(e) {
+		setElqNoState({
+			checked: e.target.checked,
+			value: e.target.value,
+		});
+	}
+
+	//there has to be a better method than having a handler on all the checkboxes, right?
+	const PriorLevelFour = [
+		{label: 'Yes', id: 'prior-yes', value: 'yes', handleChange: onPriorYesChanged},
+		{label: 'No', id: 'prior-no', value: 'no', handleChange: onPriorNoChanged}
+	];
+	
+	const ELQ = [
+		{label: 'Yes', id: 'elq-yes', value: 'yes', handleChange: elqYesChanged},
+		{label: 'No', id: 'elq-no', value: 'no', handleChange: elqNoChanged}
+	];
+
 	function saveSelectedData() {
     	//TODO: make this Reacty because this is bad.
-    	if (document.getElementById("prior-yes").checked) {
-    		global.ApplicationFormData.anyLevelFourQualification = document.getElementById("prior-yes").value;
-    		global.ApplicationFormData.levelFourQualificationDetails = document.getElementById("nameGrade").value;
+    	if (priorYesState.checked) {
+    		global.ApplicationFormData.anyLevelFourQualification = priorYesState.value;
+    		global.ApplicationFormData.levelFourQualificationDetails = nameGrade;
     	}
 
-    	if (document.getElementById("prior-no").checked) {
-    		global.ApplicationFormData.AnyLevelFourQualification = document.getElementById("prior-no").value;
+    	if (priorNoState.checked) {
+    		global.ApplicationFormData.AnyLevelFourQualification = priorNoState.value;
     	}
 
-    	global.ApplicationFormData.mostRecentSchool = document.getElementById("schoolDetail").value;
+    	global.ApplicationFormData.mostRecentSchool = recentSchool;
 
-    	if (document.getElementById("elq-yes").checked) {
-    		global.ApplicationFormData.elqQualification = document.getElementById("elq-yes").value;
+    	if (elqYesState.checked) {
+    		global.ApplicationFormData.elqQualification = elqYesState.value;
     	}
 
-    	if (document.getElementById("elq-no").checked) {
-    		global.ApplicationFormData.elqQualification = document.getElementById("elq-no").value;
+    	if (elqNoState.checked) {
+    		global.ApplicationFormData.elqQualification = elqNoState.value;
     	}
 
     	console.log(global.ApplicationFormData);
@@ -81,6 +143,7 @@ function DegreeQualifications() {
 										title="Enter qualification name and grade" 
 										name="l-4-qual" 
 										size={30} 
+										onChange={onUpdateNameGrade}
 									/>
 									: <span></span>
 							}
@@ -93,6 +156,7 @@ function DegreeQualifications() {
 								title="What is the name of the most recent school/college attended?" 
 								size={25} 
 								type="text" 
+								onChange={onUpdateRecentSchool}
 							/>
 							<RadioButton 
 								subtitle={radioButtonSubtitle}

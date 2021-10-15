@@ -29,46 +29,38 @@ function GetNextPage(){
 
 }*/ 
 
-const offerOptions = [
-	{
-		label: "Yes", 
-		id: "offerYes", 
-		value: "Yes" 
-	},
-	{
-		label: "Yes (Partial Requirements met, this will be where student doesn't have all requirements)", 
-		id: "offerYesPart", 
-		value: "yespart" 
-	},
-	{
-		label: "Yes (Subject to Ell Status)", 
-		id:"Status", 
-		value: "yesstatus" 
-	},
-	{ 
-		label: "No", 
-		id: "offerNo",
-		value: "No" 
-	},
-	{ 
-		label: "Interview Required (this may be due to students having industry experience rather than qualifications)", 
-		id: "offerInterviewRequired", 
-		value: "InterviewRequired" 
-	},
-	{ 
-		label: "RPA (Highlight this with Emma Cave or Zoe", 
-		id: "offerInterviewRequiredHighlight", 
-		value: "RPARequired" 
-	}      
-];
-
 function ClearingOfferMadeYesNoSelect() {
 	const [state, setState] = useState({
 		whenNo: false,
 		whenRPA: false,
 		whenInterview: false,
 	});
+	const [offerYesState, setOfferYesState] = useState({
+		checked: false,
+		value: ""
+	});
+	const [offerYesPartState, setOfferYesPartState] = useState({
+		checked: false,
+		value: ""
+	});
+	const [offerYesEllStatusState, setOfferYesEllStatusState] = useState({
+		checked: false,
+		value: ""
+	});
+	const [offerNoState, setOfferNoState] = useState({
+		checked: false,
+		value: ""
+	});
+	const [offerInterviewRequiredState, setOfferInterviewRequiredState] = useState({
+		checked: false,
+		value: ""
+	});
+	const [offerInterviewRequiredHighlightState, setOfferInterviewRequiredHighlightState] = useState({
+		checked: false,
+		value: ""
+	});
 
+	//State setter methods start
 	function setWhenNo(whenNo) {
 		setState({
 			...state,
@@ -89,6 +81,92 @@ function ClearingOfferMadeYesNoSelect() {
 			whenInterview: whenInterview
 		});
 	}
+
+	function onOfferYesChanged(e) {
+		setOfferYesState({
+			checked: e.target.checked,
+			value: e.target.value,
+		});
+	}
+
+	function onOfferYesPartChanged(e) {
+		setOfferYesPartState({
+			checked: e.target.checked,
+			value: e.target.value,
+		});
+	}
+
+	function onOfferYesEllStatusChanged(e) {
+		setOfferYesEllStatusState({
+			checked: e.target.checked,
+			value: e.target.value,
+		});
+	}
+
+	function onOfferNoChanged(e) {
+		setOfferNoState({
+			checked: e.target.checked,
+			value: e.target.value,
+		});
+	}
+
+	function onOfferInterviewRequiredChanged(e) {
+		setOfferInterviewRequiredState({
+			checked: e.target.checked,
+			value: e.target.value,
+		});
+	}
+
+	function onOfferInterviewRequiredHighlightChanged(e) {
+		setOfferInterviewRequiredHighlightState({
+			checked: e.target.checked,
+			value: e.target.value,
+		});
+	}
+
+	//State setter methods end
+
+	/*I don't like putting a const here in the middle of the methods but using a method
+	  before it's defined is bad practice, even if JS allows it. I could do lambdas but
+	  that makes it less readable and is thus also bad practice.*/
+	const offerOptions = [
+		{
+			label: "Yes", 
+			id: "offerYes", 
+			value: "Yes",
+			handleChange: onOfferYesChanged
+		},
+		{
+			label: "Yes (Partial Requirements met, this will be where student doesn't have all requirements)", 
+			id: "offerYesPart", 
+			value: "yespart",
+			handleChange: onOfferYesPartChanged
+		},
+		{
+			label: "Yes (Subject to Ell Status)", 
+			id:"Status", 
+			value: "yesstatus",
+			handleChange: onOfferYesEllStatusChanged
+		},
+		{ 
+			label: "No", 
+			id: "offerNo",
+			value: "No",
+			handleChange: onOfferNoChanged
+		},
+		{ 
+			label: "Interview Required (this may be due to students having industry experience rather than qualifications)", 
+			id: "offerInterviewRequired", 
+			value: "InterviewRequired",
+			handleChange: onOfferInterviewRequiredChanged
+		},
+		{ 
+			label: "RPA (Highlight this with Emma Cave or Zoe", 
+			id: "offerInterviewRequiredHighlight", 
+			value: "RPARequired",
+			handleChange: onOfferInterviewRequiredHighlightChanged
+		}      
+	];
 	
 	function handleWhenClick(v) {
     	switch (v) {
@@ -126,29 +204,28 @@ function ClearingOfferMadeYesNoSelect() {
 	}
 
 	function saveSelectedData() {
-		//TODO: see if this is actually needed and not just remnants of a mindless copy paste
-    	if (document.getElementById("offerYes").checked) {
-    		global.ApplicationFormData.offerMade = document.getElementById("offerYes").value;
+    	if (offerYesState.checked) {
+    		global.ApplicationFormData.offerMade = offerYesState.value;
     	}
 
-    	if (document.getElementById("offerYesPart").checked) {
-    		global.ApplicationFormData.offerMade = document.getElementById("offerYesPart").value;
+    	if (offerYesPartState.checked) {
+    		global.ApplicationFormData.offerMade = offerYesPartState.value;
     	}    
 
-    	if (document.getElementById("Status").checked) {
-    		global.ApplicationFormData.offerMade = document.getElementById("Status").value;
+    	if (offerYesEllStatusState.checked) {
+    		global.ApplicationFormData.offerMade = offerYesEllStatusState.value;
     	}
 
-    	if (document.getElementById("offerNo").checked) {
-    		global.ApplicationFormData.offerMade = document.getElementById("offerNo").value;
+    	if (offerNoState.checked) {
+    		global.ApplicationFormData.offerMade = offerNoState.value;
     	}
 
-    	if (document.getElementById("offerInterviewRequired").checked) {
-    		global.ApplicationFormData.offerMade = document.getElementById("offerInterviewRequired").value;
+    	if (offerInterviewRequiredState.checked) {
+    		global.ApplicationFormData.offerMade = offerInterviewRequiredState.value;
     	}
 
-    	if (document.getElementById("offerInterviewRequiredHighlight").checked) {
-    		global.ApplicationFormData.offerMade = document.getElementById("offerInterviewRequiredHighlight").value;
+    	if (offerInterviewRequiredHighlightState.checked) {
+    		global.ApplicationFormData.offerMade = offerInterviewRequiredHighlightState.value;
     	}
 
     	console.log(global.ApplicationFormData);

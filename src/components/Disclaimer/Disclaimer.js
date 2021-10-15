@@ -32,16 +32,16 @@ function Disclaimer() {
 		disclaimer = {
 			title: "Privacy Statement",
 			intro: "",
-			body: "We will only use your personal information to administer your application and / or enrolment" + 
-			"and to provide the products and services you have requested from us. Further information on our" + 
-			" privacy policy can be found at https://www.ucp.ac.uk/privacy-and-cookies/ or by emailing hello@ucp.ac.uk"
+			body: "We will only use your personal information to administer your application and / or enrolment " + 
+			"and to provide the products and services you have requested from us. Further information on our " + 
+			"privacy policy can be found at https://www.ucp.ac.uk/privacy-and-cookies/ or by emailing hello@ucp.ac.uk"
 		};
 	} else {
 		disclaimer = {
 			title: "Hello " + global.staffFirstName + ", Please Read!",
 			intro: "Hello you're through to the University Centre Peterborough Clearing Team - how can I help?",
-			body: "We will only use your personal information to administer your application and / or enrolment" + 
-				"and to provide the products and services you have requested from us. Further information on our" + 
+			body: "We will only use your personal information to administer your application and / or enrolment " + 
+				"and to provide the products and services you have requested from us. Further information on our " + 
 				"privacy policy can be found at https://www.ucp.ac.uk/privacy-and-cookies/ or by emailing hello@ucp.ac.uk"
 		};
 	}

@@ -38,6 +38,9 @@ function DegreeQualifications() {
 		setRecentSchool(e.target.value);
 	}
 
+	/*I could compress these into a single method and pass the state update method to it
+	  in a lambda for each thing, but that makes the code less readable. As much as it
+	  irritates me that I'm not doing that.*/
 	function onPriorYesChanged(e) {
 		setPriorYesState({
 			checked: e.target.checked,
@@ -66,6 +69,7 @@ function DegreeQualifications() {
 		});
 	}
 
+	//there has to be a better method than having a handler on all the checkboxes, right?
 	const PriorLevelFour = [
 		{label: 'Yes', id: 'prior-yes', value: 'yes', handleChange: onPriorYesChanged},
 		{label: 'No', id: 'prior-no', value: 'no', handleChange: onPriorNoChanged}
