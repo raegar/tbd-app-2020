@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, cleanup, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import FormOne from './FormOne';
+import AddressAndPriorsForm from './AddressAndPriorsForm';
 import { BrowserRouter as Router} from 'react-router-dom';
 
 //cleans up 

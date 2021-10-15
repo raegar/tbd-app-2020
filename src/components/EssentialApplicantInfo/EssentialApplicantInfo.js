@@ -41,6 +41,7 @@ function EssentialApplicantInfo({disabled, ...props}) {
 		value: "",
 		anyChecked: false,
 	});
+	const [selectedCourse, setSelectedCourse] = useState("");
 	const disabledInputs = disabled ? "disabled" : null;
 
 	function handleNameChange(event) {
@@ -85,6 +86,10 @@ function EssentialApplicantInfo({disabled, ...props}) {
 		});	
 	}
 
+	function onCourseSelect(e) {
+		setSelectedCourse(e.target.value);
+	}
+
 	const nationalityOptions = [
 		{ label: "UK National", id: "UK", value: "UK", handleChange: anyNationalityChecked },
 		{ label: "EU National", id: "EU", value: "EU", handleChange: anyNationalityChecked },
@@ -102,7 +107,6 @@ function EssentialApplicantInfo({disabled, ...props}) {
 	];
 
 	function saveSelectedData() {
-		//TODO: Fix to make more Reacty and not horrible bad raw HTML method
 		global.ApplicationFormData.name = nameInput;
 		global.ApplicationFormData.email = emailInput;
 		global.ApplicationFormData.telephone = telInput;
@@ -124,8 +128,7 @@ function EssentialApplicantInfo({disabled, ...props}) {
 			global.ApplicationFormData.Support = supportState.value;
 		}
 
-		var course = document.getElementById("courseSelection");
-		global.ApplicationFormData.selectedCourse = course.options[course.selectedIndex].value;
+		global.ApplicationFormData.selectedCourse = selectedCourse;
 		//
 		console.log(global.ApplicationFormData);
 	}
@@ -302,7 +305,7 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						attribute={disabledInputs}
   					/>
   					<h4>Preferred Course</h4>
-  					<DropdownMenu id="courseSelection"/>
+  					<DropdownMenu onSelect={onCourseSelect} id="courseSelection"/>
   				</span>
   			</div>
   			<div>{userTypeSelect()}</div>
