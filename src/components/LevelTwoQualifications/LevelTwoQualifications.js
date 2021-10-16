@@ -23,7 +23,6 @@ const gsceGrades = [
 ];
 
 function LevelTwoQualifications() {
-
 	const [engLangGrade, setEngLangGrade] = useState("");
 	const [engLitGrade, setEngLitGrade] = useState("");
 	const [mathGrade, setMathGrade] = useState("");

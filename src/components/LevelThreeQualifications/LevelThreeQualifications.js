@@ -15,6 +15,7 @@ function LevelThreeQualifications() {
 	const [value, setValue] = useState("");
 	const [emptyInput, setClearInput] = useState(false);
 	const [counter, setCounter] = useState(1);
+	const [qualificationsInfo, setQualificationsInfo] = useState([]);
 
   	function handleChange(event) {
 		console.log(event.target.value);
@@ -29,16 +30,33 @@ function LevelThreeQualifications() {
 		}
 	}
 
+	function onL3CompChange(e) {
+		//as all IDs take the form of <section><id>, we strip the letter characters and
+		//treat the remainder as the qualification ID.
+		let componentID = parseInt(e.target.id.replace(/\D/g, ""));
+		//replace everything except the numeric ID
+		let componentName = e.target.id.replace(/\d/g, "");
+
+		//copy old object
+		let qualificationsInfoNew = qualificationsInfo;
+
+		//modify it
+		if (!qualificationsInfoNew[componentID]) {
+			//making sure the object for that ID exists
+			qualificationsInfoNew[componentID] = {[componentName]: e.target.value};
+		} else {
+			qualificationsInfoNew[componentID][componentName] = e.target.value;
+		}
+
+		//and update state to match new object
+		setQualificationsInfo(qualificationsInfoNew);
+	}
+
 	function saveSelectedData() {
-		//TODO: Fix to make more Reacty and not horrible bad raw HTML method
-		global.ApplicationFormData.levelThreeQualifications.qual[counter-1] = 
-			document.getElementById("qualification" + counter).value;
-		global.ApplicationFormData.levelThreeQualifications.subject[counter-1] = 
-			document.getElementById("subject" + counter).value;
-		global.ApplicationFormData.levelThreeQualifications.grade[counter-1] = 
-			document.getElementById("grade" + counter).value;
-		global.ApplicationFormData.levelThreeQualifications.date[counter-1] = 
-			document.getElementById("year" + counter).value;
+		global.ApplicationFormData.levelThreeQualifications.qual[counter - 1] = qualificationsInfo[counter - 1]["qualification"];
+		global.ApplicationFormData.levelThreeQualifications.subject[counter - 1] = qualificationsInfo[counter - 1]["subject"];
+		global.ApplicationFormData.levelThreeQualifications.grade[counter - 1] = qualificationsInfo[counter - 1]["grade"];
+		global.ApplicationFormData.levelThreeQualifications.date[counter - 1] = qualificationsInfo[counter - 1]["year"];
 
 		console.log(global.ApplicationFormData);
 	}
@@ -54,7 +72,7 @@ function LevelThreeQualifications() {
   					{counter < 6 ?
   						<div className={className1}>
   							<h3 className="form-title">Level 3 Qualifications</h3>
-  							<L3Component id={counter} clearInput={emptyInput}/>
+  							<L3Component id={counter} clearInput={emptyInput} onChange={onL3CompChange}/>
   							<br/>
   							<h5>Other L3 Qualifications</h5>
   							<RadioButton1

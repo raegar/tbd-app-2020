@@ -12,7 +12,7 @@ function L3Component({name, id, key, onChange, placeholder, clearInput, value, .
 			<h5>Qualification : {"#" + id} </h5>
 			<p>(E.g. A Level, BTEC, Access)</p>
 			<TextBox
-				onChange = {onChange}    
+				onChange={onChange}    
 				id={"qualification" + id}
 				key={"2000" + id}
 				placeholder={"Enter qualification #" + id} 
@@ -21,6 +21,7 @@ function L3Component({name, id, key, onChange, placeholder, clearInput, value, .
 			/>
 			<h5>Subject: (E.g. Bussiness Studies)</h5>
 			<TextBox
+				onChange={onChange} 
 				id={"subject" + id}
 				key={"3000" + id}
 				placeholder={"Enter subject #" + id }
@@ -29,6 +30,7 @@ function L3Component({name, id, key, onChange, placeholder, clearInput, value, .
 			/>
 			<h5>Grade Achieved</h5>
 			<TextBox
+				onChange={onChange} 
 				id={"grade" + id}
 				key={"4000" + id}
 				placeholder={"Enter grade #" + id}
@@ -36,6 +38,7 @@ function L3Component({name, id, key, onChange, placeholder, clearInput, value, .
 				clearInput={clearInput} />
 			<h5>Year Achieved</h5>
 			<TextBox
+				onChange={onChange} 
 				id={"year" + id}
 				key={"5000" + id}
 				type="date" 
