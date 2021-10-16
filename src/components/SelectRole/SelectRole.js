@@ -7,13 +7,7 @@ import {isMobile} from 'react-device-detect';
 //Must Set HREF attribute to use
 
 function SelectRole() {
-	let buttonClassName;
-
-	if (isMobile) {
-		buttonClassName = "largebutton";
-	} else {
-		buttonClassName = "extralargebutton";
-	}
+	const buttonClassName = isMobile ? "largebutton" : "extralargebutton";
 
 	return (
 		<Container className="mt-5 px-3 py-3 select-role-container">

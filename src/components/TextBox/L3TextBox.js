@@ -23,6 +23,8 @@ function L3TextBox({
 	const [emptyInput, setEmptyInput] = useState(clearInput);
 	const [input, setInput] = useState('');
 
+	const className = isMobile ? "mobiletextbox" : "textbox";
+
 	function handleChange(e) {
     	if (emptyInput) {
     		setEmptyInput(false);
@@ -35,8 +37,6 @@ function L3TextBox({
 	function clearInputField(e) {
     	setEmptyInput(!clearInput);
 	}
-
-	const className = isMobile ? "mobiletextbox" : "textbox";
 
 	return (
 		<div className={`${className ? "mobiletextbox" : "textbox"}`} id={wrapID}>

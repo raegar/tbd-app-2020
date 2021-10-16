@@ -2,7 +2,6 @@ import React from 'react';
 import './RadioButton.css';
 import PropTypes from 'prop-types';
 
-
 function RadioButton1({options, attribute, name, value, onChange, oc, heading, subtitle, ...props}) {
 	//Iterate through options array and create an input + label for each
 	let items = options.map((item, i) =>
@@ -30,11 +29,6 @@ function RadioButton1({options, attribute, name, value, onChange, oc, heading, s
 		</div>
 	);
 }
-
-// const RadioButton1 = ({name, options, heading, subtitle,  attribute, oc,value, onChange,checked, ...props}) => {
-
-	
-// };
 
 //Prop Types:
 //Note that name and options are required, heading and subtitle are not

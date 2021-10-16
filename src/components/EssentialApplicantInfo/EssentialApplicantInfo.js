@@ -42,7 +42,9 @@ function EssentialApplicantInfo({disabled, ...props}) {
 		anyChecked: false,
 	});
 	const [selectedCourse, setSelectedCourse] = useState("");
+	
 	const disabledInputs = disabled ? "disabled" : null;
+	const textboxClassName = isMobile ? "mobiletextbox" : "desktoptextbox";
 
 	function handleNameChange(event) {
 		console.log(event.target.value);
@@ -199,14 +201,6 @@ function EssentialApplicantInfo({disabled, ...props}) {
 			);
 		}
 	}
-
-  	let textboxClassName;
-
-  	if (isMobile) {
-  		textboxClassName = "mobiletextbox";
-  	} else {
-  		textboxClassName = "desktoptextbox";
-  	}
 
   	return (
   		<Container className="es-form-container">

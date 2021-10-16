@@ -4,13 +4,12 @@ import UCPButton from '../Buttons/UCPButton';
 
 function Disclaimer({enableMethod, ...props}) {
 	const [acceptHidden, setAcceptHidden] = useState(false);
+	let disclaimer;
 	
 	function handleClick() {
 		enableMethod();
 		setAcceptHidden(true);
 	}
-
-	let disclaimer;
 
 	if (global.userType === "student") {
 		disclaimer = {

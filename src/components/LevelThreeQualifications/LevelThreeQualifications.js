@@ -15,7 +15,10 @@ function LevelThreeQualifications() {
 	const [value, setValue] = useState("");
 	const [emptyInput, setClearInput] = useState(false);
 	const [counter, setCounter] = useState(1);
-	const [qualificationsInfo, setQualificationsInfo] = useState([]);
+	const [qualificationsInfo, setQualificationsInfo] = useState([{}]);
+
+	const className2 = isMobile ? "l3-mobile-form-container" : "l3-form-container";
+  	const className1 = isMobile ? "l3-mobile-form-right" : "l3-form-right";
 
   	function handleChange(event) {
 		console.log(event.target.value);
@@ -60,9 +63,6 @@ function LevelThreeQualifications() {
 
 		console.log(global.ApplicationFormData);
 	}
-
-  	const className2 = isMobile ? "l3-mobile-form-container" : "l3-form-container";
-  	const className1 = isMobile ? "l3-mobile-form-right" : "l3-form-right";
 
   	return (
   		<Container>

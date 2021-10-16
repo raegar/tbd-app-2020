@@ -3,13 +3,7 @@ import './DropdownMenu.css';
 import {isMobile} from 'react-device-detect';
 
 function DropdownMenu({id, placeholder, options, onSelect, ...props}) {
-  	let dropdownClassName;
-
-  	if (isMobile) {
-  		dropdownClassName = "MobileDropdown";
-  	} else {
-  		dropdownClassName = "Dropdown";
-  	}  
+  	let dropdownClassName = isMobile ? "MobileDropdown" : "Dropdown";
 
   	return (
   		<select id={id} 

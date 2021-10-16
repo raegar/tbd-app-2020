@@ -6,7 +6,7 @@ import './Login.css';
 import {isMobile} from 'react-device-detect';
 import {Redirect} from 'react-router';
 
-const initialState = {
+const InitialState = {
 	username: "",
 	password: "",
 	usernameError: "",
@@ -24,7 +24,10 @@ function LoginForm() {
 		redirect: false,
 	});
 
+	const className = isMobile ? "MobileContainerStyle" : "ContainerStyle";
+
 	//I'm doing this because I really don't feel like going through and converting each of these functions to setStates
+	//TODO: if we go with function for methods, change these to function
 	const setUsername = username => {
 		setState({
 			...state,
@@ -114,7 +117,7 @@ function LoginForm() {
     	if (isValid) {
 			//refresh state to all black except redirect
 			setState({
-				...initialState,
+				...InitialState,
 				redirect: true,
 			});
     	}
@@ -138,7 +141,7 @@ function LoginForm() {
 
 	function clearForm() {
     	setState({
-			...initialState,
+			...InitialState,
 			redirect: state.redirect
 		});
 	};
@@ -146,8 +149,6 @@ function LoginForm() {
 	if (state.redirect) {
 		return <Redirect push to="/NewApplicationPage" />;
 	}
-
-	const className = isMobile ? "MobileContainerStyle" : "ContainerStyle";
 
 	return(
 		<Container className={className}>

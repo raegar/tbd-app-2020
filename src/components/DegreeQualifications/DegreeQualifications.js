@@ -13,22 +13,16 @@ function DegreeQualifications() {
 	const [levelFour, setLevelFour] = useState(false);
 	const [nameGrade, setNameGrade] = useState("");
 	const [recentSchool, setRecentSchool] = useState("");
-	const [priorYesState, setPriorYesState] = useState({
-		checked: false,
+	const [priorCheckedState, setPriorCheckedState] = useState({
 		value: "",
+		anyChecked: false,
 	});
-	const [priorNoState, setPriorNoState] = useState({
-		checked: false,
+	const [elqCheckedState, setElqCheckedState] = useState({
 		value: "",
+		anyChecked: false,
 	});
-	const [elqYesState, setElqYesState] = useState({
-		checked: false,
-		value: "",
-	});
-	const [elqNoState, setElqNoState] = useState({
-		checked: false,
-		value: "",
-	});
+
+	const nextpage = global.userType === "staff" ? "/ClearingOfferMade" : "/ClearingOfferMadeStudentEnd";
 
 	function handleClick(e) {
     	setLevelFour(e === 'yes');
@@ -42,79 +36,47 @@ function DegreeQualifications() {
 		setRecentSchool(e.target.value);
 	}
 
-	/*I could compress these into a single method and pass the state update method to it
-	  in a lambda for each thing, but that makes the code less readable. As much as it
-	  irritates me that I'm not doing that.*/
-	function onPriorYesChanged(e) {
-		setPriorYesState({
-			checked: e.target.checked,
+	function onPriorChanged(e) {
+		setPriorCheckedState({
 			value: e.target.value,
+			anyChecked: true,
 		});
 	}
 
-	function onPriorNoChanged(e) {
-		setPriorNoState({
-			checked: e.target.checked,
+	function onElqChanged(e) {
+		setElqCheckedState({
 			value: e.target.value,
-		});
-	}
-
-	function elqYesChanged(e) {
-		setElqYesState({
-			checked: e.target.checked,
-			value: e.target.value,
-		});
-	}
-
-	function elqNoChanged(e) {
-		setElqNoState({
-			checked: e.target.checked,
-			value: e.target.value,
+			anyChecked: true,
 		});
 	}
 
 	//there has to be a better method than having a handler on all the checkboxes, right?
 	const PriorLevelFour = [
-		{label: 'Yes', id: 'prior-yes', value: 'yes', handleChange: onPriorYesChanged},
-		{label: 'No', id: 'prior-no', value: 'no', handleChange: onPriorNoChanged}
+		{label: 'Yes', id: 'prior-yes', value: 'yes', handleChange: onPriorChanged},
+		{label: 'No', id: 'prior-no', value: 'no', handleChange: onPriorChanged}
 	];
 	
 	const ELQ = [
-		{label: 'Yes', id: 'elq-yes', value: 'yes', handleChange: elqYesChanged},
-		{label: 'No', id: 'elq-no', value: 'no', handleChange: elqNoChanged}
+		{label: 'Yes', id: 'elq-yes', value: 'yes', handleChange: onElqChanged},
+		{label: 'No', id: 'elq-no', value: 'no', handleChange: onElqChanged}
 	];
 
 	function saveSelectedData() {
-    	if (priorYesState.checked) {
-    		global.ApplicationFormData.anyLevelFourQualification = priorYesState.value;
-    		global.ApplicationFormData.levelFourQualificationDetails = nameGrade;
-    	}
+    	if (priorCheckedState.anyChecked) {
+    		global.ApplicationFormData.anyLevelFourQualification = priorCheckedState.value;
 
-    	if (priorNoState.checked) {
-    		global.ApplicationFormData.AnyLevelFourQualification = priorNoState.value;
+			if (priorCheckedState.value === 'yes') {
+    			global.ApplicationFormData.levelFourQualificationDetails = nameGrade;
+			}
     	}
 
     	global.ApplicationFormData.mostRecentSchool = recentSchool;
 
-    	if (elqYesState.checked) {
-    		global.ApplicationFormData.elqQualification = elqYesState.value;
-    	}
-
-    	if (elqNoState.checked) {
-    		global.ApplicationFormData.elqQualification = elqNoState.value;
+    	if (elqCheckedState.anyChecked) {
+    		global.ApplicationFormData.elqQualification = elqCheckedState.value;
     	}
 
     	console.log(global.ApplicationFormData);
-	}
-
-	const radioButtonSubtitle = 
-		"ELQ - is the applicant applying to study a qualification that is equivalent or lower to one they already hold?";
-	let nextpage;
-
-	if (global.userType === "staff") {
-		nextpage = "/ClearingOfferMade" ;
-	} else {
-		nextpage = "/ClearingOfferMadeStudentEnd";
 	}
 
 	return (
@@ -158,7 +120,8 @@ function DegreeQualifications() {
 								onChange={onUpdateRecentSchool}
 							/>
 							<RadioButton 
-								subtitle={radioButtonSubtitle}
+								subtitle={"ELQ - is the applicant applying to study a qualification that is " + 
+								"equivalent or lower to one they already hold?"}
 								options={ELQ}
 								name="elq"
 							/>
