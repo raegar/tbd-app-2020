@@ -49,10 +49,6 @@ function L3Component({name, id, key, onChange, placeholder, clearInput, value, .
 	);
 }
 
-// const L3Component = ({ name, id,key, onChange,placeholder,value,clearInput, ...props }) => {
-	
-// };
-
 TextBox.propTypes = {
 	backgroundColor: PropTypes.string,
 	/** What background colour to use */
