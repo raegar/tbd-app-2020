@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import "./LevelTwoQualifications.css";
 import {Row, Col, Container } from "react-bootstrap";
@@ -24,18 +24,38 @@ const gsceGrades = [
 
 function LevelTwoQualifications() {
 
+	const [engLangGrade, setEngLangGrade] = useState("");
+	const [engLitGrade, setEngLitGrade] = useState("");
+	const [mathGrade, setMathGrade] = useState("");
+	const [scienceGrade, setScienceGrade] = useState("");
+	const [l2Details, setL2Details] = useState("");
+
+	function onEngLangChange(e) {
+		setEngLangGrade(e.target.value);
+	}
+
+	function onEngLitChange(e) {
+		setEngLitGrade(e.target.value);
+	}
+
+	function onMathChange(e) {
+		setMathGrade(e.target.value);
+	}
+
+	function onScienceChange(e) {
+		setScienceGrade(e.target.value);
+	}
+
+	function onL2DetailsChange(e) {
+		setL2Details(e.target.value);
+	}
+
 	function saveSelectedData() {
-		//TODO: Fix to make more Reacty and not horrible bad raw HTML method
-		let course = document.getElementById("EngLanguage");
-		global.ApplicationFormData.GCSEEnglishLanguage = course.options[course.selectedIndex].value;
-		course = document.getElementById("EngLiterature");
-		global.ApplicationFormData.GCSEEnglishLiterature = course.options[course.selectedIndex].value;
-		course = document.getElementById("Maths");
-		global.ApplicationFormData.GCSEMaths = course.options[course.selectedIndex].value;
-		course = document.getElementById("Science");
-		global.ApplicationFormData.GCSEScience = course.options[course.selectedIndex].value;
-		course = document.getElementById("l2details");
-		global.ApplicationFormData.GCSElevelTwoDetails = course.value;
+		global.ApplicationFormData.GCSEEnglishLanguage = engLangGrade;
+		global.ApplicationFormData.GCSEEnglishLiterature = engLitGrade;
+		global.ApplicationFormData.GCSEMaths = mathGrade;
+		global.ApplicationFormData.GCSEScience = scienceGrade;
+		global.ApplicationFormData.GCSElevelTwoDetails = l2Details;
 		console.log(global.ApplicationFormData);
 	}
 
@@ -50,13 +70,33 @@ function LevelTwoQualifications() {
   				<AlerDismissible/>
   				<div className={className1}>
   					<p>GCSE English Language</p>
-  					<DropdownMenu placeholder="Select Grade" options={gsceGrades} id="EngLanguage"/>
+  					<DropdownMenu 
+					  placeholder="Select Grade" 
+					  options={gsceGrades} 
+					  id="EngLanguage" 
+					  onSelect={onEngLangChange}
+					/>
   					<p>GCSE English Literature</p>
-  					<DropdownMenu  placeholder="Select Grade" options={gsceGrades} id="EngLiterature"/>
+  					<DropdownMenu 
+					  placeholder="Select Grade" 
+					  options={gsceGrades} 
+					  id="EngLiterature" 
+					  onSelect={onEngLitChange}
+					/>
   					<p>GCSE English Mathematics</p>
-  					<DropdownMenu placeholder="Select Grade" options={gsceGrades} id="Maths"/>
+  					<DropdownMenu 
+					  placeholder="Select Grade" 
+					  options={gsceGrades} 
+					  id="Maths" 
+					  onSelect={onMathChange}
+					/>
   					<p>GCSE Science / Additional Science</p>
-  					<DropdownMenu placeholder="Select Grade" options={gsceGrades} id="Science"/>
+  					<DropdownMenu 
+					  placeholder="Select Grade" 
+					  options={gsceGrades} 
+					  id="Science" 
+					  onSelect={onScienceChange}
+					/>
   					<p>L2 Qualifications</p>
   					<textarea 
   						id="l2details" 
@@ -65,6 +105,7 @@ function LevelTwoQualifications() {
   						placeholder="Enter level 2 qualifications" 
   						rows={6} 
   						cols={30}
+						onChange={onL2DetailsChange}
   					/>
   				</div>
   			</Container>
