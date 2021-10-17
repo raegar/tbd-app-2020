@@ -1,12 +1,12 @@
-import React, {useState} from "react";
+import React, {useRef} from "react";
 import TextBox from "../TextBox/TextBox";
 import "./ClearingOfferMade.css";
 import { Container, Col, Row } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 
 function ClearingOfferMadeBeforeCompleting() {
-	const [email, setEmail] = useState(global.ApplicationFormData.email);
-	const [course, setCourse] = useState(global.ApplicationFormData.course);
+	const email = useRef(global.ApplicationFormData.email);
+	const course = useRef(global.ApplicationFormData.course);
 
 	function downloadFile() {
     	let fileName = "studentDetails.json"; 

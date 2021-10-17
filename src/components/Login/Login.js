@@ -109,13 +109,6 @@ function LoginForm() {
 		return result;
 	}
 
-	function clearForm() {
-    	setState({
-			...InitialState,
-			redirect: state.redirect
-		});
-	};
-
 	if (state.redirect) {
 		return <Redirect push to="/NewApplicationPage" />;
 	}
