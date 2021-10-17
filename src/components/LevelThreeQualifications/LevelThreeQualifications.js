@@ -34,6 +34,7 @@ function LevelThreeQualifications() {
 	}
 
 	function onL3CompChange(e) {
+		console.log("L3CompChange");
 		//as all IDs take the form of <section><id>, we strip the letter characters and
 		//treat the remainder as the qualification ID.
 		let componentID = parseInt(e.target.id.replace(/\D/g, ""));
@@ -44,22 +45,27 @@ function LevelThreeQualifications() {
 		let qualificationsInfoNew = qualificationsInfo;
 
 		//modify it
-		if (!qualificationsInfoNew[componentID]) {
+		if (!qualificationsInfoNew[componentID - 1]) {
 			//making sure the object for that ID exists
-			qualificationsInfoNew[componentID] = {[componentName]: e.target.value};
+			qualificationsInfoNew[componentID - 1] = {[componentName]: e.target.value};
 		} else {
-			qualificationsInfoNew[componentID][componentName] = e.target.value;
+			qualificationsInfoNew[componentID - 1][componentName] = e.target.value;
 		}
 
 		//and update state to match new object
 		setQualificationsInfo(qualificationsInfoNew);
+		console.log(qualificationsInfo);
 	}
 
 	function saveSelectedData() {
-		global.ApplicationFormData.levelThreeQualifications.qual[counter - 1] = qualificationsInfo[counter - 1]["qualification"];
-		global.ApplicationFormData.levelThreeQualifications.subject[counter - 1] = qualificationsInfo[counter - 1]["subject"];
-		global.ApplicationFormData.levelThreeQualifications.grade[counter - 1] = qualificationsInfo[counter - 1]["grade"];
-		global.ApplicationFormData.levelThreeQualifications.date[counter - 1] = qualificationsInfo[counter - 1]["year"];
+		let count = counter - 1;
+
+		if (qualificationsInfo[count]) {
+			global.ApplicationFormData.levelThreeQualifications.qual[count] = qualificationsInfo[count]["qualification"];
+			global.ApplicationFormData.levelThreeQualifications.subject[count] = qualificationsInfo[count]["subject"];
+			global.ApplicationFormData.levelThreeQualifications.grade[count] = qualificationsInfo[count]["grade"];
+			global.ApplicationFormData.levelThreeQualifications.date[count] = qualificationsInfo[count]["year"];
+		}
 
 		console.log(global.ApplicationFormData);
 	}
