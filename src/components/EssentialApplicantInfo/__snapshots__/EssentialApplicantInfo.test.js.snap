@@ -25,7 +25,6 @@ exports[`Renders Essential Applicant Info 1`] = `
             Name
           </label>
           <input
-            disabled=""
             id="nameinput"
             maxlength="60"
             minlength="5"
@@ -44,7 +43,6 @@ exports[`Renders Essential Applicant Info 1`] = `
             Email
           </label>
           <input
-            disabled=""
             id="emailinput"
             maxlength="60"
             minlength="5"
@@ -63,7 +61,6 @@ exports[`Renders Essential Applicant Info 1`] = `
             Tel No
           </label>
           <input
-            disabled=""
             id="telinput"
             maxlength="12"
             minlength="5"
@@ -82,7 +79,6 @@ exports[`Renders Essential Applicant Info 1`] = `
             D/O/B
           </label>
           <input
-            disabled=""
             id="dobinput"
             maxlength="30"
             minlength="0"
@@ -101,7 +97,6 @@ exports[`Renders Essential Applicant Info 1`] = `
             UCAS ID
           </label>
           <input
-            disabled=""
             id="ucasinput"
             maxlength="30"
             minlength="0"
@@ -127,7 +122,6 @@ exports[`Renders Essential Applicant Info 1`] = `
           >
             <input
               data-testid="UK"
-              disabled=""
               id="UK"
               name="nationality"
               type="radio"
@@ -144,7 +138,6 @@ exports[`Renders Essential Applicant Info 1`] = `
           >
             <input
               data-testid="EU"
-              disabled=""
               id="EU"
               name="nationality"
               type="radio"
@@ -161,7 +154,6 @@ exports[`Renders Essential Applicant Info 1`] = `
           >
             <input
               data-testid="Other"
-              disabled=""
               id="Other"
               name="nationality"
               type="radio"
@@ -188,7 +180,6 @@ exports[`Renders Essential Applicant Info 1`] = `
           >
             <input
               data-testid="crimeYes"
-              disabled=""
               id="crimeYes"
               name="criminal"
               type="radio"
@@ -205,7 +196,6 @@ exports[`Renders Essential Applicant Info 1`] = `
           >
             <input
               data-testid="crimeNo"
-              disabled=""
               id="crimeNo"
               name="criminal"
               type="radio"
@@ -232,7 +222,6 @@ exports[`Renders Essential Applicant Info 1`] = `
           >
             <input
               data-testid="supportYes"
-              disabled=""
               id="supportYes"
               name="support"
               type="radio"
@@ -249,7 +238,6 @@ exports[`Renders Essential Applicant Info 1`] = `
           >
             <input
               data-testid="supportNo"
-              disabled=""
               id="supportNo"
               name="support"
               type="radio"
