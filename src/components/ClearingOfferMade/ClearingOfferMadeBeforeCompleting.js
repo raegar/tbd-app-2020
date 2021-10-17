@@ -4,7 +4,6 @@ import "./ClearingOfferMade.css";
 import { Container, Col, Row } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 
-
 function ClearingOfferMadeBeforeCompleting() {
 	const [email, setEmail] = useState(global.ApplicationFormData.email);
 	const [course, setCourse] = useState(global.ApplicationFormData.course);
@@ -39,19 +38,20 @@ function ClearingOfferMadeBeforeCompleting() {
 			<TextBox id="courseApplied" value={course}/>
 			<Row>
 				<Col>
-					<br></br>
-					<UCPButton to='/ClearingOfferMadeSecondPage'
+					<br/>
+					<UCPButton 
+						to='/ClearingOfferMadeSecondPage'
 						primary="True"
 						className="mediumbutton"
 						buttonText="Go Back"
 						href="/ClearingOfferMadeSecondPage"
 					/>
 				</Col>
-
 				<Col>
-					<br></br>
+					<br/>
 					<div onClick={downloadFile}>
-						<UCPButton to ='/'
+						<UCPButton 
+							to='/'
 							primary="True"
 							className="mediumbutton"
 							buttonText="Confirm and Continue"

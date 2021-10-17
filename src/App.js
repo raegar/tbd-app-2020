@@ -17,12 +17,12 @@ import ClearingOfferMadeBeforeCompleting from './components/ClearingOfferMade/Cl
 import ClearingOfferMadeStudentEnd from './components/ClearingOfferMade/ClearingOfferMadeStudentEnd';
 import AddressAndPriorsForm from './components/AddressAndPriorsForm/AddressAndPriorsForm';
 
-const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
+const BaseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
 
 function App() {
 	/* const className1 = isMobile ? "mobile-App" : "App"; */
 	return (
-		<Router basename={baseUrl}>
+		<Router basename={BaseUrl}>
 			<div className="App">
 				<div className="main-app">
 					<Headers/>
@@ -40,7 +40,6 @@ function App() {
 						<Route path='/ClearingOfferMadeFourthPage' component={ClearingOfferMadeInterviewRPA}/>
 						<Route path='/ClearingOfferMadeFifthPage' component={ClearingOfferMadeBeforeCompleting}/>
 						<Route path='/ClearingOfferMadeStudentEnd' component={ClearingOfferMadeStudentEnd}/>
-
 					</Switch>
 				</div>
 				<Footer/>

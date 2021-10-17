@@ -263,7 +263,8 @@ function ClearingOfferMadeYesNoSelect() {
 			}
 			<Row>
 				<Col>
-					<UCPButton to='/ClearingOfferMade'
+					<UCPButton 
+						to='/ClearingOfferMade'
 						primary="True"
 						className="mediumbutton"
 						buttonText="Go Back"
@@ -273,7 +274,8 @@ function ClearingOfferMadeYesNoSelect() {
 				
 				<Col>
 					<div id="confirmButton" onClick={saveSelectedData}>
-						<UCPButton to='/ClearingOfferMadeFifthPage'
+						<UCPButton 
+							to='/ClearingOfferMadeFifthPage'
 							primary="True"
 							className="mediumbutton"
 							buttonText="Confirm and Continue"

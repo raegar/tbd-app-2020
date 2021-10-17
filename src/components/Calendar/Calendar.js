@@ -5,7 +5,7 @@ import DropdownMenu from '../DropdownMenu/DropdownMenu';
 import { Col, Container, Row } from 'react-bootstrap';
 import Jumbotron from '../Jumbotron/Jumbotron';
 
-const options = [
+const Options = [
 	{ value: '0', label: '9:00' },
 	{ value: '1', label: '10:00'},
 	{ value: '2', label: '11:00'},
@@ -25,34 +25,25 @@ function Calendar() {
   				<Col><UCPButton className="largebutton" buttonText="Week Commencing 9/11/2020"/></Col>
   				<Col><UCPButton className="largebutton" buttonText="Week Commencing 16/11/2020"/></Col>
   			</Row> 
-  
-  			<br></br>
-  			<br></br>
-       
+			<br/><br/>
   			<Row className="DaysButton">
-       
   				<Col><UCPButton className="mediumbutton" buttonText="Monday"/></Col>
   				<Col><UCPButton className="mediumbutton" buttonText="Tuesday"/></Col>
   				<Col><UCPButton className="mediumbutton" buttonText="Wednesday"/></Col>
   				<Col><UCPButton className="mediumbutton" buttonText="Thursday"/></Col>
   				<Col><UCPButton className="mediumbutton" buttonText="Friday"/></Col>
-        
   			</Row>
-  			<br></br>
-  			<br></br>
-        
+  			<br/><br/>
   			<Row>
   				<Col>
-  					<DropdownMenu className="Dropdown" options = {options}/>
+  					<DropdownMenu className="Dropdown" options = {Options}/>
   				</Col>
   				<Col>
   					<Jumbotron/>
   				</Col>
   			</Row>
-
   			<Row className="DaysButton">
-  				<br></br>
-
+  				<br/>
   				<Col><UCPButton className="mediumbutton" buttonText="Refresh"/></Col>
   				<Col><UCPButton className="mediumbutton" buttonText="Confirm"/></Col>
   			</Row >

@@ -15,8 +15,9 @@ function ClearingOfferMadeInterviewRPA() {
 			<TextBox/>
 			<Row>
 				<Col>
-					<br></br>
-					<UCPButton to='/ClearingOfferMadeSecondPage'
+					<br/>
+					<UCPButton 
+						to='/ClearingOfferMadeSecondPage'
 						primary="True"
 						className="mediumbutton"
 						buttonText="Go Back"
@@ -24,8 +25,9 @@ function ClearingOfferMadeInterviewRPA() {
 					/>
 				</Col>
 				<Col>
-					<br></br>
-					<UCPButton to='/ClearingOfferMadeFifthPage'
+					<br/>
+					<UCPButton 
+						to='/ClearingOfferMadeFifthPage'
 						primary="True"
 						className="mediumbutton"
 						buttonText="Confirm and Continue"

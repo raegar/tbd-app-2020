@@ -68,50 +68,19 @@ function AddressAndPriorsForm() {
 		});
 	}
 
-	function addressLineOneChanged(e) {
-		setAddressLineOne(e.target.value);
-	}
-
-	function addressLineTwoChanged(e) {
-		setAddressLineTwo(e.target.value);
-	}
-
-	function townCityChanged(e) {
-		setTownCity(e.target.value);
-	}
-
-	function regionChanged(e) {
-		setRegion(e.target.value);
-	}
-
-	function postcodeChanged(e) {
-		setPostcode(e.target.value);
-	}
-
-	function onPriorCredChanged(e) {
-		setPriorCreditValue(e.target.value);
-	}
-
-	function onPriorStudyDateChanged(e) {
-		setPriorStudyDate(e.target.value);
-	}
-
 	const fullPartOptions = [
 		{label: "Full Time", id: "full", value: "full", handleChange: onFullPartSelected},
 		{label: "Part Time", id: "part", value: "part", handleChange: onFullPartSelected}
 	];
-	
 	const priorCreditOptions = [
 		{label: "Yes", id: "prior-yes", value: "yes", handleChange: onPriorCreditSelected},
 		{label: "No", id: "prior-no", value: "no", handleChange: onPriorCreditSelected}
 	];
-	
 	const yearOptions = [
 		{label: "Year 1", id: "year-1", value: "1", handleChange: onYearSelected},
 		{label: "Year 2", id: "year-2", value: "2", handleChange: onYearSelected},
 		{label: "Year 3", id: "year-3", value: "3", handleChange: onYearSelected}
 	];
-	
 	const priorStudyOptions = [
 		{label: "Yes", id: "study-yes", value: "yes", handleChange: onPriorStudySelected},
 		{label: "No", id: "study-no", value: "no", handleChange: onPriorStudySelected}
@@ -152,7 +121,6 @@ function AddressAndPriorsForm() {
 				<Row className="form-background">
 					<Col>
 						<h4>Address</h4>
-
 						<TextBox 
 							name="address_line_1"
 							title="Address Line 1"
@@ -162,9 +130,8 @@ function AddressAndPriorsForm() {
 							size={35}
 							id="address-1"
 							type="text"
-							onChange={addressLineOneChanged}
+							onChange={(e) => setAddressLineOne(e.target.value)}
 						/>
-
 						<TextBox 
 							name="address_line_2"
 							title="Address Line 2"
@@ -174,9 +141,8 @@ function AddressAndPriorsForm() {
 							size={35}
 							id="address-2"
 							type="text"
-							onChange={addressLineTwoChanged}
+							onChange={(e) => setAddressLineTwo(e.target.value)}
 						/>
-			
 						<TextBox 
 							name="town_city"
 							title="Town/City"
@@ -186,9 +152,8 @@ function AddressAndPriorsForm() {
 							size={35}
 							id="town-city"
 							type="text"
-							onChange={townCityChanged}
+							onChange={(e) => setTownCity(e.target.value)}
 						/>
-
 						<TextBox 
 							name="region"
 							title="Region"
@@ -198,9 +163,8 @@ function AddressAndPriorsForm() {
 							size={25}
 							id="region"
 							type="text"
-							onChange={regionChanged}
+							onChange={(e) => setRegion(e.target.value)}
 						/>
-
 						<TextBox 
 							name="postcode"
 							title="Postcode"
@@ -210,11 +174,9 @@ function AddressAndPriorsForm() {
 							size={10}
 							id="postcode"
 							type="text"
-							onChange={postcodeChanged}
+							onChange={(e) => setPostcode(e.target.value)}
 						/>
-						
 						<br/>
-
 						<RadioButton
 							heading="Full/Part Time"
 							options={fullPartOptions}
@@ -245,7 +207,7 @@ function AddressAndPriorsForm() {
 									maxLength={4} 
 									min={0} 
 									max={360}
-									onChange={onPriorCredChanged}
+									onChange={(e) => setPriorCreditValue(e.target.value)}
 								/><br/></div>
 								: <span></span>
 						}
@@ -256,7 +218,6 @@ function AddressAndPriorsForm() {
 							name="year-of-entry"
 							subtitle="In what year does the student want to begin their study?"
 						/>
-
 						<RadioButton
 							heading="Prior Study"
 							options={priorStudyOptions}
@@ -275,20 +236,18 @@ function AddressAndPriorsForm() {
 									type="text" 
 									minLength={2} 
 									maxLength={20}
-									onChange={onPriorStudyDateChanged}
+									onChange={(e) => setPriorStudyDate(e.target.value)}
 								/>
 								: <span></span>
 						}
-			
 					</Col>
-
-
 				</Row>
 			</Container>
 			<Container>
 				<Row id="buttonRow">
 					<Col className="centered-buttons">
-						<UCPButton to='/NewApplicationPage'
+						<UCPButton 
+							to='/NewApplicationPage'
 							primary="True"
 							className="mediumbutton"
 							buttonText="Go Back"

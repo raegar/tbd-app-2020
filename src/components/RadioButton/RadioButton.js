@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import './RadioButton.css';
 import PropTypes from 'prop-types';
 
-
 function RadioButton({options, attribute, name, oc, heading, subtitle, ...props}) {
 	const [input, setInput] = useState('');
 

@@ -1,7 +1,6 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import {Container} from 'react-bootstrap';
 import './Breadcrumb.css';
-//import { Breadcrumb } from 'react-bootstrap';
 
 function BreadcrumbComp() {
 	return (

@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Checkbox.css';
 
-
 function Checkbox({className, checkboxText, ...props}) {
 	return (
 		<div className="labelposition">
@@ -13,7 +12,6 @@ function Checkbox({className, checkboxText, ...props}) {
 		</div>
 	);
 }
-  
   
 Checkbox.propTypes = {
 	className:PropTypes.string,

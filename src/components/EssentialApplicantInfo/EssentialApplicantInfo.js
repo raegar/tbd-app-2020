@@ -42,30 +42,9 @@ function EssentialApplicantInfo({disabled, ...props}) {
 		anyChecked: false,
 	});
 	const [selectedCourse, setSelectedCourse] = useState("");
-	
+
 	const disabledInputs = disabled ? "disabled" : null;
 	const textboxClassName = isMobile ? "mobiletextbox" : "desktoptextbox";
-
-	function handleNameChange(event) {
-		console.log(event.target.value);
-		setNameInput(event.target.value);
-	}
-
-	function handleEmailChange(e) {
-		setEmailInput(e.target.value);
-	}
-
-	function handleTelChange(e) {
-		setTelInput(e.target.value);
-	}
-
-	function handleDobChange(e) {
-		setDobInput(e.target.value);
-	}
-
-	function handleUcasChange(e) {
-		setUcasInput(e.target.value);
-	}
 
 	function anyNationalityChecked(e) {
 		setNationalityState({
@@ -88,21 +67,15 @@ function EssentialApplicantInfo({disabled, ...props}) {
 		});	
 	}
 
-	function onCourseSelect(e) {
-		setSelectedCourse(e.target.value);
-	}
-
 	const nationalityOptions = [
 		{ label: "UK National", id: "UK", value: "UK", handleChange: anyNationalityChecked },
 		{ label: "EU National", id: "EU", value: "EU", handleChange: anyNationalityChecked },
 		{ label: "Other", id: "Other", value: "Other", handleChange: anyNationalityChecked },
 	];
-	
 	const criminalOptions = [
 		{ label: "Yes", id: "crimeYes", value: "yes", handleChange: anyCriminalConvChecked },
 		{ label: "No", id: "crimeNo", value: "no", handleChange: anyCriminalConvChecked },
 	];
-	
 	const supportOptions = [
 		{ label: "Yes", id: "supportYes", value: "yes", handleChange: anySupportChecked },
 		{ label: "No", id: "supportNo", value: "no", handleChange: anySupportChecked },
@@ -140,7 +113,8 @@ function EssentialApplicantInfo({disabled, ...props}) {
 			return (
 				<Row id="buttonRow">
 					<Col className="centered-buttons">
-						<UCPButton to="/Login"
+						<UCPButton 
+							to="/Login"
 							primary="True"
 							className="mediumbutton"
 							buttonText="Go Back"
@@ -148,7 +122,8 @@ function EssentialApplicantInfo({disabled, ...props}) {
 					</Col>
 					<Col className="centered-buttons">
 						<div id="confirmButton" onClick={saveSelectedData}>
-							<UCPButton to="/MoreInfo"
+							<UCPButton 
+								to="/MoreInfo"
 								primary="True"
 								className="mediumbutton"
 								buttonText="Confirm and Go"
@@ -160,7 +135,6 @@ function EssentialApplicantInfo({disabled, ...props}) {
 		} else {
 			return (
 				<Row id="buttonRow">
-		
 					<Col className="centered-buttons">
 						<div id="confirmButton1">
 							<Modal id="hello" btnText="Request a Call Back">
@@ -180,11 +154,11 @@ function EssentialApplicantInfo({disabled, ...props}) {
 										to="none"
 										primary="True"
 										className="smallbutton"
-										buttonText="Submit" />
+										buttonText="Submit" 
+									/>
 								</div>
 							</Modal>
 						</div>
-				
 					</Col>
 					<Col className="centered-buttons">
 						<div id="confirmButton" onClick={saveSelectedData}>
@@ -196,7 +170,6 @@ function EssentialApplicantInfo({disabled, ...props}) {
 							/>
 						</div>
 					</Col>
-
 				</Row>
 			);
 		}
@@ -217,10 +190,9 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						name="name"
   						attribute={disabledInputs}
   						className={textboxClassName}
-  						onChange={handleNameChange}
+  						onChange={(e) => setNameInput(e.target.value)}
   						value={nameInput}
   					/>
-  
   					<TextBox
   						title="Email"
   						placeholder="Enter your email"
@@ -231,10 +203,9 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						name="email"
   						attribute={disabledInputs}
   						className={textboxClassName}
-  						onChange={handleEmailChange}
+  						onChange={(e) => setEmailInput(e.target.value)}
   						value={nameInput}
   					/>
-  
   					<TextBox
   						title="Tel No"
   						placeholder="Enter phone number"
@@ -245,10 +216,9 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						name="telno"
   						attribute={disabledInputs}
   						className={textboxClassName}
-  						onChange={handleTelChange}
+  						onChange={(e) => setTelInput(e.target.value)}
   						value={nameInput}
   					/>
-  
   					<TextBox
   						title="D/O/B"
   						placeholder="Enter date of birth"
@@ -257,10 +227,9 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						name="dob"
   						attribute={disabledInputs}
   						className={textboxClassName}
-  						onChange={handleDobChange}
+  						onChange={(e) => setDobInput(e.target.value)}
   						value={nameInput}
   					/>
-  
   					<TextBox
   						title="UCAS ID"
   						placeholder="Enter UCAS ID"
@@ -269,9 +238,8 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						name="ucas"
   						attribute={disabledInputs}
   						className={textboxClassName}
-  						onChange={handleUcasChange}
+  						onChange={(e) => setUcasInput(e.target.value)}
   						value={nameInput}
-  
   					/>
   				</span>
   				<span className="ess-form-right">
@@ -280,9 +248,8 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						options={nationalityOptions}
   						name="nationality"
   						attribute={disabledInputs}
-  						onClick={handleNameChange}
+  						onClick={(e) => setNameInput(e.target.value)}
   					/>
-  
   					<RadioButton
   						heading="Convictions"
   						options={criminalOptions}
@@ -290,7 +257,6 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						subtitle="Do you have any unspent criminal convictions?"
   						attribute={disabledInputs}
   					/>
-  
   					<RadioButton
   						heading="Learning Support"
   						options={supportOptions}
@@ -299,7 +265,7 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						attribute={disabledInputs}
   					/>
   					<h4>Preferred Course</h4>
-  					<DropdownMenu onSelect={onCourseSelect} id="courseSelection"/>
+  					<DropdownMenu onSelect={(e) => setSelectedCourse(e.target.value)} id="courseSelection"/>
   				</span>
   			</div>
   			<div>{userTypeSelect()}</div>

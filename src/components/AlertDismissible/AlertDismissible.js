@@ -5,7 +5,6 @@ import './AlertDismissible.css';
 function AlertDismissible() {
 	const [show, setShow] = useState(true);
 
-  
   	if (show) {
   		return (
   			<Alert className="Alert" onClose={() => setShow(false)} dismissible>

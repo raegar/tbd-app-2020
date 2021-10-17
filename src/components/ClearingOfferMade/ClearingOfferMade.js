@@ -1,12 +1,10 @@
 import React from "react";
-
-
 import "./ClearingOfferMade.css";
 import { Container, Col, Row } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 
 function ClearingOfferMade() {
-	return(
+	return (
 		<Container>
 			<h1>Offer Note</h1>
 			<p>{"Offers can only be made if applicant has acheived their qualifications and not if they are waiting" + 
@@ -22,13 +20,16 @@ function ClearingOfferMade() {
 			</p>
 			<Row>
 				<Col>
-					<UCPButton to='/DegreeQualifications' primary="True"
+					<UCPButton 
+						to='/DegreeQualifications' 
+						primary="True"
 						className="mediumbutton"
 						buttonText="Go Back">
 					</UCPButton>
 				</Col>
 				<Col>
-					<UCPButton to='/ClearingOfferMadeSecondPage'
+					<UCPButton 
+						to='/ClearingOfferMadeSecondPage'
 						primary="True"
 						className="mediumbutton"
 						buttonText="Confirm and Continue"

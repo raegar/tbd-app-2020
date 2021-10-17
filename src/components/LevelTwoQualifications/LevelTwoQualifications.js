@@ -6,7 +6,6 @@ import UCPButton from "../Buttons/UCPButton";
 import AlerDismissible from '../AlertDismissible/AlertDismissible';
 import {isMobile} from 'react-device-detect';
 
-
 const gsceGrades = [
 	{ value: "9", label: "9 - A*" },
 	{ value: "8", label: "8 - A*" },
@@ -33,26 +32,6 @@ function LevelTwoQualifications() {
   	const className1 = isMobile ? "l2-mobile-form-right" : "l2-form-right ";
   	const className2 = isMobile ? "l2-mobile-form-container" : "l2-form-container";
 
-	function onEngLangChange(e) {
-		setEngLangGrade(e.target.value);
-	}
-
-	function onEngLitChange(e) {
-		setEngLitGrade(e.target.value);
-	}
-
-	function onMathChange(e) {
-		setMathGrade(e.target.value);
-	}
-
-	function onScienceChange(e) {
-		setScienceGrade(e.target.value);
-	}
-
-	function onL2DetailsChange(e) {
-		setL2Details(e.target.value);
-	}
-
 	function saveSelectedData() {
 		global.ApplicationFormData.GCSEEnglishLanguage = engLangGrade;
 		global.ApplicationFormData.GCSEEnglishLiterature = engLitGrade;
@@ -70,31 +49,31 @@ function LevelTwoQualifications() {
   				<div className={className1}>
   					<p>GCSE English Language</p>
   					<DropdownMenu 
-					  placeholder="Select Grade" 
-					  options={gsceGrades} 
-					  id="EngLanguage" 
-					  onSelect={onEngLangChange}
+					  	placeholder="Select Grade" 
+					  	options={gsceGrades} 
+					  	id="EngLanguage" 
+					  	onSelect={(e) => setEngLangGrade(e.target.value)}
 					/>
   					<p>GCSE English Literature</p>
   					<DropdownMenu 
-					  placeholder="Select Grade" 
-					  options={gsceGrades} 
-					  id="EngLiterature" 
-					  onSelect={onEngLitChange}
+						placeholder="Select Grade" 
+						options={gsceGrades} 
+						id="EngLiterature" 
+						onSelect={(e) => setEngLitGrade(e.target.value)}
 					/>
   					<p>GCSE English Mathematics</p>
   					<DropdownMenu 
-					  placeholder="Select Grade" 
-					  options={gsceGrades} 
-					  id="Maths" 
-					  onSelect={onMathChange}
+						placeholder="Select Grade" 
+						options={gsceGrades} 
+						id="Maths" 
+						onSelect={(e) => setMathGrade(e.target.value)}
 					/>
   					<p>GCSE Science / Additional Science</p>
   					<DropdownMenu 
-					  placeholder="Select Grade" 
-					  options={gsceGrades} 
-					  id="Science" 
-					  onSelect={onScienceChange}
+						placeholder="Select Grade" 
+						options={gsceGrades} 
+						id="Science" 
+						onSelect={(e) => setScienceGrade(e.target.value)}
 					/>
   					<p>L2 Qualifications</p>
   					<textarea 
@@ -104,13 +83,14 @@ function LevelTwoQualifications() {
   						placeholder="Enter level 2 qualifications" 
   						rows={6} 
   						cols={30}
-						onChange={onL2DetailsChange}
+						onChange={(e) => setL2Details(e.target.value)}
   					/>
   				</div>
   			</Container>
   			<Row id="buttonRow">
   				<Col className="centered-buttons">
-  					<UCPButton to='/MoreInfo'
+  					<UCPButton 
+					  	to='/MoreInfo'
   						primary="True"
   						className="mediumbutton"
   						buttonText="Go Back"
@@ -119,7 +99,7 @@ function LevelTwoQualifications() {
   				<Col className="centered-buttons">
   					<div id="confirmButton" onClick={saveSelectedData}>
   						<UCPButton
-  							to = "/LevelThreeQualifications"
+  							to="/LevelThreeQualifications"
   							primary="True"
   							className="mediumbutton"
   							buttonText="Confirm and Go"

@@ -28,14 +28,6 @@ function DegreeQualifications() {
     	setLevelFour(e === 'yes');
 	}
 
-	function onUpdateNameGrade(e) {
-		setNameGrade(e.target.value);
-	}
-
-	function onUpdateRecentSchool(e) {
-		setRecentSchool(e.target.value);
-	}
-
 	function onPriorChanged(e) {
 		setPriorCheckedState({
 			value: e.target.value,
@@ -104,7 +96,7 @@ function DegreeQualifications() {
 										title="Enter qualification name and grade" 
 										name="l-4-qual" 
 										size={30} 
-										onChange={onUpdateNameGrade}
+										onChange={(e) => setNameGrade(e.target.value)}
 									/>
 									: <span></span>
 							}
@@ -117,7 +109,7 @@ function DegreeQualifications() {
 								title="What is the name of the most recent school/college attended?" 
 								size={25} 
 								type="text" 
-								onChange={onUpdateRecentSchool}
+								onChange={(e) => setRecentSchool(e.target.value)}
 							/>
 							<RadioButton 
 								subtitle={"ELQ - is the applicant applying to study a qualification that is " + 

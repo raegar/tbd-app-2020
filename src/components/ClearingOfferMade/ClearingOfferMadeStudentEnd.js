@@ -4,7 +4,6 @@ import "./ClearingOfferMade.css";
 import { Container, Col, Row } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 
-
 function ClearingOfferMadeStudentEnd() {
 	const [email, setEmail] = useState(global.ApplicationFormData.email);
 
@@ -27,32 +26,38 @@ function ClearingOfferMadeStudentEnd() {
     	saveData(fileName);
 	}
 
-	return (<Container>
-		<h1>Thank you for using the form</h1>
-		<p>Please press confirm to complete</p>
-		<h3>Please confirm email that your application will be sent to</h3>
-		<TextBox id="emailConfirm" placeholder={global.ApplicationFormData.email} value={email}/>
+	return (
+		<Container>
+			<h1>Thank you for using the form</h1>
+			<p>Please press confirm to complete</p>
+			<h3>Please confirm email that your application will be sent to</h3>
+			<TextBox id="emailConfirm" placeholder={global.ApplicationFormData.email} value={email}/>
 
-		<Row>
-			<Col><br></br><UCPButton to='/DegreeQualifications'
-				primary="True"
-				className="mediumbutton"
-				buttonText="Go Back"
-				href="/DegreeQualifications"/>
-			</Col>
-
-			<Col>
-				<br></br>
-				<div onClick={downloadFile}>
-					<UCPButton to ='/'
+			<Row>
+				<Col>
+					<br/>
+					<UCPButton 
+						to='/DegreeQualifications'
 						primary="True"
 						className="mediumbutton"
-						buttonText="Confirm"
-						href="/"/>
-				</div>
-			</Col>
-		</Row>
-	</Container>
+						buttonText="Go Back"
+						href="/DegreeQualifications"
+					/>
+				</Col>
+				<Col>
+					<br/>
+					<div onClick={downloadFile}>
+						<UCPButton 
+							to ='/'
+							primary="True"
+							className="mediumbutton"
+							buttonText="Confirm"
+							href="/"
+						/>
+					</div>
+				</Col>
+			</Row>
+		</Container>
 	);
 }
 

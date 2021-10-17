@@ -82,11 +82,13 @@ function LevelThreeQualifications() {
   								onChange={handleChange}
   							/>
   						</div>
-  						: <Redirect  to={{pathname: "/DegreeQualifications"}} />}
+  						: <Redirect to={{pathname: "/DegreeQualifications"}}/>
+					}
   				</div>
   				<Row id="buttonRow">
   					<Col className="centered-buttons">
-  						<UCPButton to='/LevelTwoQualifications'
+  						<UCPButton 
+						  	to='/LevelTwoQualifications'
   							primary="True"
   							className="mediumbutton"
   							buttonText="Go Back"
