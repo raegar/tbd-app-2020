@@ -250,7 +250,6 @@ function ClearingOfferMadeYesNoSelect() {
 						href="/ClearingOfferMade"
 					/>
 				</Col>
-				
 				<Col>
 					<div id="confirmButton" onClick={saveSelectedData}>
 						<UCPButton 

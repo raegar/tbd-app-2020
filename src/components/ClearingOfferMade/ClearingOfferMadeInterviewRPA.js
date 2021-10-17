@@ -11,7 +11,6 @@ function ClearingOfferMadeInterviewRPA() {
 			<h1>Interview or RPA required</h1>
 			<p>Enter any details for decision made</p>
 			<h3>39. Please state reasons:</h3>
-	
 			<TextBox/>
 			<Row>
 				<Col>
