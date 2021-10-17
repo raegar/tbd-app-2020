@@ -61,27 +61,6 @@ function ClearingOfferMadeYesNoSelect() {
 	});
 
 	//State setter methods start
-	function setWhenNo(whenNo) {
-		setState({
-			...state,
-			whenNo: whenNo
-		});
-	}
-	
-	function setWhenRPA(whenRPA) {
-		setState({
-			...state,
-			whenRPA: whenRPA
-		});
-	}
-
-	function setWhenInterview(whenInterview) {
-		setState({
-			...state,
-			whenInterview: whenInterview
-		});
-	}
-
 	function onOfferYesChanged(e) {
 		setOfferYesState({
 			checked: e.target.checked,
