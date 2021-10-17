@@ -3,7 +3,6 @@ import './TextBox.css';
 import PropTypes from 'prop-types';
 import {isMobile} from 'react-device-detect';
 
-//TODO: fix this awful awful formatting here
 function L3TextBox({
 	clearInput, 
 	wrapID, 

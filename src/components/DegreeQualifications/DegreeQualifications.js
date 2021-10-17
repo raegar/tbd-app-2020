@@ -5,10 +5,6 @@ import RadioButton from '../RadioButton/RadioButton';
 import TextBox from '../TextBox/TextBox';
 import UCPButton from '../Buttons/UCPButton';
 
-/*TODO: is this a clone of DegreeQualifications in the ClearingOfferMade folder?
-  or is the other the clone? for the time being I just copypasted the changes in
-  the other one to here but I should do something better later, or at least rename
-  this one.*/
 function DegreeQualifications() {
 	const [levelFour, setLevelFour] = useState(false);
 	const [nameGrade, setNameGrade] = useState("");

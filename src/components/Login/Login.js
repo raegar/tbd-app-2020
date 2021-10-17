@@ -26,16 +26,7 @@ function LoginForm() {
 
 	const className = isMobile ? "MobileContainerStyle" : "ContainerStyle";
 
-	//I'm doing this because I really don't feel like going through and converting each of these functions to setStates
-	//TODO: if we go with function for methods, change these to function
-	const setUsername = username => {
-		setState({
-			...state,
-			username: username
-		});
-	};
-
-	const setPassword = password => {
+	function setPassword(password) {
 		setState({
 			...state,
 			password: password
@@ -46,27 +37,6 @@ function LoginForm() {
 		setState({
 			...state,
 			usernameError: usernameError
-		});
-	};
-
-	const setPasswordError = passwordError => {
-		setState({
-			...state,
-			passwordError: passwordError
-		});
-	};
-
-	const setLocation = location => {
-		setState({
-			...state,
-			location: location
-		});
-	};
-
-	const setRedirect = redirect => {
-		setState({
-			...state,
-			redirect: redirect
 		});
 	};
 
