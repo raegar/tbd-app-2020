@@ -11,10 +11,10 @@ function RadioButton1({options, attribute, name, value, onChange, oc, heading, s
 				name={name} 
 				type="radio" id={item.id} 
 				checked={value === item.value} 
-				onChange={onChange}  
+				onChange={onChange ? onChange : (e) => {}}  
 				data-testid={item.id} 
 				value={item.value} 
-				onClick={oc ? (e) => oc(item.value) : ''} 
+				onClick={oc ? (e) => oc(item.value) : null} 
 			/>
 			<label htmlFor={item.id}>{item.label}</label>
 		</div>

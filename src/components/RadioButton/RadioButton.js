@@ -20,7 +20,7 @@ function RadioButton({options, attribute, name, oc, heading, subtitle, ...props}
 				id={item.id} 
 				data-testid={item.id} 
 				value={item.value} 
-				onClick={oc ? (e) => oc(item.value) : ''} 
+				onClick={oc ? (e) => oc(item.value) : null} 
 				onChange={item.handleChange ? (e) => {
 					handleChange(e);
 					item.handleChange(e); 

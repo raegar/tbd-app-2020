@@ -209,8 +209,8 @@ function EssentialApplicantInfo({disabled, ...props}) {
   					<TextBox
   						title="Tel No"
   						placeholder="Enter phone number"
-  						minLength="5"
-  						maxLength="12"
+  						minLength={5}
+  						maxLength={12}
   						id="telinput"
   						type="tel"
   						name="telno"
