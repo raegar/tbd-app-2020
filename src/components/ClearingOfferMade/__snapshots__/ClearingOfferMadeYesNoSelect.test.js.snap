@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Renders ClearingOfferMadeSecondPage 1`] = `
+exports[`Renders ClearingOfferMadeYesNoSelect 1`] = `
 <DocumentFragment>
   <div
     class="container"

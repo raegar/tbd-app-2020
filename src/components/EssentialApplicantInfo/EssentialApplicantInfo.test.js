@@ -96,7 +96,7 @@ it("should check UK option", () => {
         { label: "Other", id: "Other", value: "Other" },
       ];
     const handleChange = jest.fn();
-    const { container} = render(<RadioButton  options={nationalityOptions} onClick={handleChange} />);
+    const { container} = render(<RadioButton name="nationality" options={nationalityOptions} onClick={handleChange} />);
     var ukOption = screen.getByTestId('UK');
     expect(ukOption).not.toBeChecked();
     //Select Uk option

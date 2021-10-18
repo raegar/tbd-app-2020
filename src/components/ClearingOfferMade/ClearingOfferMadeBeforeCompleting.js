@@ -1,20 +1,22 @@
 import React, {useRef} from "react";
-import TextBox from "../../components/TextBox/TextBox";
+import TextBox from "../TextBox/TextBox";
 import "./ClearingOfferMade.css";
 import { Container, Col, Row } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 
-function ClearingOfferMadeStudentEnd() {
+function ClearingOfferMadeBeforeCompleting() {
 	const email = useRef(global.ApplicationFormData.email);
+	const course = useRef(global.ApplicationFormData.course);
 
 	function downloadFile() {
-    	const fileName = "studentDetails.json"; 
+    	let fileName = "studentDetails.json"; 
+
     	let saveData = (function () { 
     		let a = document.createElement("a"); 
     		document.body.appendChild(a); 
     		a.style = "display: none"; 
     		return function (fileName) { 
-    			let json = JSON.stringify(global.ApplicationFormData), 
+    			var json = JSON.stringify(global.ApplicationFormData), 
     				blob = new Blob([json], {type: "octet/stream"}), 
     				url = window.URL.createObjectURL(blob); 
     			a.href = url; 
@@ -26,32 +28,33 @@ function ClearingOfferMadeStudentEnd() {
     	saveData(fileName);
 	}
 
-	return (
+	return ( 
 		<Container>
-			<h1>Thank you for using the form</h1>
-			<p>Please press confirm to complete</p>
-			<h3>Please confirm email that your application will be sent to</h3>
+			<h1>Before completing the offer....</h1>
+			<p>Please state the following</p>
+			<h3>40. Please confirm email offer will be send to</h3>
 			<TextBox id="emailConfirm" placeholder={global.ApplicationFormData.email} value={email}/>
-
+			<h3>41. Please enter course applied for</h3>
+			<TextBox id="courseApplied" value={course}/>
 			<Row>
 				<Col>
 					<br/>
 					<UCPButton 
-						to='/DegreeQualifications'
+						to='/ClearingOfferMadeSecondPage'
 						primary="True"
 						className="mediumbutton"
 						buttonText="Go Back"
-						href="/DegreeQualifications"
+						href="/ClearingOfferMadeSecondPage"
 					/>
 				</Col>
 				<Col>
 					<br/>
 					<div onClick={downloadFile}>
 						<UCPButton 
-							to ='/'
+							to='/'
 							primary="True"
 							className="mediumbutton"
-							buttonText="Confirm"
+							buttonText="Confirm and Continue"
 							href="/"
 						/>
 					</div>
@@ -61,4 +64,4 @@ function ClearingOfferMadeStudentEnd() {
 	);
 }
 
-export default ClearingOfferMadeStudentEnd;
+export default ClearingOfferMadeBeforeCompleting;
