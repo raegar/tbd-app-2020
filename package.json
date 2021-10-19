@@ -28,7 +28,38 @@
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "rules": {
+      "eqeqeq": "warn",
+      "indent": [
+        "error",
+        "tab"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ],
+      "curly": [
+        "error",
+        "all"
+      ],
+      "brace-style": "error",
+      "max-len": [
+        "error",
+        {
+          "code": 130
+        }
+      ],
+      "semi-style": [
+        "error",
+        "last"
+      ]
+    },
+    "ignorePatterns": [
+      "src/serviceWorker.js",
+      "src/index.js",
+      "src/components/**/*.test.js"
+    ]
   },
   "browserslist": {
     "production": [

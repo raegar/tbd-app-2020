@@ -3,18 +3,22 @@ import UCPLogo  from '../../images/UCPLogo.png';
 import './Headers.css';
 import {isMobile} from 'react-device-detect';
 
-const Headers = () => {
+function Headers() {
+	const className = isMobile ? "MobileUCPLogoBlue" : "UCPLogoBlue";
 
-    const className = isMobile ? "MobileUCPLogoBlue" : "UCPLogoBlue";
-
-    return (
-        <header>   
-                <a href="/tbd-app-2020"><img data-testid="ucpLogoHeader" src={UCPLogo} className={className} alt="UCP official logo" /></a>  
-        </header>
-    )
+	return (
+		<header>   
+			<a href="/tbd-app-2020"><img 
+				data-testid="ucpLogoHeader" 
+				src={UCPLogo} 
+				className={className} 
+				alt="UCP official logo" 
+			/></a>  
+		</header>
+	);
 }
 
-export default Headers
+export default Headers;
 
 
 

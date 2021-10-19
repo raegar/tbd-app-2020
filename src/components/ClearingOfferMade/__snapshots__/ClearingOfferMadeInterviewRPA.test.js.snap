@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Renders ClearingOfferMadeThirdPage 1`] = `
+exports[`Renders ClearingOfferMadeInterviewRPA 1`] = `
 <DocumentFragment>
   <div
     class="container"
@@ -9,10 +9,13 @@ exports[`Renders ClearingOfferMadeThirdPage 1`] = `
       Required
     </p>
     <h1>
-      Not Offered Details
+      Interview or RPA required
     </h1>
+    <p>
+      Enter any details for decision made
+    </p>
     <h3>
-      38. If NO, please state reasons:
+      39. Please state reasons:
     </h3>
     <div
       class="mobiletextbox"
@@ -57,7 +60,7 @@ exports[`Renders ClearingOfferMadeThirdPage 1`] = `
           <button
             class="mediumbutton"
             data-testid="ucpButton"
-            href="/ClearingOfferMadeFourthPage"
+            href="/ClearingOfferMadeFifthPage"
             primary="True"
             type="button"
           >

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Renders ClearingOfferMadeFifthPage 1`] = `
+exports[`Renders ClearingOfferMadeBeforeCompleting 1`] = `
 <DocumentFragment>
   <div
     class="container"
