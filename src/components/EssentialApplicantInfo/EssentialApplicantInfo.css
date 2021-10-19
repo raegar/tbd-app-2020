@@ -1,14 +1,14 @@
 .es-form-background {
     width: 100%;
     background-color: #B2DDDF;
-   display: inline-block;
+    display: inline-block;
     padding: 20px;
-  /*text-align: left;*/
+    /*text-align: left;*/
     border: 1px solid black;
     margin-bottom: 10px;
 }
-.centered-buttons
-{
+
+.centered-buttons {
     text-align: center;
 }
 
@@ -31,18 +31,18 @@
     padding-left: 40px;
 }
 
-.mobiletextbox input{
+.mobiletextbox input {
     width: 250px;
     text-align: center;
 }
-.mobiletextbox{
+.mobiletextbox {
     width: 200px;
 }
-.mobiletextbox label{
+.mobiletextbox label {
     margin-left: 5px;
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
     .ess-form-left {
     width: 100%;
     float: left;
@@ -52,14 +52,8 @@
         width: 100%;
         float: left;
     }
-
-
-
-
-
 }
 
-.h3{
+.h3 {
     font-family: 'Montserrat', sans-serif;
-
 }

@@ -6,18 +6,19 @@
     border: 1px solid black;
     margin-bottom: 20px !important;
 }
-.centered-buttons
-{
+
+.centered-buttons {
     text-align: center;
 }
-.form-background h3
-{
+
+.form-background h3 {
     margin-left: 60px;
 }
-.form-background h5
-{
+
+.form-background h5 {
     margin-left: 60px;
 }
+
 .l3-form-container {
     text-align: center;
     margin: auto;
@@ -28,54 +29,57 @@
     margin-top: 2%;
     margin-bottom: 5%  !important;
 }
+
 .l3-mobile-form-container {
     text-align: center;
     margin: auto;
     width: 100%;
     padding: 10px;   
-  
     left: 6.5%;
     margin-top: 10%;
     padding-right: 0px !important;
     padding-left: 0px !important;
 }
+
 .form-title {
     text-align: center;
 }
+
 .l3-form-right {
     position: relative;
     left: 30%;
     text-align: center !important;
     max-width: 40% !important;
 }
+
 .l3-mobile-form-right {
     position: relative;
     
     text-align: center !important;
     max-width: 100% !important;
 }
+
 .MobileTextArea
 {
     max-width: 400px;
     max-height: 100px;
-   
 }
 
 .mobiletextbox{
     margin: 0 auto;
 }
 
-@media only screen and (max-width: 600px) {.mobiletextbox{
-    margin-left: 0%;
-  }
-  .form-background h3
-{
-    margin-left: 0px;
+@media only screen and (max-width: 600px) {
+    .mobiletextbox {
+        margin-left: 0%;
+    }
+
+    .form-background h3 {
+        margin-left: 0px;
+    }
+
+    .form-background h5 {
+        margin-top: 15px;
+        margin-left: 0px;
+    }
 }
-  .form-background h5
-  {
-      margin-top: 15px;
-      margin-left: 0px;
-  }
-}
-  

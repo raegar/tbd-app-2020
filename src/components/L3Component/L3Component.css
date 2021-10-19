@@ -1,21 +1,18 @@
 
-
-.l3component
-{
+.l3component {
     font-size: 13px;
 }
-.l3component h5 
-{
+
+.l3component h5 {
     margin-top: 25px!important;
     margin-left: 60px;
 }
-.l3component p 
-{
+
+.l3component p {
     margin-left: 60px;
 }
-.mobilel3component
-{ 
-    font-size: 12 px;   
-  
+
+.mobilel3component { 
+    font-size: 12 px;
     text-align: center !important;
 }

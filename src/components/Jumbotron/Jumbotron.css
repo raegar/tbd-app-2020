@@ -1,17 +1,18 @@
-.jumbo
-{    
+.jumbo {    
     padding-top: 4% !important;
     padding-bottom: 4% !important;
     background-color: #F08575;
     width: 100%;
     height: 25%;
 }
-.jumbo h3{
+
+.jumbo h3 {
     text-align: center;
     font-size: 18px;
     font-weight: bolder;
 }
-.jumbo p{
+
+.jumbo p {
     text-align: center;
     font-size: 16px;
 }
@@ -24,14 +25,15 @@
         width: 100%;
         height: 10%;
     }
-    .jumbo h3{
+    
+    .jumbo h3 {
         text-align: center;
         font-size: 12px;
         font-weight: bolder;
     }
-    .jumbo p{
+
+    .jumbo p {
         text-align: center;
         font-size: 10px;
     }
-
-  }
+}
