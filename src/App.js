@@ -4,6 +4,9 @@ import Headers from './components/Header/Headers';
 import Footer from './components/Footer/Footer';
 import SelectRole from './components/SelectRole/SelectRole';
 import Login from './components/Login/Login';
+
+import AdminLogin from './adminPages/adminLogIn/adminLogIn';
+
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import StartClearingApplicationPage from './StartClearingApplicationPage';
 import LevelTwoQualifications from './components/LevelTwoQualifications/LevelTwoQualifications';
@@ -29,6 +32,7 @@ function App() {
 					<Switch>
 						<Route path='/' exact component={SelectRole} />
 						<Route path='/login' component={Login}/>
+						<Route path='/AdminLogin' component={AdminLogin}/>
 						<Route path='/NewApplicationPage' component={StartClearingApplicationPage}/>
 						<Route path='/MoreInfo' component={AddressAndPriorsForm} />
 						<Route path='/LevelTwoQualifications' component={LevelTwoQualifications}/>
