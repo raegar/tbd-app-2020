@@ -1,6 +1,6 @@
 import React from 'react';
 import {Container} from 'react-bootstrap';
-import './dminLogIn.css';
+import './adminLogIn.css';
 
 function AdminLogIn(){
     return(

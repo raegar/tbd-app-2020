@@ -26,6 +26,12 @@ function SelectRole() {
 						href="/login" 
 						data-testid="staff-portal" 
 					/>
+					<UCPButton 
+						to="/AdminLogIn" 
+						buttonText="Admin" 
+						className={buttonClassName} 
+						href="/AdminLogIn" 
+					/>
 				</Col>
 			</Row>
 		</Container>
