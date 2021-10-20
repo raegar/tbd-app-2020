@@ -4,9 +4,6 @@ import Headers from './components/Header/Headers';
 import Footer from './components/Footer/Footer';
 import SelectRole from './components/SelectRole/SelectRole';
 import Login from './components/Login/Login';
-
-import AdminLogin from './adminPages/adminLogIn/adminLogIn';
-
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import StartClearingApplicationPage from './StartClearingApplicationPage';
 import LevelTwoQualifications from './components/LevelTwoQualifications/LevelTwoQualifications';
@@ -20,6 +17,11 @@ import ClearingOfferMadeBeforeCompleting from './components/ClearingOfferMade/Cl
 import ClearingOfferMadeStudentEnd from './components/ClearingOfferMade/ClearingOfferMadeStudentEnd';
 import AddressAndPriorsForm from './components/AddressAndPriorsForm/AddressAndPriorsForm';
 
+import AdminLogin from './adminPages/adminLogIn/adminLogIn';
+import AdminDashboard from './adminPages/adminDashboard/adminDashboard';
+import AdminData from './adminPages/adminData/adminData';
+import AdminGraph from './adminPages/adminGraphs/adminGraph';
+
 const BaseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
 
 function App() {
@@ -32,7 +34,6 @@ function App() {
 					<Switch>
 						<Route path='/' exact component={SelectRole} />
 						<Route path='/login' component={Login}/>
-						<Route path='/AdminLogin' component={AdminLogin}/>
 						<Route path='/NewApplicationPage' component={StartClearingApplicationPage}/>
 						<Route path='/MoreInfo' component={AddressAndPriorsForm} />
 						<Route path='/LevelTwoQualifications' component={LevelTwoQualifications}/>
@@ -44,6 +45,11 @@ function App() {
 						<Route path='/ClearingOfferMadeFourthPage' component={ClearingOfferMadeInterviewRPA}/>
 						<Route path='/ClearingOfferMadeFifthPage' component={ClearingOfferMadeBeforeCompleting}/>
 						<Route path='/ClearingOfferMadeStudentEnd' component={ClearingOfferMadeStudentEnd}/>
+
+						<Route path='/AdminLogin' component={AdminLogin}/>
+						<Route path='/AdminDashboard' component={AdminDashboard}/>
+						<Route path='/AdminData' component={AdminData}/>
+						<Route path='/AdminGraph' component={AdminGraph}/>
 					</Switch>
 				</div>
 				<Footer/>
