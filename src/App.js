@@ -30,7 +30,7 @@ function App() {
 		<Router basename={BaseUrl}>
 			<div className="App">
 				<div className="main-app">
-					<Headers/>
+					{/*<Headers/>*/}
 					<Switch>
 						<Route path='/' exact component={SelectRole} />
 						<Route path='/login' component={Login}/>
@@ -45,14 +45,14 @@ function App() {
 						<Route path='/ClearingOfferMadeFourthPage' component={ClearingOfferMadeInterviewRPA}/>
 						<Route path='/ClearingOfferMadeFifthPage' component={ClearingOfferMadeBeforeCompleting}/>
 						<Route path='/ClearingOfferMadeStudentEnd' component={ClearingOfferMadeStudentEnd}/>
-
+						
 						<Route path='/AdminLogin' component={AdminLogin}/>
 						<Route path='/AdminDashboard' component={AdminDashboard}/>
 						<Route path='/AdminData' component={AdminData}/>
 						<Route path='/AdminGraph' component={AdminGraph}/>
 					</Switch>
+					{/*<Footer/>*/}
 				</div>
-				<Footer/>
 			</div>
 		</Router>
 	);
