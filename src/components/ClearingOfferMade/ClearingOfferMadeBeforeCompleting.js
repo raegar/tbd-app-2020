@@ -33,9 +33,9 @@ function ClearingOfferMadeBeforeCompleting() {
 			<h1>Before completing the offer....</h1>
 			<p>Please state the following</p>
 			<h3>40. Please confirm email offer will be send to</h3>
-			<TextBox id="emailConfirm" placeholder={global.ApplicationFormData.email} value={email}/>
+			<TextBox id="emailConfirm" placeholder={global.ApplicationFormData.email} value={email.current}/>
 			<h3>41. Please enter course applied for</h3>
-			<TextBox id="courseApplied" value={course}/>
+			<TextBox id="courseApplied" value={course.current}/>
 			<Row>
 				<Col>
 					<br/>
