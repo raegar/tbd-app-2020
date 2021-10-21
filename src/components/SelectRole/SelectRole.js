@@ -4,13 +4,19 @@ import UCPButton from '../Buttons/UCPButton';
 import './SelectRole.css';
 import {isMobile} from 'react-device-detect';
 
+import Headers from '../Header/Headers';
+import Footer from '../Footer/Footer';
+
 //Must Set HREF attribute to use
 
 function SelectRole() {
 	const buttonClassName = isMobile ? "largebutton" : "extralargebutton";
 
 	return (
+		<div>
+		<Headers/>
 		<Container className="mt-5 px-3 py-3 select-role-container">
+			
 			<Row className="text-center">
 				<Col className="mt-3 mb-3">
 					<UCPButton 
@@ -35,6 +41,8 @@ function SelectRole() {
 				</Col>
 			</Row>
 		</Container>
+		<Footer/>
+		</div>
 	);
 }
 
