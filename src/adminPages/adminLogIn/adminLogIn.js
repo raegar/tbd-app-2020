@@ -1,14 +1,53 @@
-import React from 'react';
-import {Container} from 'react-bootstrap';
+import React, {useState} from 'react';
+import {Container, Row, Col} from 'react-bootstrap';
 import './adminLogIn.css';
-import AdminNavBar from '../../adminComponents/adimnNavBar/adminNavBar';
+import TextBox from '../../components/TextBox/TextBox';
+import UCPButton from '../../components/Buttons/UCPButton';
 
-function AdminLogIn(){
-    return(
-        <Container>LogIn
-            <AdminNavBar/>
-        </Container>
-    );
+function AdminLogIn() {
+	const [errorMessage, setErrorMessage] = useState("");
+	const [emailInput, setEmailInput] = useState("");
+	const [passwordInput, setPasswordInput] = useState("");
+
+	function loginButtonPressed(e) {
+		let validated = false;
+		setErrorMessage(emailInput);
+
+		if (!validated) {
+		    e.preventDefault();
+		}
+	}
+
+	return (
+		<Container fluid>{/*LogIn*/}
+			<Row>
+				<Col md={3}>
+					<UCPButton
+						to="/"
+						buttonText="Log In"
+						className="mediumbutton"
+						onClick={loginButtonPressed}
+					/>
+				</Col>
+				<Col md={9}>
+					<Row>
+					    <p>{errorMessage}</p>
+					</Row>
+					<Row>
+						<TextBox title="Email" placeholder="Email" onChange={(e) => setEmailInput(e.target.value)}/>
+					</Row>
+					<Row>
+						<TextBox 
+							title="Password" 
+							placeholder="Password" 
+							onChange={(e) => setPasswordInput(e.target.value)}
+							type="password"
+						/>
+					</Row>
+				</Col>
+			</Row>
+		</Container>
+	);
 }
 
 export default AdminLogIn;
