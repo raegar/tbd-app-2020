@@ -3,6 +3,7 @@ import {Container, Row, Col} from 'react-bootstrap';
 import './adminLogIn.css';
 import TextBox from '../../components/TextBox/TextBox';
 import UCPButton from '../../components/Buttons/UCPButton';
+import AdminNavBar from '../../adminComponents/adimnNavBar/adminNavBar';
 
 function AdminLogIn() {
 	const [errorMessage, setErrorMessage] = useState("");
@@ -20,6 +21,7 @@ function AdminLogIn() {
 
 	return (
 		<Container fluid>{/*LogIn*/}
+		<AdminNavBar/>
 			<Row>
 				<Col md={3}>
 					<UCPButton
@@ -31,7 +33,7 @@ function AdminLogIn() {
 				</Col>
 				<Col md={9}>
 					<Row>
-					    <p>{errorMessage}</p>
+						<p>{errorMessage}</p>
 					</Row>
 					<Row>
 						<TextBox title="Email" placeholder="Email" onChange={(e) => setEmailInput(e.target.value)}/>
