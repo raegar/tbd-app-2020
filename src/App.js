@@ -31,6 +31,7 @@ function App() {
 			<div className="App">
 				<div className="main-app">
 					{/*<Headers/>*/}
+					{/*<Footer/>*/}
 					<Switch>
 						<Route path='/' exact component={SelectRole} />
 						<Route path='/login' component={Login}/>
@@ -51,7 +52,7 @@ function App() {
 						<Route path='/AdminData' component={AdminData}/>
 						<Route path='/AdminGraph' component={AdminGraph}/>
 					</Switch>
-					{/*<Footer/>*/}
+					
 				</div>
 			</div>
 		</Router>
