@@ -1,14 +1,14 @@
 import React from 'react';
 import {Container} from 'react-bootstrap';
-import './adminDashboard.css';
-import AdminNavBar from '../../adminComponents/adimnNavBar/adminNavBar';
+import './AdminDashboard.css';
+import AdminNavBar from '../../adminComponents/AdimnNavBar/AdminNavBar';
 
 function AdminDashboard(){
-    return(
-        <Container>Dashboard
-            <AdminNavBar/>
-        </Container>
-    );
+	return(
+		<Container>Dashboard
+			<AdminNavBar/>
+		</Container>
+	);
 }
 
 export default AdminDashboard;

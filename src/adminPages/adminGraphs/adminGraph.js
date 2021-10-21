@@ -1,14 +1,14 @@
 import React from 'react';
 import {Container} from 'react-bootstrap';
-import './adminGraph.css';
-import AdminNavBar from '../../adminComponents/adimnNavBar/adminNavBar';
+import './AdminGraph.css';
+import AdminNavBar from '../../adminComponents/AdimnNavBar/AdminNavBar';
 
 function AdminGraph(){
-    return(
-        <Container>Graph
-            <AdminNavBar/>
-        </Container>
-    );
+	return(
+		<Container>Graph
+			<AdminNavBar/>
+		</Container>
+	);
 }
 
 export default AdminGraph;

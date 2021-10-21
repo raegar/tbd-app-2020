@@ -1,27 +1,27 @@
 import React, {useState} from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
-import './adminLogIn.css';
+import './AdminLogIn.css';
 import TextBox from '../../components/TextBox/TextBox';
 import UCPButton from '../../components/Buttons/UCPButton';
-import AdminNavBar from '../../adminComponents/adimnNavBar/adminNavBar';
+import AdminNavBar from '../../adminComponents/AdimnNavBar/AdminNavBar';
 
 function AdminLogIn() {
 	const [errorMessage, setErrorMessage] = useState("");
 	const [emailInput, setEmailInput] = useState("");
-	const [passwordInput, setPasswordInput] = useState("");
+	const [setPasswordInput] = useState("");
 
 	function loginButtonPressed(e) {
 		let validated = false;
 		setErrorMessage(emailInput);
 
 		if (!validated) {
-		    e.preventDefault();
+			e.preventDefault();
 		}
 	}
 
 	return (
 		<Container fluid>{/*LogIn*/}
-		<AdminNavBar/>
+			<AdminNavBar/>
 			<Row>
 				<Col md={3}>
 					<UCPButton

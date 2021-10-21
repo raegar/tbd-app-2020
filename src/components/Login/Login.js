@@ -161,7 +161,12 @@ function LoginForm() {
 						</Col>
 					</Row>
 					<div className="UserInfo">
-						<UCPButton onClick={handleSubmit} to="none" className="smallbutton" buttonText="Submit"/>                   
+						<UCPButton 
+							onClick={handleSubmit} 
+							to="none" 
+							className="smallbutton" 
+							buttonText="Submit"
+						/>                   
 					</div>
 				</form>
 			</Container>
