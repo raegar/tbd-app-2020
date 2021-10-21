@@ -77,7 +77,7 @@ L3TextBox.propTypes = {
 L3TextBox.defaultProps = {
 	backgroundColor: null,
 	size: 20,
-	maxLength: 30,
+	maxLength: 50,
 	minLength: 0,
 	placeholder: '',
 	type: "text",
