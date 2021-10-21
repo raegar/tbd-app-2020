@@ -5,6 +5,8 @@ import { Container, Col, Row } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 import {Redirect} from "react-router-dom";
 
+import Headers from '../Header/Headers';
+import Footer from '../Footer/Footer';
 
 /*
 //var NAME = false;
@@ -211,57 +213,61 @@ function ClearingOfferMadeYesNoSelect() {
 	}
 
 	return ( 
-		<Container>
-			<h1>Offer</h1>
-			<h4>* Required</h4>
-			<h3>37. Offer made? (YES/NO)</h3>
-			<p><i>Only UNCONDITIONAL Offers can be made (unless interview is needed)</i></p>
-			<RadioButton
-				heading="Yes"
-				options={offerOptions}
-				name="offer"
-				oc={handleWhenClick}
-			/>
+		<div>
+			<Headers/>
+			<Container>
+				<h1>Offer</h1>
+				<h4>* Required</h4>
+				<h3>37. Offer made? (YES/NO)</h3>
+				<p><i>Only UNCONDITIONAL Offers can be made (unless interview is needed)</i></p>
+				<RadioButton
+					heading="Yes"
+					options={offerOptions}
+					name="offer"
+					oc={handleWhenClick}
+				/>
 
-			{
-				(state.whenNo)
-					? <Redirect to={{ pathname: "/ClearingOfferMadeThirdPage" }} />
-					: <span></span>
-			}
+				{
+					(state.whenNo)
+						? <Redirect to={{ pathname: "/ClearingOfferMadeThirdPage" }} />
+						: <span></span>
+				}
 
-			{
-				(state.whenRPA)
-					? <Redirect to={{ pathname: "/ClearingOfferMadeFourthPage" }} />
-					: <span></span>
-			}
+				{
+					(state.whenRPA)
+						? <Redirect to={{ pathname: "/ClearingOfferMadeFourthPage" }} />
+						: <span></span>
+				}
 
-			{
-				(state.whenInterview)
-					? <Redirect to={{ pathname: "/ClearingOfferMadeFourthPage" }} />
-					: <span></span>
-			}
-			<Row>
-				<Col>
-					<UCPButton 
-						to='/ClearingOfferMade'
-						primary="True"
-						className="mediumbutton"
-						buttonText="Go Back"
-						href="/ClearingOfferMade"
-					/>
-				</Col>
-				<Col>
-					<div id="confirmButton" onClick={saveSelectedData}>
+				{
+					(state.whenInterview)
+						? <Redirect to={{ pathname: "/ClearingOfferMadeFourthPage" }} />
+						: <span></span>
+				}
+				<Row>
+					<Col>
 						<UCPButton 
-							to='/ClearingOfferMadeFifthPage'
+							to='/ClearingOfferMade'
 							primary="True"
 							className="mediumbutton"
-							buttonText="Confirm and Continue"
+							buttonText="Go Back"
+							href="/ClearingOfferMade"
 						/>
-					</div>
-				</Col>
-			</Row>
-		</Container>
+					</Col>
+					<Col>
+						<div id="confirmButton" onClick={saveSelectedData}>
+							<UCPButton 
+								to='/ClearingOfferMadeFifthPage'
+								primary="True"
+								className="mediumbutton"
+								buttonText="Confirm and Continue"
+							/>
+						</div>
+					</Col>
+				</Row>
+			</Container>
+			<Footer/>
+		</div>
 	);
 }
 

@@ -5,6 +5,9 @@ import RadioButton from '../RadioButton/RadioButton';
 import TextBox from '../TextBox/TextBox';
 import UCPButton from '../Buttons/UCPButton';
 
+import Headers from '../Header/Headers';
+import Footer from '../Footer/Footer';
+
 function DegreeQualifications() {
 	const [levelFour, setLevelFour] = useState(false);
 	const [nameGrade, setNameGrade] = useState("");
@@ -68,7 +71,8 @@ function DegreeQualifications() {
 	}
 
 	return (
-		<>
+		<div>
+			<Headers/>
 			<Container className="degree-form d-flex justify-content-center">
 				<link 
 					href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" 
@@ -138,7 +142,8 @@ function DegreeQualifications() {
 					</Col>
 				</Row>
 			</Container>
-		</>
+			<Footer/>
+		</div>
 	);
 }
 

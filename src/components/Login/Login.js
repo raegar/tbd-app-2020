@@ -6,6 +6,9 @@ import './Login.css';
 import {isMobile} from 'react-device-detect';
 import {Redirect} from 'react-router';
 
+import Headers from '../Header/Headers';
+import Footer from '../Footer/Footer';
+
 const InitialState = {
 	username: "",
 	password: "",
@@ -114,52 +117,56 @@ function LoginForm() {
 	}
 
 	return(
-		<Container className={className}>
-			<form>
-				<Row>
-					<Col>
-						<div className="UserInfo">
-							<h2>Login</h2>
-						</div>
-					</Col>
-				</Row>
-				<Row>
-					<Col>
-						<div className="UserInfo">
-							<TextBox
-								type="text" 
-								title="Username" 
-								value={state.username} 
-								onChange={handleChangeUsername}
-								placeholder="Enter Your Username"
-							/> 
-						</div>
-						<div className="InvalidInput">
-							<span>{state.usernameError}</span>
-						</div>
-					</Col>
-				</Row>
-				<Row>
-					<Col>
-						<div className="UserInfo">
-							<TextBox 
-								title="Password" 
-								type="password" 
-								value={state.password} 
-								onChange={handleChangePassword} 
-								placeholder="Enter Your Password"
-							/> 
-						</div>
-						<div className="InvalidInput">
-							<span>{state.passwordError}</span>
-						</div>
-					</Col>
-				</Row>
-				<div className="UserInfo">
-					<UCPButton onClick={handleSubmit} to="none" className="smallbutton" buttonText="Submit"/>                   
-				</div>
-			</form>
-		</Container>
+		<div>
+			<Headers/>
+			<Container className={className}>
+				<form>
+					<Row>
+						<Col>
+							<div className="UserInfo">
+								<h2>Login</h2>
+							</div>
+						</Col>
+					</Row>
+					<Row>
+						<Col>
+							<div className="UserInfo">
+								<TextBox
+									type="text" 
+									title="Username" 
+									value={state.username} 
+									onChange={handleChangeUsername}
+									placeholder="Enter Your Username"
+								/> 
+							</div>
+							<div className="InvalidInput">
+								<span>{state.usernameError}</span>
+							</div>
+						</Col>
+					</Row>
+					<Row>
+						<Col>
+							<div className="UserInfo">
+								<TextBox 
+									title="Password" 
+									type="password" 
+									value={state.password} 
+									onChange={handleChangePassword} 
+									placeholder="Enter Your Password"
+								/> 
+							</div>
+							<div className="InvalidInput">
+								<span>{state.passwordError}</span>
+							</div>
+						</Col>
+					</Row>
+					<div className="UserInfo">
+						<UCPButton onClick={handleSubmit} to="none" className="smallbutton" buttonText="Submit"/>                   
+					</div>
+				</form>
+			</Container>
+			<Footer/>
+		</div>
 	);
 }
 

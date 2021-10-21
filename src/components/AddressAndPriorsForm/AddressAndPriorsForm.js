@@ -5,6 +5,9 @@ import { Container, Row, Col } from "react-bootstrap";
 import './AddressAndPriorsForm.css';
 import UCPButton from '../Buttons/UCPButton';
 
+import Headers from '../Header/Headers';
+import Footer from '../Footer/Footer';
+
 function AddressAndPriorsForm() {
 	const [showPrior, setShowPrior] = useState(false);
 	const [whenStudy, setWhenStudy] = useState(false);
@@ -117,6 +120,7 @@ function AddressAndPriorsForm() {
 
 	return (
 		<div>
+			<Headers/>
 			<Container className="form-container d-flex justify-content-center">
 				<Row className="form-background">
 					<Col>
@@ -265,6 +269,7 @@ function AddressAndPriorsForm() {
 					</Col>
 				</Row>
 			</Container>
+			<Footer/>
 		</div>
 	);
 }

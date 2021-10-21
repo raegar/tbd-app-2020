@@ -4,6 +4,9 @@ import "./ClearingOfferMade.css";
 import { Container, Col, Row } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 
+import Headers from '../Header/Headers';
+import Footer from '../Footer/Footer';
+
 function ClearingOfferMadeBeforeCompleting() {
 	const email = useRef(global.ApplicationFormData.email);
 	const course = useRef(global.ApplicationFormData.course);
@@ -29,38 +32,42 @@ function ClearingOfferMadeBeforeCompleting() {
 	}
 
 	return ( 
-		<Container>
-			<h1>Before completing the offer....</h1>
-			<p>Please state the following</p>
-			<h3>40. Please confirm email offer will be send to</h3>
-			<TextBox id="emailConfirm" placeholder={global.ApplicationFormData.email} value={email}/>
-			<h3>41. Please enter course applied for</h3>
-			<TextBox id="courseApplied" value={course}/>
-			<Row>
-				<Col>
-					<br/>
-					<UCPButton 
-						to='/ClearingOfferMadeSecondPage'
-						primary="True"
-						className="mediumbutton"
-						buttonText="Go Back"
-						href="/ClearingOfferMadeSecondPage"
-					/>
-				</Col>
-				<Col>
-					<br/>
-					<div onClick={downloadFile}>
+		<div>
+			<Headers/>
+			<Container>
+				<h1>Before completing the offer....</h1>
+				<p>Please state the following</p>
+				<h3>40. Please confirm email offer will be send to</h3>
+				<TextBox id="emailConfirm" placeholder={global.ApplicationFormData.email} value={email}/>
+				<h3>41. Please enter course applied for</h3>
+				<TextBox id="courseApplied" value={course}/>
+				<Row>
+					<Col>
+						<br/>
 						<UCPButton 
-							to='/'
+							to='/ClearingOfferMadeSecondPage'
 							primary="True"
 							className="mediumbutton"
-							buttonText="Confirm and Continue"
-							href="/"
+							buttonText="Go Back"
+							href="/ClearingOfferMadeSecondPage"
 						/>
-					</div>
-				</Col>
-			</Row>
-		</Container>
+					</Col>
+					<Col>
+						<br/>
+						<div onClick={downloadFile}>
+							<UCPButton 
+								to='/'
+								primary="True"
+								className="mediumbutton"
+								buttonText="Confirm and Continue"
+								href="/"
+							/>
+						</div>
+					</Col>
+				</Row>
+			</Container>
+		<Footer/>
+		</div>
 	);
 }
 
