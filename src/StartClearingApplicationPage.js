@@ -4,8 +4,8 @@ import EssentialApplicantInfo from './components/EssentialApplicantInfo/Essentia
 import Disclaimer from './components/Disclaimer/Disclaimer';
 import {Container} from 'react-bootstrap';
 
-import Headers from '../Header/Headers';
-import Footer from '../Footer/Footer';
+import Headers from './components/Header/Headers';
+import Footer from './components/Footer/Footer';
 
 function StartClearingApplicationPage() {
 	//used to control whether or not the user can interact with any buttons
