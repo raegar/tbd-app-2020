@@ -1,7 +1,7 @@
 import React from 'react';
 import {Container} from 'react-bootstrap';
 import './AdminDashboard.css';
-import AdminNavBar from '../../adminComponents/AdminNavBar/AdminNavBar';
+import AdminNavBar from '../../componentsAdmin/AdminNavBar/AdminNavBar';
 
 function AdminDashboard(){
 	return(

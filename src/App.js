@@ -15,10 +15,10 @@ import ClearingOfferMadeBeforeCompleting from './components/ClearingOfferMade/Cl
 import ClearingOfferMadeStudentEnd from './components/ClearingOfferMade/ClearingOfferMadeStudentEnd';
 import AddressAndPriorsForm from './components/AddressAndPriorsForm/AddressAndPriorsForm';
 
-import AdminLogin from './adminPages/AdminLogIn/AdminLogIn';
-import AdminDashboard from './adminPages/AdminDashboard/AdminDashboard';
-import AdminData from './adminPages/AdminData/AdminData';
-import AdminGraph from './adminPages/AdminGraphs/AdminGraph';
+import AdminLogin from './pagesAdmin/AdminLogIn/AdminLogIn';
+import AdminDashboard from './pagesAdmin/AdminDashboard/AdminDashboard';
+import AdminData from './pagesAdmin/AdminData/AdminData';
+import AdminGraph from './pagesAdmin/AdminGraphs/AdminGraph';
 
 const BaseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
 

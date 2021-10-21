@@ -3,7 +3,7 @@ import {Container, Row, Col} from 'react-bootstrap';
 import './AdminLogIn.css';
 import TextBox from '../../components/TextBox/TextBox';
 import UCPButton from '../../components/Buttons/UCPButton';
-import AdminNavBar from '../../adminComponents/AdminNavBar/AdminNavBar';
+import AdminNavBar from '../../componentsAdmin/AdminNavBar/AdminNavBar';
 
 function AdminLogIn() {
 	const [errorMessage, setErrorMessage] = useState("");
