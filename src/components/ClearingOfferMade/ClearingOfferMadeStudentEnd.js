@@ -31,7 +31,7 @@ function ClearingOfferMadeStudentEnd() {
 			<h1>Thank you for using the form</h1>
 			<p>Please press confirm to complete</p>
 			<h3>Please confirm email that your application will be sent to</h3>
-			<TextBox id="emailConfirm" placeholder={global.ApplicationFormData.email} value={email}/>
+			<TextBox id="emailConfirm" placeholder={global.ApplicationFormData.email} value={email.current}/>
 
 			<Row>
 				<Col>
