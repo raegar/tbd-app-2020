@@ -7,6 +7,9 @@ import {Row, Col, Container} from "react-bootstrap";
 import {Redirect} from "react-router-dom";
 import UCPButton from '../Buttons/UCPButton';
 
+import Headers from '../Header/Headers';
+import Footer from '../Footer/Footer';
+
 const l3QualificationsOptions = [
 	{ label: "Yes", id: "qualificationYes", value: "yes" },
 ];
@@ -71,48 +74,52 @@ function LevelThreeQualifications() {
 	}
 
   	return (
-  		<Container>
-  			<div className={className2}>
-  				<div className="form-background">
-          
-  					{counter < 6 ?
-  						<div className={className1}>
-  							<h3 className="form-title">Level 3 Qualifications</h3>
-  							<L3Component id={counter} clearInput={emptyInput} onChange={onL3CompChange}/>
-  							<br/>
-  							<h5>Other L3 Qualifications</h5>
-  							<RadioButton1
-  								options={l3QualificationsOptions}
-  								name="l3qualifications"
-  								value={value}
-  								onChange={handleChange}
-  							/>
-  						</div>
-  						: <Redirect to={{pathname: "/DegreeQualifications"}}/>
-					}
-  				</div>
-  				<Row id="buttonRow">
-  					<Col className="centered-buttons">
-  						<UCPButton 
-						  	to='/LevelTwoQualifications'
-  							primary="True"
-  							className="mediumbutton"
-  							buttonText="Go Back"
-  						/>
-  					</Col>
-  					<Col className="centered-buttons">
-  						<div id="confirmButton" onClick={saveSelectedData}>
-  							<UCPButton
-  								to="/DegreeQualifications"
+		  <div>
+			<Headers/>
+  			<Container>
+  				<div className={className2}>
+  					<div className="form-background">
+		
+  						{counter < 6 ?
+  							<div className={className1}>
+  								<h3 className="form-title">Level 3 Qualifications</h3>
+  								<L3Component id={counter} clearInput={emptyInput} onChange={onL3CompChange}/>
+  								<br/>
+  								<h5>Other L3 Qualifications</h5>
+  								<RadioButton1
+  									options={l3QualificationsOptions}
+  									name="l3qualifications"
+  									value={value}
+  									onChange={handleChange}
+  								/>
+  							</div>
+  							: <Redirect to={{pathname: "/DegreeQualifications"}}/>
+						}
+  					</div>
+  					<Row id="buttonRow">
+  						<Col className="centered-buttons">
+  							<UCPButton 
+							  	to='/LevelTwoQualifications'
   								primary="True"
   								className="mediumbutton"
-  								buttonText="Confirm and Go"
+  								buttonText="Go Back"
   							/>
-  						</div>
-  					</Col>
-  				</Row>
-  			</div>
-  		</Container>
+  						</Col>
+  						<Col className="centered-buttons">
+  							<div id="confirmButton" onClick={saveSelectedData}>
+  								<UCPButton
+  									to="/DegreeQualifications"
+  									primary="True"
+  									className="mediumbutton"
+  									buttonText="Confirm and Go"
+  								/>
+  							</div>
+  						</Col>
+  					</Row>
+  				</div>
+  			</Container>
+			<Footer/>
+		</div>
   	);
 }
 

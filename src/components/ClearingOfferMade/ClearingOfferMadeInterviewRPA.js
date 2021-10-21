@@ -4,37 +4,44 @@ import "./ClearingOfferMade.css";
 import { Container, Col , Row} from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 
+import Headers from '../Header/Headers';
+import Footer from '../Footer/Footer';
+
 function ClearingOfferMadeInterviewRPA() {
 	return (
-		<Container>
-			<p>Required</p>
-			<h1>Interview or RPA required</h1>
-			<p>Enter any details for decision made</p>
-			<h3>39. Please state reasons:</h3>
-			<TextBox/>
-			<Row>
-				<Col>
-					<br/>
-					<UCPButton 
-						to='/ClearingOfferMadeSecondPage'
-						primary="True"
-						className="mediumbutton"
-						buttonText="Go Back"
-						href="/ClearingOfferMadeSecondPage"
-					/>
-				</Col>
-				<Col>
-					<br/>
-					<UCPButton 
-						to='/ClearingOfferMadeFifthPage'
-						primary="True"
-						className="mediumbutton"
-						buttonText="Confirm and Continue"
-						href="/ClearingOfferMadeFifthPage"
-					/>
-				</Col>
-			</Row>
-		</Container>
+		<div>
+			<Headers/>
+			<Container>
+				<p>Required</p>
+				<h1>Interview or RPA required</h1>
+				<p>Enter any details for decision made</p>
+				<h3>39. Please state reasons:</h3>
+				<TextBox/>
+				<Row>
+					<Col>
+						<br/>
+						<UCPButton 
+							to='/ClearingOfferMadeSecondPage'
+							primary="True"
+							className="mediumbutton"
+							buttonText="Go Back"
+							href="/ClearingOfferMadeSecondPage"
+						/>
+					</Col>
+					<Col>
+						<br/>
+						<UCPButton 
+							to='/ClearingOfferMadeFifthPage'
+							primary="True"
+							className="mediumbutton"
+							buttonText="Confirm and Continue"
+							href="/ClearingOfferMadeFifthPage"
+						/>
+					</Col>
+				</Row>
+			</Container>
+			<Footer/>
+		</div>
 	);
 }
 
