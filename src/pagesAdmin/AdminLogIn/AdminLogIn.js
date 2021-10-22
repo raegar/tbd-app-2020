@@ -8,10 +8,11 @@ import AdminNavBar from '../../componentsAdmin/AdminNavBar/AdminNavBar';
 function AdminLogIn() {
 	const [errorMessage, setErrorMessage] = useState("");
 	const [emailInput, setEmailInput] = useState("");
-	const [setPasswordInput] = useState("");
+	const [passwordInput, setPasswordInput] = useState(null);
 
 	function loginButtonPressed(e) {
-		let validated = false;
+		//for now we just check to see if there is a password
+		let validated = !!passwordInput;
 		setErrorMessage(emailInput);
 
 		if (!validated) {
