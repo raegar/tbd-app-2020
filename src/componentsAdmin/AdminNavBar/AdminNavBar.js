@@ -8,7 +8,7 @@ function AdminLogIn(){
 	const buttonClassName = isMobile ? "largebutton" : "extralargebutton";
 
 	return(
-		<Container>
+		<div className="navbar-container">
 			<UCPButton 
 				to="/AdminLogIn" 
 				buttonText="Admin" 
@@ -33,7 +33,7 @@ function AdminLogIn(){
 				className={buttonClassName} 
 				href="/AdminGraph" 
 			/>
-		</Container>
+		</div>
 	);
 }
 
