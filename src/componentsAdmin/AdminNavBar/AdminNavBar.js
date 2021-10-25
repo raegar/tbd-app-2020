@@ -5,33 +5,95 @@ import UCPButton from '../../components/Buttons/UCPButton';
 import {isMobile} from 'react-device-detect';
 
 function AdminLogIn(){
-	const buttonClassName = isMobile ? "largebutton" : "extralargebutton";
+	const buttonClassName = isMobile ? "largebutton" : "admin-navbar-button";
 
 	return(
 		<div className="navbar-container">
-			<UCPButton 
-				to="/AdminLogIn" 
-				buttonText="Admin" 
-				className={buttonClassName} 
-				href="/AdminLogIn" 
-			/>
-			<UCPButton 
+			<UCPButton
 				to="/AdminDashboard" 
-				buttonText="AdminDashboard" 
+				buttonText="Dashboard" 
 				className={buttonClassName} 
 				href="/AdminDashboard" 
 			/>
-			<UCPButton 
+			<UCPButton
 				to="/AdminData" 
-				buttonText="AdminData" 
+				buttonText="Data" 
 				className={buttonClassName} 
 				href="/AdminData" 
 			/>
-			<UCPButton 
+
+			<UCPButton
 				to="/AdminGraph" 
-				buttonText="AdminGraph" 
+				buttonText="Gender" 
 				className={buttonClassName} 
 				href="/AdminGraph" 
+			/>
+			<UCPButton
+				to="/AdminGraph" 
+				buttonText="Age" 
+				className={buttonClassName} 
+				href="/AdminGraph" 
+			/>
+			<UCPButton
+				to="/AdminGraph" 
+				buttonText="Course" 
+				className={buttonClassName} 
+				href="/AdminGraph" 
+			/>
+			<UCPButton
+				to="/AdminGraph" 
+				buttonText="Ethnicity" 
+				className={buttonClassName} 
+				href="/AdminGraph" 
+			/>
+			<UCPButton
+				to="/AdminGraph" 
+				buttonText="Location" 
+				className={buttonClassName} 
+				href="/AdminGraph" 
+			/>
+			<UCPButton
+				to="/AdminGraph" 
+				buttonText="Income" 
+				className={buttonClassName} 
+				href="/AdminGraph" 
+			/>
+			<UCPButton
+				to="/AdminGraph" 
+				buttonText="Disabilities" 
+				className={buttonClassName} 
+				href="/AdminGraph" 
+			/>
+			<UCPButton
+				to="/AdminGraph" 
+				buttonText="Support" 
+				className={buttonClassName} 
+				href="/AdminGraph" 
+			/>
+			<UCPButton
+				to="/AdminGraph" 
+				buttonText="Education" 
+				className={buttonClassName} 
+				href="/AdminGraph" 
+			/>
+			<UCPButton
+				to="/AdminGraph" 
+				buttonText="Employment" 
+				className={buttonClassName} 
+				href="/AdminGraph" 
+			/>
+			<UCPButton
+				to="/AdminGraph" 
+				buttonText="Payment" 
+				className={buttonClassName} 
+				href="/AdminGraph" 
+			/>
+
+			<UCPButton 
+				to="/AdminLogIn" 
+				buttonText="LogOff" 
+				className={buttonClassName} 
+				href="/AdminLogIn" 
 			/>
 		</div>
 	);
