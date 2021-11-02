@@ -23,7 +23,7 @@ function AdminLogIn() {
 	return (
 		<div className="admin-login-container">{/*LogIn*/}
 				<Col md={2.5} className="first-col">
-					<AdminNavBar/>
+					<AdminNavBar theActive="LogIn"/>
 					{/*<UCPButton
 						to="/"
 						buttonText="Log In"

@@ -68,8 +68,14 @@
   color: #D5D5D5;
 }
 
-.admin-navbar-button:active{
-  color: #D5D5D5;
+.admin-navbar-button-active{
+  background-color: #fff;
+  color: #797979;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  border-radius: 0;
+  border: 0;
+  outline: none !important;
 }
 
   .smallbutton:hover{
