@@ -4,7 +4,7 @@ import UCPButton from '../../components/Buttons/UCPButton';
 import {isMobile} from 'react-device-detect';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faBirthdayCake, faBook, faBriefcase, faCoffee, faColumns, faDatabase, faDonate, faGraduationCap, faKey, faMapMarked, faMapMarkedAlt, faMoneyBillWave, faPoll, faPoundSign, faTable, faUserPlus, faVenusMars, faWheelchair } from '@fortawesome/free-solid-svg-icons';
 
 function AdminLogIn(props){
 	const theActive = props.theActive;
@@ -24,20 +24,20 @@ function AdminLogIn(props){
 	const paymentClassName = theActive=="Payment" ? "admin-navbar-button-active" : "admin-navbar-button";
 	const logInClassName = theActive=="LogIn" ? "admin-navbar-button-active" : "admin-navbar-button";
 
-	const dashboardIcon = isMobile ? <FontAwesomeIcon icon={faCoffee}/> : "Dashboard";
-	const dataIcon = isMobile ? <FontAwesomeIcon icon={faCoffee}/> : "Data";
-	const genderIcon = isMobile ? <FontAwesomeIcon icon={faCoffee}/> : "Gender";
-	const ageIcon = isMobile ? <FontAwesomeIcon icon={faCoffee}/> : "Age";
-	const courseIcon = isMobile ? <FontAwesomeIcon icon={faCoffee}/> : "Course";
-	const ethnicityIcon = isMobile ? <FontAwesomeIcon icon={faCoffee}/> : "Ethnicity";
-	const locationIcon = isMobile ? <FontAwesomeIcon icon={faCoffee}/> : "Location";
-	const incomeIcon = isMobile ? <FontAwesomeIcon icon={faCoffee}/> : "Income";
-	const disabilitiesIcon = isMobile ? <FontAwesomeIcon icon={faCoffee}/> : "Disabilities";
-	const supportIcon = isMobile ? <FontAwesomeIcon icon={faCoffee}/> : "Support";
-	const educationIcon = isMobile ? <FontAwesomeIcon icon={faCoffee}/> : "Education";
-	const employmentIcon = isMobile ? <FontAwesomeIcon icon={faCoffee}/> : "Employment";
-	const paymentIcon = isMobile ? <FontAwesomeIcon icon={faCoffee}/> : "Payment";
-	const logInIcon = isMobile ? <FontAwesomeIcon icon={faCoffee}/> : "LogIn";
+	const dashboardIcon = isMobile ? <FontAwesomeIcon icon={faTable}/> : "Dashboard";
+	const dataIcon = isMobile ? <FontAwesomeIcon icon={faDatabase}/> : "Data";
+	const genderIcon = isMobile ? <FontAwesomeIcon icon={faVenusMars}/> : "Gender";
+	const ageIcon = isMobile ? <FontAwesomeIcon icon={faBirthdayCake}/> : "Age";
+	const courseIcon = isMobile ? <FontAwesomeIcon icon={faGraduationCap}/> : "Course";
+	const ethnicityIcon = isMobile ? <FontAwesomeIcon icon={faPoll}/> : "Ethnicity";
+	const locationIcon = isMobile ? <FontAwesomeIcon icon={faMapMarkedAlt}/> : "Location";
+	const incomeIcon = isMobile ? <FontAwesomeIcon icon={faDonate}/> : "Income";
+	const disabilitiesIcon = isMobile ? <FontAwesomeIcon icon={faWheelchair}/> : "Disabilities";
+	const supportIcon = isMobile ? <FontAwesomeIcon icon={faUserPlus}/> : "Support";
+	const educationIcon = isMobile ? <FontAwesomeIcon icon={faBook}/> : "Education";
+	const employmentIcon = isMobile ? <FontAwesomeIcon icon={faBriefcase}/> : "Employment";
+	const paymentIcon = isMobile ? <FontAwesomeIcon icon={faPoundSign}/> : "Payment";
+	const logInIcon = isMobile ? <FontAwesomeIcon icon={faKey}/> : "LogIn";
 
 	return(
 		<div className="navbar-container">
