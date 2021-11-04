@@ -69,13 +69,13 @@
 
   }
 
-  .mediumbuttom:hover{
+  .mediumbutton:hover{
     background-color: white;
     color: black;
-    width: 400px;
-    height: 200px;
+    width: 125px;
+    height: 75px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 22px;    border-radius: 25px;
+    font-size: 16px;    border-radius: 25px;
     border: 2px solid #005C6E;
     outline: none !important;
 

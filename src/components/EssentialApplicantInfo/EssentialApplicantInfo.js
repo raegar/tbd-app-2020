@@ -127,6 +127,7 @@ function EssentialApplicantInfo({disabled, ...props}) {
 								primary="True"
 								className="mediumbutton"
 								buttonText="Confirm and Go"
+								disabled={disabled}
 							/>
 						</div>
 					</Col>
@@ -167,6 +168,7 @@ function EssentialApplicantInfo({disabled, ...props}) {
 								primary="True"
 								className="mediumbutton"
 								buttonText="Apply Now"
+								disabled={disabled}
 							/>
 						</div>
 					</Col>
@@ -265,7 +267,7 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						attribute={disabledInputs}
   					/>
   					<h4>Preferred Course</h4>
-  					<DropdownMenu onSelect={(e) => setSelectedCourse(e.target.value)} id="courseSelection"/>
+  					<DropdownMenu disabled={disabled} onSelect={(e) => setSelectedCourse(e.target.value)} id="courseSelection"/>
   				</span>
   			</div>
   			<div>{userTypeSelect()}</div>
