@@ -4,25 +4,40 @@ import UCPButton from '../../components/Buttons/UCPButton';
 import {isMobile} from 'react-device-detect';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBirthdayCake, faBook, faBriefcase, faCoffee, faColumns, faDatabase, faDonate, faGraduationCap, faKey, faMapMarked, faMapMarkedAlt, faMoneyBillWave, faPoll, faPoundSign, faTable, faUserPlus, faVenusMars, faWheelchair } from '@fortawesome/free-solid-svg-icons';
+import { 
+	faBirthdayCake, 
+	faBook, 
+	faBriefcase, 
+	faDatabase, 
+	faDonate, 
+	faGraduationCap, 
+	faKey, 
+	faMapMarkedAlt, 
+	faPoll, 
+	faPoundSign, 
+	faTable, 
+	faUserPlus, 
+	faVenusMars, 
+	faWheelchair 
+} from '@fortawesome/free-solid-svg-icons';
 
 function AdminLogIn(props){
 	const theActive = props.theActive;
 
-	const dashboardClassName = theActive=="Dashboard" ? "admin-navbar-button-active" : "admin-navbar-button";
-	const dataClassName = theActive=="Data" ? "admin-navbar-button-active" : "admin-navbar-button";
-	const genderClassName = theActive=="Gender" ? "admin-navbar-button-active" : "admin-navbar-button";
-	const ageClassName = theActive=="Age" ? "admin-navbar-button-active" : "admin-navbar-button";
-	const courseClassName = theActive=="Course" ? "admin-navbar-button-active" : "admin-navbar-button";
-	const ethnicityClassName = theActive=="Ethnicity" ? "admin-navbar-button-active" : "admin-navbar-button";
-	const locationClassName = theActive=="Location" ? "admin-navbar-button-active" : "admin-navbar-button";
-	const incomeClassName = theActive=="Income" ? "admin-navbar-button-active" : "admin-navbar-button";
-	const disabilitiesClassName = theActive=="Disabilities" ? "admin-navbar-button-active" : "admin-navbar-button";
-	const supportClassName = theActive=="Support" ? "admin-navbar-button-active" : "admin-navbar-button";
-	const educationClassName = theActive=="Education" ? "admin-navbar-button-active" : "admin-navbar-button";
-	const employmentClassName = theActive=="Employment​" ? "admin-navbar-button-active" : "admin-navbar-button";
-	const paymentClassName = theActive=="Payment" ? "admin-navbar-button-active" : "admin-navbar-button";
-	const logInClassName = theActive=="LogIn" ? "admin-navbar-button-active" : "admin-navbar-button";
+	const dashboardClassName = theActive === "Dashboard" ? "admin-navbar-button-active" : "admin-navbar-button";
+	const dataClassName = theActive === "Data" ? "admin-navbar-button-active" : "admin-navbar-button";
+	const genderClassName = theActive === "Gender" ? "admin-navbar-button-active" : "admin-navbar-button";
+	const ageClassName = theActive === "Age" ? "admin-navbar-button-active" : "admin-navbar-button";
+	const courseClassName = theActive === "Course" ? "admin-navbar-button-active" : "admin-navbar-button";
+	const ethnicityClassName = theActive === "Ethnicity" ? "admin-navbar-button-active" : "admin-navbar-button";
+	const locationClassName = theActive === "Location" ? "admin-navbar-button-active" : "admin-navbar-button";
+	const incomeClassName = theActive === "Income" ? "admin-navbar-button-active" : "admin-navbar-button";
+	const disabilitiesClassName = theActive === "Disabilities" ? "admin-navbar-button-active" : "admin-navbar-button";
+	const supportClassName = theActive === "Support" ? "admin-navbar-button-active" : "admin-navbar-button";
+	const educationClassName = theActive === "Education" ? "admin-navbar-button-active" : "admin-navbar-button";
+	const employmentClassName = theActive === "Employment​" ? "admin-navbar-button-active" : "admin-navbar-button";
+	const paymentClassName = theActive === "Payment" ? "admin-navbar-button-active" : "admin-navbar-button";
+	const logInClassName = theActive === "LogIn" ? "admin-navbar-button-active" : "admin-navbar-button";
 
 	const dashboardIcon = isMobile ? <FontAwesomeIcon icon={faTable}/> : "Dashboard";
 	const dataIcon = isMobile ? <FontAwesomeIcon icon={faDatabase}/> : "Data";
