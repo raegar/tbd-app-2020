@@ -21,35 +21,37 @@ function AdminLogIn() {
 	}
 
 	return (
-		<Container fluid>{/*LogIn*/}
-			<AdminNavBar/>
-			<Row>
-				<Col md={3}>
-					<UCPButton
+		<div className="admin-login-container">{/*LogIn*/}
+			<Col md={2.5} className="first-col">
+				<AdminNavBar theActive="LogIn"/>
+				{/*<UCPButton
 						to="/"
 						buttonText="Log In"
 						className="mediumbutton"
 						onClick={loginButtonPressed}
+					/>*/}
+			</Col>
+			<Col className="second-col">
+				<Row>
+					<p>{errorMessage}</p>
+				</Row>
+				<Row>
+					<TextBox 
+						title="Email" 
+						placeholder="Email" 
+						onChange={(e) => setEmailInput(e.target.value)}
 					/>
-				</Col>
-				<Col md={9}>
-					<Row>
-						<p>{errorMessage}</p>
-					</Row>
-					<Row>
-						<TextBox title="Email" placeholder="Email" onChange={(e) => setEmailInput(e.target.value)}/>
-					</Row>
-					<Row>
-						<TextBox 
-							title="Password" 
-							placeholder="Password" 
-							onChange={(e) => setPasswordInput(e.target.value)}
-							type="password"
-						/>
-					</Row>
-				</Col>
-			</Row>
-		</Container>
+				</Row>
+				<Row>
+					<TextBox 
+						title="Password" 
+						placeholder="Password" 
+						onChange={(e) => setPasswordInput(e.target.value)}
+						type="password"
+					/>
+				</Row>
+			</Col>
+		</div>
 	);
 }
 

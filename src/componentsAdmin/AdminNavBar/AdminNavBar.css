@@ -1,0 +1,10 @@
+.navbar-container{
+    background-color: #005C6E;
+    width: 15vw !important;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
