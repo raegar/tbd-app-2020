@@ -27,37 +27,49 @@ function ClearingOfferMadeStudentEnd() {
 	}
 
 	return (
-		<Container>
-			<h1>Thank you for using the form</h1>
-			<p>Please press confirm to complete</p>
-			<h3>Please confirm email that your application will be sent to</h3>
-			<TextBox id="emailConfirm" placeholder={global.ApplicationFormData.email} value={email}/>
-
-			<Row>
-				<Col>
-					<br/>
-					<UCPButton 
-						to='/DegreeQualifications'
-						primary="True"
-						className="mediumbutton"
-						buttonText="Go Back"
-						href="/DegreeQualifications"
-					/>
-				</Col>
-				<Col>
-					<br/>
-					<div onClick={downloadFile}>
+		<div>
+			<Container className="form-container d-flex justify-content-center">
+				<Row className="form-background">
+					<h1 className="form-title">Thank you for using the form</h1>
+					<h3>Please confirm email that your application will be sent to</h3>
+					<span className="form-center">
+						<TextBox 
+							className="emailBox" 
+							id="emailConfirm" 
+							placeholder={global.ApplicationFormData.email} 
+							value={email} 
+						/>
+						<p>Please press confirm to complete</p>
+					</span>
+				</Row>
+			</Container>
+			<Container>
+				<Row id="buttonRow">
+					<Col className="centered-buttons">
+						<br/>
 						<UCPButton 
-							to ='/'
+							to='/DegreeQualifications'
 							primary="True"
 							className="mediumbutton"
-							buttonText="Confirm"
-							href="/"
+							buttonText="Go Back"
+							href="/DegreeQualifications"
 						/>
-					</div>
-				</Col>
-			</Row>
-		</Container>
+					</Col>
+					<Col className="centered-buttons">
+						<br/>
+						<div onClick={downloadFile}>
+							<UCPButton 
+								to ='/'
+								primary="True"
+								className="mediumbutton"
+								buttonText="Confirm"
+								href="/"
+							/>
+						</div>
+					</Col>
+				</Row>
+			</Container>
+		</div>
 	);
 }
 

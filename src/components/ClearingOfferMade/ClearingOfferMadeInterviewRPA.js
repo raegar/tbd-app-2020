@@ -6,35 +6,42 @@ import UCPButton from "../Buttons/UCPButton";
 
 function ClearingOfferMadeInterviewRPA() {
 	return (
-		<Container>
-			<p>Required</p>
-			<h1>Interview or RPA required</h1>
-			<p>Enter any details for decision made</p>
-			<h3>39. Please state reasons:</h3>
-			<TextBox/>
-			<Row>
-				<Col>
+		<div>
+			<Container className="form-container d-flex justify-content-center">
+				<Row className="form-background">
+					<h1 className="form-title content-center">Interview or RPA required</h1>
 					<br/>
-					<UCPButton 
-						to='/ClearingOfferMadeSecondPage'
-						primary="True"
-						className="mediumbutton"
-						buttonText="Go Back"
-						href="/ClearingOfferMadeSecondPage"
-					/>
-				</Col>
-				<Col>
-					<br/>
-					<UCPButton 
-						to='/ClearingOfferMadeFifthPage'
-						primary="True"
-						className="mediumbutton"
-						buttonText="Confirm and Continue"
-						href="/ClearingOfferMadeFifthPage"
-					/>
-				</Col>
-			</Row>
-		</Container>
+					<Row className="text">
+						<h3>39. Please state reasons:</h3>
+					</Row>
+					<TextBox/>
+				</Row>
+			</Container>
+			<Container>
+				<Row id="buttonRow">
+					<Col className="centered-buttons">
+						<br/>
+						<UCPButton 
+							to='/ClearingOfferMadeSecondPage'
+							primary="True"
+							className="mediumbutton"
+							buttonText="Go Back"
+							href="/ClearingOfferMadeSecondPage"
+						/>
+					</Col>
+					<Col className="centered-buttons">
+						<br/>
+						<UCPButton 
+							to='/ClearingOfferMadeFifthPage'
+							primary="True"
+							className="mediumbutton"
+							buttonText="Confirm and Continue"
+							href="/ClearingOfferMadeFifthPage"
+						/>
+					</Col>
+				</Row>
+			</Container>
+		</div>	
 	);
 }
 

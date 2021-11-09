@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import TextBox from '../TextBox/TextBox';
 import RadioButton from '../RadioButton/RadioButton';
 import { Container, Row, Col } from "react-bootstrap";
@@ -12,6 +13,7 @@ function AddressAndPriorsForm() {
 		value: "",
 		anyChecked: false
 	});
+	const [selectedCourse, setSelectedCourse] = useState("");
 	const [priorCreditState, setPriorCreditState] = useState({
 		value: "",
 		anyChecked: false
@@ -26,11 +28,6 @@ function AddressAndPriorsForm() {
 		anyChecked: false
 	});
 	const [priorStudyDate, setPriorStudyDate] = useState("");
-	const [addressLineOne, setAddressLineOne] = useState("");
-	const [addressLineTwo, setAddressLineTwo] = useState("");
-	const [townCity, setTownCity] = useState("");
-	const [region, setRegion] = useState("");
-	const [postcode, setPostcode] = useState("");
 
 	function handlePriorClick(v) {
     	setShowPrior(v === 'yes');
@@ -87,11 +84,6 @@ function AddressAndPriorsForm() {
 	];
 
 	function saveSelectedData() {
-    	global.ApplicationFormData.addressLineOne = addressLineOne;
-    	global.ApplicationFormData.addressLineTwo = addressLineTwo;
-    	global.ApplicationFormData.city = townCity;
-    	global.ApplicationFormData.region = region;
-    	global.ApplicationFormData.postcode = postcode;
  
     	// get course length selection from radio button
 		if (fullPartState.anyChecked) {
@@ -111,7 +103,7 @@ function AddressAndPriorsForm() {
 			global.ApplicationFormData.priorStudy = priorStudyState.value;
 			global.ApplicationFormData.priorStudyDate = priorStudyDate;
 		}
-
+		global.ApplicationFormData.selectedCourse = selectedCourse;
     	console.log(global.ApplicationFormData);
 	}
 
@@ -120,68 +112,21 @@ function AddressAndPriorsForm() {
 			<Container className="form-container d-flex justify-content-center">
 				<Row className="form-background">
 					<Col>
-						<h4>Address</h4>
-						<TextBox 
-							name="address_line_1"
-							title="Address Line 1"
-							placeholder="Address Line 1"
-							minLength={10}
-							maxLength={100}
-							size={35}
-							id="address-1"
-							type="text"
-							onChange={(e) => setAddressLineOne(e.target.value)}
-						/>
-						<TextBox 
-							name="address_line_2"
-							title="Address Line 2"
-							placeholder="Address Line 2"
-							minLength={10}
-							maxLength={100}
-							size={35}
-							id="address-2"
-							type="text"
-							onChange={(e) => setAddressLineTwo(e.target.value)}
-						/>
-						<TextBox 
-							name="town_city"
-							title="Town/City"
-							placeholder="Town/City"
-							minLength={10}
-							maxLength={100}
-							size={35}
-							id="town-city"
-							type="text"
-							onChange={(e) => setTownCity(e.target.value)}
-						/>
-						<TextBox 
-							name="region"
-							title="Region"
-							placeholder="Region"
-							minLength={3}
-							maxLength={30}
-							size={25}
-							id="region"
-							type="text"
-							onChange={(e) => setRegion(e.target.value)}
-						/>
-						<TextBox 
-							name="postcode"
-							title="Postcode"
-							placeholder="Postcode"
-							minLength={6}
-							maxLength={9}
-							size={10}
-							id="postcode"
-							type="text"
-							onChange={(e) => setPostcode(e.target.value)}
-						/>
+						<h4>Preferred Course</h4>
+	  					<DropdownMenu onSelect={(e) => setSelectedCourse(e.target.value)} id="courseSelection"/>
+						<br/>
 						<br/>
 						<RadioButton
 							heading="Full/Part Time"
 							options={fullPartOptions}
 							name="full-part"
 							subtitle="Will the student study the course full-time or part-time?"
+						/>
+						<RadioButton
+							heading="Year of Entry"
+							options={yearOptions}
+							name="year-of-entry"
+							subtitle="In what year does the student want to begin their study?"
 						/>
 					</Col>
 					<Col>
@@ -212,12 +157,6 @@ function AddressAndPriorsForm() {
 								: <span></span>
 						}
 
-						<RadioButton
-							heading="Year of Entry"
-							options={yearOptions}
-							name="year-of-entry"
-							subtitle="In what year does the student want to begin their study?"
-						/>
 						<RadioButton
 							heading="Prior Study"
 							options={priorStudyOptions}
