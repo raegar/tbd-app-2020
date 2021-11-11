@@ -28,71 +28,186 @@ function GetNextPage(){
 
 
 }*/ 
-const ClearingOfferMadeSecondPages = (props) => {
-    const[whenNo, setWhenNo] = useState(false);
-    const[whenRPA, setWhenRPA] = useState(false);
-    const[whenInterview, setwhenInterview] = useState(false);
+function ClearingOfferMadeYesNoSelect() {
+	const [state, setState] = useState({
+		whenNo: false,
+		whenRPA: false,
+		whenInterview: false,
+	});
+	const [offerYesState, setOfferYesState] = useState({
+		checked: false,
+		value: ""
+	});
+	const [offerYesPartState, setOfferYesPartState] = useState({
+		checked: false,
+		value: ""
+	});
+	const [offerYesEllStatusState, setOfferYesEllStatusState] = useState({
+		checked: false,
+		value: ""
+	});
+	const [offerNoState, setOfferNoState] = useState({
+		checked: false,
+		value: ""
+	});
+	const [offerInterviewRequiredState, setOfferInterviewRequiredState] = useState({
+		checked: false,
+		value: ""
+	});
+	const [offerInterviewRequiredHighlightState, setOfferInterviewRequiredHighlightState] = useState({
+		checked: false,
+		value: ""
+	});
 
-    function handleWhenClick(v) {
-        if (v === 'No') {
-            setWhenNo(true);
-            setWhenRPA(false);
-            setwhenInterview(false);
-        } else if (v==="RPARequired"){
-            setWhenRPA(true);
-            setWhenNo(false);
-            setwhenInterview(false);
+	//State setter methods start
+	function onOfferYesChanged(e) {
+		setOfferYesState({
+			checked: e.target.checked,
+			value: e.target.value,
+		});
+	}
 
-        
-        } else if (v==="InterviewRequired"){
-            setWhenRPA(false);
-            setWhenNo(false);
-            setwhenInterview(true);
+	function onOfferYesPartChanged(e) {
+		setOfferYesPartState({
+			checked: e.target.checked,
+			value: e.target.value,
+		});
+	}
 
-        }
-        else  {
-            setWhenNo(false);
-            setWhenRPA(false);
-            setwhenInterview(false);
+	function onOfferYesEllStatusChanged(e) {
+		setOfferYesEllStatusState({
+			checked: e.target.checked,
+			value: e.target.value,
+		});
+	}
 
-        }
-    }
-    var offerOptions = [
-        { label: "Yes", id: "offerYes", value: "Yes" },
-        { label: "Yes (Partial Requirements met, this will be where student doesn't have all requirements)", id: "offerYesPart", value: "yespart" },
-        { label: "Yes (Subject to Ell Status)", id:"Status", value: "yesstatus" },
-        { label: "No", id: "offerNo",value: "No" },
-        { label: "Interview Required (this may be due to students having industry experience rather than qualifications)", id: "offerInterviewRequired", value: "InterviewRequired" },
-        { label: "RPA (Highlight this with Emma Cave or Zoe", id: "offerInterviewRequiredHighlight", value: "RPARequired" }      
-      ]
-    ;
-   
+	function onOfferNoChanged(e) {
+		setOfferNoState({
+			checked: e.target.checked,
+			value: e.target.value,
+		});
+	}
 
-    function SaveSelectedData() {
+	function onOfferInterviewRequiredChanged(e) {
+		setOfferInterviewRequiredState({
+			checked: e.target.checked,
+			value: e.target.value,
+		});
+	}
 
-        if (document.getElementById("offerYes").checked) {
-            global.ApplicationFormData.offerMade = document.getElementById("offerYes").value;
-          }
-          if (document.getElementById("offerYesPart").checked) {
-            global.ApplicationFormData.offerMade = document.getElementById("offerYesPart").value;
-          }    
+	function onOfferInterviewRequiredHighlightChanged(e) {
+		setOfferInterviewRequiredHighlightState({
+			checked: e.target.checked,
+			value: e.target.value,
+		});
+	}
 
-        if (document.getElementById("Status").checked) {
-            global.ApplicationFormData.offerMade = document.getElementById("Status").value;
-        }
-        if (document.getElementById("offerNo").checked) {
-            global.ApplicationFormData.offerMade = document.getElementById("offerNo").value;
-        }
-        if (document.getElementById("offerInterviewRequired").checked) {
-            global.ApplicationFormData.offerMade = document.getElementById("offerInterviewRequired").value;
-        }
-        if (document.getElementById("offerInterviewRequiredHighlight").checked) {
-            global.ApplicationFormData.offerMade = document.getElementById("offerInterviewRequiredHighlight").value;
-        }
+	//State setter methods end
 
-    
-        console.log(global.ApplicationFormData);
-      }
+	/*I don't like putting a const here in the middle of the methods but using a method
+	  before it's defined is bad practice, even if JS allows it. I could do lambdas but
+	  that makes it less readable and is thus also bad practice.*/
+	const offerOptions = [
+		{
+			label: "Yes", 
+			id: "offerYes", 
+			value: "Yes",
+			handleChange: onOfferYesChanged
+		},
+		{
+			label: "Yes (Partial Requirements met, this will be where student doesn't have all requirements)", 
+			id: "offerYesPart", 
+			value: "yespart",
+			handleChange: onOfferYesPartChanged
+		},
+		{
+			label: "Yes (Subject to Ell Status)", 
+			id:"Status", 
+			value: "yesstatus",
+			handleChange: onOfferYesEllStatusChanged
+		},
+		{ 
+			label: "No", 
+			id: "offerNo",
+			value: "No",
+			handleChange: onOfferNoChanged
+		},
+		{ 
+			label: "Interview Required (this may be due to students having industry experience rather than qualifications)", 
+			id: "offerInterviewRequired", 
+			value: "InterviewRequired",
+			handleChange: onOfferInterviewRequiredChanged
+		},
+		{ 
+			label: "RPA (Highlight this with Emma Cave or Zoe", 
+			id: "offerInterviewRequiredHighlight", 
+			value: "RPARequired",
+			handleChange: onOfferInterviewRequiredHighlightChanged
+		}      
+	];
+	
+	function handleWhenClick(v) {
+    	switch (v) {
+    		case 'No':
+    			setState({
+    				whenNo: true,
+    				whenRPA: false,
+    				whenInterview: false,
+    			});
+    			break;
+                
+    		case 'RPARequired':
+    			setState({
+    				whenNo: true,
+    				whenRPA: false,
+    				whenInterview: false,
+    			});
+    			break;
+
+    	    case 'InterviewRequired':
+    			setState({
+    				whenNo: false,
+    				whenRPA: false,
+    				whenInterview: true,
+    			});
+    			break;
+                
+    		default:
+    			setState({
+    				whenNo: false,
+    				whenRPA: false,
+    				whenInterview: false,
+    			});
+    	}
+	}
+
+	function saveSelectedData() {
+    	if (offerYesState.checked) {
+    		global.ApplicationFormData.offerMade = offerYesState.value;
+    	}
+
+    	if (offerYesPartState.checked) {
+    		global.ApplicationFormData.offerMade = offerYesPartState.value;
+    	}    
+
+    	if (offerYesEllStatusState.checked) {
+    		global.ApplicationFormData.offerMade = offerYesEllStatusState.value;
+    	}
+
+    	if (offerNoState.checked) {
+    		global.ApplicationFormData.offerMade = offerNoState.value;
+    	}
+
+    	if (offerInterviewRequiredState.checked) {
+    		global.ApplicationFormData.offerMade = offerInterviewRequiredState.value;
+    	}
+
+    	if (offerInterviewRequiredHighlightState.checked) {
+    		global.ApplicationFormData.offerMade = offerInterviewRequiredHighlightState.value;
+    	}
+
+    	console.log(global.ApplicationFormData);
+	}
 
 
 return ( 
@@ -140,7 +255,7 @@ return (
                 href="/ClearingOfferMade"></UCPButton></Col>
                 
     <Col>
-    <div id="confirmButton" onClick={SaveSelectedData}>
+    <div id="confirmButton" onClick={saveSelectedData}>
         <UCPButton to='/ClearingOfferMadeFifthPage'
                 primary="True"
                 className="mediumbutton"
