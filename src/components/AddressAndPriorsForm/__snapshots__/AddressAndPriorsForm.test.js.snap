@@ -3,6 +3,18 @@
 exports[`Renders Form One 1`] = `
 <DocumentFragment>
   <div>
+    <header>
+      <a
+        href="/tbd-app-2020"
+      >
+        <img
+          alt="UCP official logo"
+          class="UCPLogoBlue"
+          data-testid="ucpLogoHeader"
+          src="UCPLogo.png"
+        />
+      </a>
+    </header>
     <div
       class="form-container d-flex justify-content-center container"
     >
@@ -13,97 +25,88 @@ exports[`Renders Form One 1`] = `
           class="col"
         >
           <h4>
-            Address
+            Preferred Course
           </h4>
-          <div
-            class="mobiletextbox"
+          <select
+            class="Dropdown"
+            id="courseSelection"
           >
-            <label
-              for="address-1"
-            >
-              Address Line 1
-            </label>
-            <input
-              id="address-1"
-              maxlength="100"
-              minlength="10"
-              name="address_line_1"
-              placeholder="Address Line 1"
-              size="35"
-              type="text"
+            <option
+              value=""
             />
-          </div>
+            <option
+              value="computing"
+            >
+              BSc (Hons) Computing and Information Systems
+            </option>
+            <option
+              value="criminoloy"
+            >
+              BA (Hons) Crimonology
+            </option>
+            <option
+              value="digitalArts"
+            >
+              FDA Digital Arts
+            </option>
+          </select>
           <div
-            class="mobiletextbox"
+            class="radio-buttons"
           >
-            <label
-              for="address-2"
+            <h4>
+              Year of Entry
+            </h4>
+            <p>
+              In what year does the student want to begin their study?
+            </p>
+            <div
+              class="radio-group"
             >
-              Address Line 2
-            </label>
-            <input
-              id="address-2"
-              maxlength="100"
-              minlength="10"
-              name="address_line_2"
-              placeholder="Address Line 2"
-              size="35"
-              type="text"
-            />
-          </div>
-          <div
-            class="mobiletextbox"
-          >
-            <label
-              for="town-city"
+              <input
+                data-testid="year-1"
+                id="year-1"
+                name="year-of-entry"
+                type="radio"
+                value="1"
+              />
+              <label
+                for="year-1"
+              >
+                Year 1
+              </label>
+            </div>
+            <div
+              class="radio-group"
             >
-              Town/City
-            </label>
-            <input
-              id="town-city"
-              maxlength="100"
-              minlength="10"
-              name="town_city"
-              placeholder="Town/City"
-              size="35"
-              type="text"
-            />
-          </div>
-          <div
-            class="mobiletextbox"
-          >
-            <label
-              for="region"
+              <input
+                data-testid="year-2"
+                id="year-2"
+                name="year-of-entry"
+                type="radio"
+                value="2"
+              />
+              <label
+                for="year-2"
+              >
+                Year 2
+              </label>
+            </div>
+            <div
+              class="radio-group"
             >
-              Region
-            </label>
-            <input
-              id="region"
-              maxlength="30"
-              minlength="3"
-              name="region"
-              placeholder="Region"
-              size="25"
-              type="text"
-            />
-          </div>
-          <div
-            class="mobiletextbox"
-          >
-            <label
-              for="postcode"
-            >
-              Postcode
-            </label>
-            <input
-              id="postcode"
-              maxlength="9"
-              minlength="6"
-              name="postcode"
-              placeholder="Postcode"
-              size="10"
-              type="text"
-            />
+              <input
+                data-testid="year-3"
+                id="year-3"
+                name="year-of-entry"
+                type="radio"
+                value="3"
+              />
+              <label
+                for="year-3"
+              >
+                Year 3
+              </label>
+            </div>
           </div>
           <br />
           <div
@@ -201,64 +204,6 @@ exports[`Renders Form One 1`] = `
             class="radio-buttons"
           >
             <h4>
-              Year of Entry
-            </h4>
-            <p>
-              In what year does the student want to begin their study?
-            </p>
-            <div
-              class="radio-group"
-            >
-              <input
-                data-testid="year-1"
-                id="year-1"
-                name="year-of-entry"
-                type="radio"
-                value="1"
-              />
-              <label
-                for="year-1"
-              >
-                Year 1
-              </label>
-            </div>
-            <div
-              class="radio-group"
-            >
-              <input
-                data-testid="year-2"
-                id="year-2"
-                name="year-of-entry"
-                type="radio"
-                value="2"
-              />
-              <label
-                for="year-2"
-              >
-                Year 2
-              </label>
-            </div>
-            <div
-              class="radio-group"
-            >
-              <input
-                data-testid="year-3"
-                id="year-3"
-                name="year-of-entry"
-                type="radio"
-                value="3"
-              />
-              <label
-                for="year-3"
-              >
-                Year 3
-              </label>
-            </div>
-          </div>
-          <div
-            class="radio-buttons"
-          >
-            <h4>
               Prior Study
             </h4>
             <p>
@@ -346,6 +291,9 @@ exports[`Renders Form One 1`] = `
         </div>
       </div>
     </div>
+    <footer
+      class="ucpFooter"
+    />
   </div>
 </DocumentFragment>
 `;

@@ -30,6 +30,7 @@ function AddressAndPriorsForm() {
 		anyChecked: false
 	});
 	const [priorStudyDate, setPriorStudyDate] = useState("");
+	const [selectedCourse, setSelectedCourse] = useState("");
 	
 	function handlePriorClick(v) {
     	setShowPrior(v === 'yes');
@@ -106,11 +107,10 @@ function AddressAndPriorsForm() {
 			global.ApplicationFormData.priorStudyDate = priorStudyDate;
 		}
 
+		global.ApplicationFormData.selectedCourse = selectedCourse;
+
     	console.log(global.ApplicationFormData);
 	}
-	const [selectedCourse, setSelectedCourse] = useState("");
-	global.ApplicationFormData.selectedCourse = selectedCourse;
-	
 
 	return (
 		<div>

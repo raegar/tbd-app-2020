@@ -2,73 +2,96 @@
 
 exports[`Renders ClearingOfferMadeInterviewRPA 1`] = `
 <DocumentFragment>
-  <div
-    class="container"
-  >
-    <p>
-      Required
-    </p>
-    <h1>
-      Interview or RPA required
-    </h1>
-    <p>
-      Enter any details for decision made
-    </p>
-    <h3>
-      39. Please state reasons:
-    </h3>
+  <div>
+    <header>
+      <a
+        href="/tbd-app-2020"
+      >
+        <img
+          alt="UCP official logo"
+          class="UCPLogoBlue"
+          data-testid="ucpLogoHeader"
+          src="UCPLogo.png"
+        />
+      </a>
+    </header>
     <div
-      class="mobiletextbox"
-    >
-      <label />
-      <input
-        maxlength="30"
-        minlength="0"
-        placeholder=""
-        size="20"
-        type="text"
-      />
-    </div>
-    <div
-      class="row"
+      class="container"
     >
       <div
-        class="col"
+        class="offer-made row"
       >
-        <br />
-        <a
-          href="/ClearingOfferMadeSecondPage"
+        <h1>
+          Interview or RPA required
+        </h1>
+        <span
+          class="form-center"
         >
-          <button
-            class="mediumbutton"
-            data-testid="ucpButton"
+          <div
+            class="mobiletextbox"
+          >
+            <label>
+              Please state reasons:
+            </label>
+            <input
+              maxlength="30"
+              minlength="0"
+              placeholder="Please state reasons:"
+              size="20"
+              type="text"
+            />
+          </div>
+        </span>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="row"
+        id="buttonRow"
+      >
+        <div
+          class="centered-buttons col"
+        >
+          <br />
+          <a
             href="/ClearingOfferMadeSecondPage"
-            primary="True"
-            type="button"
           >
-            Go Back​
-          </button>
-        </a>
-      </div>
-      <div
-        class="col"
-      >
-        <br />
-        <a
-          href="/ClearingOfferMadeFifthPage"
+            <button
+              class="mediumbutton"
+              data-testid="ucpButton"
+              href="/ClearingOfferMadeSecondPage"
+              primary="True"
+              type="button"
+            >
+              Go Back​
+            </button>
+          </a>
+        </div>
+        <div
+          class="centered-buttons col"
         >
-          <button
-            class="mediumbutton"
-            data-testid="ucpButton"
+          <br />
+          <a
             href="/ClearingOfferMadeFifthPage"
-            primary="True"
-            type="button"
           >
-            Confirm and Continue​
-          </button>
-        </a>
+            <button
+              class="mediumbutton"
+              data-testid="ucpButton"
+              href="/ClearingOfferMadeFifthPage"
+              primary="True"
+              type="button"
+            >
+              Confirm and Continue​
+            </button>
+          </a>
+        </div>
       </div>
     </div>
+    <footer
+      class="ucpFooter"
+    />
   </div>
 </DocumentFragment>
 `;

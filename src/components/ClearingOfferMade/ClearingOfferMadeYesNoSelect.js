@@ -8,9 +8,6 @@ import {Redirect} from "react-router-dom";
 import Headers from '../Header/Headers';
 import Footer from '../Footer/Footer';
 
-import Headers from '../Header/Headers';
-import Footer from '../Footer/Footer';
-
 /*
 //var NAME = false;
 function GetTestData(selectedValue) {

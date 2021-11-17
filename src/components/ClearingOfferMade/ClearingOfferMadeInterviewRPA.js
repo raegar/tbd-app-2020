@@ -6,9 +6,6 @@ import UCPButton from "../Buttons/UCPButton";
 import Headers from '../Header/Headers';
 import Footer from '../Footer/Footer';
 
-import Headers from '../Header/Headers';
-import Footer from '../Footer/Footer';
-
 function ClearingOfferMadeInterviewRPA() {
 	return (
 		<div>
