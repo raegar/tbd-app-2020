@@ -4,25 +4,21 @@ import "./ClearingOfferMade.css";
 import { Container, Col, Row } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 
+import Headers from '../Header/Headers';
+import Footer from '../Footer/Footer';
 function ClearingOfferMadeReasonIfNo() {
 	return (
 		<div>
-			<Container className="form-container d-flex justify-content-center">
-				<Row className="form-background">
-					<h1 className="form-title content-center">Not Offered Details</h1>
-					<Row>
-						<br/>
-						<TextBox 
-							name="not_offered"
-							title="38. Please state reasons"
-							placeholder="Reasons for offer not being made"
-							minLength={10}
-							maxLength={100}
-							size={35}
-							id="not-offered"
-							type="text"
+			<Headers/>
+			<Container>
+				<Row className="offer-made">
+					<h1>Not Offered Details</h1>
+					<span className="form-center">
+						<TextBox
+							title="Please state reasons:"
+							placeholder="Please state reasons:" 
 						/>
-					</Row>
+					</span>
 				</Row>
 			</Container>
 
@@ -50,6 +46,7 @@ function ClearingOfferMadeReasonIfNo() {
 					</Col>
 				</Row>
 			</Container>
+			<Footer/>
 		</div>
 	);
 }

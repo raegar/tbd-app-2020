@@ -4,6 +4,9 @@ import "./ClearingOfferMade.css";
 import { Container, Col, Row } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 
+import Headers from '../Header/Headers';
+import Footer from '../Footer/Footer';
+
 function ClearingOfferMadeBeforeCompleting() {
 	const email = useRef(global.ApplicationFormData.email);
 	const course = useRef(global.ApplicationFormData.course);
@@ -30,10 +33,10 @@ function ClearingOfferMadeBeforeCompleting() {
 
 	return ( 
 		<div>
-			<Container className="form-container d-flex justify-content-center">
-				<Row className="form-background">
+			<Headers/>
+			<Container >
+				<Row className="offer-made">
 					<h1>Before completing the offer....</h1>
-					<p>Please state the following</p>
 					<h3>40. Please confirm email offer will be send to</h3>
 					<TextBox id="emailConfirm" placeholder={global.ApplicationFormData.email} value={email}/>
 					<h3>41. Please enter course applied for</h3>
@@ -42,7 +45,7 @@ function ClearingOfferMadeBeforeCompleting() {
 			</Container>
 			<Container>
 				<Row id="buttonRow">
-					<Col>
+					<Col className="centered-buttons">
 						<br/>
 						<UCPButton 
 							to='/ClearingOfferMadeSecondPage'
@@ -52,7 +55,7 @@ function ClearingOfferMadeBeforeCompleting() {
 							href="/ClearingOfferMadeSecondPage"
 						/>
 					</Col>
-					<Col>
+					<Col className="centered-buttons">
 						<br/>
 						<div onClick={downloadFile}>
 							<UCPButton 
@@ -66,6 +69,7 @@ function ClearingOfferMadeBeforeCompleting() {
 					</Col>
 				</Row>
 			</Container>
+			<Footer/>
 		</div>
 	);
 }

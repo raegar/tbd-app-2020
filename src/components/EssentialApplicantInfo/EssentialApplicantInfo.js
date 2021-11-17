@@ -7,7 +7,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 import Modal from "../Modal/Modal";
 import {isMobile} from 'react-device-detect';
-
+import Headers from '../Header/Headers';
+import Footer from '../Footer/Footer';
 const time = [
 	{value: 'morning', label: '09:00am - 12:00pm'},
 	{value: 'afternoon', label: '12:00pm - 15:00pm'},
@@ -28,6 +29,12 @@ function EssentialApplicantInfo({disabled, ...props}) {
 	const [telInput, setTelInput] = useState("");
 	const [dobInput, setDobInput] = useState("");
 	const [ucasInput, setUcasInput] = useState("");
+	const [addressLineOne, setAddressLineOne] = useState("");
+	const [addressLineTwo, setAddressLineTwo] = useState("");
+	const [townCity, setTownCity] = useState("");
+	const [region, setRegion] = useState("");
+	const [postcode, setPostcode] = useState("");
+
 	//I refuse to copypaste 10 state setting things.
 	const [nationalityState, setNationalityState] = useState({
 		value: "",
@@ -65,11 +72,7 @@ function EssentialApplicantInfo({disabled, ...props}) {
 			anyChecked: true,
 		});	
 	}
-	const [addressLineOne, setAddressLineOne] = useState("");
-	const [addressLineTwo, setAddressLineTwo] = useState("");
-	const [townCity, setTownCity] = useState("");
-	const [region, setRegion] = useState("");
-	const [postcode, setPostcode] = useState("");
+	
 
 	const nationalityOptions = [
 		{ label: "UK National", id: "UK", value: "UK", handleChange: anyNationalityChecked },
@@ -184,7 +187,9 @@ function EssentialApplicantInfo({disabled, ...props}) {
 	}
 
   	return (
-  		<Container className="es-form-container">
+		  <div>
+			<Headers/>
+  			<Container className="es-form-container">
   			<div className="es-form-background">
   				<h3 className="form-title">CLEARING APPLICATION</h3>
   				<span className="ess-form-left">
@@ -200,63 +205,63 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						className={textboxClassName}
   						onChange={(e) => setNameInput(e.target.value)}
   						value={nameInput}
-						required
+							required
   					/>
-					<TextBox 
-						name="address_line_1"
-						title="Address Line 1"
-						placeholder="Address Line 1"
-						minLength={10}
-						maxLength={100}
-						size={35}
-						id="address-1"
-						type="text"
-						onChange={(e) => setAddressLineOne(e.target.value)}
-					/>
-					<TextBox 
-						name="address_line_2"
-						title="Address Line 2"
-						placeholder="Address Line 2"
-						minLength={10}
-						maxLength={100}
-						size={35}
-						id="address-2"
-						type="text"
-						onChange={(e) => setAddressLineTwo(e.target.value)}
-					/>
-					<TextBox 
-						name="town_city"
-						title="Town/City"
-						placeholder="Town/City"
-						minLength={10}
-						maxLength={100}
-						size={35}
-						id="town-city"
-						type="text"
-						onChange={(e) => setTownCity(e.target.value)}
-					/>
-					<TextBox 
-						name="region"
-						title="Region"
-						placeholder="Region"
-						minLength={3}
-						maxLength={30}
-						size={25}							
-						id="region"
-						type="text"
-						onChange={(e) => setRegion(e.target.value)}
-					/>
-					<TextBox 
-						name="postcode"
-						title="Postcode"
-						placeholder="Postcode"							
-						minLength={6}
-						maxLength={9}
-						size={10}
-						id="postcode"
-						type="text"
-						onChange={(e) => setPostcode(e.target.value)}
-					/>
+						<TextBox 
+							name="address_line_1"
+							title="Address Line 1"
+							placeholder="Address Line 1"
+							minLength={10}
+							maxLength={100}
+							size={35}
+							id="address-1"
+							type="text"
+							onChange={(e) => setAddressLineOne(e.target.value)}
+						/>
+						<TextBox 
+							name="address_line_2"
+							title="Address Line 2"
+							placeholder="Address Line 2"
+							minLength={10}
+							maxLength={100}
+							size={35}
+							id="address-2"
+							type="text"
+							onChange={(e) => setAddressLineTwo(e.target.value)}
+						/>
+						<TextBox 
+							name="town_city"
+							title="Town/City"
+							placeholder="Town/City"
+							minLength={10}
+							maxLength={100}
+							size={35}
+							id="town-city"
+							type="text"
+							onChange={(e) => setTownCity(e.target.value)}
+						/>
+						<TextBox 
+							name="region"
+							title="Region"
+							placeholder="Region"
+							minLength={3}
+							maxLength={30}
+							size={25}							
+							id="region"
+							type="text"
+							onChange={(e) => setRegion(e.target.value)}
+						/>
+						<TextBox 
+							name="postcode"
+							title="Postcode"
+							placeholder="Postcode"							
+							minLength={6}
+							maxLength={9}
+							size={10}
+							id="postcode"
+							type="text"
+							onChange={(e) => setPostcode(e.target.value)}
+						/>
   					<TextBox
   						title="Email"
   						placeholder="Enter your email"
@@ -269,7 +274,7 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						className={textboxClassName}
   						onChange={(e) => setEmailInput(e.target.value)}
   						value={nameInput}
-						required
+							required
   					/>
   					<TextBox
   						title="Phone No"
@@ -283,7 +288,6 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						className={textboxClassName}
   						onChange={(e) => setTelInput(e.target.value)}
   						value={nameInput}
-						input name="required field"
   					/>
   					<TextBox
   						title="D/O/B"
@@ -334,6 +338,8 @@ function EssentialApplicantInfo({disabled, ...props}) {
   			</div>
   			<div>{userTypeSelect()}</div>
   		</Container>
+			<Footer/>
+		  </div>
   	);
 }
 

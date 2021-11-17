@@ -1,10 +1,13 @@
 import React, {useState} from 'react';
-import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import TextBox from '../TextBox/TextBox';
 import RadioButton from '../RadioButton/RadioButton';
+import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import { Container, Row, Col } from "react-bootstrap";
 import './AddressAndPriorsForm.css';
 import UCPButton from '../Buttons/UCPButton';
+
+import Headers from '../Header/Headers';
+import Footer from '../Footer/Footer';
 
 function AddressAndPriorsForm() {
 	const [showPrior, setShowPrior] = useState(false);
@@ -13,7 +16,6 @@ function AddressAndPriorsForm() {
 		value: "",
 		anyChecked: false
 	});
-	const [selectedCourse, setSelectedCourse] = useState("");
 	const [priorCreditState, setPriorCreditState] = useState({
 		value: "",
 		anyChecked: false
@@ -28,7 +30,7 @@ function AddressAndPriorsForm() {
 		anyChecked: false
 	});
 	const [priorStudyDate, setPriorStudyDate] = useState("");
-
+	
 	function handlePriorClick(v) {
     	setShowPrior(v === 'yes');
 	}
@@ -103,30 +105,33 @@ function AddressAndPriorsForm() {
 			global.ApplicationFormData.priorStudy = priorStudyState.value;
 			global.ApplicationFormData.priorStudyDate = priorStudyDate;
 		}
-		global.ApplicationFormData.selectedCourse = selectedCourse;
+
     	console.log(global.ApplicationFormData);
 	}
+	const [selectedCourse, setSelectedCourse] = useState("");
+	global.ApplicationFormData.selectedCourse = selectedCourse;
+	
 
 	return (
 		<div>
+			<Headers/>
 			<Container className="form-container d-flex justify-content-center">
 				<Row className="form-background">
 					<Col>
 						<h4>Preferred Course</h4>
-	  					<DropdownMenu onSelect={(e) => setSelectedCourse(e.target.value)} id="courseSelection"/>
-						<br/>
+						<DropdownMenu onSelect={(e) => setSelectedCourse(e.target.value)} id="courseSelection"/>
+						<RadioButton
+							heading="Year of Entry"
+							options={yearOptions}
+							name="year-of-entry"
+							subtitle="In what year does the student want to begin their study?"
+						/>
 						<br/>
 						<RadioButton
 							heading="Full/Part Time"
 							options={fullPartOptions}
 							name="full-part"
 							subtitle="Will the student study the course full-time or part-time?"
-						/>
-						<RadioButton
-							heading="Year of Entry"
-							options={yearOptions}
-							name="year-of-entry"
-							subtitle="In what year does the student want to begin their study?"
 						/>
 					</Col>
 					<Col>
@@ -204,6 +209,7 @@ function AddressAndPriorsForm() {
 					</Col>
 				</Row>
 			</Container>
+			<Footer/>
 		</div>
 	);
 }

@@ -4,6 +4,9 @@ import "./ClearingOfferMade.css";
 import { Container, Col, Row } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 
+import Headers from '../Header/Headers';
+import Footer from '../Footer/Footer';
+
 function ClearingOfferMadeStudentEnd() {
 	const email = useRef(global.ApplicationFormData.email);
 
@@ -25,9 +28,9 @@ function ClearingOfferMadeStudentEnd() {
     	}()); 
     	saveData(fileName);
 	}
-
 	return (
 		<div>
+			<Headers/>
 			<Container className="form-container d-flex justify-content-center">
 				<Row className="form-background">
 					<h1 className="form-title">Thank you for using the form</h1>
@@ -69,6 +72,7 @@ function ClearingOfferMadeStudentEnd() {
 					</Col>
 				</Row>
 			</Container>
+			<Footer/>
 		</div>
 	);
 }

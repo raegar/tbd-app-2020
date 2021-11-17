@@ -3,9 +3,15 @@
     background-color: #B2DDDF;
     display: inline-block;
     padding: 20px;
-    /*text-align: left;*/
     border: 1px solid black;
     margin-bottom: 10px;
+    text-align: left;
+}
+.offer-made{
+    width: 100%;
+    background-color: #B2DDDF;
+    border: 1px solid black;
+    padding:20px
 }
 
 .form-background h4{text-align: center;}

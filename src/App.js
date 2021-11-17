@@ -1,7 +1,5 @@
 import React from 'react';
 import './App.css';
-import Headers from './components/Header/Headers';
-import Footer from './components/Footer/Footer';
 import SelectRole from './components/SelectRole/SelectRole';
 import Login from './components/Login/Login';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -17,6 +15,11 @@ import ClearingOfferMadeBeforeCompleting from './components/ClearingOfferMade/Cl
 import ClearingOfferMadeStudentEnd from './components/ClearingOfferMade/ClearingOfferMadeStudentEnd';
 import AddressAndPriorsForm from './components/AddressAndPriorsForm/AddressAndPriorsForm';
 
+//import AdminLogin from './pagesAdmin/AdminLogIn/AdminLogIn';
+//import AdminDashboard from './pagesAdmin/AdminDashboard/AdminDashboard';
+//import AdminData from './pagesAdmin/AdminData/AdminData';
+//import AdminGraph from './pagesAdmin/AdminGraphs/AdminGraph';
+
 const BaseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
 
 function App() {
@@ -25,7 +28,6 @@ function App() {
 		<Router basename={BaseUrl}>
 			<div className="App">
 				<div className="main-app">
-					<Headers/>
 					<Switch>
 						<Route path='/' exact component={SelectRole} />
 						<Route path='/login' component={Login}/>
@@ -40,9 +42,10 @@ function App() {
 						<Route path='/ClearingOfferMadeFourthPage' component={ClearingOfferMadeInterviewRPA}/>
 						<Route path='/ClearingOfferMadeFifthPage' component={ClearingOfferMadeBeforeCompleting}/>
 						<Route path='/ClearingOfferMadeStudentEnd' component={ClearingOfferMadeStudentEnd}/>
+						
 					</Switch>
+					
 				</div>
-				<Footer/>
 			</div>
 		</Router>
 	);

@@ -6,6 +6,9 @@ import UCPButton from "../Buttons/UCPButton";
 import {Redirect} from "react-router-dom";
 
 
+import Headers from '../Header/Headers';
+import Footer from '../Footer/Footer';
+
 /*
 //var NAME = false;
 function GetTestData(selectedValue) {
@@ -28,6 +31,7 @@ function GetNextPage(){
 
 
 }*/ 
+
 function ClearingOfferMadeYesNoSelect() {
 	const [state, setState] = useState({
 		whenNo: false,
@@ -209,62 +213,66 @@ function ClearingOfferMadeYesNoSelect() {
     	console.log(global.ApplicationFormData);
 	}
 
+	return ( 
+		<div>
+			<Headers/>
+			<Container>
+				<Row className="offer-made">
+					<h1>Offer</h1>
+					<h4>* Required</h4>
+					<Row>
+						<h3>37. Offer made? (YES/NO)</h3>
+						<p><i>Only UNCONDITIONAL Offers can be made (unless interview is needed)</i></p>
+						<RadioButton
+							heading="Yes"
+							options={offerOptions}
+							name="offer"
+							oc={handleWhenClick}
+						/>
 
-return ( 
+						{
+							(state.whenNo)
+								? <Redirect to={{ pathname: "/ClearingOfferMadeThirdPage" }} />
+								: <span></span>
+						}
 
-<Container>
-<h1>Offer</h1>
-    <h4>* Required</h4>
-<h3>37. Offer made? (YES/NO)</h3>
-<p><i>Only UNCONDITIONAL Offers can be made (unless interview is needed)</i></p>
-<RadioButton
-            heading="Yes"
-            options={offerOptions}
-            name="offer"
-            oc={handleWhenClick}
+						{
+							(state.whenRPA)
+								? <Redirect to={{ pathname: "/ClearingOfferMadeFourthPage" }} />
+								: <span></span>
+						}
 
-           /*  oc={GetTestData()}
-           onchange={GetNextPage()} */
-  />
-
-{
-                (whenNo)
-                ? <Redirect to={{ pathname: "/ClearingOfferMadeThirdPage" }} />
-                
-                : <span></span>
-            }
-
-{
-                (whenRPA)
-                ? <Redirect to={{ pathname: "/ClearingOfferMadeFourthPage" }} />
-                
-                : <span></span>
-            }
-
-{
-                (whenInterview)
-                ? <Redirect to={{ pathname: "/ClearingOfferMadeFourthPage" }} />
-                
-                : <span></span>
-            }
-<Row>
-<Col><UCPButton to='/ClearingOfferMade'
-                primary="True"
-                className="mediumbutton"
-                buttonText="Go Back"
-                href="/ClearingOfferMade"></UCPButton></Col>
-                
-    <Col>
-    <div id="confirmButton" onClick={saveSelectedData}>
-        <UCPButton to='/ClearingOfferMadeFifthPage'
-                primary="True"
-                className="mediumbutton"
-                buttonText="Confirm and Continue"
-                ></UCPButton>
-    </div>
-    </Col>
-</Row>
-</Container>
-)
+						{
+							(state.whenInterview)
+								? <Redirect to={{ pathname: "/ClearingOfferMadeFourthPage" }} />
+								: <span></span>
+						}
+					</Row>
+				</Row>
+				<Row id="buttonRow">
+					<Col className="centered-buttons">
+						<UCPButton 
+							to='/ClearingOfferMade'
+							primary="True"
+							className="mediumbutton"
+							buttonText="Go Back"
+							href="/ClearingOfferMade"
+						/>
+					</Col>
+					<Col className="centered-buttons">
+						<div id="confirmButton" onClick={saveSelectedData}>
+							<UCPButton 
+								to='/ClearingOfferMadeFifthPage'
+								primary="True"
+								className="mediumbutton"
+								buttonText="Confirm and Continue"
+							/>
+						</div>
+					</Col>
+				</Row>
+			</Container>
+			<Footer/>
+		</div>
+	);
 }
-export default ClearingOfferMadeSecondPages;
+export default ClearingOfferMadeYesNoSelect;

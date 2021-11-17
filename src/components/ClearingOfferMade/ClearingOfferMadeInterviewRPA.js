@@ -3,18 +3,22 @@ import TextBox from "../TextBox/TextBox";
 import "./ClearingOfferMade.css";
 import { Container, Col , Row} from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
+import Headers from '../Header/Headers';
+import Footer from '../Footer/Footer';
 
 function ClearingOfferMadeInterviewRPA() {
 	return (
 		<div>
-			<Container className="form-container d-flex justify-content-center">
-				<Row className="form-background">
-					<h1 className="form-title content-center">Interview or RPA required</h1>
-					<br/>
-					<Row className="text">
-						<h3>39. Please state reasons:</h3>
-					</Row>
-					<TextBox/>
+			<Headers/>
+			<Container>
+				<Row className="offer-made">
+					<h1>Interview or RPA required</h1>
+					<span className="form-center">
+						<TextBox
+							title="Please state reasons:"
+							placeholder="Please state reasons:" 
+						/>
+					</span>
 				</Row>
 			</Container>
 			<Container>
@@ -41,6 +45,7 @@ function ClearingOfferMadeInterviewRPA() {
 					</Col>
 				</Row>
 			</Container>
+			<Footer/>
 		</div>	
 	);
 }
