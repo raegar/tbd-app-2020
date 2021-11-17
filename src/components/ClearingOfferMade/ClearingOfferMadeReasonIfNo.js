@@ -6,6 +6,7 @@ import UCPButton from "../Buttons/UCPButton";
 
 import Headers from '../Header/Headers';
 import Footer from '../Footer/Footer';
+
 function ClearingOfferMadeReasonIfNo() {
 	return (
 		<div>

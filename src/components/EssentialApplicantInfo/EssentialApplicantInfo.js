@@ -138,6 +138,7 @@ function EssentialApplicantInfo({disabled, ...props}) {
 								primary="True"
 								className="mediumbutton"
 								buttonText="Confirm and Go"
+								disabled={disabled}
 							/>
 						</div>
 					</Col>
@@ -178,6 +179,7 @@ function EssentialApplicantInfo({disabled, ...props}) {
 								primary="True"
 								className="mediumbutton"
 								buttonText="Apply Now"
+								disabled={disabled}
 							/>
 						</div>
 					</Col>

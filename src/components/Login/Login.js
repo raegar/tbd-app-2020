@@ -8,6 +8,9 @@ import {Redirect} from 'react-router';
 import Headers from '../Header/Headers';
 import Footer from '../Footer/Footer';
 
+import Headers from '../Header/Headers';
+import Footer from '../Footer/Footer';
+
 const InitialState = {
 	username: "",
 	password: "",

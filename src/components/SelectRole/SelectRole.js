@@ -39,8 +39,7 @@ function SelectRole() {
 				</Row>
 			</Container>
 			<Footer/>
-		</div>
-	
+		</div>	
 	);
 }
 
