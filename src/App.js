@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Tabs from "./components/TabbedNavbar";
 import Headers from './components/Header/Headers';
 import Footer from './components/Footer/Footer';
 import SelectRole from './components/SelectRole/SelectRole';
@@ -22,7 +23,23 @@ const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
 function App() {
  /* const className1 = isMobile ? "mobile-App" : "App"; */
   return (
-    <Router basename={baseUrl}>
+
+    <div>
+      <h1>Tabs Demo</h1>
+      <Tabs>
+        <div label="Gator">
+          See ya later, <em>Alligator</em>!
+        </div>
+        <div label="Croc">
+          After 'while, <em>Crocodile</em>!
+        </div>
+        <div label="Sarcosuchus">
+          Nothing to see here, this tab is <em>extinct</em>!
+        </div>
+      </Tabs>
+    </div>
+
+    /*<Router basename={baseUrl}>
     <div className="App">
       <div className="main-app">
       <Headers/>
@@ -45,7 +62,7 @@ function App() {
       </div>
         <Footer/>
     </div>
-    </Router>
+    </Router>*/
   );
 }
 export default App;
