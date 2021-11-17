@@ -7,7 +7,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 import Modal from "../Modal/Modal";
 import {isMobile} from 'react-device-detect';
-
+import Headers from '../Header/Headers';
+import Footer from '../Footer/Footer';
 const time = [
 	{value: 'morning', label: '09:00am - 12:00pm'},
 	{value: 'afternoon', label: '12:00pm - 15:00pm'},
@@ -28,6 +29,12 @@ function EssentialApplicantInfo({disabled, ...props}) {
 	const [telInput, setTelInput] = useState("");
 	const [dobInput, setDobInput] = useState("");
 	const [ucasInput, setUcasInput] = useState("");
+	const [addressLineOne, setAddressLineOne] = useState("");
+	const [addressLineTwo, setAddressLineTwo] = useState("");
+	const [townCity, setTownCity] = useState("");
+	const [region, setRegion] = useState("");
+	const [postcode, setPostcode] = useState("");
+
 	//I refuse to copypaste 10 state setting things.
 	const [nationalityState, setNationalityState] = useState({
 		value: "",
@@ -41,7 +48,6 @@ function EssentialApplicantInfo({disabled, ...props}) {
 		value: "",
 		anyChecked: false,
 	});
-	const [selectedCourse, setSelectedCourse] = useState("");
 
 	const disabledInputs = disabled ? "disabled" : null;
 	const textboxClassName = isMobile ? "mobiletextbox" : "desktoptextbox";
@@ -66,6 +72,7 @@ function EssentialApplicantInfo({disabled, ...props}) {
 			anyChecked: true,
 		});	
 	}
+	
 
 	const nationalityOptions = [
 		{ label: "UK National", id: "UK", value: "UK", handleChange: anyNationalityChecked },
@@ -83,6 +90,11 @@ function EssentialApplicantInfo({disabled, ...props}) {
 
 	function saveSelectedData() {
 		global.ApplicationFormData.name = nameInput;
+		global.ApplicationFormData.addressLineOne = addressLineOne;
+    	global.ApplicationFormData.addressLineTwo = addressLineTwo;
+    	global.ApplicationFormData.city = townCity;
+    	global.ApplicationFormData.region = region;
+    	global.ApplicationFormData.postcode = postcode;
 		global.ApplicationFormData.email = emailInput;
 		global.ApplicationFormData.telephone = telInput;
 		global.ApplicationFormData.dob = dobInput;
@@ -103,7 +115,6 @@ function EssentialApplicantInfo({disabled, ...props}) {
 			global.ApplicationFormData.Support = supportState.value;
 		}
 
-		global.ApplicationFormData.selectedCourse = selectedCourse;
 		//
 		console.log(global.ApplicationFormData);
 	}
@@ -150,7 +161,7 @@ function EssentialApplicantInfo({disabled, ...props}) {
 											<DropdownMenu placeholder="Please select a time..." options={time}/>
 										</Col>
 									</Row>
-									<br></br>
+									<br/>
 									<UCPButton 
 										to="none"
 										primary="True"
@@ -178,7 +189,9 @@ function EssentialApplicantInfo({disabled, ...props}) {
 	}
 
   	return (
-  		<Container className="es-form-container">
+		  <div>
+			<Headers/>
+  			<Container className="es-form-container">
   			<div className="es-form-background">
   				<h3 className="form-title">CLEARING APPLICATION</h3>
   				<span className="ess-form-left">
@@ -194,7 +207,63 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						className={textboxClassName}
   						onChange={(e) => setNameInput(e.target.value)}
   						value={nameInput}
+							required
   					/>
+						<TextBox 
+							name="address_line_1"
+							title="Address Line 1"
+							placeholder="Address Line 1"
+							minLength={10}
+							maxLength={100}
+							size={35}
+							id="address-1"
+							type="text"
+							onChange={(e) => setAddressLineOne(e.target.value)}
+						/>
+						<TextBox 
+							name="address_line_2"
+							title="Address Line 2"
+							placeholder="Address Line 2"
+							minLength={10}
+							maxLength={100}
+							size={35}
+							id="address-2"
+							type="text"
+							onChange={(e) => setAddressLineTwo(e.target.value)}
+						/>
+						<TextBox 
+							name="town_city"
+							title="Town/City"
+							placeholder="Town/City"
+							minLength={10}
+							maxLength={100}
+							size={35}
+							id="town-city"
+							type="text"
+							onChange={(e) => setTownCity(e.target.value)}
+						/>
+						<TextBox 
+							name="region"
+							title="Region"
+							placeholder="Region"
+							minLength={3}
+							maxLength={30}
+							size={25}							
+							id="region"
+							type="text"
+							onChange={(e) => setRegion(e.target.value)}
+						/>
+						<TextBox 
+							name="postcode"
+							title="Postcode"
+							placeholder="Postcode"							
+							minLength={6}
+							maxLength={9}
+							size={10}
+							id="postcode"
+							type="text"
+							onChange={(e) => setPostcode(e.target.value)}
+						/>
   					<TextBox
   						title="Email"
   						placeholder="Enter your email"
@@ -207,9 +276,10 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						className={textboxClassName}
   						onChange={(e) => setEmailInput(e.target.value)}
   						value={nameInput}
+							required
   					/>
   					<TextBox
-  						title="Tel No"
+  						title="Phone No"
   						placeholder="Enter phone number"
   						minLength={5}
   						maxLength={12}
@@ -266,12 +336,12 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						subtitle="Do you have any additional learning support needs or disabilities?"
   						attribute={disabledInputs}
   					/>
-  					<h4>Preferred Course</h4>
-  					<DropdownMenu disabled={disabled} onSelect={(e) => setSelectedCourse(e.target.value)} id="courseSelection"/>
   				</span>
   			</div>
   			<div>{userTypeSelect()}</div>
   		</Container>
+			<Footer/>
+		  </div>
   	);
 }
 

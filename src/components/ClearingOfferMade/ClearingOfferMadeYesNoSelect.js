@@ -1,9 +1,12 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import RadioButton from "../RadioButton/RadioButton";
 import "./ClearingOfferMade2.css";
 import { Container, Col, Row } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 import {Redirect} from "react-router-dom";
+
+import Headers from '../Header/Headers';
+import Footer from '../Footer/Footer';
 
 import Headers from '../Header/Headers';
 import Footer from '../Footer/Footer';
@@ -216,36 +219,40 @@ function ClearingOfferMadeYesNoSelect() {
 		<div>
 			<Headers/>
 			<Container>
-				<h1>Offer</h1>
-				<h4>* Required</h4>
-				<h3>37. Offer made? (YES/NO)</h3>
-				<p><i>Only UNCONDITIONAL Offers can be made (unless interview is needed)</i></p>
-				<RadioButton
-					heading="Yes"
-					options={offerOptions}
-					name="offer"
-					oc={handleWhenClick}
-				/>
+				<Row className="offer-made">
+					<h1>Offer</h1>
+					<h4>* Required</h4>
+					<Row>
+						<h3>37. Offer made? (YES/NO)</h3>
+						<p><i>Only UNCONDITIONAL Offers can be made (unless interview is needed)</i></p>
+						<RadioButton
+							heading="Yes"
+							options={offerOptions}
+							name="offer"
+							oc={handleWhenClick}
+						/>
 
-				{
-					(state.whenNo)
-						? <Redirect to={{ pathname: "/ClearingOfferMadeThirdPage" }} />
-						: <span></span>
-				}
+						{
+							(state.whenNo)
+								? <Redirect to={{ pathname: "/ClearingOfferMadeThirdPage" }} />
+								: <span></span>
+						}
 
-				{
-					(state.whenRPA)
-						? <Redirect to={{ pathname: "/ClearingOfferMadeFourthPage" }} />
-						: <span></span>
-				}
+						{
+							(state.whenRPA)
+								? <Redirect to={{ pathname: "/ClearingOfferMadeFourthPage" }} />
+								: <span></span>
+						}
 
-				{
-					(state.whenInterview)
-						? <Redirect to={{ pathname: "/ClearingOfferMadeFourthPage" }} />
-						: <span></span>
-				}
-				<Row>
-					<Col>
+						{
+							(state.whenInterview)
+								? <Redirect to={{ pathname: "/ClearingOfferMadeFourthPage" }} />
+								: <span></span>
+						}
+					</Row>
+				</Row>
+				<Row id="buttonRow">
+					<Col className="centered-buttons">
 						<UCPButton 
 							to='/ClearingOfferMade'
 							primary="True"
@@ -254,7 +261,7 @@ function ClearingOfferMadeYesNoSelect() {
 							href="/ClearingOfferMade"
 						/>
 					</Col>
-					<Col>
+					<Col className="centered-buttons">
 						<div id="confirmButton" onClick={saveSelectedData}>
 							<UCPButton 
 								to='/ClearingOfferMadeFifthPage'
@@ -270,5 +277,4 @@ function ClearingOfferMadeYesNoSelect() {
 		</div>
 	);
 }
-
 export default ClearingOfferMadeYesNoSelect;

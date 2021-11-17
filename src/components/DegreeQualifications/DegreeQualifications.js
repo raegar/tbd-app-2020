@@ -11,7 +11,6 @@ import Footer from '../Footer/Footer';
 function DegreeQualifications() {
 	const [levelFour, setLevelFour] = useState(false);
 	const [nameGrade, setNameGrade] = useState("");
-	const [recentSchool, setRecentSchool] = useState("");
 	const [priorCheckedState, setPriorCheckedState] = useState({
 		value: "",
 		anyChecked: false,
@@ -61,8 +60,7 @@ function DegreeQualifications() {
 			}
     	}
 
-    	global.ApplicationFormData.mostRecentSchool = recentSchool;
-
+      
     	if (elqCheckedState.anyChecked) {
     		global.ApplicationFormData.elqQualification = elqCheckedState.value;
     	}
@@ -103,14 +101,6 @@ function DegreeQualifications() {
 
 						</Col>
 						<Col>
-							<TextBox 
-								id="schoolDetail"
-								name="recent-school" 
-								title="What is the name of the most recent school/college attended?" 
-								size={25} 
-								type="text" 
-								onChange={(e) => setRecentSchool(e.target.value)}
-							/>
 							<RadioButton 
 								subtitle={"ELQ - is the applicant applying to study a qualification that is " + 
 								"equivalent or lower to one they already hold?"}

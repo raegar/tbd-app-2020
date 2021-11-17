@@ -28,17 +28,27 @@ function ClearingOfferMadeStudentEnd() {
     	}()); 
     	saveData(fileName);
 	}
-
 	return (
 		<div>
 			<Headers/>
+			<Container className="form-container d-flex justify-content-center">
+				<Row className="form-background">
+					<h1 className="form-title">Thank you for using the form</h1>
+					<h3>Please confirm email that your application will be sent to</h3>
+					<span className="form-center">
+						<TextBox 
+							className="emailBox" 
+							id="emailConfirm" 
+							placeholder={global.ApplicationFormData.email} 
+							value={email} 
+						/>
+						<p>Please press confirm to complete</p>
+					</span>
+				</Row>
+			</Container>
 			<Container>
-				<h1>Thank you for using the form</h1>
-				<p>Please press confirm to complete</p>
-				<h3>Please confirm email that your application will be sent to</h3>
-				<TextBox id="emailConfirm" placeholder={global.ApplicationFormData.email} value={email.current}/>
-				<Row>
-					<Col>
+				<Row id="buttonRow">
+					<Col className="centered-buttons">
 						<br/>
 						<UCPButton 
 							to='/DegreeQualifications'
@@ -48,7 +58,7 @@ function ClearingOfferMadeStudentEnd() {
 							href="/DegreeQualifications"
 						/>
 					</Col>
-					<Col>
+					<Col className="centered-buttons">
 						<br/>
 						<div onClick={downloadFile}>
 							<UCPButton 
