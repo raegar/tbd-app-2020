@@ -62,7 +62,7 @@ function L3Component(
 								id={"qualification" + id}
 								key={"2000" + id}
 								placeholder={"Enter qualification #" + id} 
-								value={value} 
+								value={someValue} 
 								clearInput={clearInput}
 							/>
 							<h5>Subject: (E.g. Bussiness Studies)</h5>
@@ -71,7 +71,7 @@ function L3Component(
 								id={"subject" + id}
 								key={"3000" + id}
 								placeholder={"Enter subject #" + id }
-								value={value} 
+								value={someValue} 
 								clearInput={clearInput}
 							/>
 							<h5>Grade Achieved</h5>
@@ -80,7 +80,7 @@ function L3Component(
 								id={"grade" + id}
 								key={"4000" + id}
 								placeholder={"Enter grade #" + id}
-								value={value} 
+								value={someValue} 
 								clearInput={clearInput} />
 							<h5>Year Achieved</h5>
 							<TextBox
@@ -88,7 +88,7 @@ function L3Component(
 								id={"year" + id}
 								key={"5000" + id}
 								type="date" 
-								value={value} 
+								value={someValue} 
 								clearInput={clearInput}
 							/>
 						</div>
@@ -97,7 +97,7 @@ function L3Component(
 						<RadioButton1
 							options={L3QualificationsOptions}
 							name="l3qualifications"
-							value={value}
+							value={someValue}
 							onChange={handleChange}
 						/>
 					</div>

@@ -1,10 +1,8 @@
 import React, {useState} from "react";
 import "./LevelThreeQualifications.css";
-import RadioButton1 from '../RadioButton/RadioButton1';
 import L3Component from '../L3Component/L3Component';
 import { isMobile } from 'react-device-detect';
 import {Row, Col, Container} from "react-bootstrap";
-import {Redirect} from "react-router-dom";
 import UCPButton from '../Buttons/UCPButton';
 
 import Headers from '../Header/Headers';
