@@ -10,57 +10,12 @@ import UCPButton from '../Buttons/UCPButton';
 import Headers from '../Header/Headers';
 import Footer from '../Footer/Footer';
 
-const l3QualificationsOptions = [
-	{ label: "Yes", id: "qualificationYes", value: "yes" },
-];
-
 function LevelThreeQualifications() {
-	const [value, setValue] = useState("");
-	const [emptyInput, setClearInput] = useState(false);
-	const [counter, setCounter] = useState(1);
 	const [qualificationsInfo, setQualificationsInfo] = useState([{}]);
 
 	const className2 = isMobile ? "l3-mobile-form-container" : "l3-form-container";
-  	const className1 = isMobile ? "l3-mobile-form-right" : "l3-form-right";
 
-  	function handleChange(event) {
-		console.log(event.target.value);
-
-		if (event.target.value === 'no') {
-			setCounter(6);
-			setValue(event.target.value);
-		} else {
-			setClearInput(true);
-			setCounter(counter + 1);
-			saveSelectedData();
-		}
-	}
-
-	function onL3CompChange(e) {
-		console.log("L3CompChange");
-		//as all IDs take the form of <section><id>, we strip the letter characters and
-		//treat the remainder as the qualification ID.
-		let componentID = parseInt(e.target.id.replace(/\D/g, ""));
-		//replace everything except the numeric ID
-		let componentName = e.target.id.replace(/\d/g, "");
-
-		//copy old object
-		let qualificationsInfoNew = qualificationsInfo;
-
-		//modify it
-		if (!qualificationsInfoNew[componentID - 1]) {
-			//making sure the object for that ID exists
-			qualificationsInfoNew[componentID - 1] = {[componentName]: e.target.value};
-		} else {
-			qualificationsInfoNew[componentID - 1][componentName] = e.target.value;
-		}
-
-		//and update state to match new object
-		setQualificationsInfo(qualificationsInfoNew);
-		console.log(qualificationsInfo);
-	}
-
-	function saveSelectedData() {
+	function saveSelectedData(counter) {
 		let count = counter - 1;
 
 		if (qualificationsInfo[count]) {
@@ -79,22 +34,12 @@ function LevelThreeQualifications() {
   			<Container>
   				<div className={className2}>
   					<div className="form-background">
-		
-  						{counter < 6 ?
-  							<div className={className1}>
-  								<h3 className="form-title">Level 3 Qualifications</h3>
-  								<L3Component id={counter} clearInput={emptyInput} onChange={onL3CompChange}/>
-  								<br/>
-  								<h5>Other L3 Qualifications</h5>
-  								<RadioButton1
-  									options={l3QualificationsOptions}
-  									name="l3qualifications"
-  									value={value}
-  									onChange={handleChange}
-  								/>
-  							</div>
-  							: <Redirect to={{pathname: "/DegreeQualifications"}}/>
-						}
+						<L3Component 
+							setQualificationsInfo={setQualificationsInfo} 
+							qualificationsInfo={qualificationsInfo} 
+							saveSelectedData={saveSelectedData}
+						/>
+  						
   					</div>
   					<Row id="buttonRow">
   						<Col className="centered-buttons">
