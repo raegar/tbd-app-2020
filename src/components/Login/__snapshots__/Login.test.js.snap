@@ -2,99 +2,116 @@
 
 exports[`Renders Login 1`] = `
 <DocumentFragment>
-  <div
-    class="ContainerStyle container"
-  >
-    <form>
-      <div
-        class="row"
+  <div>
+    <header>
+      <a
+        href="/tbd-app-2020"
       >
+        <img
+          alt="UCP official logo"
+          class="UCPLogoBlue"
+          data-testid="ucpLogoHeader"
+          src="UCPLogo.png"
+        />
+      </a>
+    </header>
+    <div
+      class="ContainerStyle container"
+    >
+      <form>
         <div
-          class="col"
+          class="row"
         >
           <div
-            class="UserInfo"
-          >
-            <h2>
-              Login
-            </h2>
-          </div>
-        </div>
-      </div>
-      <div
-        class="row"
-      >
-        <div
-          class="col"
-        >
-          <div
-            class="UserInfo"
+            class="col"
           >
             <div
-              class="mobiletextbox"
+              class="UserInfo"
             >
-              <label>
-                Username
-              </label>
-              <input
-                maxlength="30"
-                minlength="0"
-                placeholder="Enter Your Username"
-                size="20"
-                type="text"
-              />
+              <h2>
+                Login
+              </h2>
             </div>
           </div>
-          <div
-            class="InvalidInput"
-          >
-            <span />
-          </div>
         </div>
-      </div>
-      <div
-        class="row"
-      >
         <div
-          class="col"
+          class="row"
         >
           <div
-            class="UserInfo"
+            class="col"
           >
             <div
-              class="mobiletextbox"
+              class="UserInfo"
             >
-              <label>
-                Password
-              </label>
-              <input
-                maxlength="30"
-                minlength="0"
-                placeholder="Enter Your Password"
-                size="20"
-                type="password"
-              />
+              <div
+                class="mobiletextbox"
+              >
+                <label>
+                  Username
+                </label>
+                <input
+                  maxlength="30"
+                  minlength="0"
+                  placeholder="Enter Your Username"
+                  size="20"
+                  type="text"
+                />
+              </div>
+            </div>
+            <div
+              class="InvalidInput"
+            >
+              <span />
             </div>
           </div>
+        </div>
+        <div
+          class="row"
+        >
           <div
-            class="InvalidInput"
+            class="col"
           >
-            <span />
+            <div
+              class="UserInfo"
+            >
+              <div
+                class="mobiletextbox"
+              >
+                <label>
+                  Password
+                </label>
+                <input
+                  maxlength="30"
+                  minlength="0"
+                  placeholder="Enter Your Password"
+                  size="20"
+                  type="password"
+                />
+              </div>
+            </div>
+            <div
+              class="InvalidInput"
+            >
+              <span />
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        class="UserInfo"
-      >
-        <button
-          class="smallbutton"
-          data-testid="ucpButton"
-          type="button"
+        <div
+          class="UserInfo"
         >
-          Submit​
-        </button>
-      </div>
-    </form>
+          <button
+            class="smallbutton"
+            data-testid="ucpButton"
+            type="button"
+          >
+            Submit​
+          </button>
+        </div>
+      </form>
+    </div>
+    <footer
+      class="ucpFooter"
+    />
   </div>
 </DocumentFragment>
 `;

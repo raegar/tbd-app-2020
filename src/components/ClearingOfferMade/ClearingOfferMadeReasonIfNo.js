@@ -12,12 +12,20 @@ function ClearingOfferMadeReasonIfNo() {
 		<div>
 			<Headers/>
 			<Container>
-				<p>Required</p>
-				<h1>Not Offered Details</h1>
-				<h3>38. If NO, please state reasons:</h3>
-				<TextBox/>
-				<Row>
-					<Col>
+				<Row className="offer-made">
+					<h1>Not Offered Details</h1>
+					<span className="form-center">
+						<TextBox
+							title="Please state reasons:"
+							placeholder="Please state reasons:" 
+						/>
+					</span>
+				</Row>
+			</Container>
+
+			<Container>
+				<Row id="buttonRow">
+					<Col className="centered-buttons">
 						<br/>
 						<UCPButton 
 							to='/ClearingOfferMadeSecondPage'
@@ -27,7 +35,7 @@ function ClearingOfferMadeReasonIfNo() {
 							href="/ClearingOfferMadeSecondPage"
 						/>
 					</Col>
-					<Col>
+					<Col className="centered-buttons">
 						<br/>
 						<UCPButton 
 							to='/ClearingOfferMadeFifthPage'

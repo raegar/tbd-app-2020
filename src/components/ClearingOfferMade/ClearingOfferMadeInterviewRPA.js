@@ -3,7 +3,6 @@ import TextBox from "../TextBox/TextBox";
 import "./ClearingOfferMade.css";
 import { Container, Col , Row} from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
-
 import Headers from '../Header/Headers';
 import Footer from '../Footer/Footer';
 
@@ -12,13 +11,19 @@ function ClearingOfferMadeInterviewRPA() {
 		<div>
 			<Headers/>
 			<Container>
-				<p>Required</p>
-				<h1>Interview or RPA required</h1>
-				<p>Enter any details for decision made</p>
-				<h3>39. Please state reasons:</h3>
-				<TextBox/>
-				<Row>
-					<Col>
+				<Row className="offer-made">
+					<h1>Interview or RPA required</h1>
+					<span className="form-center">
+						<TextBox
+							title="Please state reasons:"
+							placeholder="Please state reasons:" 
+						/>
+					</span>
+				</Row>
+			</Container>
+			<Container>
+				<Row id="buttonRow">
+					<Col className="centered-buttons">
 						<br/>
 						<UCPButton 
 							to='/ClearingOfferMadeSecondPage'
@@ -28,7 +33,7 @@ function ClearingOfferMadeInterviewRPA() {
 							href="/ClearingOfferMadeSecondPage"
 						/>
 					</Col>
-					<Col>
+					<Col className="centered-buttons">
 						<br/>
 						<UCPButton 
 							to='/ClearingOfferMadeFifthPage'
@@ -41,7 +46,7 @@ function ClearingOfferMadeInterviewRPA() {
 				</Row>
 			</Container>
 			<Footer/>
-		</div>
+		</div>	
 	);
 }
 

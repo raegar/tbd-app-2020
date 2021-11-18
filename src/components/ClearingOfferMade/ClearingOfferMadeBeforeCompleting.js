@@ -34,15 +34,18 @@ function ClearingOfferMadeBeforeCompleting() {
 	return ( 
 		<div>
 			<Headers/>
+			<Container >
+				<Row className="offer-made">
+					<h1>Before completing the offer....</h1>
+					<h3>40. Please confirm email offer will be send to</h3>
+					<TextBox id="emailConfirm" placeholder={global.ApplicationFormData.email} value={email}/>
+					<h3>41. Please enter course applied for</h3>
+					<TextBox id="courseApplied" value={course}/>
+				</Row>
+			</Container>
 			<Container>
-				<h1>Before completing the offer....</h1>
-				<p>Please state the following</p>
-				<h3>40. Please confirm email offer will be send to</h3>
-				<TextBox id="emailConfirm" placeholder={global.ApplicationFormData.email} value={email.current}/>
-				<h3>41. Please enter course applied for</h3>
-				<TextBox id="courseApplied" value={course.current}/>
-				<Row>
-					<Col>
+				<Row id="buttonRow">
+					<Col className="centered-buttons">
 						<br/>
 						<UCPButton 
 							to='/ClearingOfferMadeSecondPage'
@@ -52,7 +55,7 @@ function ClearingOfferMadeBeforeCompleting() {
 							href="/ClearingOfferMadeSecondPage"
 						/>
 					</Col>
-					<Col>
+					<Col className="centered-buttons">
 						<br/>
 						<div onClick={downloadFile}>
 							<UCPButton 
@@ -66,7 +69,7 @@ function ClearingOfferMadeBeforeCompleting() {
 					</Col>
 				</Row>
 			</Container>
-		<Footer/>
+			<Footer/>
 		</div>
 	);
 }

@@ -5,7 +5,6 @@ import UCPButton from '../Buttons/UCPButton';
 import './Login.css';
 import {isMobile} from 'react-device-detect';
 import {Redirect} from 'react-router';
-
 import Headers from '../Header/Headers';
 import Footer from '../Footer/Footer';
 
@@ -161,12 +160,8 @@ function LoginForm() {
 						</Col>
 					</Row>
 					<div className="UserInfo">
-						<UCPButton 
-							onClick={handleSubmit} 
-							to="none" 
-							className="smallbutton" 
-							buttonText="Submit"
-						/>                   
+						<UCPButton onClick={handleSubmit} 
+							to="none" className="smallbutton" buttonText="Submit"/>                   
 					</div>
 				</form>
 			</Container>

@@ -2,378 +2,372 @@
 
 exports[`Renders LevelTwoQualifications 1`] = `
 <DocumentFragment>
-  <div
-    class="container"
-  >
+  <div>
+    <header>
+      <a
+        href="/tbd-app-2020"
+      >
+        <img
+          alt="UCP official logo"
+          class="UCPLogoBlue"
+          data-testid="ucpLogoHeader"
+          src="UCPLogo.png"
+        />
+      </a>
+    </header>
     <div
-      class="l2-form-container container"
+      class="container"
     >
-      <h4
-        class="form-title"
-      >
-        Applicant Qualifications
-      </h4>
       <div
-        class="fade Alert alert alert-dismissible show"
-        role="alert"
+        class="l2-form-container container"
       >
-        <button
-          class="close"
-          type="button"
+        <h4
+          class="form-title"
         >
-          <span
-            aria-hidden="true"
-          >
-            ×
-          </span>
-          <span
-            class="sr-only"
-          >
-            Close alert
-          </span>
-        </button>
+          Applicant Qualifications
+        </h4>
         <div
-          class="alert-heading h4"
+          class="fade Alert alert alert-dismissible show"
+          role="alert"
         >
-          Please request GCSE grades
+          <button
+            class="close"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+            >
+              ×
+            </span>
+            <span
+              class="sr-only"
+            >
+              Close alert
+            </span>
+          </button>
+          <div
+            class="alert-heading h4"
+          >
+            Please request GCSE grades
+          </div>
+        </div>
+        <div
+          class="l2-form-right "
+        >
+          <p>
+            GCSE English Language
+          </p>
+          <select
+            class="Dropdown"
+            id="EngLanguage"
+          >
+            <option
+              value=""
+            >
+              Select Grade
+            </option>
+            <option
+              value="9"
+            >
+              9 - A*
+            </option>
+            <option
+              value="8"
+            >
+              8 - A*
+            </option>
+            <option
+              value="7"
+            >
+              7 - A
+            </option>
+            <option
+              value="6"
+            >
+              6 - B
+            </option>
+            <option
+              value="5"
+            >
+              5 - B
+            </option>
+            <option
+              value="4"
+            >
+              4 - C
+            </option>
+            <option
+              value="3"
+            >
+              3 - D
+            </option>
+            <option
+              value="2"
+            >
+              2 - E
+            </option>
+            <option
+              value="1"
+            >
+              2 - F
+            </option>
+            <option
+              value="1"
+            >
+              1 -G
+            </option>
+            <option
+              value="u"
+            >
+              U
+            </option>
+            <option
+              value="na"
+            >
+              n/a
+            </option>
+          </select>
+          <p>
+            GCSE English Literature
+          </p>
+          <select
+            class="Dropdown"
+            id="EngLiterature"
+          >
+            <option
+              value=""
+            >
+              Select Grade
+            </option>
+            <option
+              value="9"
+            >
+              9 - A*
+            </option>
+            <option
+              value="8"
+            >
+              8 - A*
+            </option>
+            <option
+              value="7"
+            >
+              7 - A
+            </option>
+            <option
+              value="6"
+            >
+              6 - B
+            </option>
+            <option
+              value="5"
+            >
+              5 - B
+            </option>
+            <option
+              value="4"
+            >
+              4 - C
+            </option>
+            <option
+              value="3"
+            >
+              3 - D
+            </option>
+            <option
+              value="2"
+            >
+              2 - E
+            </option>
+            <option
+              value="1"
+            >
+              2 - F
+            </option>
+            <option
+              value="1"
+            >
+              1 -G
+            </option>
+            <option
+              value="u"
+            >
+              U
+            </option>
+            <option
+              value="na"
+            >
+              n/a
+            </option>
+          </select>
+          <p>
+            GCSE English Mathematics
+          </p>
+          <select
+            class="Dropdown"
+            id="Maths"
+          >
+            <option
+              value=""
+            >
+              Select Grade
+            </option>
+            <option
+              value="9"
+            >
+              9 - A*
+            </option>
+            <option
+              value="8"
+            >
+              8 - A*
+            </option>
+            <option
+              value="7"
+            >
+              7 - A
+            </option>
+            <option
+              value="6"
+            >
+              6 - B
+            </option>
+            <option
+              value="5"
+            >
+              5 - B
+            </option>
+            <option
+              value="4"
+            >
+              4 - C
+            </option>
+            <option
+              value="3"
+            >
+              3 - D
+            </option>
+            <option
+              value="2"
+            >
+              2 - E
+            </option>
+            <option
+              value="1"
+            >
+              2 - F
+            </option>
+            <option
+              value="1"
+            >
+              1 -G
+            </option>
+            <option
+              value="u"
+            >
+              U
+            </option>
+            <option
+              value="na"
+            >
+              n/a
+            </option>
+          </select>
+          <p>
+            GCSE Science / Additional Science
+          </p>
+          <select
+            class="Dropdown"
+            id="Science"
+          >
+            <option
+              value=""
+            >
+              Select Grade
+            </option>
+            <option
+              value="9"
+            >
+              9 - A*
+            </option>
+            <option
+              value="8"
+            >
+              8 - A*
+            </option>
+            <option
+              value="7"
+            >
+              7 - A
+            </option>
+            <option
+              value="6"
+            >
+              6 - B
+            </option>
+            <option
+              value="5"
+            >
+              5 - B
+            </option>
+            <option
+              value="4"
+            >
+              4 - C
+            </option>
+            <option
+              value="3"
+            >
+              3 - D
+            </option>
+            <option
+              value="2"
+            >
+              2 - E
+            </option>
+            <option
+              value="1"
+            >
+              2 - F
+            </option>
+            <option
+              value="1"
+            >
+              1 -G
+            </option>
+            <option
+              value="u"
+            >
+              U
+            </option>
+            <option
+              value="na"
+            >
+              n/a
+            </option>
+          </select>
+          <p>
+            L2 Qualifications
+          </p>
+          <textarea
+            class="DesktopTextArea"
+            cols="30"
+            id="l2details"
+            name="l2qualificaitons"
+            placeholder="Enter level 2 qualifications"
+            rows="6"
+          />
         </div>
       </div>
       <div
-        class="l2-form-right "
-      >
-        <p>
-          GCSE English Language
-        </p>
-        <select
-          class="Dropdown"
-          id="EngLanguage"
-        >
-          <option
-            value=""
-          >
-            Select Grade
-          </option>
-          <option
-            value="9"
-          >
-            9 - A*
-          </option>
-          <option
-            value="8"
-          >
-            8 - A*
-          </option>
-          <option
-            value="7"
-          >
-            7 - A
-          </option>
-          <option
-            value="6"
-          >
-            6 - B
-          </option>
-          <option
-            value="5"
-          >
-            5 - B
-          </option>
-          <option
-            value="4"
-          >
-            4 - C
-          </option>
-          <option
-            value="3"
-          >
-            3 - D
-          </option>
-          <option
-            value="2"
-          >
-            2 - E
-          </option>
-          <option
-            value="1"
-          >
-            2 - F
-          </option>
-          <option
-            value="1"
-          >
-            1 -G
-          </option>
-          <option
-            value="u"
-          >
-            U
-          </option>
-          <option
-            value="na"
-          >
-            n/a
-          </option>
-        </select>
-        <p>
-          GCSE English Literature
-        </p>
-        <select
-          class="Dropdown"
-          id="EngLiterature"
-        >
-          <option
-            value=""
-          >
-            Select Grade
-          </option>
-          <option
-            value="9"
-          >
-            9 - A*
-          </option>
-          <option
-            value="8"
-          >
-            8 - A*
-          </option>
-          <option
-            value="7"
-          >
-            7 - A
-          </option>
-          <option
-            value="6"
-          >
-            6 - B
-          </option>
-          <option
-            value="5"
-          >
-            5 - B
-          </option>
-          <option
-            value="4"
-          >
-            4 - C
-          </option>
-          <option
-            value="3"
-          >
-            3 - D
-          </option>
-          <option
-            value="2"
-          >
-            2 - E
-          </option>
-          <option
-            value="1"
-          >
-            2 - F
-          </option>
-          <option
-            value="1"
-          >
-            1 -G
-          </option>
-          <option
-            value="u"
-          >
-            U
-          </option>
-          <option
-            value="na"
-          >
-            n/a
-          </option>
-        </select>
-        <p>
-          GCSE English Mathematics
-        </p>
-        <select
-          class="Dropdown"
-          id="Maths"
-        >
-          <option
-            value=""
-          >
-            Select Grade
-          </option>
-          <option
-            value="9"
-          >
-            9 - A*
-          </option>
-          <option
-            value="8"
-          >
-            8 - A*
-          </option>
-          <option
-            value="7"
-          >
-            7 - A
-          </option>
-          <option
-            value="6"
-          >
-            6 - B
-          </option>
-          <option
-            value="5"
-          >
-            5 - B
-          </option>
-          <option
-            value="4"
-          >
-            4 - C
-          </option>
-          <option
-            value="3"
-          >
-            3 - D
-          </option>
-          <option
-            value="2"
-          >
-            2 - E
-          </option>
-          <option
-            value="1"
-          >
-            2 - F
-          </option>
-          <option
-            value="1"
-          >
-            1 -G
-          </option>
-          <option
-            value="u"
-          >
-            U
-          </option>
-          <option
-            value="na"
-          >
-            n/a
-          </option>
-        </select>
-        <p>
-          GCSE Science / Additional Science
-        </p>
-        <select
-          class="Dropdown"
-          id="Science"
-        >
-          <option
-            value=""
-          >
-            Select Grade
-          </option>
-          <option
-            value="9"
-          >
-            9 - A*
-          </option>
-          <option
-            value="8"
-          >
-            8 - A*
-          </option>
-          <option
-            value="7"
-          >
-            7 - A
-          </option>
-          <option
-            value="6"
-          >
-            6 - B
-          </option>
-          <option
-            value="5"
-          >
-            5 - B
-          </option>
-          <option
-            value="4"
-          >
-            4 - C
-          </option>
-          <option
-            value="3"
-          >
-            3 - D
-          </option>
-          <option
-            value="2"
-          >
-            2 - E
-          </option>
-          <option
-            value="1"
-          >
-            2 - F
-          </option>
-          <option
-            value="1"
-          >
-            1 -G
-          </option>
-          <option
-            value="u"
-          >
-            U
-          </option>
-          <option
-            value="na"
-          >
-            n/a
-          </option>
-        </select>
-        <p>
-          L2 Qualifications
-        </p>
-        <textarea
-          class="DesktopTextArea"
-          cols="30"
-          id="l2details"
-          name="l2qualificaitons"
-          placeholder="Enter level 2 qualifications"
-          rows="6"
-        />
-      </div>
-    </div>
-    <div
-      class="row"
-      id="buttonRow"
-    >
-      <div
-        class="centered-buttons col"
-      >
-        <a
-          href="/MoreInfo"
-        >
-          <button
-            class="mediumbutton"
-            data-testid="ucpButton"
-            primary="True"
-            type="button"
-          >
-            Go Back​
-          </button>
-        </a>
-      </div>
-      <div
-        class="centered-buttons col"
+        class="row"
+        id="buttonRow"
       >
         <div
-          id="confirmButton"
+          class="centered-buttons col"
         >
           <a
-            href="/LevelThreeQualifications"
+            href="/MoreInfo"
           >
             <button
               class="mediumbutton"
@@ -381,12 +375,35 @@ exports[`Renders LevelTwoQualifications 1`] = `
               primary="True"
               type="button"
             >
-              Confirm and Go​
+              Go Back​
             </button>
           </a>
         </div>
+        <div
+          class="centered-buttons col"
+        >
+          <div
+            id="confirmButton"
+          >
+            <a
+              href="/LevelThreeQualifications"
+            >
+              <button
+                class="mediumbutton"
+                data-testid="ucpButton"
+                primary="True"
+                type="button"
+              >
+                Confirm and Go​
+              </button>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
+    <footer
+      class="ucpFooter"
+    />
   </div>
 </DocumentFragment>
 `;
