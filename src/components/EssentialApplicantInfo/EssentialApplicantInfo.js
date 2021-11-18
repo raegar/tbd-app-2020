@@ -32,7 +32,7 @@ function EssentialApplicantInfo({disabled, ...props}) {
 	const [addressLineOne, setAddressLineOne] = useState("");
 	const [addressLineTwo, setAddressLineTwo] = useState("");
 	const [townCity, setTownCity] = useState("");
-	const [region, setRegion] = useState("");
+	const [region, setCounty] = useState("");
 	const [postcode, setPostcode] = useState("");
 
 	//I refuse to copypaste 10 state setting things.
@@ -243,15 +243,15 @@ function EssentialApplicantInfo({disabled, ...props}) {
 							onChange={(e) => setTownCity(e.target.value)}
 						/>
 						<TextBox 
-							name="region"
-							title="Region"
-							placeholder="Region"
+							name="county"
+							title="County"
+							placeholder="County"
 							minLength={3}
 							maxLength={30}
 							size={25}							
-							id="region"
+							id="county"
 							type="text"
-							onChange={(e) => setRegion(e.target.value)}
+							onChange={(e) => setCounty(e.target.value)}
 						/>
 						<TextBox 
 							name="postcode"
