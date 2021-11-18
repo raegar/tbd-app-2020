@@ -15,10 +15,10 @@ import ClearingOfferMadeBeforeCompleting from './components/ClearingOfferMade/Cl
 import ClearingOfferMadeStudentEnd from './components/ClearingOfferMade/ClearingOfferMadeStudentEnd';
 import AddressAndPriorsForm from './components/AddressAndPriorsForm/AddressAndPriorsForm';
 
-//import AdminLogin from './pagesAdmin/AdminLogIn/AdminLogIn';
-//import AdminDashboard from './pagesAdmin/AdminDashboard/AdminDashboard';
-//import AdminData from './pagesAdmin/AdminData/AdminData';
-//import AdminGraph from './pagesAdmin/AdminGraphs/AdminGraph';
+import AdminLogin from './pagesAdmin/AdminLogIn/AdminLogIn';
+import AdminDashboard from './pagesAdmin/AdminDashboard/AdminDashboard';
+import AdminData from './pagesAdmin/AdminData/AdminData';
+import AdminGraph from './pagesAdmin/AdminGraphs/AdminGraph';
 
 const BaseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
 
@@ -42,8 +42,12 @@ function App() {
 						<Route path='/ClearingOfferMadeFourthPage' component={ClearingOfferMadeInterviewRPA}/>
 						<Route path='/ClearingOfferMadeFifthPage' component={ClearingOfferMadeBeforeCompleting}/>
 						<Route path='/ClearingOfferMadeStudentEnd' component={ClearingOfferMadeStudentEnd}/>
-					</Switch>
 					
+						<Route path='/AdminLogin' component={AdminLogin}/>
+						<Route path='/AdminDashboard' component={AdminDashboard}/>
+						<Route path='/AdminData' component={AdminData}/>
+						<Route path='/AdminGraph' component={AdminGraph}/>
+					</Switch>
 				</div>
 			</div>
 		</Router>
