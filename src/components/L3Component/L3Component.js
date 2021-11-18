@@ -32,7 +32,7 @@ function L3Component(
 	const l3ComponentClassName = isMobile ? "mobilel3component" : "l3component";
 	const className1 = isMobile ? "l3-mobile-form-right" : "l3-form-right";
 
-	const id = (qualificationIndex + 1)
+	const id = (qualificationIndex + 1);
 
 	function handleChange(event) {
 		console.log(event.target.value);
