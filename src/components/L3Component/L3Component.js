@@ -14,7 +14,6 @@ const L3QualificationsOptions = [
 function L3Component(
 	{
 		name, 
-		id, 
 		key, 
 		onChange, 
 		placeholder, 
@@ -32,6 +31,8 @@ function L3Component(
 
 	const l3ComponentClassName = isMobile ? "mobilel3component" : "l3component";
 	const className1 = isMobile ? "l3-mobile-form-right" : "l3-form-right";
+
+	const id = (qualificationIndex + 1)
 
 	function handleChange(event) {
 		console.log(event.target.value);
@@ -56,7 +57,7 @@ function L3Component(
 						<h3 className="form-title">Level 3 Qualifications</h3>
 						{/*<L3Component id={counter} clearInput={emptyInput} onChange={handleChange} setCounter={setCounter}/>*/}
 						<div className={l3ComponentClassName}>
-							<h5>Qualification : {"#" + (qualificationIndex + 1)} </h5>
+							<h5>Qualification : {"#" + id} </h5>
 							<p>(E.g. A Level, BTEC, Access)</p>
 							<TextBox
 								onChange={onChange}    
