@@ -41,11 +41,14 @@ function L3Component(
 			setValue(event.target.value);
 		} else {
 			setClearInput(true);
+			setQualificationIndex(counter);
 			setCounter(counter + 1);
 			saveSelectedData(counter);
 		}
 
-		onChange(event);
+		if (onChange) {
+			onChange(event);
+		}
 	}
 	
 	return (
