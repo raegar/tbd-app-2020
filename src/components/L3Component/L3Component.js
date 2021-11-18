@@ -10,7 +10,6 @@ const L3QualificationsOptions = [
 	{ label: "Yes", id: "qualificationYes", value: "yes" },
 ];
 
-
 function L3Component(
 	{
 		name, 
@@ -55,7 +54,6 @@ function L3Component(
 				counter < 6 ?
 					<div className={className1}>
 						<h3 className="form-title">Level 3 Qualifications</h3>
-						{/*<L3Component id={counter} clearInput={emptyInput} onChange={handleChange} setCounter={setCounter}/>*/}
 						<div className={l3ComponentClassName}>
 							<h5>Qualification : {"#" + id} </h5>
 							<p>(E.g. A Level, BTEC, Access)</p>
@@ -104,7 +102,7 @@ function L3Component(
 						/>
 					</div>
 					: <Redirect to={{pathname: "/DegreeQualifications"}}/>
-	   }
+			}
 	   </>
 	);
 }
@@ -121,7 +119,9 @@ TextBox.propTypes = {
 	minLength: PropTypes.number,
 	//Minimum input length
 	placeholder: PropTypes.string,
-	type: PropTypes.oneOf(['text', 'password', 'email', 'tel', 'number', 'date'])
+	type: PropTypes.oneOf(['text', 'password', 'email', 'tel', 'number', 'date']),
+	setQualificationsInfo: PropTypes.func,
+	saveSelectedData: PropTypes.func,
 };
 
 TextBox.defaultProps = {
