@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Tab from './Tab';
 import {Tabs} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBirthdayCake} from '@fortawesome/free-solid-svg-icons';
@@ -18,12 +17,12 @@ function GraphTabs(){
       <div eventKey="home" title={<FontAwesomeIcon icon={faBirthdayCake}/>}>
         Graph pie
       </div>
-      <Tab eventKey="profile" title={<FontAwesomeIcon icon={faBirthdayCake}/>}>
+      <div eventKey="profile" title={<FontAwesomeIcon icon={faBirthdayCake}/>}>
         Graph lines
-      </Tab>
-      <Tab eventKey="contact" title={<FontAwesomeIcon icon={faBirthdayCake}/>} disabled>
+      </div>
+      <div eventKey="contact" title={<FontAwesomeIcon icon={faBirthdayCake}/>} disabled>
         Graph chart
-      </Tab>
+      </div>
     </Tabs>
     </div>
   );
