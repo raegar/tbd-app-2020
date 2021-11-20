@@ -5,6 +5,7 @@ import TextBox from '../TextBox/TextBox';
 import {isMobile} from 'react-device-detect';
 import {Redirect} from "react-router-dom";
 import RadioButton1 from '../RadioButton/RadioButton1';
+import UCPButton from '../Buttons/UCPButton';
 
 const L3QualificationsOptions = [
 	{ label: "Yes", id: "qualificationYes", value: "yes" },
@@ -27,7 +28,6 @@ function L3Component(
 		setQualificationsInfo,
 		...props
 	}) {
-	const [qualificationIndex, setQualificationIndex] = useState(0);
 	//no clue what value was for but we'll preserve it just in case
 	const [someValue, setValue] = useState(!!value ? value : "");
 	const [clearInput, setClearInput] = useState(false);
@@ -36,7 +36,7 @@ function L3Component(
 	const l3ComponentClassName = isMobile ? "mobilel3component" : "l3component";
 	const className1 = isMobile ? "l3-mobile-form-right" : "l3-form-right";
 
-	const id = (qualificationIndex + 1);
+	const id = counter;
 
 	function onYesMoreQualifications(event) {
 		console.log(event.target.value);
@@ -46,7 +46,7 @@ function L3Component(
 			setValue(event.target.value);
 		} else {
 			setClearInput(true);
-			setQualificationIndex(counter);
+			//setQualificationIndex(counter);
 			setCounter(counter + 1);
 			saveSelectedData(counter);
 		}
@@ -60,11 +60,24 @@ function L3Component(
 	function saveValue(e, key) {
 		console.log("saveValue " + key);
 		let qualCopy = qualificationsInfo;
-		if (!qualCopy[counter-1]){
-			qualCopy[counter-1]={};
+		if (!qualCopy[counter - 1]) {
+			qualCopy[counter - 1] = {};
 		}
-		qualCopy[counter-1][key] = e.target.value;
+		qualCopy[counter - 1][key] = e.target.value;
 		setQualificationsInfo(qualCopy);
+	}
+
+	function gotoPrevious() {
+		gotoQualification(counter);
+	}
+
+	function gotoNext() {
+		gotoQualification(counter + 2);
+	}
+
+	function gotoQualification(qualNumber) {
+		//quals start at one, the index starts at zero
+		setCounter(qualNumber - 1);
 	}
 	
 	return (
@@ -109,6 +122,19 @@ function L3Component(
 								type="date" 
 								value={someValue} 
 								clearInput={clearInput}
+							/>
+							<br/>
+							<UCPButton
+								to="none"
+								className="smallbutton"
+								buttonText="Previous"
+								onClick={gotoPrevious}
+							/>
+							<UCPButton
+								to="none"
+								className="smallbutton"
+								buttonText="Next"
+								onClick={gotoNext}
 							/>
 						</div>
 						<br/>
