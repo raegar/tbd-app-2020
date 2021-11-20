@@ -26,6 +26,14 @@ function LevelThreeQualifications() {
 		console.log(global.ApplicationFormData);
 	}
 
+	function saveAllSelectedData() {
+		for (let i = 1; i <= qualificationsInfo.length; i++) {
+			if (qualificationsInfo[i - 1]) {
+				saveSelectedData(i);
+			}
+		}
+	}
+
   	return (
 		  <div>
 			<Headers/>
@@ -49,7 +57,7 @@ function LevelThreeQualifications() {
   							/>
   						</Col>
   						<Col className="centered-buttons">
-  							<div id="confirmButton" onClick={saveSelectedData}>
+  							<div id="confirmButton" onClick={saveAllSelectedData}>
   								<UCPButton
   									to="/DegreeQualifications"
   									primary="True"
