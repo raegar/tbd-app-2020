@@ -33,8 +33,6 @@ function L3Component(
 	const l3ComponentClassName = isMobile ? "mobilel3component" : "l3component";
 	const className1 = isMobile ? "l3-mobile-form-right" : "l3-form-right";
 
-	const id = counter;
-
 	function onYesMoreQualifications(event) {
 		console.log(event.target.value);
 
@@ -83,35 +81,35 @@ function L3Component(
 					<div className={className1}>
 						<h3 className="form-title">Level 3 Qualifications</h3>
 						<div className={l3ComponentClassName}>
-							<h5>Qualification : {"#" + id} </h5>
+							<h5>Qualification : {"#" + counter} </h5>
 							<p>(E.g. A Level, BTEC, Access)</p>
 							<TextBox
 								onChange={(e) => saveValue(e, QualificationKey)}    
-								id={"qualification" + id}
-								key={"2000" + id}
-								placeholder={"Enter qualification #" + id} 
+								id={"qualification" + counter}
+								key={"2000" + counter}
+								placeholder={"Enter qualification #" + counter} 
 								clearInput={clearInput}
 							/>
 							<h5>Subject: (E.g. Bussiness Studies)</h5>
 							<TextBox
 								onChange={(e) => saveValue(e, SubjectKey)} 
-								id={"subject" + id}
-								key={"3000" + id}
-								placeholder={"Enter subject #" + id }
+								id={"subject" + counter}
+								key={"3000" + counter}
+								placeholder={"Enter subject #" + counter }
 								clearInput={clearInput}
 							/>
 							<h5>Grade Achieved</h5>
 							<TextBox
 								onChange={(e) => saveValue(e, GradeKey)} 
-								id={"grade" + id}
-								key={"4000" + id}
-								placeholder={"Enter grade #" + id}
+								id={"grade" + counter}
+								key={"4000" + counter}
+								placeholder={"Enter grade #" + counter}
 								clearInput={clearInput} />
 							<h5>Year Achieved</h5>
 							<TextBox
 								onChange={(e) => saveValue(e, YearKey)} 
-								id={"year" + id}
-								key={"5000" + id}
+								id={"year" + counter}
+								key={"5000" + counter}
 								type="date" 
 								clearInput={clearInput}
 							/>
