@@ -10,16 +10,21 @@ const L3QualificationsOptions = [
 	{ label: "Yes", id: "qualificationYes", value: "yes" },
 ];
 
+const QualificationKey = "qualification";
+const SubjectKey = "subject";
+const GradeKey = "grade";
+const YearKey = "year";
+
 function L3Component(
 	{
 		name, 
 		key, 
 		onChange, 
 		placeholder, 
-		value, 
-		setQualificationsInfo, 
-		qualificationsInfo, 
+		value,
 		saveSelectedData, 
+		qualificationsInfo,
+		setQualificationsInfo,
 		...props
 	}) {
 	const [qualificationIndex, setQualificationIndex] = useState(0);
@@ -33,7 +38,7 @@ function L3Component(
 
 	const id = (qualificationIndex + 1);
 
-	function handleChange(event) {
+	function onYesMoreQualifications(event) {
 		console.log(event.target.value);
 
 		if (event.target.value === 'no') {
@@ -50,6 +55,14 @@ function L3Component(
 			onChange(event);
 		}
 	}
+
+
+	function saveValue(e, key) {
+		console.log("saveValue " + key);
+		let qualCopy = qualificationsInfo;
+		qualCopy[key] = e.target.value;
+		setQualificationsInfo(qualCopy);
+	}
 	
 	return (
 		<>
@@ -61,7 +74,7 @@ function L3Component(
 							<h5>Qualification : {"#" + id} </h5>
 							<p>(E.g. A Level, BTEC, Access)</p>
 							<TextBox
-								onChange={onChange}    
+								onChange={(e) => saveValue(e, QualificationKey)}    
 								id={"qualification" + id}
 								key={"2000" + id}
 								placeholder={"Enter qualification #" + id} 
@@ -70,7 +83,7 @@ function L3Component(
 							/>
 							<h5>Subject: (E.g. Bussiness Studies)</h5>
 							<TextBox
-								onChange={onChange} 
+								onChange={(e) => saveValue(e, SubjectKey)} 
 								id={"subject" + id}
 								key={"3000" + id}
 								placeholder={"Enter subject #" + id }
@@ -79,7 +92,7 @@ function L3Component(
 							/>
 							<h5>Grade Achieved</h5>
 							<TextBox
-								onChange={onChange} 
+								onChange={(e) => saveValue(e, GradeKey)} 
 								id={"grade" + id}
 								key={"4000" + id}
 								placeholder={"Enter grade #" + id}
@@ -87,7 +100,7 @@ function L3Component(
 								clearInput={clearInput} />
 							<h5>Year Achieved</h5>
 							<TextBox
-								onChange={onChange} 
+								onChange={(e) => saveValue(e, YearKey)} 
 								id={"year" + id}
 								key={"5000" + id}
 								type="date" 
@@ -101,7 +114,7 @@ function L3Component(
 							options={L3QualificationsOptions}
 							name="l3qualifications"
 							value={someValue}
-							onChange={handleChange}
+							onChange={onYesMoreQualifications}
 						/>
 					</div>
 					: <Redirect to={{pathname: "/DegreeQualifications"}}/>
