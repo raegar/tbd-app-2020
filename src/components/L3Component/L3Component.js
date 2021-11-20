@@ -22,14 +22,11 @@ function L3Component(
 		key, 
 		onChange, 
 		placeholder, 
-		value,
 		saveSelectedData, 
 		qualificationsInfo,
 		setQualificationsInfo,
 		...props
 	}) {
-	//no clue what value was for but we'll preserve it just in case
-	const [someValue, setValue] = useState(!!value ? value : "");
 	const [clearInput, setClearInput] = useState(false);
 	const [counter, setCounter] = useState(1);
 
@@ -43,7 +40,6 @@ function L3Component(
 
 		if (event.target.value === 'no') {
 			setCounter(6);
-			setValue(event.target.value);
 		} else {
 			setClearInput(true);
 			//setQualificationIndex(counter);
@@ -94,7 +90,6 @@ function L3Component(
 								id={"qualification" + id}
 								key={"2000" + id}
 								placeholder={"Enter qualification #" + id} 
-								value={someValue} 
 								clearInput={clearInput}
 							/>
 							<h5>Subject: (E.g. Bussiness Studies)</h5>
@@ -103,7 +98,6 @@ function L3Component(
 								id={"subject" + id}
 								key={"3000" + id}
 								placeholder={"Enter subject #" + id }
-								value={someValue} 
 								clearInput={clearInput}
 							/>
 							<h5>Grade Achieved</h5>
@@ -112,7 +106,6 @@ function L3Component(
 								id={"grade" + id}
 								key={"4000" + id}
 								placeholder={"Enter grade #" + id}
-								value={someValue} 
 								clearInput={clearInput} />
 							<h5>Year Achieved</h5>
 							<TextBox
@@ -120,7 +113,6 @@ function L3Component(
 								id={"year" + id}
 								key={"5000" + id}
 								type="date" 
-								value={someValue} 
 								clearInput={clearInput}
 							/>
 							<br/>
@@ -142,7 +134,6 @@ function L3Component(
 						<RadioButton1
 							options={L3QualificationsOptions}
 							name="l3qualifications"
-							value={someValue}
 							onChange={onYesMoreQualifications}
 						/>
 					</div>

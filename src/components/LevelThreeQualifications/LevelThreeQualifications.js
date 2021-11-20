@@ -44,6 +44,7 @@ function LevelThreeQualifications() {
 							setQualificationsInfo={setQualificationsInfo} 
 							qualificationsInfo={qualificationsInfo} 
 							saveSelectedData={saveSelectedData}
+							value="me"
 						/>
   						
   					</div>
