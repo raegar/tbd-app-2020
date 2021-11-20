@@ -27,7 +27,6 @@ function L3Component(
 		setQualificationsInfo,
 		...props
 	}) {
-	const [clearInput, setClearInput] = useState(false);
 	const [qualificationCounter, setCounter] = useState(1);
 
 	const l3ComponentClassName = isMobile ? "mobilel3component" : "l3component";
@@ -39,8 +38,6 @@ function L3Component(
 		if (event.target.value === 'no') {
 			setCounter(6);
 		} else {
-			setClearInput(true);
-			//setQualificationIndex(counter);
 			setCounter(qualificationCounter + 1);
 			saveSelectedData(qualificationCounter);
 		}
@@ -50,9 +47,7 @@ function L3Component(
 		}
 	}
 
-
 	function saveValue(e, key) {
-		console.log("saveValue " + key);
 		let qualCopy = qualificationsInfo;
 		if (!qualCopy[qualificationCounter - 1]) {
 			qualCopy[qualificationCounter - 1] = {};
@@ -88,7 +83,6 @@ function L3Component(
 								id={"qualification" + qualificationCounter}
 								key={"2000" + qualificationCounter}
 								placeholder={"Enter qualification #" + qualificationCounter} 
-								clearInput={clearInput}
 							/>
 							<h5>Subject: (E.g. Bussiness Studies)</h5>
 							<TextBox
@@ -96,7 +90,6 @@ function L3Component(
 								id={"subject" + qualificationCounter}
 								key={"3000" + qualificationCounter}
 								placeholder={"Enter subject #" + qualificationCounter }
-								clearInput={clearInput}
 							/>
 							<h5>Grade Achieved</h5>
 							<TextBox
@@ -104,19 +97,18 @@ function L3Component(
 								id={"grade" + qualificationCounter}
 								key={"4000" + qualificationCounter}
 								placeholder={"Enter grade #" + qualificationCounter}
-								clearInput={clearInput} />
+							/>
 							<h5>Year Achieved</h5>
 							<TextBox
 								onChange={(e) => saveValue(e, YearKey)} 
 								id={"year" + qualificationCounter}
 								key={"5000" + qualificationCounter}
 								type="date" 
-								clearInput={clearInput}
 							/>
 							<br/>
 							<UCPButton
 								to="none"
-								className="smallbutton"
+								className="smallbutton prevButton"
 								buttonText="Previous"
 								onClick={gotoPrevious}
 							/>
