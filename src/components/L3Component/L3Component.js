@@ -28,7 +28,7 @@ function L3Component(
 		...props
 	}) {
 	const [clearInput, setClearInput] = useState(false);
-	const [counter, setCounter] = useState(1);
+	const [qualificationCounter, setCounter] = useState(1);
 
 	const l3ComponentClassName = isMobile ? "mobilel3component" : "l3component";
 	const className1 = isMobile ? "l3-mobile-form-right" : "l3-form-right";
@@ -41,8 +41,8 @@ function L3Component(
 		} else {
 			setClearInput(true);
 			//setQualificationIndex(counter);
-			setCounter(counter + 1);
-			saveSelectedData(counter);
+			setCounter(qualificationCounter + 1);
+			saveSelectedData(qualificationCounter);
 		}
 
 		if (onChange) {
@@ -54,19 +54,19 @@ function L3Component(
 	function saveValue(e, key) {
 		console.log("saveValue " + key);
 		let qualCopy = qualificationsInfo;
-		if (!qualCopy[counter - 1]) {
-			qualCopy[counter - 1] = {};
+		if (!qualCopy[qualificationCounter - 1]) {
+			qualCopy[qualificationCounter - 1] = {};
 		}
-		qualCopy[counter - 1][key] = e.target.value;
+		qualCopy[qualificationCounter - 1][key] = e.target.value;
 		setQualificationsInfo(qualCopy);
 	}
 
 	function gotoPrevious() {
-		gotoQualification(counter);
+		gotoQualification(qualificationCounter);
 	}
 
 	function gotoNext() {
-		gotoQualification(counter + 2);
+		gotoQualification(qualificationCounter + 2);
 	}
 
 	function gotoQualification(qualNumber) {
@@ -77,39 +77,39 @@ function L3Component(
 	return (
 		<>
 			{
-				counter < 6 ?
+				qualificationCounter < 6 ?
 					<div className={className1}>
 						<h3 className="form-title">Level 3 Qualifications</h3>
 						<div className={l3ComponentClassName}>
-							<h5>Qualification : {"#" + counter} </h5>
+							<h5>Qualification : {"#" + qualificationCounter} </h5>
 							<p>(E.g. A Level, BTEC, Access)</p>
 							<TextBox
 								onChange={(e) => saveValue(e, QualificationKey)}    
-								id={"qualification" + counter}
-								key={"2000" + counter}
-								placeholder={"Enter qualification #" + counter} 
+								id={"qualification" + qualificationCounter}
+								key={"2000" + qualificationCounter}
+								placeholder={"Enter qualification #" + qualificationCounter} 
 								clearInput={clearInput}
 							/>
 							<h5>Subject: (E.g. Bussiness Studies)</h5>
 							<TextBox
 								onChange={(e) => saveValue(e, SubjectKey)} 
-								id={"subject" + counter}
-								key={"3000" + counter}
-								placeholder={"Enter subject #" + counter }
+								id={"subject" + qualificationCounter}
+								key={"3000" + qualificationCounter}
+								placeholder={"Enter subject #" + qualificationCounter }
 								clearInput={clearInput}
 							/>
 							<h5>Grade Achieved</h5>
 							<TextBox
 								onChange={(e) => saveValue(e, GradeKey)} 
-								id={"grade" + counter}
-								key={"4000" + counter}
-								placeholder={"Enter grade #" + counter}
+								id={"grade" + qualificationCounter}
+								key={"4000" + qualificationCounter}
+								placeholder={"Enter grade #" + qualificationCounter}
 								clearInput={clearInput} />
 							<h5>Year Achieved</h5>
 							<TextBox
 								onChange={(e) => saveValue(e, YearKey)} 
-								id={"year" + counter}
-								key={"5000" + counter}
+								id={"year" + qualificationCounter}
+								key={"5000" + qualificationCounter}
 								type="date" 
 								clearInput={clearInput}
 							/>
