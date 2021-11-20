@@ -60,7 +60,7 @@ function L3Component(
 	function saveValue(e, key) {
 		console.log("saveValue " + key);
 		let qualCopy = qualificationsInfo;
-		qualCopy[key] = e.target.value;
+		qualCopy[counter-1][key] = e.target.value;
 		setQualificationsInfo(qualCopy);
 	}
 	
