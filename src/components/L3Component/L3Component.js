@@ -121,18 +121,27 @@ function L3Component(
 								value={inputContents.current[YearKey]}
 							/>
 							<br/>
-							<UCPButton
-								to="none"
-								className="smallbutton prevButton"
-								buttonText="Previous"
-								onClick={gotoPrevious}
-							/>
-							<UCPButton
-								to="none"
-								className="smallbutton"
-								buttonText="Next"
-								onClick={gotoNext}
-							/>
+							<div className="row">
+								<div className="col-5">
+									<UCPButton
+										to="none"
+										className="smallbutton"
+										buttonText="Previous"
+										onClick={gotoPrevious}
+										disabled={!(qualificationCounter - 1 > 0)}
+									/>
+								</div>
+								<div className="col-2"/>
+								<div className="col-5">
+									<UCPButton
+										to="none"
+										className="smallbutton"
+										buttonText="Next"
+										onClick={gotoNext}
+										disabled={!(qualificationsInfo.length >= qualificationCounter + 1)}
+									/>
+								</div>
+							</div>
 						</div>
 						<br/>
 						<h5>Other L3 Qualifications</h5>
