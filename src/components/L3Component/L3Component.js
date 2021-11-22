@@ -1,51 +1,159 @@
-import React from 'react';
+import React, {useState, useRef} from 'react';
 import './L3Component.css';
 import PropTypes from 'prop-types';
 import TextBox from '../TextBox/TextBox';
 import {isMobile} from 'react-device-detect';
+import {Redirect} from "react-router-dom";
+import RadioButton1 from '../RadioButton/RadioButton1';
+import UCPButton from '../Buttons/UCPButton';
 
-function L3Component({name, id, key, onChange, placeholder, clearInput, value, ...props}) {
-	const className1 = isMobile ? "mobilel3component" : "l3component";
+const L3QualificationsOptions = [
+	{ label: "Yes", id: "qualificationYes", value: "yes" },
+];
+
+const QualificationKey = "qualification";
+const SubjectKey = "subject";
+const GradeKey = "grade";
+const YearKey = "year";
+
+function L3Component(
+	{
+		name, 
+		key, 
+		onChange, 
+		placeholder, 
+		saveSelectedData, 
+		qualificationsInfo,
+		setQualificationsInfo,
+		...props
+	}) {
+	const [qualificationCounter, setCounter] = useState(1);
+	const inputContents = useRef({});
+
+	const l3ComponentClassName = isMobile ? "mobilel3component" : "l3component";
+	const l3FormRightClassName = isMobile ? "l3-mobile-form-right" : "l3-form-right";
+
+	function onYesMoreQualifications(event) {
+		if (event.target.value === 'no') {
+			setCounter(6);
+		} else {
+			setCounter(qualificationCounter + 1);
+			saveSelectedData(qualificationCounter);
+		}
+
+		inputContents.current = {};
+
+		if (onChange) {
+			onChange(event);
+		}
+	}
+
+	function saveValue(e, key) {
+		let qualCopy = qualificationsInfo;
+
+		if (!qualCopy[qualificationCounter - 1]) {
+			qualCopy[qualificationCounter - 1] = {};
+		}
+
+		qualCopy[qualificationCounter - 1][key] = e.target.value;
+		inputContents.current[key] = e.target.value;
+		setQualificationsInfo(qualCopy);
+	}
+
+	function gotoPrevious() {
+		if (qualificationCounter - 1 > 0) {
+			gotoQualification(qualificationCounter - 1);
+		}
+	}
+
+	function gotoNext() {
+		if (qualificationsInfo.length >= qualificationCounter + 1) {
+			gotoQualification(qualificationCounter + 1);
+		}
+	}
+
+	function gotoQualification(qualNumber) {
+		for (const key of Object.keys(qualificationsInfo[qualNumber - 1])) {
+			inputContents.current[key] = qualificationsInfo[qualNumber - 1][key];
+		}
+
+		setCounter(qualNumber);
+	}
 	
 	return (
-		<div className={className1}>
-			<h5>Qualification : {"#" + id} </h5>
-			<p>(E.g. A Level, BTEC, Access)</p>
-			<TextBox
-				onChange={onChange}    
-				id={"qualification" + id}
-				key={"2000" + id}
-				placeholder={"Enter qualification #" + id} 
-				value={value} 
-				clearInput={clearInput}
-			/>
-			<h5>Subject: (E.g. Bussiness Studies)</h5>
-			<TextBox
-				onChange={onChange} 
-				id={"subject" + id}
-				key={"3000" + id}
-				placeholder={"Enter subject #" + id }
-				value={value} 
-				clearInput={clearInput}
-			/>
-			<h5>Grade Achieved</h5>
-			<TextBox
-				onChange={onChange} 
-				id={"grade" + id}
-				key={"4000" + id}
-				placeholder={"Enter grade #" + id}
-				value={value} 
-				clearInput={clearInput} />
-			<h5>Year Achieved</h5>
-			<TextBox
-				onChange={onChange} 
-				id={"year" + id}
-				key={"5000" + id}
-				type="date" 
-				value={value} 
-				clearInput={clearInput}
-			/>
-		</div>
+		<>
+			{
+				qualificationCounter < 6 ?
+					<div className={l3FormRightClassName}>
+						<h3 className="form-title">Level 3 Qualifications</h3>
+						<div className={l3ComponentClassName}>
+							<h5>Qualification : {"#" + qualificationCounter} </h5>
+							<p>(E.g. A Level, BTEC, Access)</p>
+							<TextBox
+								onChange={(e) => saveValue(e, QualificationKey)}    
+								id={"qualification" + qualificationCounter}
+								key={"2000" + qualificationCounter}
+								placeholder={"Enter qualification #" + qualificationCounter}
+								value={inputContents.current[QualificationKey]}
+							/>
+							<h5>Subject: (E.g. Bussiness Studies)</h5>
+							<TextBox
+								onChange={(e) => saveValue(e, SubjectKey)} 
+								id={"subject" + qualificationCounter}
+								key={"3000" + qualificationCounter}
+								placeholder={"Enter subject #" + qualificationCounter }
+								value={inputContents.current[SubjectKey]}
+							/>
+							<h5>Grade Achieved</h5>
+							<TextBox
+								onChange={(e) => saveValue(e, GradeKey)} 
+								id={"grade" + qualificationCounter}
+								key={"4000" + qualificationCounter}
+								placeholder={"Enter grade #" + qualificationCounter}
+								value={inputContents.current[GradeKey]}
+							/>
+							<h5>Year Achieved</h5>
+							<TextBox
+								onChange={(e) => saveValue(e, YearKey)} 
+								id={"year" + qualificationCounter}
+								key={"5000" + qualificationCounter}
+								type="date" 
+								value={inputContents.current[YearKey]}
+							/>
+							<br/>
+							<div className="row">
+								<div className="col-5">
+									<UCPButton
+										to="none"
+										className="smallbutton"
+										buttonText="Previous"
+										onClick={gotoPrevious}
+										disabled={!(qualificationCounter - 1 > 0)}
+									/>
+								</div>
+								<div className="col-2"/>
+								<div className="col-5">
+									<UCPButton
+										to="none"
+										className="smallbutton"
+										buttonText="Next"
+										onClick={gotoNext}
+										disabled={!(qualificationsInfo.length >= qualificationCounter + 1)}
+									/>
+								</div>
+							</div>
+						</div>
+						<br/>
+						<h5>Other L3 Qualifications</h5>
+						<RadioButton1
+							options={L3QualificationsOptions}
+							name="l3qualifications"
+							onChange={onYesMoreQualifications}
+						/>
+					</div>
+					: <Redirect to={{pathname: "/DegreeQualifications"}}/>
+			}
+	   </>
 	);
 }
 
@@ -61,7 +169,9 @@ TextBox.propTypes = {
 	minLength: PropTypes.number,
 	//Minimum input length
 	placeholder: PropTypes.string,
-	type: PropTypes.oneOf(['text', 'password', 'email', 'tel', 'number', 'date'])
+	type: PropTypes.oneOf(['text', 'password', 'email', 'tel', 'number', 'date']),
+	setQualificationsInfo: PropTypes.func,
+	saveSelectedData: PropTypes.func,
 };
 
 TextBox.defaultProps = {
