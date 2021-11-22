@@ -44,9 +44,7 @@ function LevelThreeQualifications() {
 							setQualificationsInfo={setQualificationsInfo} 
 							qualificationsInfo={qualificationsInfo} 
 							saveSelectedData={saveSelectedData}
-							value="me"
 						/>
-  						
   					</div>
   					<Row id="buttonRow">
   						<Col className="centered-buttons">

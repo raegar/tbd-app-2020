@@ -31,7 +31,7 @@ function L3Component(
 	const inputContents = useRef({});
 
 	const l3ComponentClassName = isMobile ? "mobilel3component" : "l3component";
-	const className1 = isMobile ? "l3-mobile-form-right" : "l3-form-right";
+	const l3FormRightClassName = isMobile ? "l3-mobile-form-right" : "l3-form-right";
 
 	function onYesMoreQualifications(event) {
 		if (event.target.value === 'no') {
@@ -84,7 +84,7 @@ function L3Component(
 		<>
 			{
 				qualificationCounter < 6 ?
-					<div className={className1}>
+					<div className={l3FormRightClassName}>
 						<h3 className="form-title">Level 3 Qualifications</h3>
 						<div className={l3ComponentClassName}>
 							<h5>Qualification : {"#" + qualificationCounter} </h5>
