@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import './L3Component.css';
 import PropTypes from 'prop-types';
 import TextBox from '../TextBox/TextBox';
@@ -28,19 +28,20 @@ function L3Component(
 		...props
 	}) {
 	const [qualificationCounter, setCounter] = useState(1);
+	const inputContents = useRef({});
 
 	const l3ComponentClassName = isMobile ? "mobilel3component" : "l3component";
 	const className1 = isMobile ? "l3-mobile-form-right" : "l3-form-right";
 
 	function onYesMoreQualifications(event) {
-		console.log(event.target.value);
-
 		if (event.target.value === 'no') {
 			setCounter(6);
 		} else {
 			setCounter(qualificationCounter + 1);
 			saveSelectedData(qualificationCounter);
 		}
+
+		inputContents.current = {};
 
 		if (onChange) {
 			onChange(event);
@@ -49,24 +50,34 @@ function L3Component(
 
 	function saveValue(e, key) {
 		let qualCopy = qualificationsInfo;
+
 		if (!qualCopy[qualificationCounter - 1]) {
 			qualCopy[qualificationCounter - 1] = {};
 		}
+
 		qualCopy[qualificationCounter - 1][key] = e.target.value;
+		inputContents.current[key] = e.target.value;
 		setQualificationsInfo(qualCopy);
 	}
 
 	function gotoPrevious() {
-		gotoQualification(qualificationCounter);
+		if (qualificationCounter - 1 > 0) {
+			gotoQualification(qualificationCounter - 1);
+		}
 	}
 
 	function gotoNext() {
-		gotoQualification(qualificationCounter + 2);
+		if (qualificationsInfo.length >= qualificationCounter + 1) {
+			gotoQualification(qualificationCounter + 1);
+		}
 	}
 
 	function gotoQualification(qualNumber) {
-		//quals start at one, the index starts at zero
-		setCounter(qualNumber - 1);
+		for (const key of Object.keys(qualificationsInfo[qualNumber - 1])) {
+			inputContents.current[key] = qualificationsInfo[qualNumber - 1][key];
+		}
+
+		setCounter(qualNumber);
 	}
 	
 	return (
@@ -82,7 +93,8 @@ function L3Component(
 								onChange={(e) => saveValue(e, QualificationKey)}    
 								id={"qualification" + qualificationCounter}
 								key={"2000" + qualificationCounter}
-								placeholder={"Enter qualification #" + qualificationCounter} 
+								placeholder={"Enter qualification #" + qualificationCounter}
+								value={inputContents.current[QualificationKey]}
 							/>
 							<h5>Subject: (E.g. Bussiness Studies)</h5>
 							<TextBox
@@ -90,6 +102,7 @@ function L3Component(
 								id={"subject" + qualificationCounter}
 								key={"3000" + qualificationCounter}
 								placeholder={"Enter subject #" + qualificationCounter }
+								value={inputContents.current[SubjectKey]}
 							/>
 							<h5>Grade Achieved</h5>
 							<TextBox
@@ -97,6 +110,7 @@ function L3Component(
 								id={"grade" + qualificationCounter}
 								key={"4000" + qualificationCounter}
 								placeholder={"Enter grade #" + qualificationCounter}
+								value={inputContents.current[GradeKey]}
 							/>
 							<h5>Year Achieved</h5>
 							<TextBox
@@ -104,6 +118,7 @@ function L3Component(
 								id={"year" + qualificationCounter}
 								key={"5000" + qualificationCounter}
 								type="date" 
+								value={inputContents.current[YearKey]}
 							/>
 							<br/>
 							<UCPButton

@@ -35,6 +35,7 @@ function TextBox({
 				min={min}
 				max={max}
 				disabled={attribute}
+				{...props}
 			/>
 		</div>
 	);
