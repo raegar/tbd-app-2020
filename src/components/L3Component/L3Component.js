@@ -96,7 +96,7 @@ function L3Component(
 								placeholder={"Enter qualification #" + qualificationCounter}
 								value={inputContents.current[QualificationKey]}
 							/>
-							<h5>Subject: (E.g. Bussiness Studies)</h5>
+							<h5>Subject: (E.g. Business Studies)</h5>
 							<TextBox
 								onChange={(e) => saveValue(e, SubjectKey)} 
 								id={"subject" + qualificationCounter}
