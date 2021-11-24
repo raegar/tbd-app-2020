@@ -117,8 +117,18 @@ function L3Component(
 								onChange={(e) => saveValue(e, YearKey)} 
 								id={"year" + qualificationCounter}
 								key={"5000" + qualificationCounter}
-								type="date" 
+								type="date"
+								max="9999-12-31"
+								maxLength= {8}
 								value={inputContents.current[YearKey]}
+								min="1000-1-1"
+							/>
+							<br/>
+							<h5>Other L3 Qualifications</h5>
+							<RadioButton1
+								options={L3QualificationsOptions}
+								name="l3qualifications"
+								onChange={onYesMoreQualifications}
 							/>
 							<br/>
 							<div className="row">
@@ -143,13 +153,6 @@ function L3Component(
 								</div>
 							</div>
 						</div>
-						<br/>
-						<h5>Other L3 Qualifications</h5>
-						<RadioButton1
-							options={L3QualificationsOptions}
-							name="l3qualifications"
-							onChange={onYesMoreQualifications}
-						/>
 					</div>
 					: <Redirect to={{pathname: "/DegreeQualifications"}}/>
 			}
