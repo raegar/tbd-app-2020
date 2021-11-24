@@ -1,5 +1,5 @@
-#Coding Standards:
-##ESLint Plugin:
+# Coding Standards:
+## ESLint Plugin:
 To ensure easier enforcing of these standards, the VSCode ESLint plugin should be installed as it will highlight the errors, which you can often fix by moving the cursor to the red underlines and pressing Ctrl+. (as in Ctrl and the . key) and selecting the appropriate fix.
 
 If you run into the “too long line” error and have issues resolving it, remember that most javascript lines comma separated or with +s between can be put on separate lines.
@@ -31,11 +31,11 @@ const result = a.really.long.function.method.call.that.somehow.goes.over.one
 
 Do note that this won’t catch every violation but if ESLint has more features or you’re more experienced with it feel free to add the ones that are missing. The current rules can be found in package.json.
 
-##Javascript:
-###Naming conventions:
+## Javascript:
+### Naming conventions:
 Global variables (such as Styled Components) are PascalCase, whereas local variables are to be camelCase. Functions that are not a React component should be camelCase, but React component functions and classes should be PascalCase.
 
-####OK:
+#### OK:
 ```javascript
 const GlobalVariable = 4;
 
@@ -54,7 +54,7 @@ class ClassThing {
 }
 ```
 
-####Not OK:
+#### Not OK:
 ```javascript
 const globalVariable = 4;
 
@@ -74,10 +74,10 @@ class classThing {
 ```
 
 
-###Spacing/Indentation:
+### Spacing/Indentation:
 Use Tabs, not spaces for indentation. In Javascript (unless you are adding JSX, such as in the return statement of components, which should be treated as HTML except for bits between the curly braces (these: {})) there should be a space before and after assignment operators (=, +, -, *, / etc.) and conditional operators (>, <, ==, != etc.). Additionally, there should be a space before a curly brace unless it is the start of a newline.
 
-####OK:
+#### OK:
 ```javascript
 const x = 9;
 const y = x + 4;
@@ -91,7 +91,7 @@ if (x >= 8) {
 }
 ```
 
-####NOT OK:
+#### NOT OK:
 ```javascript
 const x=9;
 const y=x+4;
@@ -105,7 +105,7 @@ if (x>=8){
  }
 ```
 
-###Braces:
+### Braces:
 Opening brace always goes on the same line.
 
 ```javascript
@@ -115,7 +115,7 @@ if (blah) {
 }
 ```
 
-####NOT:
+#### NOT:
 ```javascript
 if (blah)
 {
@@ -139,7 +139,7 @@ if (thingy) {
 ```
 
 
-####NOT:
+#### NOT:
 
 ```javascript
 }
@@ -154,10 +154,10 @@ else
 }
 ```
 
-###Semicolons:
+### Semicolons:
 Put semicolons on the end of every line where possible, including imports. The exception is inside inlined methods, where it is ok to not have one, unless there is more than one statement, but if you put it there anyways that’s fine.
 
-####OK:
+#### OK:
 ```javascript
 import module from 'place';
 import module2 from 'place2';
@@ -174,7 +174,7 @@ statement2;
 }
 ```
 
-####NOT OK:
+#### NOT OK:
 ```javascript
 import module from 'place'
 import module2 from 'place2'
@@ -190,10 +190,10 @@ statement2
 ```
 
 
-###Comparison Operators:
+### Comparison Operators:
 Always use === and !== when comparing anything, unless you explicitly need the weirdness of == (e.g if you want to check and see if ‘1’ and 1 are equal for some reason). This is because == has weirdness, such as being true in the case of (1 == '1') among other things. This does not affect the other comparison operators, only the equals operators.
 
-####OK:
+#### OK:
 ```javascript
 if (x === y) {
 	blah;
@@ -208,7 +208,7 @@ if (x === 1) {
 }
 ```
 
-####NOT OK:
+#### NOT OK:
 ```javascript
 if (x == y) {
 	blah;
@@ -223,10 +223,10 @@ if (x == 1) {
 }
 ```
 
-###Testing multiple values:
+### Testing multiple values:
 Use switch statements if you need to test if a value is equal to multiple different values and do something different each, as it is neater looking and results in less repeating of code.
 
-####OK:
+#### OK:
 ```javascript
 switch (blah) {
 	case 1:
@@ -244,7 +244,7 @@ switch (blah) {
 
 
 
-####NOT OK (ew ew ew ew):
+#### NOT OK (ew ew ew ew):
 ```javascript
 if (blah === 1) {
 	yadayada;
@@ -260,12 +260,12 @@ if (blah === 2) {
 }
 ```
 
-###Comments:
+### Comments:
 `//` (double forward slash) should always be used for short comments (though in JSX you have to do the `{/* */}` approach so this doesn’t apply there), but for anything longer than two somewhat lengthy lines, the `/* */` comments or similar should be used.
 
 Documentation should have proper capitalisation, but brief programming related comments can be whatever as long as they are accurate and are understandable to English speakers. The occasional joke comment is fine as long as it’s not offensive, but don’t go overboard and keep it relevant (no longer than one short line). This is a software project, not a joke book. If leaving a todo comment, preface it with TODO: so that we can Ctrl+F with ‘TODO:’ to find unfinished comments later.
 
-####Good:
+#### Good:
 ```javascript
 //This is a comment.
 //this is a comment
@@ -285,7 +285,7 @@ Documentation should have proper capitalisation, but brief programming related c
 /* This function takes in parameter x and y, and returns result z. */
 ```
 
-####Bad:
+#### Bad:
 ```javascript
 /*This is a comment.*/
 /*this is a comment*/
@@ -303,7 +303,7 @@ Documentation should have proper capitalisation, but brief programming related c
 //to-do become god of this codebase
 ```
 
-###Long lines/function calls:
+### Long lines/function calls:
 If a line of code stretches beyond 130 characters, and it can be made to span over multiple lines (it almost always can unless you do something completely insane with your naming), do so. This makes reading code much easier. Additionally, if a function call needs more than 4 parameters, it is preferable to spread it over multiple lines.
 
 For example:
@@ -323,23 +323,23 @@ function funcName(param1,
 ```
 
 
-##HTML and JSX:
-###HTML Tagging:
+## HTML and JSX:
+### HTML Tagging:
 There should be no space between the tag, equals and the value. If you want to know why we do it like this in HTML and not in Javascript, ask the web development community.
 
-####OK:
+#### OK:
 ```html
 <p style="blah: blah;">blah</p>
 ```
 
-####NOT OK:
+#### NOT OK:
 ```html
 <p style = "blah: blah;">blah</p>
 ```
 
 
 NOTE: Styling should be kept in the CSS where possible.
-###Long Elements:
+### Long Elements:
 In the case of long elements such as below, they should be spread out over a few lines.
 ```javascript
 <Component heading={currNews.heading} paragraph={currNews.paragraph} date={currNews.date} image={currNews.image} alt={currNews.alt} isRed={isNewsRed} onDelete={() => {this.deletedNewsIndexes.push(i); this.setState({});}} key={i}/>
@@ -359,11 +359,11 @@ Should become:
 />
 ```
 
-##File Structure:
-###Components:
+## File Structure:
+### Components:
 Each component should have its own folder under src/components, even if the file is entirely on its own. This is because it will otherwise sometimes appear to look as if it is under a different folder in VSCode if one is programming on auto pilot, causing confusion later. It also saves having to move that file into a folder if you need to add another file to that component in its folder later.
 
-####OK:
+#### OK:
 ```
 src/components/
 		   ComponentName/
@@ -375,13 +375,13 @@ src/components/
 				        OtherFile.js
 ```
 
-####NOT OK:
+#### NOT OK:
 ```
 src/Components/
 		   ComponentName.js
 ```
 
-##Components/Pages:
+## Components/Pages:
 Components should be function based where possible (as the React community at large are shifting to them as of the introduction of React Hooks), but if there is a good technical reason (no, "because the tutorial I'm using uses class based" is not a good technical reason, it isn't that hard to convert class based to function based in the majority of cases) to make them class components then there’s no problem making them class based. Pages should also be function based where possible, but, again, if there’s a good technical reason to make it a class based page, go ahead.
 
 Components should not have any more than the minimum spacing styling to make them work as standaloney as possible (though of course things like styling for common components to match the site's themes are fine). Leave the margin spacing to the classes. Obviously, this doesn’t apply to actual visual styling (colour, font etc.). This makes sure that the component is reusable on as many pages as possible without having to entirely restyle it. Obviously, padding (inside) is fair game, though.
