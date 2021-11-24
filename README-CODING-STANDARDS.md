@@ -1,11 +1,12 @@
 # Coding Standards:
 ## ESLint Plugin:
-To ensure easier enforcing of these standards, the VSCode ESLint plugin should be installed as it will highlight the errors, which you can often fix by moving the cursor to the red underlines and pressing Ctrl+. (as in Ctrl and the . key) and selecting the appropriate fix.
+To ensure easier enforcing of these standards, the VSCode ESLint plugin (the one by Microsoft in the Extensions section with the orange icon titled "ESLint" is the one we used but others probably work) should be installed as it will highlight the errors, which you can often fix by moving the cursor to the red underlines and pressing Ctrl+. (as in Ctrl and the . key) and selecting the appropriate fix.
 
 If you run into the “too long line” error and have issues resolving it, remember that most javascript lines comma separated or with +s between can be put on separate lines.
 
 ```javascript
-const stringThing = "Some really long text that goes on" + " for a really really really really really " +
+const stringThing = "Some really long text that goes on" + 
+" for a really really really really really " +
 "long time";
 
 const result = a.really.long.function.method.call.that.somehow.goes.over.one
@@ -37,10 +38,10 @@ Global variables (such as Styled Components) are PascalCase, whereas local varia
 
 #### OK:
 ```javascript
-const GlobalVariable = 4;
+const GlobalVariable = 42;
 
 function func() {
-	let localVariable = 20;
+	let localVariable = 64;
 }
 
 function ReactThing(props) {
@@ -49,17 +50,17 @@ function ReactThing(props) {
 
 class ClassThing {
 	constructor() {
-		this.localVariable = 69;
+		this.localVariable = 3141592;
 	}
 }
 ```
 
 #### Not OK:
 ```javascript
-const globalVariable = 4;
+const globalVariable = 42;
 
 function Func() {
-	let LocalVariable = 20;
+	let LocalVariable = 64;
 }
 
 function reactThing(props) {
@@ -68,7 +69,7 @@ function reactThing(props) {
 
 class classThing {
 	constructor() {
-		this.local_variable = 69;
+		this.local_variable = 3141592;
 	}
 }
 ```
