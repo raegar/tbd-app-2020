@@ -19,7 +19,7 @@ function L3Component({name, id, key, onChange, placeholder, clearInput, value, .
 				value={value} 
 				clearInput={clearInput}
 			/>
-			<h5>Subject: (E.g. Bussiness Studies)</h5>
+			<h5>Subject: (E.g. Business Studies)</h5>
 			<TextBox
 				onChange={onChange} 
 				id={"subject" + id}
