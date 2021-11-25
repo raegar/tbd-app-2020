@@ -40,7 +40,7 @@ function ClearingOfferMadeStudentEnd() {
 							className="emailBox" 
 							id="emailConfirm" 
 							placeholder={global.ApplicationFormData.email} 
-							value={email} 
+							value={email.current} 
 						/>
 						<p>Please press confirm to complete</p>
 					</span>
