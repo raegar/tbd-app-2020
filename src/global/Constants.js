@@ -28,8 +28,8 @@ export const L3QualificationsOptions = [
 ];
 
 export const Subjects = [{ value: 'computing', label: 'BSc (Hons) Computing and Information Systems' },
-	{ value: 'criminoloy', label: 'BA (Hons) Crimonology'                                            },
-	{ value: 'digitalArts', label: 'FDA Digital Arts'                                                },
+	{ value: 'criminoloy', label: 'BA (Hons) Criminology'},
+	{ value: 'digitalArts', label: 'FDA Digital Arts'}
 ];
 
 export const GCSEGrades = [
@@ -51,4 +51,3 @@ export const QualificationKey = "qualification";
 export const SubjectKey = "subject";
 export const GradeKey = "grade";
 export const YearKey = "year";
-
