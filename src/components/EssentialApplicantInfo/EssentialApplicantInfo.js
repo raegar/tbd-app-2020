@@ -275,7 +275,7 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						attribute={disabledInputs}
   						className={textboxClassName}
   						onChange={(e) => setEmailInput(e.target.value)}
-  						value={nameInput}
+  						value={emailInput}
 							required
   					/>
   					<TextBox
@@ -289,7 +289,7 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						attribute={disabledInputs}
   						className={textboxClassName}
   						onChange={(e) => setTelInput(e.target.value)}
-  						value={nameInput}
+  						value={telInput}
   					/>
   					<TextBox
   						title="D/O/B"
@@ -300,7 +300,7 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						attribute={disabledInputs}
   						className={textboxClassName}
   						onChange={(e) => setDobInput(e.target.value)}
-  						value={nameInput}
+  						value={dobInput}
   					/>
   					<TextBox
   						title="UCAS ID"
@@ -311,7 +311,7 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						attribute={disabledInputs}
   						className={textboxClassName}
   						onChange={(e) => setUcasInput(e.target.value)}
-  						value={nameInput}
+  						value={ucasInput}
   					/>
   				</span>
   				<span className="ess-form-right">
@@ -320,7 +320,7 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						options={nationalityOptions}
   						name="nationality"
   						attribute={disabledInputs}
-  						onClick={(e) => setNameInput(e.target.value)}
+  						onClick={anyNationalityChecked}
   					/>
   					<RadioButton
   						heading="Convictions"
@@ -328,6 +328,7 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						name="criminal"
   						subtitle="Do you have any unspent criminal convictions?"
   						attribute={disabledInputs}
+							onClick={anyCriminalConvChecked}
   					/>
   					<RadioButton
   						heading="Learning Support"
@@ -335,6 +336,7 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						name="support"
   						subtitle="Do you have any additional learning support needs or disabilities?"
   						attribute={disabledInputs}
+							onClick={anySupportChecked}
   					/>
   				</span>
   			</div>
