@@ -4,17 +4,7 @@ import UCPButton from '../Buttons/UCPButton';
 import DropdownMenu from '../DropdownMenu/DropdownMenu';
 import { Col, Container, Row } from 'react-bootstrap';
 import Jumbotron from '../Jumbotron/Jumbotron';
-
-const Options = [
-	{ value: '0', label: '9:00' },
-	{ value: '1', label: '10:00'},
-	{ value: '2', label: '11:00'},
-	{ value: '3', label: '12:00'},
-	{ value: '4', label: '13:00' },
-	{ value: '5', label: '14:00'},
-	{ value: '6', label: '15:00'},
-	{ value: '7', label: '16:00'},
-];
+import { TimeOptions } from '../../global/Constants';
 
 function Calendar() {
   	return (
@@ -36,7 +26,7 @@ function Calendar() {
   			<br/><br/>
   			<Row>
   				<Col>
-  					<DropdownMenu className="Dropdown" options = {Options}/>
+  					<DropdownMenu className="Dropdown" options={TimeOptions}/>
   				</Col>
   				<Col>
   					<Jumbotron/>

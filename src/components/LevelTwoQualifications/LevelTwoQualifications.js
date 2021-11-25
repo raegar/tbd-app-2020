@@ -5,24 +5,10 @@ import {Row, Col, Container } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 import AlerDismissible from '../AlertDismissible/AlertDismissible';
 import {isMobile} from 'react-device-detect';
+import {GCSEGrades} from '../../global/Constants';
 
 import Headers from '../Header/Headers';
 import Footer from '../Footer/Footer';
-
-const gsceGrades = [
-	{ value: "9", label: "9 - A*" },
-	{ value: "8", label: "8 - A*" },
-	{ value: "7", label: "7 - A" },
-	{ value: "6", label: "6 - B" },
-	{ value: "5", label: "5 - B" },
-	{ value: "4", label: "4 - C" },
-	{ value: "3", label: "3 - D" },
-	{ value: "2", label: "2 - E" },
-	{ value: "1", label: "2 - F"  },
-	{ value: "1", label: "1 -G"  },
-	{ value: "u", label: "U"  },
-	{ value: "na", label: "n/a"},
-];
 
 function LevelTwoQualifications() {
 	const [engLangGrade, setEngLangGrade] = useState("");
@@ -31,9 +17,9 @@ function LevelTwoQualifications() {
 	const [scienceGrade, setScienceGrade] = useState("");
 	const [l2Details, setL2Details] = useState("");
 
-	const className = isMobile ? "MobileTextArea" : "DesktopTextArea";  
-  	const className1 = isMobile ? "l2-mobile-form-right" : "l2-form-right ";
-  	const className2 = isMobile ? "l2-mobile-form-container" : "l2-form-container";
+	const textAreaClassName = isMobile ? "MobileTextArea" : "DesktopTextArea";  
+  	const l2FormRightClassName = isMobile ? "l2-mobile-form-right" : "l2-form-right ";
+  	const l2FormContainerClassName = isMobile ? "l2-mobile-form-container" : "l2-form-container";
 
 	function saveSelectedData() {
 		global.ApplicationFormData.GCSEEnglishLanguage = engLangGrade;
@@ -48,42 +34,42 @@ function LevelTwoQualifications() {
 		<div>
 			<Headers/>
   			<Container>
-  				<Container className={className2}>
+  				<Container className={l2FormContainerClassName}>
   					<h4 className="form-title">Applicant Qualifications</h4>
   					<AlerDismissible/>
-  					<div className={className1}>
+  					<div className={l2FormRightClassName}>
   						<p>GCSE English Language</p>
   						<DropdownMenu 
 						  	placeholder="Select Grade" 
-						  	options={gsceGrades} 
+						  	options={GCSEGrades} 
 						  	id="EngLanguage" 
 						  	onSelect={(e) => setEngLangGrade(e.target.value)}
 						/>
   						<p>GCSE English Literature</p>
   						<DropdownMenu 
 							placeholder="Select Grade" 
-							options={gsceGrades} 
+							options={GCSEGrades} 
 							id="EngLiterature" 
 							onSelect={(e) => setEngLitGrade(e.target.value)}
 						/>
   						<p>GCSE English Mathematics</p>
   						<DropdownMenu 
 							placeholder="Select Grade" 
-							options={gsceGrades} 
+							options={GCSEGrades} 
 							id="Maths" 
 							onSelect={(e) => setMathGrade(e.target.value)}
 						/>
   						<p>GCSE Science / Additional Science</p>
   						<DropdownMenu 
 							placeholder="Select Grade" 
-							options={gsceGrades} 
+							options={GCSEGrades} 
 							id="Science" 
 							onSelect={(e) => setScienceGrade(e.target.value)}
 						/>
   						<p>L2 Qualifications</p>
   						<textarea 
   							id="l2details" 
-  							className={className} 
+  							className={textAreaClassName} 
   							name="l2qualificaitons" 
   							placeholder="Enter level 2 qualifications" 
   							rows={6} 

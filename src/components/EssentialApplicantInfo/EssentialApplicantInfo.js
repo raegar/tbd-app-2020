@@ -9,19 +9,7 @@ import Modal from "../Modal/Modal";
 import {isMobile} from 'react-device-detect';
 import Headers from '../Header/Headers';
 import Footer from '../Footer/Footer';
-const time = [
-	{value: 'morning', label: '09:00am - 12:00pm'},
-	{value: 'afternoon', label: '12:00pm - 15:00pm'},
-	{value: 'evening', label: '15:00pm - 17:00pm'}
-];
-
-const days = [
-	{value: 'monday', label: 'Monday'},
-	{value: 'tuesday', label: 'Tuesday'},
-	{value: 'wednesday', label: 'Wednesday'},
-	{value: 'thursday', label: 'Thursday'},
-	{value: 'friday', label: 'Friday'}
-];
+import {Time, Days} from '../../global/Constants';
 
 function EssentialApplicantInfo({disabled, ...props}) {
 	const [nameInput, setNameInput] = useState("");
@@ -155,10 +143,10 @@ function EssentialApplicantInfo({disabled, ...props}) {
 									<p>Please select a day and time you would be available.</p>
 									<Row id="dropdownRow">
 										<Col className="dropdownOptions1">
-											<DropdownMenu placeholder="Please select a day..." options={days}/>
+											<DropdownMenu placeholder="Please select a day..." options={Days}/>
 										</Col>
 										<Col className="dropdownOptions2">
-											<DropdownMenu placeholder="Please select a time..." options={time}/>
+											<DropdownMenu placeholder="Please select a time..." options={Time}/>
 										</Col>
 									</Row>
 									<br/>

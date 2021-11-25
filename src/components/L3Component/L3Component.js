@@ -6,15 +6,7 @@ import {isMobile} from 'react-device-detect';
 import {Redirect} from "react-router-dom";
 import RadioButton1 from '../RadioButton/RadioButton1';
 import UCPButton from '../Buttons/UCPButton';
-
-const L3QualificationsOptions = [
-	{ label: "Yes", id: "qualificationYes", value: "yes" },
-];
-
-const QualificationKey = "qualification";
-const SubjectKey = "subject";
-const GradeKey = "grade";
-const YearKey = "year";
+import {L3QualificationsOptions, QualificationKey, SubjectKey, GradeKey, YearKey} from '../../global/Constants';
 
 function L3Component(
 	{
