@@ -2,12 +2,12 @@ import React from 'react';
 import './RadioButton.css';
 import PropTypes from 'prop-types';
 
-function RadioButton1({options, attribute, name, value, onChange, oc, heading, subtitle, ...props}) {
+function RadioButton1({options, disabled, name, value, onChange, oc, heading, subtitle, ...props}) {
 	//Iterate through options array and create an input + label for each
 	let items = options.map((item, i) =>
 		<div key={i} className="radio-group">
 			<input 
-				disabled={attribute} 
+				disabled={disabled} 
 				name={name} 
 				type="radio" id={item.id} 
 				checked={value === item.value} 

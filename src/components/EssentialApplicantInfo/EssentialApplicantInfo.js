@@ -298,7 +298,7 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						id="ucasinput"
   						type="text"
   						name="ucas"
-  						attribute={disabledInputs}
+  						disabled={disabledInputs}
   						className={textboxClassName}
   						onChange={(e) => setUcasInput(e.target.value)}
   						value={ucasInput}
@@ -309,7 +309,7 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						heading="Nationality"
   						options={nationalityOptions}
   						name="nationality"
-  						attribute={disabledInputs}
+  						disabled={disabledInputs}
   						onClick={anyNationalityChecked}
   					/>
   					<RadioButton
@@ -317,7 +317,7 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						options={criminalOptions}
   						name="criminal"
   						subtitle="Do you have any unspent criminal convictions?"
-  						attribute={disabledInputs}
+  						disabled={disabledInputs}
 							onClick={anyCriminalConvChecked}
   					/>
   					<RadioButton
@@ -325,7 +325,7 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						options={supportOptions}
   						name="support"
   						subtitle="Do you have any additional learning support needs or disabilities?"
-  						attribute={disabledInputs}
+  						disabled={disabledInputs}
 							onClick={anySupportChecked}
   					/>
   				</span>

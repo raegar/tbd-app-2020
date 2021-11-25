@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './RadioButton.css';
 import PropTypes from 'prop-types';
 
-function RadioButton({options, attribute, name, oc, heading, subtitle, ...props}) {
+function RadioButton({options, disabled, name, oc, heading, subtitle, ...props}) {
 	const [input, setInput] = useState('');
 
 	function handleChange(event) {
@@ -14,7 +14,7 @@ function RadioButton({options, attribute, name, oc, heading, subtitle, ...props}
 	var items = options.map((item, i) =>
 		<div key={i} className="radio-group">
 			<input 
-				disabled={attribute} 
+				disabled={disabled} 
 				name={name} 
 				type="radio" 
 				id={item.id} 
