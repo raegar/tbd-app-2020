@@ -87,8 +87,6 @@ function LevelTwoQualifications() {
   							className={className} 
   							name="l2qualificaitons" 
   							placeholder="Enter Additional Qualifications" 
-  							rows={6} 
-  							cols={30}
 							onChange={(e) => setL2Details(e.target.value)}
   						/>
   					</div>
