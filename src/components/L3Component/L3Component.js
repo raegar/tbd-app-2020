@@ -40,6 +40,21 @@ function L3Component(
 		}
 	}
 
+	function enableMoreQualifications() {
+		let empty = true;
+
+		console.log("Keys of inputs: " + Object.keys(inputContents.current));
+										
+		for (let key of Object.keys(inputContents.current)) {
+			if (inputContents.current[key] && inputContents.current[key].length > 0) {
+				console.log(key + " has a value");
+				empty = false;
+			}
+		}
+
+		return empty;
+	}
+
 	function saveValue(e, key) {
 		let qualCopy = qualificationsInfo;
 
@@ -121,6 +136,7 @@ function L3Component(
 								options={L3QualificationsOptions}
 								name="l3qualifications"
 								onChange={onYesMoreQualifications}
+								disabled={enableMoreQualifications}
 							/>
 							<br/>
 							<div className="row">
