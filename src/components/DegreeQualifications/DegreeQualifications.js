@@ -96,6 +96,7 @@ function DegreeQualifications() {
 										size={30} 
 										onChange={(e) => setNameGrade(e.target.value)}
 									/>
+									
 									: <span></span>
 							}
 
