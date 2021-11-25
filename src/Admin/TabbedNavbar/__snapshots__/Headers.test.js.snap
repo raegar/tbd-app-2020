@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Header 1`] = `
+<DocumentFragment>
+  <header>
+    <a
+      href="/tbd-app-2020"
+    >
+      <img
+        alt="UCP official logo"
+        class="UCPLogoBlue"
+        data-testid="ucpLogoHeader"
+        src="UCPLogo.png"
+      />
+    </a>
+  </header>
+</DocumentFragment>
+`;
