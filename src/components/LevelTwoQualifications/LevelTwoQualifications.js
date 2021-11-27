@@ -66,14 +66,13 @@ function LevelTwoQualifications() {
 							id="Science" 
 							onSelect={(e) => setScienceGrade(e.target.value)}
 						/>
-  						<p>L2 Qualifications</p>
+						<p id = "TextBoxBreak"></p> 
+  						<p>Additional Qualifications</p>
   						<textarea 
   							id="l2details" 
   							className={textAreaClassName} 
   							name="l2qualificaitons" 
-  							placeholder="Enter level 2 qualifications" 
-  							rows={6} 
-  							cols={30}
+  							placeholder="Enter Additional Qualifications" 
 							onChange={(e) => setL2Details(e.target.value)}
   						/>
   					</div>

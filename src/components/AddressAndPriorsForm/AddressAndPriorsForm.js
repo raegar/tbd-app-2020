@@ -152,9 +152,10 @@ function AddressAndPriorsForm() {
 									name="prior-credits" 
 									title="How Many Credits?" 
 									size={5} 
-									type="number" 
+									type="number"
+									placeholder="0" 
 									minLength={1} 
-									maxLength={4} 
+									maxLength={3} 
 									min={0} 
 									max={360}
 									onChange={(e) => setPriorCreditValue(e.target.value)}
@@ -175,11 +176,8 @@ function AddressAndPriorsForm() {
 								? <TextBox 
 									id="priorStudyDate" 
 									name="when-study" 
-									title="When did they last study at UCP/ARU?" 
-									size={20} 
-									type="text" 
-									minLength={2} 
-									maxLength={20}
+									title="When did they last study at UCP/ARU?"  
+									type="date" 
 									onChange={(e) => setPriorStudyDate(e.target.value)}
 								/>
 								: <span></span>

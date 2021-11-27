@@ -8,6 +8,10 @@
     margin-bottom: 10px;
 }
 
+#priorCred {
+    width: 5em;
+  }
+
 .form-background h4{text-align: center;}
 
 .form-background p{text-align: center;}

@@ -293,6 +293,8 @@ function EssentialApplicantInfo({disabled, ...props}) {
   					<TextBox
   						title="UCAS ID"
   						placeholder="Enter UCAS ID"
+						minLength={5}
+  						maxLength={12}
   						id="ucasinput"
   						type="text"
   						name="ucas"
