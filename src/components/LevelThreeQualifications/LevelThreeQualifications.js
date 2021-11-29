@@ -4,8 +4,8 @@ import L3Component from '../L3Component/L3Component';
 import { isMobile } from 'react-device-detect';
 import {Row, Col, Container} from "react-bootstrap";
 import UCPButton from '../Buttons/UCPButton';
-
-import Headers from '../Header/Headers';
+import ProgressBar from '../ProgressBar/ProgressBar';
+import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
 function LevelThreeQualifications() {
@@ -33,10 +33,16 @@ function LevelThreeQualifications() {
 			}
 		}
 	}
+	const completionRate = [
+		{bgcolor: "#005C6E", completed:75 },
+	];
 
   	return (
 		  <div>
-			<Headers/>
+			<Header/>
+			{completionRate.map((item, idx)=>(
+				<ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed}/>
+			))}
   			<Container>
   				<div className={className2}>
   					<div className="form-background">

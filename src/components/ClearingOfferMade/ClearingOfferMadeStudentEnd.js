@@ -3,8 +3,8 @@ import TextBox from "../../components/TextBox/TextBox";
 import "./ClearingOfferMade.css";
 import { Container, Col, Row } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
-
-import Headers from '../Header/Headers';
+import ProgressBar from '../ProgressBar/ProgressBar';
+import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
 function ClearingOfferMadeStudentEnd() {
@@ -28,9 +28,15 @@ function ClearingOfferMadeStudentEnd() {
     	}()); 
     	saveData(fileName);
 	}
+	const completionRate = [
+		{bgcolor: "#005C6E", completed:100 },
+	];
 	return (
 		<div>
-			<Headers/>
+			<Header/>
+			{completionRate.map((item, idx)=>(
+				<ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed}/>
+			))}
 			<Container className="form-container d-flex justify-content-center">
 				<Row className="form-background">
 					<h1 className="form-title">Thank you for using the form</h1>

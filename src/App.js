@@ -4,6 +4,7 @@ import SelectRole from './components/SelectRole/SelectRole';
 import Login from './components/Login/Login';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import StartClearingApplicationPage from './StartClearingApplicationPage';
+import NextOfKin from './components/NextOfKin/NextOfKin';
 import LevelTwoQualifications from './components/LevelTwoQualifications/LevelTwoQualifications';
 import LevelThreeQualifications from './components/LevelThreeQualifications/LevelThreeQualifications';
 import ClearingOfferMade from './components/ClearingOfferMade/ClearingOfferMade';
@@ -13,7 +14,8 @@ import ClearingOfferMadeReasonIfNo from './components/ClearingOfferMade/Clearing
 import ClearingOfferMadeInterviewRPA from './components/ClearingOfferMade/ClearingOfferMadeInterviewRPA';
 import ClearingOfferMadeBeforeCompleting from './components/ClearingOfferMade/ClearingOfferMadeBeforeCompleting';
 import ClearingOfferMadeStudentEnd from './components/ClearingOfferMade/ClearingOfferMadeStudentEnd';
-import AddressAndPriorsForm from './components/AddressAndPriorsForm/AddressAndPriorsForm';
+import Course from './components/Course/Course';
+import AdditionalInformation from './components/AdditionalInformation/AdditionalInformation';
 
 import AdminLogin from './pagesAdmin/AdminLogIn/AdminLogIn';
 import AdminDashboard from './pagesAdmin/AdminDashboard/AdminDashboard';
@@ -31,8 +33,10 @@ function App() {
 					<Switch>
 						<Route path='/' exact component={SelectRole} />
 						<Route path='/login' component={Login}/>
+						<Route path='/AdditionalInformation' component={AdditionalInformation}/>
 						<Route path='/NewApplicationPage' component={StartClearingApplicationPage}/>
-						<Route path='/MoreInfo' component={AddressAndPriorsForm} />
+						<Route path='/NextOfKin' component={NextOfKin}/>
+						<Route path='/Course' component={Course} />
 						<Route path='/LevelTwoQualifications' component={LevelTwoQualifications}/>
 						<Route path='/LevelThreeQualifications' component={LevelThreeQualifications}/>
 						<Route path='/DegreeQualifications' component={DegreeQualifications} />

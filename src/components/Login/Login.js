@@ -5,7 +5,7 @@ import UCPButton from '../Buttons/UCPButton';
 import './Login.css';
 import {isMobile} from 'react-device-detect';
 import {Redirect} from 'react-router';
-import Headers from '../Header/Headers';
+import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
 const InitialState = {
@@ -117,7 +117,7 @@ function LoginForm() {
 
 	return(
 		<div>
-			<Headers/>
+			<Header/>
 			<Container className={className}>
 				<form>
 					<Row>
