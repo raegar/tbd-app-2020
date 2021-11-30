@@ -32,7 +32,9 @@ function AdminLogIn() {
 			</Col>
 			<Col className="second-col">
 				<Row>
-					<p>{errorMessage}</p>
+					<p>{
+					//errorMessage
+					}</p>
 				</Row>
 				<Row>
 					<TextBox 
