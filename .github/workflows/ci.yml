@@ -19,8 +19,8 @@ jobs:
           node-version: 16.x
         
         # Install & build & test:
-      - run: npm test
       - run: npm run build
+      - run: npm test
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
