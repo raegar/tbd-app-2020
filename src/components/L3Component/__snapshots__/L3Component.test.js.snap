@@ -35,7 +35,7 @@ exports[`Renders L3Component 1`] = `
         />
       </div>
       <h5>
-        Subject: (E.g. Bussiness Studies)
+        Subject: (E.g. Business Studies)
       </h5>
       <div
         class="mobiletextbox"
@@ -81,12 +81,40 @@ exports[`Renders L3Component 1`] = `
         />
         <input
           id="year1"
-          maxlength="30"
+          max="9999-12-31"
+          maxlength="8"
+          min="1000-1-1"
           minlength="0"
           placeholder=""
           type="date"
           value=""
         />
+      </div>
+      <br />
+      <h5>
+        Other L3 Qualifications
+      </h5>
+      <div
+        class="radio-buttons"
+      >
+        <h4 />
+        <p />
+        <div
+          class="radio-group"
+        >
+          <input
+            data-testid="qualificationYes"
+            id="qualificationYes"
+            name="l3qualifications"
+            type="radio"
+            value="yes"
+          />
+          <label
+            for="qualificationYes"
+          >
+            Yes
+          </label>
+        </div>
       </div>
       <br />
       <div
@@ -119,32 +147,6 @@ exports[`Renders L3Component 1`] = `
             Next​
           </button>
         </div>
-      </div>
-    </div>
-    <br />
-    <h5>
-      Other L3 Qualifications
-    </h5>
-    <div
-      class="radio-buttons"
-    >
-      <h4 />
-      <p />
-      <div
-        class="radio-group"
-      >
-        <input
-          data-testid="qualificationYes"
-          id="qualificationYes"
-          name="l3qualifications"
-          type="radio"
-          value="yes"
-        />
-        <label
-          for="qualificationYes"
-        >
-          Yes
-        </label>
       </div>
     </div>
   </div>
