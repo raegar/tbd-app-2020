@@ -19,6 +19,7 @@ jobs:
           node-version: 16.x
         
         # Install & build & test:
+      - run: npm install
       - run: npm run build
       - run: npm test
 
