@@ -5,9 +5,9 @@ import TextBox from '../../components/TextBox/TextBox';
 import AdminNavBar from '../../componentsAdmin/AdminNavBar/AdminNavBar';
 
 function AdminLogIn() {
-	const [errorMessage, setErrorMessage] = useState("");
-	const [emailInput, setEmailInput] = useState("");
-	const [passwordInput, setPasswordInput] = useState(null);
+	//const [errorMessage, setErrorMessage] = useState("");
+	//const [emailInput, setEmailInput] = useState("");
+	//const [passwordInput, setPasswordInput] = useState(null);
 	/*
 	function loginButtonPressed(e) {
 		//for now we just check to see if there is a password
@@ -38,14 +38,14 @@ function AdminLogIn() {
 					<TextBox 
 						title="Email" 
 						placeholder="Email" 
-						onChange={(e) => setEmailInput(e.target.value)}
+						//onChange={(e) => setEmailInput(e.target.value)}
 					/>
 				</Row>
 				<Row>
 					<TextBox 
 						title="Password" 
 						placeholder="Password" 
-						onChange={(e) => setPasswordInput(e.target.value)}
+						//onChange={(e) => setPasswordInput(e.target.value)}
 						type="password"
 					/>
 				</Row>
