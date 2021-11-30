@@ -1,15 +1,14 @@
 import React, {useState} from 'react';
-import {Container, Row, Col} from 'react-bootstrap';
+import {Row, Col} from 'react-bootstrap';
 import './AdminLogIn.css';
 import TextBox from '../../components/TextBox/TextBox';
-import UCPButton from '../../components/Buttons/UCPButton';
 import AdminNavBar from '../../componentsAdmin/AdminNavBar/AdminNavBar';
 
 function AdminLogIn() {
 	const [errorMessage, setErrorMessage] = useState("");
 	const [emailInput, setEmailInput] = useState("");
 	const [passwordInput, setPasswordInput] = useState(null);
-
+	/*
 	function loginButtonPressed(e) {
 		//for now we just check to see if there is a password
 		let validated = !!passwordInput;
@@ -18,7 +17,7 @@ function AdminLogIn() {
 		if (!validated) {
 			e.preventDefault();
 		}
-	}
+	}*/
 
 	return (
 		<div className="admin-login-container">{/*LogIn*/}
