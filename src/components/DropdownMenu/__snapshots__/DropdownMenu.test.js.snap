@@ -16,7 +16,7 @@ exports[`Renders DropdownMenu 1`] = `
     <option
       value="criminoloy"
     >
-      BA (Hons) Crimonology
+      BA (Hons) Criminology
     </option>
     <option
       value="digitalArts"

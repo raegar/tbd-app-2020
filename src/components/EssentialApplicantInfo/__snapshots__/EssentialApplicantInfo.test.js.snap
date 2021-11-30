@@ -38,13 +38,16 @@ exports[`Renders Essential Applicant Info 1`] = `
               Name
             </label>
             <input
+              class="desktoptextbox"
               id="nameinput"
               maxlength="60"
               minlength="5"
               name="name"
               placeholder="Enter your name"
+              required=""
               size="20"
               type="text"
+              value=""
             />
           </div>
           <div
@@ -105,16 +108,16 @@ exports[`Renders Essential Applicant Info 1`] = `
             class="mobiletextbox"
           >
             <label
-              for="region"
+              for="county"
             >
-              Region
+              County
             </label>
             <input
-              id="region"
+              id="county"
               maxlength="30"
               minlength="3"
-              name="region"
-              placeholder="Region"
+              name="county"
+              placeholder="County"
               size="25"
               type="text"
             />
@@ -146,13 +149,16 @@ exports[`Renders Essential Applicant Info 1`] = `
               Email
             </label>
             <input
+              class="desktoptextbox"
               id="emailinput"
               maxlength="60"
               minlength="5"
               name="email"
               placeholder="Enter your email"
+              required=""
               size="20"
               type="email"
+              value=""
             />
           </div>
           <div
@@ -164,6 +170,7 @@ exports[`Renders Essential Applicant Info 1`] = `
               Phone No
             </label>
             <input
+              class="desktoptextbox"
               id="telinput"
               maxlength="12"
               minlength="5"
@@ -171,6 +178,7 @@ exports[`Renders Essential Applicant Info 1`] = `
               placeholder="Enter phone number"
               size="20"
               type="tel"
+              value=""
             />
           </div>
           <div
@@ -182,6 +190,7 @@ exports[`Renders Essential Applicant Info 1`] = `
               D/O/B
             </label>
             <input
+              class="desktoptextbox"
               id="dobinput"
               maxlength="30"
               minlength="0"
@@ -189,6 +198,7 @@ exports[`Renders Essential Applicant Info 1`] = `
               placeholder="Enter date of birth"
               size="20"
               type="date"
+              value=""
             />
           </div>
           <div
@@ -200,13 +210,15 @@ exports[`Renders Essential Applicant Info 1`] = `
               UCAS ID
             </label>
             <input
+              class="desktoptextbox"
               id="ucasinput"
-              maxlength="30"
-              minlength="0"
+              maxlength="12"
+              minlength="5"
               name="ucas"
               placeholder="Enter UCAS ID"
               size="20"
               type="text"
+              value=""
             />
           </div>
         </span>

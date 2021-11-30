@@ -114,7 +114,7 @@ exports[`Renders LevelTwoQualifications 1`] = `
             <option
               value="1"
             >
-              1 -G
+              1 - G
             </option>
             <option
               value="u"
@@ -187,7 +187,7 @@ exports[`Renders LevelTwoQualifications 1`] = `
             <option
               value="1"
             >
-              1 -G
+              1 - G
             </option>
             <option
               value="u"
@@ -260,7 +260,7 @@ exports[`Renders LevelTwoQualifications 1`] = `
             <option
               value="1"
             >
-              1 -G
+              1 - G
             </option>
             <option
               value="u"
@@ -333,7 +333,7 @@ exports[`Renders LevelTwoQualifications 1`] = `
             <option
               value="1"
             >
-              1 -G
+              1 - G
             </option>
             <option
               value="u"
@@ -346,16 +346,17 @@ exports[`Renders LevelTwoQualifications 1`] = `
               n/a
             </option>
           </select>
+          <p
+            id="TextBoxBreak"
+          />
           <p>
-            L2 Qualifications
+            Additional Qualifications
           </p>
           <textarea
             class="DesktopTextArea"
-            cols="30"
             id="l2details"
             name="l2qualificaitons"
-            placeholder="Enter level 2 qualifications"
-            rows="6"
+            placeholder="Enter Additional Qualifications"
           />
         </div>
       </div>
