@@ -17,5 +17,5 @@ test("Proper progress number shows", () => {
         </Router>
     );
 
-    expect(screen.getByText(percent + "%"));
+    expect(screen.getByText(percent + "%")).not.toBeNull();
 })
