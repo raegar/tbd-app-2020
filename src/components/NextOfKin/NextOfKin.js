@@ -108,7 +108,7 @@ function NextOfKin({ ...props}) {
   					/>
   				</span>
   				<span className="ess-form-right">
-				  <TextBox 
+					<TextBox 
 						name="kin_address_line_1"
 						title="Kin Address Line 1"
 						placeholder="Kin Address Line 1"
