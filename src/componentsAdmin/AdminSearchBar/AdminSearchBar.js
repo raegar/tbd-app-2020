@@ -1,21 +1,28 @@
 import React from "react";
-import "./SearchBar.css"
-const SearchBar = () => {
+import "./AdminSearchBar.css";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+
+import {faThumbsUp} from '@fortawesome/free-solid-svg-icons';
+
+function SearchBar(){
 	return (
-		<form action="/" method="get">
+		<div>
 			<label htmlFor="header-search">
 				<span className="visually-hidden">Search blog posts </span>
 			</label>
 			<input
 				type="text"
 				id="header-search"
-				placeholder="Search blog posts"
+				placeholder="Search data"
 				name="s"
 			/>
-			<button type ="submit">search</button>
-		</form>
-	)
+			<button className= "searchbar-container">
+                Search
+            </button>
+		</div>
+	);
 }
+
 const posts= [ 
 	{id:'1', name: 'this first post is about react'},
 	{id:'2', name: 'this is about preact'},
