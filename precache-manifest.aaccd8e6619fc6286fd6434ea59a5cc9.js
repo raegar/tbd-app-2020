@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "113dae16f769ffad773a29261a918594",
+    "revision": "e83a2e54d9e03cbdc7c6443ab70f4c9d",
     "url": "/tbd-app-2020/index.html"
   },
   {
-    "revision": "30f7deab1b03053c39f2",
+    "revision": "6f27cca86d98deb6cd9f",
     "url": "/tbd-app-2020/static/css/2.429e79c4.chunk.css"
   },
   {
-    "revision": "3b285d39d70293431c63",
+    "revision": "f6e380cba07443a58cd3",
     "url": "/tbd-app-2020/static/css/main.b491954e.chunk.css"
   },
   {
-    "revision": "30f7deab1b03053c39f2",
-    "url": "/tbd-app-2020/static/js/2.b7634850.chunk.js"
+    "revision": "6f27cca86d98deb6cd9f",
+    "url": "/tbd-app-2020/static/js/2.cd175ba7.chunk.js"
   },
   {
     "revision": "3975064d7735ae6d64a08870a919e367",
-    "url": "/tbd-app-2020/static/js/2.b7634850.chunk.js.LICENSE.txt"
+    "url": "/tbd-app-2020/static/js/2.cd175ba7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3b285d39d70293431c63",
-    "url": "/tbd-app-2020/static/js/main.d53adca9.chunk.js"
+    "revision": "f6e380cba07443a58cd3",
+    "url": "/tbd-app-2020/static/js/main.ac97838a.chunk.js"
   },
   {
     "revision": "3e2c9d8f5b64489a328b",
