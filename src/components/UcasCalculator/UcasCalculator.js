@@ -51,7 +51,7 @@ function UcasCalculator() {
 			gradesCopy[index].points = parseInt(e.target.value);
 		}
 
-		setSelectedGrades(gradesCopy);
+		setSelectedGrades([...gradesCopy]);
 		console.log(JSON.stringify(selectedGrades));
 		console.log(selectedGrades[index].points);
 	}
@@ -67,6 +67,8 @@ function UcasCalculator() {
 
 		return sum;
 	}
+
+	console.log("redraw");
 
 	return (
 		<div>

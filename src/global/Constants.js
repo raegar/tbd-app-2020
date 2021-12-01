@@ -67,7 +67,7 @@ export const UCASGrades = {
 		"A Levels": [
 			{grade: "A*", points: 56},
 			{grade: "A", points: 48},
-			{grade: "B", points: 0},
+			{grade: "B", points: 40},
 			{grade: "C", points: 32},
 			{grade: "D", points: 24},
 			{grade: "E", points: 16}
