@@ -39,12 +39,14 @@ exports[`Renders ClearingOfferMadeStudentEnd 1`] = `
               for="emailConfirm"
             />
             <input
+              class="emailBox"
               id="emailConfirm"
               maxlength="30"
               minlength="0"
               placeholder="Test@email.com"
               size="20"
               type="text"
+              value="Test@email.com"
             />
           </div>
           <p>

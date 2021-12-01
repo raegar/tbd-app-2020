@@ -40,6 +40,7 @@ exports[`Renders ClearingOfferMadeBeforeCompleting 1`] = `
             placeholder="Test@email.com"
             size="20"
             type="text"
+            value="Test@email.com"
           />
         </div>
         <h3>
@@ -58,6 +59,7 @@ exports[`Renders ClearingOfferMadeBeforeCompleting 1`] = `
             placeholder=""
             size="20"
             type="text"
+            value=""
           />
         </div>
       </div>

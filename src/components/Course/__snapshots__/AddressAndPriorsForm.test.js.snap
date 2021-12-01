@@ -42,7 +42,7 @@ exports[`Renders Form One 1`] = `
             <option
               value="criminoloy"
             >
-              BA (Hons) Crimonology
+              BA (Hons) Criminology
             </option>
             <option
               value="digitalArts"
