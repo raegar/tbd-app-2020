@@ -16,27 +16,38 @@ function TextBox({
 	type, 
 	min, 
 	max, 
-	attribute, 
+	attribute,
+	multiline, 
 	...props}) {
-	const className = isMobile ? "mobiletextbox" : "textbox";
+	const textBoxClassName = isMobile ? "mobiletextbox" : "textbox";
+	/*TODO: can we cull a bunch of these via the use of {...props}? it's basically meant to
+	be a copy of input so some poor soul could get points for adding a component anyways.*/
+	const textBoxPropsObj = {
+		name: name,
+		onChange: onChange,
+		placeholder: placeholder,
+		id: id,
+		maxLength: maxLength,
+		minLength: minLength,
+		size: size,
+		type: type,
+		min: min,
+		max: max,
+		disabled: attribute,
+		...props
+	};
 
+	//<input> doesn't work with multiple lines 
 	return (
-		<div className={`${className ? "mobiletextbox" : "textbox"}`} id={wrapID}>
+		<div className={`${textBoxClassName ? "mobiletextbox" : "textbox"}`} id={wrapID}>
 			<label htmlFor={id}>{title}</label>
-			<input
-				name={name}
-				onChange={onChange}
-				placeholder={placeholder}
-				id={id}
-				maxLength={maxLength}
-				minLength={minLength}
-				size={size}
-				type={type}
-				min={min}
-				max={max}
-				disabled={attribute}
-				{...props}
-			/>
+			{(!multiline) ? 
+				<input 
+					{...textBoxPropsObj}
+				/>
+				: <textarea
+					{...textBoxPropsObj}
+				/>}
 		</div>
 	);
 }
@@ -52,7 +63,8 @@ TextBox.propTypes = {
 	min: PropTypes.number,
 	max: PropTypes.number,
 	wrapID: PropTypes.string,
-	attribute: PropTypes.string
+	attribute: PropTypes.string,
+	multiline: PropTypes.bool
 };
 
 TextBox.defaultProps = {
@@ -62,7 +74,8 @@ TextBox.defaultProps = {
 	minLength: 0,
 	placeholder: '',
 	type: "text",
-	attribute: ''
+	attribute: '',
+	multiline: false
 };
 
 /* Example Use

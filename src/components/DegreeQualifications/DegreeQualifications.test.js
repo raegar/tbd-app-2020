@@ -13,6 +13,7 @@ it("Renders Degree Qual", () => {
 });
 
 test("Level 4 Qualification Conditional rendering", () => {
+    const lookingFor = 'Enter qualification name and grade:'
     render(
         <Router>
             <DegreeQualifications />
@@ -20,13 +21,13 @@ test("Level 4 Qualification Conditional rendering", () => {
     )
 
     expect(screen.getByTestId('prior-yes')).toBeInTheDocument()
-    //expect(screen.queryByText('Enter qualification name and grade')).toBe(null)
+    expect(screen.queryByText(lookingFor)).toBeNull()
 
     fireEvent.click(screen.getByTestId('prior-yes'))
 
-    //expect(screen.queryByText('Enter qualification name and grade')).toBeInTheDocument()
+    expect(screen.queryByText(lookingFor)).toBeInTheDocument()
 
     fireEvent.click(screen.getByTestId('prior-no'))
 
-    //expect(screen.queryByText('Enter qualification name and grade')).toBe(null)
+    expect(screen.queryByText(lookingFor)).toBeNull()
 })
