@@ -63,7 +63,8 @@ TextBox.propTypes = {
 	min: PropTypes.number,
 	max: PropTypes.number,
 	wrapID: PropTypes.string,
-	attribute: PropTypes.string
+	attribute: PropTypes.string,
+	multiline: PropTypes.bool
 };
 
 TextBox.defaultProps = {
@@ -73,7 +74,8 @@ TextBox.defaultProps = {
 	minLength: 0,
 	placeholder: '',
 	type: "text",
-	attribute: ''
+	attribute: '',
+	multiline: false
 };
 
 /* Example Use
