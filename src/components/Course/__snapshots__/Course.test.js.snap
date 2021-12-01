@@ -16,6 +16,19 @@ exports[`Renders Form One 1`] = `
       </a>
     </header>
     <div
+      style="height: 30px; width: 90%; background-color: rgb(178, 221, 223); border-radius: 50px; margin: 50px;"
+    >
+      <div
+        style="height: 100%; width: 45%; background-color: rgb(0, 92, 110); border-radius: inherit; text-align: right;"
+      >
+        <span
+          style="padding: 5px; color: rgb(255, 255, 255); font-weight: bold;"
+        >
+           45% 
+        </span>
+      </div>
+    </div>
+    <div
       class="form-container d-flex justify-content-center container"
     >
       <div
@@ -257,7 +270,7 @@ exports[`Renders Form One 1`] = `
           class="centered-buttons col"
         >
           <a
-            href="/NewApplicationPage"
+            href="/AdditionalInformation"
           >
             <button
               class="mediumbutton"

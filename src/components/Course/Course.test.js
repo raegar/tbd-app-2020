@@ -1,21 +1,21 @@
 import React from 'react';
 import { render, cleanup, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import AddressAndPriorsForm from './AddressAndPriorsForm';
+import Course from './Course';
 import { BrowserRouter as Router} from 'react-router-dom';
 
 //cleans up 
 afterEach(cleanup);
 
 it("Renders Form One", () => {
-    const { asFragment } = render(<Router><AddressAndPriorsForm /></Router>);
+    const { asFragment } = render(<Router><Course /></Router>);
     expect(asFragment()).toMatchSnapshot();
 });
 
 test('Prior Credit Conditional Rendering', () => {
     render (
         <Router>
-            <AddressAndPriorsForm />
+            <Course />
         </Router>
     )
     //The prior credit radio button should be in the document
@@ -41,7 +41,7 @@ test('Prior Credit Conditional Rendering', () => {
 test('Prior Study Conditional Rendering', () => {
     render(
         <Router>
-            <AddressAndPriorsForm />
+            <Course />
         </Router>
     )
 
