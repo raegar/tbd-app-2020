@@ -6,8 +6,8 @@ import UCPButton from "../Buttons/UCPButton";
 import AlerDismissible from '../AlertDismissible/AlertDismissible';
 import {isMobile} from 'react-device-detect';
 import {GCSEGrades} from '../../global/Constants';
-
-import Headers from '../Header/Headers';
+import ProgressBar from '../ProgressBar/ProgressBar';
+import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
 function LevelTwoQualifications() {
@@ -16,7 +16,6 @@ function LevelTwoQualifications() {
 	const [mathGrade, setMathGrade] = useState("");
 	const [scienceGrade, setScienceGrade] = useState("");
 	const [l2Details, setL2Details] = useState("");
-
 	const textAreaClassName = isMobile ? "MobileTextArea" : "DesktopTextArea";  
   	const l2FormRightClassName = isMobile ? "l2-mobile-form-right" : "l2-form-right ";
   	const l2FormContainerClassName = isMobile ? "l2-mobile-form-container" : "l2-form-container";
@@ -29,10 +28,17 @@ function LevelTwoQualifications() {
 		global.ApplicationFormData.GCSElevelTwoDetails = l2Details;
 		console.log(global.ApplicationFormData);
 	}
+	//progress bar
+	const completionRate = [
+		{bgcolor: "#005C6E", completed:60 },
+	];
 
   	return (
 		<div>
-			<Headers/>
+			<Header/>
+			{completionRate.map((item, idx)=>(
+				<ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed}/>
+			))}
   			<Container>
   				<Container className={l2FormContainerClassName}>
   					<h4 className="form-title">Applicant Qualifications</h4>
@@ -80,7 +86,7 @@ function LevelTwoQualifications() {
   				<Row id="buttonRow">
   					<Col className="centered-buttons">
   						<UCPButton 
-						  	to='/MoreInfo'
+						  	to='/Course'
   							primary="True"
   							className="mediumbutton"
   							buttonText="Go Back"

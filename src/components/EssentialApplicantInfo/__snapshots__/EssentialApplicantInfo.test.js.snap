@@ -3,18 +3,19 @@
 exports[`Renders Essential Applicant Info 1`] = `
 <DocumentFragment>
   <div>
-    <header>
-      <a
-        href="/tbd-app-2020"
+    <div
+      style="height: 30px; width: 90%; background-color: rgb(178, 221, 223); border-radius: 50px; margin: 50px;"
+    >
+      <div
+        style="height: 100%; width: 15%; background-color: rgb(0, 92, 110); border-radius: inherit; text-align: right;"
       >
-        <img
-          alt="UCP official logo"
-          class="UCPLogoBlue"
-          data-testid="ucpLogoHeader"
-          src="UCPLogo.png"
-        />
-      </a>
-    </header>
+        <span
+          style="padding: 5px; color: rgb(255, 255, 255); font-weight: bold;"
+        >
+           15% 
+        </span>
+      </div>
+    </div>
     <div
       class="es-form-container container"
     >
@@ -54,90 +55,41 @@ exports[`Renders Essential Applicant Info 1`] = `
             class="mobiletextbox"
           >
             <label
-              for="address-1"
+              for="prefixinput"
             >
-              Address Line 1
+              Perefered prefix
             </label>
             <input
-              id="address-1"
-              maxlength="100"
-              minlength="10"
-              name="address_line_1"
-              placeholder="Address Line 1"
-              size="35"
+              class="desktoptextbox"
+              id="prefixinput"
+              maxlength="60"
+              minlength="5"
+              name="prefix"
+              placeholder="Enter your prefix"
+              required=""
+              size="20"
               type="text"
+              value=""
             />
           </div>
           <div
             class="mobiletextbox"
           >
             <label
-              for="address-2"
+              for="ucasinput"
             >
-              Address Line 2
+              UCAS ID
             </label>
             <input
-              id="address-2"
-              maxlength="100"
-              minlength="10"
-              name="address_line_2"
-              placeholder="Address Line 2"
-              size="35"
+              class="desktoptextbox"
+              id="ucasinput"
+              maxlength="12"
+              minlength="5"
+              name="ucas"
+              placeholder="Enter UCAS ID"
+              size="20"
               type="text"
-            />
-          </div>
-          <div
-            class="mobiletextbox"
-          >
-            <label
-              for="town-city"
-            >
-              Town/City
-            </label>
-            <input
-              id="town-city"
-              maxlength="100"
-              minlength="10"
-              name="town_city"
-              placeholder="Town/City"
-              size="35"
-              type="text"
-            />
-          </div>
-          <div
-            class="mobiletextbox"
-          >
-            <label
-              for="county"
-            >
-              County
-            </label>
-            <input
-              id="county"
-              maxlength="30"
-              minlength="3"
-              name="county"
-              placeholder="County"
-              size="25"
-              type="text"
-            />
-          </div>
-          <div
-            class="mobiletextbox"
-          >
-            <label
-              for="postcode"
-            >
-              Postcode
-            </label>
-            <input
-              id="postcode"
-              maxlength="9"
-              minlength="6"
-              name="postcode"
-              placeholder="Postcode"
-              size="10"
-              type="text"
+              value=""
             />
           </div>
           <div
@@ -201,169 +153,99 @@ exports[`Renders Essential Applicant Info 1`] = `
               value=""
             />
           </div>
-          <div
-            class="mobiletextbox"
-          >
-            <label
-              for="ucasinput"
-            >
-              UCAS ID
-            </label>
-            <input
-              class="desktoptextbox"
-              id="ucasinput"
-              maxlength="12"
-              minlength="5"
-              name="ucas"
-              placeholder="Enter UCAS ID"
-              size="20"
-              type="text"
-              value=""
-            />
-          </div>
         </span>
         <span
           class="ess-form-right"
         >
           <div
-            class="radio-buttons"
+            class="mobiletextbox"
           >
-            <h4>
-              Nationality
-            </h4>
-            <p />
-            <div
-              class="radio-group"
+            <label
+              for="address-1"
             >
-              <input
-                data-testid="UK"
-                id="UK"
-                name="nationality"
-                type="radio"
-                value="UK"
-              />
-              <label
-                for="UK"
-              >
-                UK National
-              </label>
-            </div>
-            <div
-              class="radio-group"
-            >
-              <input
-                data-testid="EU"
-                id="EU"
-                name="nationality"
-                type="radio"
-                value="EU"
-              />
-              <label
-                for="EU"
-              >
-                EU National
-              </label>
-            </div>
-            <div
-              class="radio-group"
-            >
-              <input
-                data-testid="Other"
-                id="Other"
-                name="nationality"
-                type="radio"
-                value="Other"
-              />
-              <label
-                for="Other"
-              >
-                Other
-              </label>
-            </div>
+              Address Line 1
+            </label>
+            <input
+              id="address-1"
+              maxlength="100"
+              minlength="10"
+              name="address_line_1"
+              placeholder="Address Line 1"
+              size="35"
+              type="text"
+            />
           </div>
           <div
-            class="radio-buttons"
+            class="mobiletextbox"
           >
-            <h4>
-              Convictions
-            </h4>
-            <p>
-              Do you have any unspent criminal convictions?
-            </p>
-            <div
-              class="radio-group"
+            <label
+              for="address-2"
             >
-              <input
-                data-testid="crimeYes"
-                id="crimeYes"
-                name="criminal"
-                type="radio"
-                value="yes"
-              />
-              <label
-                for="crimeYes"
-              >
-                Yes
-              </label>
-            </div>
-            <div
-              class="radio-group"
-            >
-              <input
-                data-testid="crimeNo"
-                id="crimeNo"
-                name="criminal"
-                type="radio"
-                value="no"
-              />
-              <label
-                for="crimeNo"
-              >
-                No
-              </label>
-            </div>
+              Address Line 2
+            </label>
+            <input
+              id="address-2"
+              maxlength="100"
+              minlength="10"
+              name="address_line_2"
+              placeholder="Address Line 2"
+              size="35"
+              type="text"
+            />
           </div>
           <div
-            class="radio-buttons"
+            class="mobiletextbox"
           >
-            <h4>
-              Learning Support
-            </h4>
-            <p>
-              Do you have any additional learning support needs or disabilities?
-            </p>
-            <div
-              class="radio-group"
+            <label
+              for="town-city"
             >
-              <input
-                data-testid="supportYes"
-                id="supportYes"
-                name="support"
-                type="radio"
-                value="yes"
-              />
-              <label
-                for="supportYes"
-              >
-                Yes
-              </label>
-            </div>
-            <div
-              class="radio-group"
+              Town/City
+            </label>
+            <input
+              id="town-city"
+              maxlength="100"
+              minlength="10"
+              name="town_city"
+              placeholder="Town/City"
+              size="35"
+              type="text"
+            />
+          </div>
+          <div
+            class="mobiletextbox"
+          >
+            <label
+              for="county"
             >
-              <input
-                data-testid="supportNo"
-                id="supportNo"
-                name="support"
-                type="radio"
-                value="no"
-              />
-              <label
-                for="supportNo"
-              >
-                No
-              </label>
-            </div>
+              Region
+            </label>
+            <input
+              id="county"
+              maxlength="30"
+              minlength="3"
+              name="region"
+              placeholder="Region"
+              size="25"
+              type="text"
+            />
+          </div>
+          <div
+            class="mobiletextbox"
+          >
+            <label
+              for="postcode"
+            >
+              Postcode
+            </label>
+            <input
+              id="postcode"
+              maxlength="9"
+              minlength="6"
+              name="postcode"
+              placeholder="Postcode"
+              size="10"
+              type="text"
+            />
           </div>
         </span>
       </div>
@@ -394,7 +276,7 @@ exports[`Renders Essential Applicant Info 1`] = `
               id="confirmButton"
             >
               <a
-                href="/MoreInfo"
+                href="/NextOfKin"
               >
                 <button
                   class="mediumbutton"

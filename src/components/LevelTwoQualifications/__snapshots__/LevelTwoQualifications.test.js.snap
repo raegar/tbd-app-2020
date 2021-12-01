@@ -16,6 +16,19 @@ exports[`Renders LevelTwoQualifications 1`] = `
       </a>
     </header>
     <div
+      style="height: 30px; width: 90%; background-color: rgb(178, 221, 223); border-radius: 50px; margin: 50px;"
+    >
+      <div
+        style="height: 100%; width: 60%; background-color: rgb(0, 92, 110); border-radius: inherit; text-align: right;"
+      >
+        <span
+          style="padding: 5px; color: rgb(255, 255, 255); font-weight: bold;"
+        >
+           60% 
+        </span>
+      </div>
+    </div>
+    <div
       class="container"
     >
       <div
@@ -368,7 +381,7 @@ exports[`Renders LevelTwoQualifications 1`] = `
           class="centered-buttons col"
         >
           <a
-            href="/MoreInfo"
+            href="/Course"
           >
             <button
               class="mediumbutton"

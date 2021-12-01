@@ -4,7 +4,7 @@ import EssentialApplicantInfo from './components/EssentialApplicantInfo/Essentia
 import Disclaimer from './components/Disclaimer/Disclaimer';
 import {Container} from 'react-bootstrap';
 
-import Headers from './components/Header/Headers';
+import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
 function StartClearingApplicationPage() {
@@ -17,7 +17,7 @@ function StartClearingApplicationPage() {
 
 	return (
 		<div>
-			<Headers/>
+			<Header/>
 			<Container>
 				<Disclaimer enableMethod={onUserAcceptedPrivacyPolicy} staff={global.userType}/>
 				<EssentialApplicantInfo disabled={!userAcceptedPrivacyPolicy}/>

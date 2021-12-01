@@ -3,13 +3,13 @@ import TextBox from "../TextBox/TextBox";
 import "./ClearingOfferMade.css";
 import { Container, Col , Row} from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
-import Headers from '../Header/Headers';
+import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
 function ClearingOfferMadeInterviewRPA() {
 	return (
 		<div>
-			<Headers/>
+			<Header/>
 			<Container>
 				<Row className="offer-made">
 					<h1>Interview or RPA required</h1>

@@ -3,7 +3,7 @@ import { Container, Row , Col} from 'react-bootstrap';
 import UCPButton from '../Buttons/UCPButton';
 import './SelectRole.css';
 import {isMobile} from 'react-device-detect';
-import Headers from '../Header/Headers';
+import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 //Must Set HREF attribute to use
 
@@ -12,7 +12,7 @@ function SelectRole() {
 
 	return (
 		<div>
-			<Headers/>
+			<Header/>
 			<Container className="mt-5 px-3 py-3 select-role-container">
 				<Row className="text-center">
 					<Col className="mt-3 mb-3">

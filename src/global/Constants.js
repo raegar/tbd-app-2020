@@ -14,13 +14,28 @@ export const TimeOptions = [
 	{ value: '6', label: '15:00'},
 	{ value: '7', label: '16:00'},
 ];
+export const Kin =[
+	{value:'Mother', label: 'Mother'},
+	{value:'Father', label: 'Father'},
+	{value: 'Brother', label:'Brother'},
+	{value:'Sister', label:'Sister'},
+	{value:'Grandparent', label:'Grandparent'},
+	{value:'Partner', label:'Partner'},
+	{value:'Carer', label:'Carer'},
 
+];
 export const Days = [
 	{value: 'monday', label: 'Monday'      },
 	{value: 'tuesday', label: 'Tuesday'    },
 	{value: 'wednesday', label: 'Wednesday'},
 	{value: 'thursday', label: 'Thursday'  },
 	{value: 'friday', label: 'Friday'      },
+];
+
+export const Prefixs =[
+	{value: "he/his", id:"He/HisPrefixs", label:"He/His"},
+	{value: "she/her", id:"She/HerPrefixs", label:"She/Her"},
+	{value: "they/their", id:"They/TheirPrefixs", label:"They/Their"},
 ];
 
 export const L3QualificationsOptions = [
