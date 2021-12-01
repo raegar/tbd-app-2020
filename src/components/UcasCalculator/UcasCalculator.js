@@ -37,13 +37,11 @@ function UcasCalculator() {
 	function changeSubjectName(e, index) {
 		let gradesCopy = selectedGrades;
 		gradesCopy[index].name = e.target.value;
-		console.log("subject change");
 		setSelectedGrades(gradesCopy);
 	}
 
 	function selectGrade(e, index) {
 		let gradesCopy = selectedGrades;
-		console.log(e.target.value);
 
 		if (!gradesCopy[index]) {
 			gradesCopy[index] = {name: "", points: parseInt(e.target.value)};
@@ -52,8 +50,6 @@ function UcasCalculator() {
 		}
 
 		setSelectedGrades([...gradesCopy]);
-		console.log(JSON.stringify(selectedGrades));
-		console.log(selectedGrades[index].points);
 	}
 
 	function totalPoints() {
@@ -63,12 +59,8 @@ function UcasCalculator() {
 			sum += selectedGrades[i].points;
 		}
 
-		console.log("sum");
-
 		return sum;
 	}
-
-	console.log("redraw");
 
 	return (
 		<div>
@@ -97,10 +89,7 @@ function UcasCalculator() {
 								: [{label: "...", value: "none"}]
 							}
 							disabled={gradeOptions.length <= 0}
-							onSelect={(e) => {
-								console.log("test"); 
-								selectGrade(e, 0);
-							}}
+							onSelect={(e) => selectGrade(e, 0)}
 						/>
 					</Col>
 				</Row>
