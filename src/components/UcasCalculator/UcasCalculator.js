@@ -142,7 +142,7 @@ function UcasCalculator() {
 						buttonText="Add another qualification"
 					/>
 				</Row>
-				<span className="totalQualPoints">Total points <b>{totalPoints()}</b></span>
+				<span className="totalQualPoints">Total points <b data-testid="totalPoints">{totalPoints()}</b></span>
 			</Container>
 		</div>
 	);
