@@ -22,6 +22,10 @@ import AdminDashboard from './pagesAdmin/AdminDashboard/AdminDashboard';
 import AdminData from './pagesAdmin/AdminData/AdminData';
 import AdminGraph from './pagesAdmin/AdminGraphs/AdminGraph';
 
+//DEBUG
+import UcasCalculator from './components/UcasCalculator/UcasCalculator';
+//DEBUG
+
 const BaseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
 
 function App() {
@@ -30,6 +34,7 @@ function App() {
 		<Router basename={BaseUrl}>
 			<div className="App">
 				<div className="main-app">
+					<UcasCalculator/>
 					<Switch>
 						<Route path='/' exact component={SelectRole} />
 						<Route path='/login' component={Login}/>

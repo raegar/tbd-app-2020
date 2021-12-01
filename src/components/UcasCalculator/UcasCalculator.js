@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import './UcasCalculator.css';
 import {UCASGrades} from '../../global/Constants';
-import {TextBox} from '../TextBox/TextBox';
-import {DropdownMenu} from '../DropdownMenu/DropdownMenu';
+import TextBox from '../TextBox/TextBox';
+import DropdownMenu from '../DropdownMenu/DropdownMenu';
 import {Container, Row, Col} from "react-bootstrap";
 
 function UcasCalculator() {
@@ -12,12 +12,12 @@ function UcasCalculator() {
 	function gradesOptions() {
 		const options = [];
 
-		for (const name of Object.keys(UCASGrades)) {
+		for (const name in UCASGrades) {
 			//first add the disabled bold section option
 			options.push(<option disabled className="gradeTypeHeader">{name}</option>);
 
 			//now add each subgrade type
-			for (const subgradeName of Object.keys(UCASGrades[name])) {
+			for (const subgradeName in UCASGrades[name]) {
 				options.push(<option value={UCASGrades[name][subgradeName]}>{"  " + subgradeName}</option>);
 			}
 		}
@@ -26,6 +26,7 @@ function UcasCalculator() {
 	}
 
 	function selectGradeType(e) {
+		console.log(JSON.stringify(e.target.value));
 		setGradeOptions(e.target.value);
 	}
 
@@ -33,9 +34,12 @@ function UcasCalculator() {
 		<div>
 			<Container>
 				<Row>
-					<select id={"grades"} onChange={selectGradeType}>
-						{gradesOptions()}
-					</select>
+					<Col>
+						<select id={"grades"} onChange={selectGradeType}>
+							<option disabled selected="selected">Please select a qualification...</option>
+							{gradesOptions()}
+						</select>
+					</Col>
 				</Row>
 				<Row>
 					<Col>
@@ -56,5 +60,6 @@ function UcasCalculator() {
 		</div>
 	);
 }
+
 //<iframe src="https://www.ucas.com/ucas/tariff-calculator"></iframe>
 export default UcasCalculator;
