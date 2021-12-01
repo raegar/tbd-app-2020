@@ -3,6 +3,7 @@ import "./DegreeQualifications.css";
 import {Row, Col, Container} from "react-bootstrap";
 import RadioButton from '../RadioButton/RadioButton';
 import UCPButton from '../Buttons/UCPButton';
+import TextBox from '../TextBox/TextBox';
 import ProgressBar from '../ProgressBar/ProgressBar';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
@@ -94,14 +95,15 @@ function DegreeQualifications() {
 							/>
 							{
 								(levelFour)
-									? <textarea 
+									? <TextBox 
 										id="nameGrade" 
-										title="Enter qualification name and grade" 
+										title="Enter qualification name and grade:" 
 										name="l-4-qual"
 										rows="10"
 										maxLength="224" 
 										placeholder=" Name
 										Grade"
+										multiline
 										onChange={(e) => setNameGrade(e.target.value)}
 									/>		
 									: <span></span>
