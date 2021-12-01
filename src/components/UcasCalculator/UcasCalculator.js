@@ -87,6 +87,7 @@ function UcasCalculator() {
 						<TextBox placeholder="Subject (optional)" onChange={(e) => changeSubjectName(e, i)}/>
 					</Col>
 					<Col>
+						<br/>
 						<DropdownMenu 
 							options={gradeOptions.length > 0 && gradeOptions[i] ?
 								gradeOptions[i].map((option, j) => {
@@ -111,9 +112,17 @@ function UcasCalculator() {
 					</Col>
 				</Row>
 			);
+			grades.push(<br/>);
 		}
 
 		return grades;
+	}
+
+	function addButton() {
+		const selectedGradesCopy = selectedGrades;
+		selectedGradesCopy[gradesCount] = {name: "", points: 0};
+		setSelectedGrades([...selectedGradesCopy]);
+		setGradesCount(gradesCount + 1);
 	}
 
 	return (
@@ -124,7 +133,7 @@ function UcasCalculator() {
 					<UCPButton 
 						to="none"
 						className="mediumbutton" 
-						onClick={() => setGradesCount(gradesCount + 1)} 
+						onClick={addButton} 
 						buttonText="Add another qualification"
 					/>
 				</Row>
