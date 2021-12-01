@@ -74,7 +74,7 @@ function UcasCalculator() {
 			grades.push(
 				<Row>
 					<Col>
-						<select id={"qualifications"} onChange={(e) => selectGradeType(e, i)}>
+						<select id={"qualifications"} onChange={(e) => selectGradeType(e, i)} className="qualInputBox">
 							<option disabled selected="selected">Please select a qualification...</option>
 							{gradesOptions()}
 						</select>
@@ -83,10 +83,14 @@ function UcasCalculator() {
 			);
 			grades.push(
 				<Row>
-					<Col>
-						<TextBox placeholder="Subject (optional)" onChange={(e) => changeSubjectName(e, i)}/>
+					<Col md={10}>
+						<TextBox 
+							placeholder="Subject (optional)" 
+							onChange={(e) => changeSubjectName(e, i)} 
+							className="subjectInputBox"
+						/>
 					</Col>
-					<Col>
+					<Col md={2}>
 						<br/>
 						<DropdownMenu 
 							options={gradeOptions.length > 0 && gradeOptions[i] ?
@@ -100,15 +104,16 @@ function UcasCalculator() {
 							}
 							disabled={gradeOptions.length <= 0}
 							onSelect={(e) => selectGrade(e, i)}
+							className="gradeSelect"
 						/>
 					</Col>
 				</Row>
 			);
 			grades.push(
 				<Row>
-					<Col/>
+					<Col md={10}/>
 					<Col>
-						<span>Points <b>{selectedGrades[i]?.points}</b></span>
+						<span className="qualPoints">Points <b>{selectedGrades[i]?.points}</b></span>
 					</Col>
 				</Row>
 			);
@@ -132,12 +137,12 @@ function UcasCalculator() {
 				<Row>
 					<UCPButton 
 						to="none"
-						className="mediumbutton" 
+						className="mediumbutton addQualButton" 
 						onClick={addButton} 
 						buttonText="Add another qualification"
 					/>
 				</Row>
-				<span>Total points <b>{totalPoints()}</b></span>
+				<span className="totalQualPoints">Total points <b>{totalPoints()}</b></span>
 			</Container>
 		</div>
 	);
