@@ -3,19 +3,23 @@ import TextBox from '../TextBox/TextBox';
 import RadioButton from '../RadioButton/RadioButton';
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import { Container, Row, Col } from "react-bootstrap";
-import './AddressAndPriorsForm.css';
+import './Course.css';
 import UCPButton from '../Buttons/UCPButton';
-
-import Headers from '../Header/Headers';
+import ProgressBar from "../ProgressBar/ProgressBar";
+import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
-function AddressAndPriorsForm() {
+function Course() {
 	const [showPrior, setShowPrior] = useState(false);
 	const [whenStudy, setWhenStudy] = useState(false);
 	const [fullPartState, setFullPartState] = useState({
 		value: "",
 		anyChecked: false
 	});
+	//progress bar
+	const completionRate = [
+		{bgcolor: "#005C6E", completed:45 },
+	];
 	const [priorCreditState, setPriorCreditState] = useState({
 		value: "",
 		anyChecked: false
@@ -114,7 +118,10 @@ function AddressAndPriorsForm() {
 
 	return (
 		<div>
-			<Headers/>
+			<Header/>
+			{completionRate.map((item, idx)=>(
+				<ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed}/>
+			))}
 			<Container className="form-container d-flex justify-content-center">
 				<Row className="form-background">
 					<Col>
@@ -189,7 +196,7 @@ function AddressAndPriorsForm() {
 				<Row id="buttonRow">
 					<Col className="centered-buttons">
 						<UCPButton 
-							to='/NewApplicationPage'
+							to='/AdditionalInformation'
 							primary="True"
 							className="mediumbutton"
 							buttonText="Go Back"
@@ -211,4 +218,4 @@ function AddressAndPriorsForm() {
 		</div>
 	);
 }
-export default AddressAndPriorsForm;
+export default Course;

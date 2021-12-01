@@ -1,18 +1,20 @@
+/* eslint-disable indent */
 import React, {useState} from "react";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import TextBox from "../TextBox/TextBox";
-import RadioButton from "../RadioButton/RadioButton";
 import "./EssentialApplicantInfo.css";
 import { Container, Row, Col } from "react-bootstrap";
 import UCPButton from "../Buttons/UCPButton";
 import Modal from "../Modal/Modal";
 import {isMobile} from 'react-device-detect';
-import Headers from '../Header/Headers';
+//import Headers from '../Header/Headers';
 import Footer from '../Footer/Footer';
 import {Time, Days} from '../../global/Constants';
+import ProgressBar from "../ProgressBar/ProgressBar";
 
 function EssentialApplicantInfo({disabled, ...props}) {
 	const [nameInput, setNameInput] = useState("");
+	const [prefixInput, setPrefixInput] = useState("");
 	const [emailInput, setEmailInput] = useState("");
 	const [telInput, setTelInput] = useState("");
 	const [dobInput, setDobInput] = useState("");
@@ -20,62 +22,15 @@ function EssentialApplicantInfo({disabled, ...props}) {
 	const [addressLineOne, setAddressLineOne] = useState("");
 	const [addressLineTwo, setAddressLineTwo] = useState("");
 	const [townCity, setTownCity] = useState("");
-	const [region, setCounty] = useState("");
+	const [region, setRegion] = useState("");
 	const [postcode, setPostcode] = useState("");
-
-	//I refuse to copypaste 10 state setting things.
-	const [nationalityState, setNationalityState] = useState({
-		value: "",
-		anyChecked: false,
-	});
-	const [criminalConvState, setCriminalConvState] = useState({
-		value: "",
-		anyChecked: false,
-	});
-	const [supportState, setSupportState] = useState({
-		value: "",
-		anyChecked: false,
-	});
-
 	const disabledInputs = disabled ? "disabled" : null;
 	const textboxClassName = isMobile ? "mobiletextbox" : "desktoptextbox";
-
-	function anyNationalityChecked(e) {
-		setNationalityState({
-			value: e.target.value,
-			anyChecked: true,
-		});
-	}
-
-	function anyCriminalConvChecked(e) {
-		setCriminalConvState({
-			value: e.target.value,
-			anyChecked: true,
-		});	
-	}
-
-	function anySupportChecked(e) {
-		setSupportState({
-			value: e.target.value,
-			anyChecked: true,
-		});	
-	}
-	
-
-	const nationalityOptions = [
-		{ label: "UK National", id: "UK", value: "UK", handleChange: anyNationalityChecked },
-		{ label: "EU National", id: "EU", value: "EU", handleChange: anyNationalityChecked },
-		{ label: "Other", id: "Other", value: "Other", handleChange: anyNationalityChecked },
+	//progress bar
+	const completionRate = [
+		{bgcolor: "#005C6E", completed:15 },
 	];
-	const criminalOptions = [
-		{ label: "Yes", id: "crimeYes", value: "yes", handleChange: anyCriminalConvChecked },
-		{ label: "No", id: "crimeNo", value: "no", handleChange: anyCriminalConvChecked },
-	];
-	const supportOptions = [
-		{ label: "Yes", id: "supportYes", value: "yes", handleChange: anySupportChecked },
-		{ label: "No", id: "supportNo", value: "no", handleChange: anySupportChecked },
-	];
-
+	//Saves data collected to do with applicants address
 	function saveSelectedData() {
 		global.ApplicationFormData.name = nameInput;
 		global.ApplicationFormData.addressLineOne = addressLineOne;
@@ -88,22 +43,6 @@ function EssentialApplicantInfo({disabled, ...props}) {
 		global.ApplicationFormData.dob = dobInput;
 		global.ApplicationFormData.ucasNumber = ucasInput;
 
-		// get Nationality
-		if (nationalityState.anyChecked) {
-			global.ApplicationFormData.Nationality = nationalityState.value;
-		}
-
-		// Criminal Conviction
-		if (criminalConvState.anyChecked) {
-			global.ApplicationFormData.Convictions = criminalConvState.value;
-		}
-
-		// Learning Support
-		if (supportState.anyChecked) {
-			global.ApplicationFormData.Support = supportState.value;
-		}
-
-		//
 		console.log(global.ApplicationFormData);
 	}
 
@@ -122,7 +61,7 @@ function EssentialApplicantInfo({disabled, ...props}) {
 					<Col className="centered-buttons">
 						<div id="confirmButton" onClick={saveSelectedData}>
 							<UCPButton 
-								to="/MoreInfo"
+								to="/NextOfKin"
 								primary="True"
 								className="mediumbutton"
 								buttonText="Confirm and Go"
@@ -163,7 +102,7 @@ function EssentialApplicantInfo({disabled, ...props}) {
 					<Col className="centered-buttons">
 						<div id="confirmButton" onClick={saveSelectedData}>
 							<UCPButton
-								to="/MoreInfo"
+								to="/NextOfKin"
 								primary="True"
 								className="mediumbutton"
 								buttonText="Apply Now"
@@ -178,7 +117,10 @@ function EssentialApplicantInfo({disabled, ...props}) {
 
   	return (
 		  <div>
-			<Headers/>
+			{completionRate.map((item, idx)=>(
+				<ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed}/>
+			))}
+
   			<Container className="es-form-container">
   			<div className="es-form-background">
   				<h3 className="form-title">CLEARING APPLICATION</h3>
@@ -197,61 +139,33 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						value={nameInput}
 							required
   					/>
-						<TextBox 
-							name="address_line_1"
-							title="Address Line 1"
-							placeholder="Address Line 1"
-							minLength={10}
-							maxLength={100}
-							size={35}
-							id="address-1"
-							type="text"
-							onChange={(e) => setAddressLineOne(e.target.value)}
-						/>
-						<TextBox 
-							name="address_line_2"
-							title="Address Line 2"
-							placeholder="Address Line 2"
-							minLength={10}
-							maxLength={100}
-							size={35}
-							id="address-2"
-							type="text"
-							onChange={(e) => setAddressLineTwo(e.target.value)}
-						/>
-						<TextBox 
-							name="town_city"
-							title="Town/City"
-							placeholder="Town/City"
-							minLength={10}
-							maxLength={100}
-							size={35}
-							id="town-city"
-							type="text"
-							onChange={(e) => setTownCity(e.target.value)}
-						/>
-						<TextBox 
-							name="county"
-							title="County"
-							placeholder="County"
-							minLength={3}
-							maxLength={30}
-							size={25}							
-							id="county"
-							type="text"
-							onChange={(e) => setCounty(e.target.value)}
-						/>
-						<TextBox 
-							name="postcode"
-							title="Postcode"
-							placeholder="Postcode"							
-							minLength={6}
-							maxLength={9}
-							size={10}
-							id="postcode"
-							type="text"
-							onChange={(e) => setPostcode(e.target.value)}
-						/>
+					 <TextBox
+  						title="Perefered prefix"
+  						placeholder="Enter your prefix"
+  						minLength={5}
+  						maxLength={60}
+  						id="prefixinput"
+  						type="text"
+  						name="prefix"
+  						attribute={disabledInputs}
+  						className={textboxClassName}
+  						onChange={(e) => setPrefixInput(e.target.value)}
+  						value={prefixInput}
+							required
+  					/>
+						<TextBox
+  						title="UCAS ID"
+  						placeholder="Enter UCAS ID"
+							minLength={5}
+  						maxLength={12}
+  						id="ucasinput"
+  						type="text"
+  						name="ucas"
+  						attribute={disabledInputs}
+  						className={textboxClassName}
+  						onChange={(e) => setUcasInput(e.target.value)}
+  						value={ucasInput}
+  					/>
   					<TextBox
   						title="Email"
   						placeholder="Enter your email"
@@ -290,50 +204,70 @@ function EssentialApplicantInfo({disabled, ...props}) {
   						onChange={(e) => setDobInput(e.target.value)}
   						value={dobInput}
   					/>
-  					<TextBox
-  						title="UCAS ID"
-  						placeholder="Enter UCAS ID"
-						minLength={5}
-  						maxLength={12}
-  						id="ucasinput"
-  						type="text"
-  						name="ucas"
-  						attribute={disabledInputs}
-  						className={textboxClassName}
-  						onChange={(e) => setUcasInput(e.target.value)}
-  						value={ucasInput}
-  					/>
+
   				</span>
   				<span className="ess-form-right">
-  					<RadioButton
-  						heading="Nationality"
-  						options={nationalityOptions}
-  						name="nationality"
-  						attribute={disabledInputs}
-  						onClick={anyNationalityChecked}
-  					/>
-  					<RadioButton
-  						heading="Convictions"
-  						options={criminalOptions}
-  						name="criminal"
-  						subtitle="Do you have any unspent criminal convictions?"
-  						attribute={disabledInputs}
-							onClick={anyCriminalConvChecked}
-  					/>
-  					<RadioButton
-  						heading="Learning Support"
-  						options={supportOptions}
-  						name="support"
-  						subtitle="Do you have any additional learning support needs or disabilities?"
-  						attribute={disabledInputs}
-							onClick={anySupportChecked}
-  					/>
+					<TextBox 
+						name="address_line_1"
+						title="Address Line 1"
+						placeholder="Address Line 1"
+						minLength={10}
+						maxLength={100}
+						size={35}
+						id="address-1"
+						type="text"
+						onChange={(e) => setAddressLineOne(e.target.value)}
+					/>
+					<TextBox 
+						name="address_line_2"
+						title="Address Line 2"
+						placeholder="Address Line 2"
+						minLength={10}
+						maxLength={100}
+						size={35}
+						id="address-2"
+						type="text"
+						onChange={(e) => setAddressLineTwo(e.target.value)}
+					/>
+					<TextBox 
+						name="town_city"
+						title="Town/City"
+						placeholder="Town/City"
+						minLength={10}
+						maxLength={100}
+						size={35}
+						id="town-city"
+						type="text"
+						onChange={(e) => setTownCity(e.target.value)}
+					/>
+					<TextBox 
+						name="region"
+						title="Region"
+						placeholder="Region"
+						minLength={3}
+						maxLength={30}
+						size={25}							
+						id="county"
+						type="text"
+						onChange={(e) => setRegion(e.target.value)}
+					/>
+					<TextBox 
+						name="postcode"
+						title="Postcode"
+						placeholder="Postcode"							
+						minLength={6}
+						maxLength={9}
+						size={10}
+						id="postcode"
+						type="text"
+						onChange={(e) => setPostcode(e.target.value)}
+					/>
   				</span>
   			</div>
   			<div>{userTypeSelect()}</div>
-  		</Container>
+  			</Container>
 			<Footer/>
-		  </div>
+		</div>
   	);
 }
 

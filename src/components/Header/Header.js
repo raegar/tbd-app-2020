@@ -1,9 +1,9 @@
 import React from 'react';
 import UCPLogo  from '../../images/UCPLogo.png';
-import './Headers.css';
+import './Header.css';
 import {isMobile} from 'react-device-detect';
 
-function Headers() {
+function Header() {
 	const className = isMobile ? "MobileUCPLogoBlue" : "UCPLogoBlue";
 
 	return (
@@ -18,7 +18,7 @@ function Headers() {
 	);
 }
 
-export default Headers;
+export default Header;
 
 
 

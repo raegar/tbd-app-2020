@@ -4,8 +4,8 @@ import {Row, Col, Container} from "react-bootstrap";
 import RadioButton from '../RadioButton/RadioButton';
 import UCPButton from '../Buttons/UCPButton';
 import TextBox from '../TextBox/TextBox';
-
-import Headers from '../Header/Headers';
+import ProgressBar from '../ProgressBar/ProgressBar';
+import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
 function DegreeQualifications() {
@@ -67,10 +67,16 @@ function DegreeQualifications() {
 
     	console.log(global.ApplicationFormData);
 	}
+	const completionRate = [
+		{bgcolor: "#005C6E", completed:90 },
+	];
 
 	return (
 		<div>
-			<Headers/>
+			<Header/>
+			{completionRate.map((item, idx)=>(
+				<ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed}/>
+			))}
 			<Container className="degree-form d-flex justify-content-center">
 				<link 
 					href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" 
