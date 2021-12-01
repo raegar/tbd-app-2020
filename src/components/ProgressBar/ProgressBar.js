@@ -1,30 +1,29 @@
 import React from "react";
 
-const ProgressBar =(props) => {
-	const {bgcolor, completed } = props;
+function ProgressBar ({bgcolor, completed, ...props}) {
 
-	const containerStyles={
+	const containerStyles ={
 		height: 30,
 		width: `90%`,
 		backgroundColor: `#B2DDDF`,
 		borderRadius: 50,
 		margin: 50,
-	}
-    
-	const fillerStyles = {
+	};
+	
+	const fillerStyles={
 		height: `100%`,
 		width: `${completed}%`,
 		backgroundColor:bgcolor,
 		borderRadius: `inherit`,
 		textAlign: `right`
-	}
+	};
 
-	const labelStyles ={
+	const labelStyles={
 		padding:5,
 		color: `#ffffff`,
 		fontWeight: `bold`
-	}
-    
+	};
+
 	return(
 		<div style={containerStyles}>
 			<div style={fillerStyles}>

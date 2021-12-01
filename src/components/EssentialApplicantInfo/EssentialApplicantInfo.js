@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import React, {useState} from "react";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import TextBox from "../TextBox/TextBox";
@@ -206,67 +207,67 @@ function EssentialApplicantInfo({disabled, ...props}) {
 
   				</span>
   				<span className="ess-form-right">
-				  <TextBox 
-							name="address_line_1"
-							title="Address Line 1"
-							placeholder="Address Line 1"
-							minLength={10}
-							maxLength={100}
-							size={35}
-							id="address-1"
-							type="text"
-							onChange={(e) => setAddressLineOne(e.target.value)}
-						/>
-						<TextBox 
-							name="address_line_2"
-							title="Address Line 2"
-							placeholder="Address Line 2"
-							minLength={10}
-							maxLength={100}
-							size={35}
-							id="address-2"
-							type="text"
-							onChange={(e) => setAddressLineTwo(e.target.value)}
-						/>
-						<TextBox 
-							name="town_city"
-							title="Town/City"
-							placeholder="Town/City"
-							minLength={10}
-							maxLength={100}
-							size={35}
-							id="town-city"
-							type="text"
-							onChange={(e) => setTownCity(e.target.value)}
-						/>
-						<TextBox 
-							name="region"
-							title="Region"
-							placeholder="Region"
-							minLength={3}
-							maxLength={30}
-							size={25}							
-							id="county"
-							type="text"
-							onChange={(e) => setRegion(e.target.value)}
-						/>
-						<TextBox 
-							name="postcode"
-							title="Postcode"
-							placeholder="Postcode"							
-							minLength={6}
-							maxLength={9}
-							size={10}
-							id="postcode"
-							type="text"
-							onChange={(e) => setPostcode(e.target.value)}
-						/>
+					<TextBox 
+						name="address_line_1"
+						title="Address Line 1"
+						placeholder="Address Line 1"
+						minLength={10}
+						maxLength={100}
+						size={35}
+						id="address-1"
+						type="text"
+						onChange={(e) => setAddressLineOne(e.target.value)}
+					/>
+					<TextBox 
+						name="address_line_2"
+						title="Address Line 2"
+						placeholder="Address Line 2"
+						minLength={10}
+						maxLength={100}
+						size={35}
+						id="address-2"
+						type="text"
+						onChange={(e) => setAddressLineTwo(e.target.value)}
+					/>
+					<TextBox 
+						name="town_city"
+						title="Town/City"
+						placeholder="Town/City"
+						minLength={10}
+						maxLength={100}
+						size={35}
+						id="town-city"
+						type="text"
+						onChange={(e) => setTownCity(e.target.value)}
+					/>
+					<TextBox 
+						name="region"
+						title="Region"
+						placeholder="Region"
+						minLength={3}
+						maxLength={30}
+						size={25}							
+						id="county"
+						type="text"
+						onChange={(e) => setRegion(e.target.value)}
+					/>
+					<TextBox 
+						name="postcode"
+						title="Postcode"
+						placeholder="Postcode"							
+						minLength={6}
+						maxLength={9}
+						size={10}
+						id="postcode"
+						type="text"
+						onChange={(e) => setPostcode(e.target.value)}
+					/>
   				</span>
   			</div>
   			<div>{userTypeSelect()}</div>
-  		</Container>
+  			</Container>
 			<Footer/>
-		  </div>
+		</div>
   	);
 }
 
