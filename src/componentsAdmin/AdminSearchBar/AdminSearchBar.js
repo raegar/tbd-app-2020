@@ -17,15 +17,15 @@ function SearchBar(){
 				name="s"
 			/>
 			<button className= "searchbar-container">
-                Search
-            </button>
+				<FontAwesomeIcon icon={faThumbsUp}/> Search
+			</button>
 		</div>
 	);
 }
 
-const posts= [ 
-	{id:'1', name: 'this first post is about react'},
-	{id:'2', name: 'this is about preact'},
-	{id:'3', name: 'this is the last post'},
-];
+// const posts= [ 
+// 	{id:'1', name: 'this first post is about react'},
+// 	{id:'2', name: 'this is about preact'},
+// 	{id:'3', name: 'this is the last post'},
+// ];
 export default SearchBar;
