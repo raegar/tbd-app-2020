@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "da612f36ce086fb8a9a81d0c8700d5ef",
+    "revision": "dd1c0c18ff50271c11d9fcc320bcfc7f",
     "url": "/tbd-app-2020/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tbd-app-2020/static/css/2.429e79c4.chunk.css"
   },
   {
-    "revision": "ded6e4a5b3780a5134aa",
-    "url": "/tbd-app-2020/static/css/main.e34a2dbc.chunk.css"
+    "revision": "dc87621c78ee99a961d1",
+    "url": "/tbd-app-2020/static/css/main.10aeb350.chunk.css"
   },
   {
     "revision": "0bc98a83d2f36c65b2fb",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tbd-app-2020/static/js/2.f6e51f92.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ded6e4a5b3780a5134aa",
+    "revision": "dc87621c78ee99a961d1",
     "url": "/tbd-app-2020/static/js/main.682fcead.chunk.js"
   },
   {
@@ -28,8 +28,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tbd-app-2020/static/js/runtime-main.9c11f291.js"
   },
   {
-    "revision": "ab926c9f121ffd1bca17868172e97b01",
-    "url": "/tbd-app-2020/static/media/Footer.ab926c9f.png"
+    "revision": "5e635b27a8a3fb39bda75370d437ba5b",
+    "url": "/tbd-app-2020/static/media/Footer.5e635b27.png"
   },
   {
     "revision": "cc8e2a656a234555ba66e2feda2e7773",
