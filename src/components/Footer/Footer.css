@@ -21,3 +21,8 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.CallbackFooter{
+    text-align: center;
+    background-color: brown;
+}
