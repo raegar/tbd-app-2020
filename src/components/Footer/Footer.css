@@ -2,7 +2,7 @@
 .ucpFooter, .MobileFooter {
     width: 100%;
     background-image: url('../../images/Footer.png');
-    background-position: center center;
+    background-position: center;
     background-size: cover;
     bottom: 0;
     margin: 0em;
@@ -22,7 +22,4 @@
     background-size: cover;
 }
 
-.CallbackFooter{
-    text-align: center;
-    background-color: brown;
-}
+
