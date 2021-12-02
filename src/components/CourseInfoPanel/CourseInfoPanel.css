@@ -1,42 +1,19 @@
 .courseInfoBox {
-	margin-top: 3rem !important;
-	height: 100%;
-	background-color: #B2DDDF;
-	margin-left: 1rem;
-	padding: 1em 1em 1em 1em;
+	
 }
 
 .titleRow {
 
 }
 
-.courseInfoTitle {
-	font-style: bold;
-}
-
 .courseTitle {
 
 }
 
-.iframeContainer {
-	width: 95%;
-}
-
 .uniPageLinkRow {
-	
+
 }
 
 .uniPageLink {
 
-}
-
-.icon {
-	color: white;
-}
-
-.iframeLink {
-	width: 100%;
-	height: 40em;
-	margin: 1em;
-	overflow-x: scroll;
 }
