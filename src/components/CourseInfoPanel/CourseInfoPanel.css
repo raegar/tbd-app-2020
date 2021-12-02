@@ -18,8 +18,12 @@
 
 }
 
-.uniPageLinkRow {
+.iframeContainer {
+	width: 95%;
+}
 
+.uniPageLinkRow {
+	
 }
 
 .uniPageLink {
@@ -34,4 +38,5 @@
 	width: 100%;
 	height: 40em;
 	margin: 1em;
+	overflow-x: scroll;
 }
