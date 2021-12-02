@@ -47,6 +47,12 @@ export const Subjects = [{ value: 'computing', label: 'BSc (Hons) Computing and 
 	{ value: 'digitalArts', label: 'FDA Digital Arts'}
 ];
 
+export const SubjectInfo = {
+	'criminoloy': "A course where you catch people like on that CSI TV show",
+	'computing': "Awesome course with computers and stuff.",
+	'digitalArts': "It's art but it's digital!"
+};
+
 export const GCSEGrades = [
 	{ value: "9", label: "9 - A*" },
 	{ value: "8", label: "8 - A*" },
