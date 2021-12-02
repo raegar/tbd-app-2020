@@ -3,18 +3,25 @@
 exports[`Renders Form One 1`] = `
 <DocumentFragment>
   <div>
-    <header>
-      <a
-        href="/tbd-app-2020"
+    <div>
+      <header
+        class="Header"
       >
-        <img
-          alt="UCP official logo"
-          class="UCPLogoBlue"
-          data-testid="ucpLogoHeader"
-          src="UCPLogo.png"
-        />
-      </a>
-    </header>
+        <a
+          href="/tbd-app-2020"
+        >
+          <img
+            alt="UCP official logo"
+            class="UCPLogoBlue"
+            data-testid="ucpLogoHeader"
+            src="Logo_White.png"
+          />
+        </a>
+      </header>
+      <div
+        class="Line"
+      />
+    </div>
     <div
       style="height: 30px; width: 90%; background-color: rgb(178, 221, 223); border-radius: 50px; margin: 50px;"
     >
