@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/tbd-app-2020/static/css/main.310de722.chunk.css",
-    "main.js": "/tbd-app-2020/static/js/main.682fcead.chunk.js",
-    "main.js.map": "/tbd-app-2020/static/js/main.682fcead.chunk.js.map",
+    "main.js": "/tbd-app-2020/static/js/main.831a8a28.chunk.js",
+    "main.js.map": "/tbd-app-2020/static/js/main.831a8a28.chunk.js.map",
     "runtime-main.js": "/tbd-app-2020/static/js/runtime-main.9c11f291.js",
     "runtime-main.js.map": "/tbd-app-2020/static/js/runtime-main.9c11f291.js.map",
     "static/css/2.429e79c4.chunk.css": "/tbd-app-2020/static/css/2.429e79c4.chunk.css",
     "static/js/2.f6e51f92.chunk.js": "/tbd-app-2020/static/js/2.f6e51f92.chunk.js",
     "static/js/2.f6e51f92.chunk.js.map": "/tbd-app-2020/static/js/2.f6e51f92.chunk.js.map",
     "index.html": "/tbd-app-2020/index.html",
-    "precache-manifest.114aa06d6049937e8a695f3f7e53ab0b.js": "/tbd-app-2020/precache-manifest.114aa06d6049937e8a695f3f7e53ab0b.js",
+    "precache-manifest.402582849a29d0dd4b873301e95f5e1f.js": "/tbd-app-2020/precache-manifest.402582849a29d0dd4b873301e95f5e1f.js",
     "service-worker.js": "/tbd-app-2020/service-worker.js",
     "static/css/2.429e79c4.chunk.css.map": "/tbd-app-2020/static/css/2.429e79c4.chunk.css.map",
     "static/css/main.310de722.chunk.css.map": "/tbd-app-2020/static/css/main.310de722.chunk.css.map",
@@ -22,6 +22,6 @@
     "static/css/2.429e79c4.chunk.css",
     "static/js/2.f6e51f92.chunk.js",
     "static/css/main.310de722.chunk.css",
-    "static/js/main.682fcead.chunk.js"
+    "static/js/main.831a8a28.chunk.js"
   ]
 }
