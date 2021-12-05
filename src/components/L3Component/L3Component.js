@@ -44,9 +44,7 @@ function L3Component(
 		let empty = true;
 
 		console.log("Keys of inputs: " + Object.keys(inputContents.current));
-<<<<<<< HEAD
 
-		
 		if (qualificationCounter - 1 > 0) {								
 			for (let key of Object.keys(inputContents.current)) {
 				console.log(key);
@@ -58,14 +56,6 @@ function L3Component(
 			}
 		} else {
 			empty = false;
-=======
-										
-		for (let key of Object.keys(inputContents.current)) {
-			if (inputContents.current[key] && inputContents.current[key].length > 0) {
-				console.log(key + " has a value");
-				empty = false;
-			}
->>>>>>> d3ca5bfadb51ec41478cb71e1680d58e7ec5582b
 		}
 
 		return empty;
@@ -152,11 +142,7 @@ function L3Component(
 								options={L3QualificationsOptions}
 								name="l3qualifications"
 								onChange={onYesMoreQualifications}
-<<<<<<< HEAD
 								disabled={enableMoreQualifications()}
-=======
-								disabled={enableMoreQualifications}
->>>>>>> d3ca5bfadb51ec41478cb71e1680d58e7ec5582b
 							/>
 							<br/>
 							<div className="row">
