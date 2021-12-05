@@ -79,10 +79,10 @@ function EssentialApplicantInfo({disabled, ...props}) {
 	function saveSelectedData() {
 		global.ApplicationFormData.name = nameInput;
 		global.ApplicationFormData.addressLineOne = addressLineOne;
-    	global.ApplicationFormData.addressLineTwo = addressLineTwo;
-    	global.ApplicationFormData.city = townCity;
-    	global.ApplicationFormData.region = region;
-    	global.ApplicationFormData.postcode = postcode;
+		global.ApplicationFormData.addressLineTwo = addressLineTwo;
+		global.ApplicationFormData.city = townCity;
+		global.ApplicationFormData.region = region;
+		global.ApplicationFormData.postcode = postcode;
 		global.ApplicationFormData.email = emailInput;
 		global.ApplicationFormData.telephone = telInput;
 		global.ApplicationFormData.dob = dobInput;
@@ -176,27 +176,27 @@ function EssentialApplicantInfo({disabled, ...props}) {
 		}
 	}
 
-  	return (
-		  <div>
+	return (
+		<div>
 			<Headers/>
-  			<Container className="es-form-container">
-  			<div className="es-form-background">
-  				<h3 className="form-title">CLEARING APPLICATION</h3>
-  				<span className="ess-form-left">
-  					<TextBox
-  						title="Name"
-  						placeholder="Enter your name"
-  						minLength={5}
-  						maxLength={60}
-  						id="nameinput"
-  						type="text"
-  						name="name"
-  						attribute={disabledInputs}
-  						className={textboxClassName}
-  						onChange={(e) => setNameInput(e.target.value)}
-  						value={nameInput}
+			<Container className="es-form-container">
+				<div className="es-form-background">
+					<h3 className="form-title">CLEARING APPLICATION</h3>
+					<span className="ess-form-left">
+						<TextBox
+							title="Name"
+							placeholder="Enter your name"
+							minLength={5}
+							maxLength={60}
+							id="nameinput"
+							type="text"
+							name="name"
+							attribute={disabledInputs}
+							className={textboxClassName}
+							onChange={(e) => setNameInput(e.target.value)}
+							value={nameInput}
 							required
-  					/>
+						/>
 						<TextBox 
 							name="address_line_1"
 							title="Address Line 1"
@@ -252,89 +252,89 @@ function EssentialApplicantInfo({disabled, ...props}) {
 							type="text"
 							onChange={(e) => setPostcode(e.target.value)}
 						/>
-  					<TextBox
-  						title="Email"
-  						placeholder="Enter your email"
-  						minLength={5}
-  						maxLength={60}
-  						id="emailinput"
-  						type="email"
-  						name="email"
-  						attribute={disabledInputs}
-  						className={textboxClassName}
-  						onChange={(e) => setEmailInput(e.target.value)}
-  						value={emailInput}
+						<TextBox
+							title="Email"
+							placeholder="Enter your email"
+							minLength={5}
+							maxLength={60}
+							id="emailinput"
+							type="email"
+							name="email"
+							attribute={disabledInputs}
+							className={textboxClassName}
+							onChange={(e) => setEmailInput(e.target.value)}
+							value={emailInput}
 							required
-  					/>
-  					<TextBox
-  						title="Phone No"
-  						placeholder="Enter phone number"
-  						minLength={5}
-  						maxLength={12}
-  						id="telinput"
-  						type="tel"
-  						name="telno"
-  						attribute={disabledInputs}
-  						className={textboxClassName}
-  						onChange={(e) => setTelInput(e.target.value)}
-  						value={telInput}
-  					/>
-  					<TextBox
-  						title="D/O/B"
-  						placeholder="Enter date of birth"
-  						id="dobinput"
-  						type="date"
-  						name="dob"
-  						attribute={disabledInputs}
-  						className={textboxClassName}
-  						onChange={(e) => setDobInput(e.target.value)}
-  						value={dobInput}
-  					/>
-  					<TextBox
-  						title="UCAS ID"
-  						placeholder="Enter UCAS ID"
-						minLength={5}
-  						maxLength={12}
-  						id="ucasinput"
-  						type="text"
-  						name="ucas"
-  						disabled={disabledInputs}
-  						className={textboxClassName}
-  						onChange={(e) => setUcasInput(e.target.value)}
-  						value={ucasInput}
-  					/>
-  				</span>
-  				<span className="ess-form-right">
-  					<RadioButton
-  						heading="Nationality"
-  						options={nationalityOptions}
-  						name="nationality"
-  						disabled={disabledInputs}
-  						onClick={anyNationalityChecked}
-  					/>
-  					<RadioButton
-  						heading="Convictions"
-  						options={criminalOptions}
-  						name="criminal"
-  						subtitle="Do you have any unspent criminal convictions?"
-  						disabled={disabledInputs}
+						/>
+						<TextBox
+							title="Phone No"
+							placeholder="Enter phone number"
+							minLength={5}
+							maxLength={12}
+							id="telinput"
+							type="tel"
+							name="telno"
+							attribute={disabledInputs}
+							className={textboxClassName}
+							onChange={(e) => setTelInput(e.target.value)}
+							value={telInput}
+						/>
+						<TextBox
+							title="D/O/B"
+							placeholder="Enter date of birth"
+							id="dobinput"
+							type="date"
+							name="dob"
+							attribute={disabledInputs}
+							className={textboxClassName}
+							onChange={(e) => setDobInput(e.target.value)}
+							value={dobInput}
+						/>
+						<TextBox
+							title="UCAS ID"
+							placeholder="Enter UCAS ID"
+							minLength={5}
+							maxLength={12}
+							id="ucasinput"
+							type="text"
+							name="ucas"
+							disabled={disabledInputs}
+							className={textboxClassName}
+							onChange={(e) => setUcasInput(e.target.value)}
+							value={ucasInput}
+						/>
+					</span>
+					<span className="ess-form-right">
+						<RadioButton
+							heading="Nationality"
+							options={nationalityOptions}
+							name="nationality"
+							disabled={disabledInputs}
+							onClick={anyNationalityChecked}
+						/>
+						<RadioButton
+							heading="Convictions"
+							options={criminalOptions}
+							name="criminal"
+							subtitle="Do you have any unspent criminal convictions?"
+							disabled={disabledInputs}
 							onClick={anyCriminalConvChecked}
-  					/>
-  					<RadioButton
-  						heading="Learning Support"
-  						options={supportOptions}
-  						name="support"
-  						subtitle="Do you have any additional learning support needs or disabilities?"
-  						disabled={disabledInputs}
+						/>
+						<RadioButton
+							heading="Learning Support"
+							options={supportOptions}
+							name="support"
+							subtitle="Do you have any additional learning support needs or disabilities?"
+							disabled={disabledInputs}
 							onClick={anySupportChecked}
-  					/>
-  				</span>
-  			</div>
-  			<div>{userTypeSelect()}</div>
-  		</Container>
+						/>
+					</span>
+				</div>
+				<div>{userTypeSelect()}</div>
+			</Container>
 			<Footer/>
-		  </div>
-  	);
+		</div>
+	);
 }
 
 export default EssentialApplicantInfo;
