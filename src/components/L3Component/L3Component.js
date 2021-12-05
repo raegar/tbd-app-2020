@@ -142,7 +142,7 @@ function L3Component(
 								options={L3QualificationsOptions}
 								name="l3qualifications"
 								onChange={onYesMoreQualifications}
-								disabled={enableMoreQualifications()}
+								attribute={enableMoreQualifications()}
 							/>
 							<br/>
 							<div className="row">
@@ -152,7 +152,7 @@ function L3Component(
 										className="smallbutton"
 										buttonText="Previous"
 										onClick={gotoPrevious}
-										disabled={!(qualificationCounter - 1 > 0)}
+										attribute={!(qualificationCounter - 1 > 0)}
 									/>
 								</div>
 								<div className="col-2"/>
@@ -162,7 +162,7 @@ function L3Component(
 										className="smallbutton"
 										buttonText="Next"
 										onClick={gotoNext}
-										disabled={!(qualificationsInfo.length >= qualificationCounter + 1)}
+										attribute={!(qualificationsInfo.length >= qualificationCounter + 1)}
 									/>
 								</div>
 							</div>
