@@ -152,7 +152,7 @@ function L3Component(
 										className="smallbutton"
 										buttonText="Previous"
 										onClick={gotoPrevious}
-										attribute={!(qualificationCounter - 1 > 0)}
+										disabled={!(qualificationCounter - 1 > 0)}
 									/>
 								</div>
 								<div className="col-2"/>
@@ -162,7 +162,7 @@ function L3Component(
 										className="smallbutton"
 										buttonText="Next"
 										onClick={gotoNext}
-										attribute={!(qualificationsInfo.length >= qualificationCounter + 1)}
+										disabled={!(qualificationsInfo.length >= qualificationCounter + 1)}
 									/>
 								</div>
 							</div>
