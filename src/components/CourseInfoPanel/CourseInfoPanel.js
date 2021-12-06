@@ -6,9 +6,10 @@ import { faCommentDots } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 import { SubjectInfo } from '../../global/Constants';
 import UCPButton from '../Buttons/UCPButton';
+import '../../global/GlobalVariables.js'
 
 
-function CourseInfoPanel({courseSelected, className, ...props}) {
+function CourseInfoPanel({className, ...props}) {
 	const [showEmbed, setShowEmbed] = useState(true);
 
 	return (
@@ -32,8 +33,8 @@ function CourseInfoPanel({courseSelected, className, ...props}) {
 			<Row>
 				<a href="https://www.ucp.ac.uk/a-z-courses/">Link to Course information page on UCP website</a>
 			</Row>
-			{courseSelected ? <Row className="courseInfoRow">
-				<span><b>Course Overview: </b>{SubjectInfo[courseSelected]}</span>
+			{global.SelectedCourse ? <Row className="courseInfoRow">
+				<span><b>Course Overview: </b>{SubjectInfo[global.SelectedCourse]}</span>
 			</Row> : null}
 		</Container>
 	);
