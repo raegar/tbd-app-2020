@@ -6,7 +6,7 @@ import { faCommentDots } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 import { SubjectInfo } from '../../global/Constants';
 import UCPButton from '../Buttons/UCPButton';
-import '../../global/GlobalVariables.js'
+import '../../global/GlobalVariables.js';
 
 
 function CourseInfoPanel({className, ...props}) {
