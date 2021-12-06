@@ -8,6 +8,7 @@ import UCPButton from '../Buttons/UCPButton';
 import ProgressBar from "../ProgressBar/ProgressBar";
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import '../../global/GlobalVariables.js'
 
 function Course() {
 	const [showPrior, setShowPrior] = useState(false);
@@ -49,6 +50,12 @@ function Course() {
 			value: e.target.value,
 			anyChecked: true,
 		});
+	}
+
+	function updateCourse(e) {
+		global.SelectedCourse = e.target.value;
+		setSelectedCourse(e.target.value);
+		//TODO: update router so this changes the CourseInfo component.
 	}
 
 	function onPriorCreditSelected(e) {
@@ -126,7 +133,7 @@ function Course() {
 				<Row className="form-background">
 					<Col>
 						<h4>Preferred Course</h4>
-						<DropdownMenu onSelect={(e) => setSelectedCourse(e.target.value)} id="courseSelection"/>
+						<DropdownMenu onSelect={updateCourse} id="courseSelection"/>
 						<RadioButton
 							heading="Year of Entry"
 							options={yearOptions}
