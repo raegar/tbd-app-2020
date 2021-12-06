@@ -6,7 +6,7 @@ import {isMobile} from 'react-device-detect';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import CourseInfoPanel from '../CourseInfoPanel/CourseInfoPanel';
-import '../../global/GlobalVariables.js'
+import '../../global/GlobalVariables.js';
 
 //Must Set HREF attribute to use
 
