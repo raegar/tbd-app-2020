@@ -43,13 +43,13 @@ export const L3QualificationsOptions = [
 ];
 
 export const Subjects = [{ value: 'computing', label: 'BSc (Hons) Computing and Information Systems' },
-	{ value: 'criminoloy', label: 'BA (Hons) Criminology'},
+	{ value: 'criminology', label: 'BA (Hons) Criminology'},
 	{ value: 'digitalArts', label: 'FDA Digital Arts'}
 ];
 
 export const SubjectInfo = {
-	'criminoloy': "A course where you catch people like on that CSI TV show",
-	'computing': "Awesome course with computers and stuff.",
+	'criminology': "Are you interested in the problem of crime in contemporary societies? If so, our Criminology course may be for you. \n\nAs a Criminology student, you will investigate the nature of crime and criminality as well as studying societies response through the criminal justice system.\n\nYou'll learn about the social and personal impacts of crime and what it means to be a victim of crime. You will understand how societies control and punish disorder and study forms of transnational crime that cross-national borders. Criminology takes a social scientific approach to studying and classifying crime as well as exploring theories around criminal behaviour. In addition to theory, you will study the institutions of the criminal justice system including police, law courts, prisons and probation services.",
+	'computing': "This new degree includes developments such as embedding Cisco CCNA networking qualifications into the course through specialist industry related modules. It will introduce a new Cloud Computing module where students will learn how to set up and manage Amazon AWS Cloud services. There are cyber security options, such as Ethical Hacking and Digital Forensics plus the software development provision meets the demands of employers by creating employer ready graduates.",
 	'digitalArts': "It's art but it's digital!"
 };
 
