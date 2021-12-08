@@ -83,12 +83,15 @@ function UcasCalculator() {
 			);
 			grades.push(
 				<Row>
-					<Col md={10}>
+					<Col md={2}>
 						<TextBox 
 							placeholder="Subject (optional)" 
 							onChange={(e) => changeSubjectName(e, i)} 
 							className="subjectInputBox"
 						/>
+					</Col>
+					<Col md={4}>
+						<br/>
 					</Col>
 					<Col md={2}>
 						<br/>
@@ -111,9 +114,9 @@ function UcasCalculator() {
 			);
 			grades.push(
 				<Row>
-					<Col md={10}/>
+					<Col md={6}/>
 					<Col>
-						<span className="qualPoints">Points <b>{selectedGrades[i]?.points}</b></span>
+						<span className="qualPoints">Points: <b>{selectedGrades[i]?.points}</b></span>
 					</Col>
 				</Row>
 			);
@@ -142,7 +145,7 @@ function UcasCalculator() {
 						buttonText="Add another qualification"
 					/>
 				</Row>
-				<span className="totalQualPoints">Total points <b data-testid="totalPoints">{totalPoints()}</b></span>
+				<span className="totalQualPoints">Total points: <b data-testid="totalPoints">{totalPoints()}</b></span>
 			</Container>
 		</div>
 	);
