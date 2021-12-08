@@ -116,7 +116,7 @@ function UcasCalculator() {
 				<Row>
 					<Col md={6}/>
 					<Col>
-						<span className="qualPoints">Points: <b>{selectedGrades[i]?.points}</b></span>
+						<span className="qualPoints" data-testid="qualPoints">Points: <b>{selectedGrades[i]?.points}</b></span>
 					</Col>
 				</Row>
 			);

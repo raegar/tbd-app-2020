@@ -15,7 +15,8 @@ test("Points 0 is displayed by default", () => {
         <UcasCalculator/>
     );
 
-    expect(screen.getByText("Points 0")).not.toBeNull();
+    expect(screen.getByTestId("qualPoints")).not.toBeNull();
+    expect(screen.getByTestId("qualPoints")).toHaveTextContent("Points: 0");
 });
 
 test("Total points 0 is displayed by default", () => {
@@ -24,7 +25,7 @@ test("Total points 0 is displayed by default", () => {
     );
 
     expect(screen.getByTestId("totalPoints")).not.toBeNull();
-    expect(screen.getByTestId("totalPoints")).toBe(0);
+    expect(screen.getByTestId("totalPoints")).toHaveTextContent("0");//.toBe(0);
 })
 
 //TODO: add test for selecting a course and grade.
