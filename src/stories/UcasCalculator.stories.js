@@ -1,5 +1,5 @@
 import React from 'react';
-import UcasCalculator from '../UcasCalculator';
+import UcasCalculator from '../components/UcasCalculator/UcasCalculator';
 
 export default {
 	title: "UcasCalculator",
