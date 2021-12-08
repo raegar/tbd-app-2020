@@ -70,7 +70,8 @@
     "ignorePatterns": [
       "src/serviceWorker.js",
       "src/index.js",
-      "src/components/**/*.test.js"
+      "src/components/**/*.test.js",
+      "src/stories/*"
     ]
   },
   "browserslist": {

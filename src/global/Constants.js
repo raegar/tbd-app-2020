@@ -62,6 +62,28 @@ export const GCSEGrades = [
 	{ value: "na", label: "n/a"   },
 ];
 
+export const UCASGrades = {
+	"A Level and AS": {
+		"A Levels": [
+			{grade: "A*", points: 56},
+			{grade: "A", points: 48},
+			{grade: "B", points: 40},
+			{grade: "C", points: 32},
+			{grade: "D", points: 24},
+			{grade: "E", points: 16}
+		],
+		"AS Levels": []
+	},
+	"BTEC National (RQF) (From 2016)": {
+		"Pearson BTEC Level 3 National Extended Certificate (first teaching from September 2016)": [
+			{grade: "D*", points: 56},
+			{grade: "D", points: 48},
+			{grade: "M", points: 32},
+			{grade: "P", points: 24}
+		]
+	}
+};
+
 export const QualificationKey = "qualification";
 export const SubjectKey = "subject";
 export const GradeKey = "grade";
