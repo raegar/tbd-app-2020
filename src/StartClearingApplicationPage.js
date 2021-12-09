@@ -2,10 +2,11 @@ import React, {useState} from 'react';
 import './StartClearingApplicationPage.css';
 import EssentialApplicantInfo from './components/EssentialApplicantInfo/EssentialApplicantInfo';
 import Disclaimer from './components/Disclaimer/Disclaimer';
-import {Container} from 'react-bootstrap';
+import {Container, Row, Col} from 'react-bootstrap';
 
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import CourseInfoPanel from './components/CourseInfoPanel/CourseInfoPanel';
 
 function StartClearingApplicationPage() {
 	//used to control whether or not the user can interact with any buttons
@@ -18,10 +19,22 @@ function StartClearingApplicationPage() {
 	return (
 		<div>
 			<Header/>
-			<Container>
-				<Disclaimer enableMethod={onUserAcceptedPrivacyPolicy} staff={global.userType}/>
-				<EssentialApplicantInfo disabled={!userAcceptedPrivacyPolicy}/>
-			</Container>
+			<Row>
+				<Col md={3}>
+					<CourseInfoPanel/>
+				</Col>
+				<Col>
+					<Container>
+						<Disclaimer enableMethod={onUserAcceptedPrivacyPolicy} staff={global.userType}/>
+						<Row>
+					
+							<Col>
+								<EssentialApplicantInfo disabled={!userAcceptedPrivacyPolicy}/>
+							</Col>
+						</Row>
+					</Container>
+				</Col>
+			</Row>
 			<Footer/>
 		</div>
 	);
