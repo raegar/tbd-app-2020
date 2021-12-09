@@ -146,35 +146,36 @@ function AdditionalInfo({ ...props}) {
 								}
 							</span>
 						</div>
+						<Container>
+							<Row id="buttonRow">
+								<Col className="centered-buttons">
+									<UCPButton to='/NextOfKin'
+										primary="True"
+										className="mediumbutton"
+										buttonText="Go Back"
+									/>
+								</Col>
+								<Col className="centered-buttons" onClick={saveSelectedData}>
+									<div id="confirmButton">
+										<UCPButton
+											to= '/Course'
+											primary="True"
+											className="mediumbutton"
+											buttonText="Confirm and Go"
+										/>
+									</div>
+								</Col>
+							</Row>
+						</Container>
 					</Col>
 				</Row>  
 			</div>
 			<br/>
 			<br/>
 			<br/>
-			<Row>
-				<Container>
-					<Row id="buttonRow">
-						<Col className="centered-buttons">
-							<UCPButton to='/NextOfKin'
-								primary="True"
-								className="mediumbutton"
-								buttonText="Go Back"
-							/>
-						</Col>
-						<Col className="centered-buttons" onClick={saveSelectedData}>
-							<div id="confirmButton">
-								<UCPButton
-									to= '/Course'
-									primary="True"
-									className="mediumbutton"
-									buttonText="Confirm and Go"
-								/>
-							</div>
-						</Col>
-					</Row>
-				</Container>
-			</Row>
+			{/* <Row> */}
+			
+			{/* </Row> */}
 			<Footer/>
 		</div>
 	);

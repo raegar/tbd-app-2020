@@ -89,29 +89,30 @@ function LevelTwoQualifications() {
 								/>
 							</div>
 						</Container>
+						<Row id="buttonRow">
+							<Col className="centered-buttons">
+								<UCPButton 
+									to='/Course'
+									primary="True"
+									className="mediumbutton"
+									buttonText="Go Back"
+								/>
+							</Col>
+							<Col className="centered-buttons">
+								<div id="confirmButton" onClick={saveSelectedData}>
+									<UCPButton
+										to="/LevelThreeQualifications"
+										primary="True"
+										className="mediumbutton"
+										buttonText="Confirm and Go"
+									/>
+								</div>
+							</Col>
+						</Row>
 					</Col>
 				</Row>
+				
 				<br/>
-  				<Row id="buttonRow">
-  					<Col className="centered-buttons">
-  						<UCPButton 
-						  	to='/Course'
-  							primary="True"
-  							className="mediumbutton"
-  							buttonText="Go Back"
-  						/>
-  					</Col>
-  					<Col className="centered-buttons">
-  						<div id="confirmButton" onClick={saveSelectedData}>
-  							<UCPButton
-  								to="/LevelThreeQualifications"
-  								primary="True"
-  								className="mediumbutton"
-  								buttonText="Confirm and Go"
-  							/>
-  						</div>
-  					</Col>
-  				</Row>
   			</div>
 			<Footer/>
 		</div>
