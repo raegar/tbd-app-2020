@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/tbd-app-2020/static/css/main.310de722.chunk.css",
-    "main.js": "/tbd-app-2020/static/js/main.62270739.chunk.js",
-    "main.js.map": "/tbd-app-2020/static/js/main.62270739.chunk.js.map",
+    "main.css": "/tbd-app-2020/static/css/main.c58d069c.chunk.css",
+    "main.js": "/tbd-app-2020/static/js/main.0fdd38dc.chunk.js",
+    "main.js.map": "/tbd-app-2020/static/js/main.0fdd38dc.chunk.js.map",
     "runtime-main.js": "/tbd-app-2020/static/js/runtime-main.9c11f291.js",
     "runtime-main.js.map": "/tbd-app-2020/static/js/runtime-main.9c11f291.js.map",
     "static/css/2.429e79c4.chunk.css": "/tbd-app-2020/static/css/2.429e79c4.chunk.css",
-    "static/js/2.f6e51f92.chunk.js": "/tbd-app-2020/static/js/2.f6e51f92.chunk.js",
-    "static/js/2.f6e51f92.chunk.js.map": "/tbd-app-2020/static/js/2.f6e51f92.chunk.js.map",
+    "static/js/2.879bc1e7.chunk.js": "/tbd-app-2020/static/js/2.879bc1e7.chunk.js",
+    "static/js/2.879bc1e7.chunk.js.map": "/tbd-app-2020/static/js/2.879bc1e7.chunk.js.map",
     "index.html": "/tbd-app-2020/index.html",
-    "precache-manifest.75699fdac095190d19a8d28ad7ba0422.js": "/tbd-app-2020/precache-manifest.75699fdac095190d19a8d28ad7ba0422.js",
+    "precache-manifest.49cbdd6292b5568c4a08e393b5d52f9c.js": "/tbd-app-2020/precache-manifest.49cbdd6292b5568c4a08e393b5d52f9c.js",
     "service-worker.js": "/tbd-app-2020/service-worker.js",
     "static/css/2.429e79c4.chunk.css.map": "/tbd-app-2020/static/css/2.429e79c4.chunk.css.map",
-    "static/css/main.310de722.chunk.css.map": "/tbd-app-2020/static/css/main.310de722.chunk.css.map",
-    "static/js/2.f6e51f92.chunk.js.LICENSE.txt": "/tbd-app-2020/static/js/2.f6e51f92.chunk.js.LICENSE.txt",
+    "static/css/main.c58d069c.chunk.css.map": "/tbd-app-2020/static/css/main.c58d069c.chunk.css.map",
+    "static/js/2.879bc1e7.chunk.js.LICENSE.txt": "/tbd-app-2020/static/js/2.879bc1e7.chunk.js.LICENSE.txt",
     "static/media/Footer.css": "/tbd-app-2020/static/media/Footer.5e635b27.png",
     "static/media/Logo_White.png": "/tbd-app-2020/static/media/Logo_White.cc8e2a65.png"
   },
   "entrypoints": [
     "static/js/runtime-main.9c11f291.js",
     "static/css/2.429e79c4.chunk.css",
-    "static/js/2.f6e51f92.chunk.js",
-    "static/css/main.310de722.chunk.css",
-    "static/js/main.62270739.chunk.js"
+    "static/js/2.879bc1e7.chunk.js",
+    "static/css/main.c58d069c.chunk.css",
+    "static/js/main.0fdd38dc.chunk.js"
   ]
 }
