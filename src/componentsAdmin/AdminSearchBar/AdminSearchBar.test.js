@@ -9,7 +9,7 @@ it("Renders AdminSearchBar", () => {
 	expect(asFragment()).toMatchSnapshot();
 });
 
-test("Proper progress number shows", () => {
+test("AdminSearchBar", () => {
     const lookingFor = 'Search:';
 	expect(screen.queryByText(lookingFor)).toBeNull();
 });
