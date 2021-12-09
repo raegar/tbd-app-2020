@@ -59,6 +59,17 @@ exports[`Render SelectRole 1`] = `
               </h1>
             </div>
             <div
+              class="row"
+            >
+              <button
+                class="mediumbutton"
+                data-testid="ucpButton"
+                type="button"
+              >
+                Move UCAS Calculator to Here​
+              </button>
+            </div>
+            <div
               class="uniPageLinkRow row"
             >
               <button
