@@ -3,7 +3,7 @@
 }
 
 .qualInputBox {
-    width: auto;
+    width: 100%;
 }
 
 .subjectInputBox {
@@ -11,7 +11,7 @@
 }
 
 .gradeSelect {
-
+    width: 100%;
 }
 
 .addQualButton {

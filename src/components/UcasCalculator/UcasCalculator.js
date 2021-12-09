@@ -90,7 +90,7 @@ function UcasCalculator() {
 							className="subjectInputBox"
 						/>
 					</Col>
-					<Col md={4}>
+					<Col>
 						<br/>
 					</Col>
 					<Col md={2}>
