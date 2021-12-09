@@ -1,14 +1,14 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import LevelThreeQualifications from './LevelThreeQualifications';
+import NextOfKin from './NextOfKin';
 import { BrowserRouter as Router} from 'react-router-dom';
 
 //cleans up 
 afterEach(cleanup);
 
 it("Renders LevelThreeQualifications", () => {
-    const { asFragment } = render(<Router><LevelThreeQualifications/></Router>);
+    const { asFragment } = render(<Router><NextOfKin/></Router>);
     expect(asFragment()).toMatchSnapshot();
 });
 
