@@ -1,0 +1,282 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders NextOfKin 1`] = `
+<DocumentFragment>
+  <div>
+    <div>
+      <header
+        class="Header"
+      >
+        <a
+          href="/tbd-app-2020"
+        >
+          <img
+            alt="UCP official logo"
+            class="UCPLogoBlue"
+            data-testid="ucpLogoHeader"
+            src="Logo_White.png"
+          />
+        </a>
+      </header>
+      <div
+        class="Line"
+      />
+    </div>
+    <div
+      style="height: 30px; width: 90%; background-color: rgb(178, 221, 223); border-radius: 50px; margin: 50px;"
+    >
+      <div
+        style="height: 100%; width: 30%; background-color: rgb(0, 92, 110); border-radius: inherit; text-align: right;"
+      >
+        <span
+          style="padding: 5px; color: rgb(255, 255, 255); font-weight: bold;"
+        >
+           30% 
+        </span>
+      </div>
+    </div>
+    <div
+      class="es-form-container container"
+    >
+      <div
+        class="es-form-background"
+      >
+        <h3
+          class="form-title"
+        >
+          Next of kin
+        </h3>
+        <span
+          class="ess-form-left"
+        >
+          <div
+            class="mobiletextbox"
+          >
+            <label
+              for="nameinput"
+            >
+              Name
+            </label>
+            <input
+              class="desktoptextbox"
+              id="nameinput"
+              maxlength="60"
+              minlength="5"
+              name="name"
+              placeholder="Enter your name"
+              required=""
+              size="20"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="mobiletextbox"
+          >
+            <label
+              for="kinEmailinput"
+            >
+              Email
+            </label>
+            <input
+              class="desktoptextbox"
+              id="kinEmailinput"
+              maxlength="60"
+              minlength="5"
+              name="kinEmail"
+              placeholder="Enter your email"
+              required=""
+              size="20"
+              type="email"
+              value=""
+            />
+          </div>
+          <div
+            class="mobiletextbox"
+          >
+            <label
+              for="kinTelinput"
+            >
+              Phone No
+            </label>
+            <input
+              class="desktoptextbox"
+              id="kinTelinput"
+              maxlength="12"
+              minlength="5"
+              name="kTelno"
+              placeholder="Enter phone number"
+              size="20"
+              type="tel"
+              value=""
+            />
+          </div>
+          <div
+            class="mobiletextbox"
+          >
+            <label
+              for="kinRelationship"
+            >
+              Net of kin relationship
+            </label>
+            <input
+              class="desktoptextbox"
+              id="kinRelationship"
+              maxlength="60"
+              minlength="5"
+              name="kinRelationship"
+              placeholder="Enter your next of kins relationship"
+              required=""
+              size="20"
+              type="text"
+              value=""
+            />
+          </div>
+        </span>
+        <span
+          class="ess-form-right"
+        >
+          <div
+            class="mobiletextbox"
+          >
+            <label
+              for="kin-address-1"
+            >
+              Kin Address Line 1
+            </label>
+            <input
+              id="kin-address-1"
+              maxlength="100"
+              minlength="10"
+              name="kin_address_line_1"
+              placeholder="Kin Address Line 1"
+              size="35"
+              type="text"
+            />
+          </div>
+          <div
+            class="mobiletextbox"
+          >
+            <label
+              for="kin-address-2"
+            >
+              Kin Address Line 2
+            </label>
+            <input
+              id="kin-address-2"
+              maxlength="100"
+              minlength="10"
+              name="kin_address_line_2"
+              placeholder="Kin Address Line 2"
+              size="35"
+              type="text"
+            />
+          </div>
+          <div
+            class="mobiletextbox"
+          >
+            <label
+              for="kin-town-city"
+            >
+              Kin Town/City
+            </label>
+            <input
+              id="kin-town-city"
+              maxlength="100"
+              minlength="10"
+              name="kin_town_city"
+              placeholder="Kin Town/City"
+              size="35"
+              type="text"
+            />
+          </div>
+          <div
+            class="mobiletextbox"
+          >
+            <label
+              for="kin-region"
+            >
+              Kin Region
+            </label>
+            <input
+              id="kin-region"
+              maxlength="30"
+              minlength="3"
+              name="kin_region"
+              placeholder="Kin Region"
+              size="25"
+              type="text"
+            />
+          </div>
+          <div
+            class="mobiletextbox"
+          >
+            <label
+              for="kin-postcode"
+            >
+              Kin Postcode
+            </label>
+            <input
+              id="kin-postcode"
+              maxlength="9"
+              minlength="6"
+              name="kin_postcode"
+              placeholder="Kin Postcode"
+              size="10"
+              type="text"
+            />
+          </div>
+        </span>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="row"
+        id="buttonRow"
+      >
+        <div
+          class="centered-buttons col"
+        >
+          <a
+            href="/EssentialApplicantInfo"
+          >
+            <button
+              class="mediumbutton"
+              data-testid="ucpButton"
+              primary="True"
+              type="button"
+            >
+              Go Back​
+            </button>
+          </a>
+        </div>
+        <div
+          class="centered-buttons col"
+        >
+          <div
+            id="confirmButton"
+          >
+            <a
+              href="/AdditionalInformation"
+            >
+              <button
+                class="mediumbutton"
+                data-testid="ucpButton"
+                primary="True"
+                type="button"
+              >
+                Confirm and Go​
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer
+      class="ucpFooter"
+    />
+  </div>
+</DocumentFragment>
+`;
