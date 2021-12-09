@@ -23,169 +23,399 @@ exports[`Renders Degree Qual 1`] = `
       />
     </div>
     <div
-      style="height: 30px; width: 90%; background-color: rgb(178, 221, 223); border-radius: 50px; margin: 50px;"
+      class="row"
     >
       <div
-        style="height: 100%; width: 90%; background-color: rgb(0, 92, 110); border-radius: inherit; text-align: right;"
-      >
-        <span
-          style="padding: 5px; color: rgb(255, 255, 255); font-weight: bold;"
-        >
-           90% 
-        </span>
-      </div>
-    </div>
-    <div
-      class="degree-form d-flex justify-content-center container"
-    >
-      <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
-        rel="stylesheet"
-      />
-      <div
-        class="form-background"
-      >
-        <h3
-          class="form-title"
-        >
-          Level 4 or Above Experience
-        </h3>
-        <div
-          class="row"
-        >
-          <div
-            class="col"
-          >
-            <div
-              class="radio-buttons"
-            >
-              <h4 />
-              <p>
-                Do you have any level 4 or above qualifications?
-              </p>
-              <div
-                class="radio-group"
-              >
-                <input
-                  data-testid="prior-yes"
-                  id="prior-yes"
-                  name="level-four"
-                  type="radio"
-                  value="yes"
-                />
-                <label
-                  for="prior-yes"
-                >
-                  Yes
-                </label>
-              </div>
-              <div
-                class="radio-group"
-              >
-                <input
-                  data-testid="prior-no"
-                  id="prior-no"
-                  name="level-four"
-                  type="radio"
-                  value="no"
-                />
-                <label
-                  for="prior-no"
-                >
-                  No
-                </label>
-              </div>
-            </div>
-            <span />
-          </div>
-          <div
-            class="col"
-          >
-            <div
-              class="radio-buttons"
-            >
-              <h4 />
-              <p>
-                ELQ - is the applicant applying to study a qualification that is equivalent or lower to one they already hold?
-              </p>
-              <div
-                class="radio-group"
-              >
-                <input
-                  data-testid="elq-yes"
-                  id="elq-yes"
-                  name="elq"
-                  type="radio"
-                  value="yes"
-                />
-                <label
-                  for="elq-yes"
-                >
-                  Yes
-                </label>
-              </div>
-              <div
-                class="radio-group"
-              >
-                <input
-                  data-testid="elq-no"
-                  id="elq-no"
-                  name="elq"
-                  type="radio"
-                  value="no"
-                />
-                <label
-                  for="elq-no"
-                >
-                  No
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="container"
-    >
-      <div
-        class="row"
-        id="buttonRow"
+        class="col-md-3"
       >
         <div
-          class="centered-buttons col"
+          class="courseInfoBox undefined"
         >
-          <a
-            href="/LevelThreeQualifications"
+          <div
+            class="courseTitleRow row"
+          >
+            <h1
+              class="courseInfoTitle"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-comment-dots fa-w-16 icon"
+                data-icon="comment-dots"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M256 32C114.6 32 0 125.1 0 240c0 49.6 21.4 95 57 130.7C44.5 421.1 2.7 466 2.2 466.5c-2.2 2.3-2.8 5.7-1.5 8.7S4.8 480 8 480c66.3 0 116-31.8 140.6-51.4 32.7 12.3 69 19.4 107.4 19.4 141.4 0 256-93.1 256-208S397.4 32 256 32zM128 272c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128 0c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128 0c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"
+                  fill="currentColor"
+                />
+              </svg>
+                Course Info
+            </h1>
+          </div>
+          <div
+            class="row"
           >
             <button
               class="mediumbutton"
               data-testid="ucpButton"
-              primary="True"
               type="button"
             >
-              Go Back​
+              Move UCAS Calculator to Here​
             </button>
-          </a>
-        </div>
-        <div
-          class="centered-buttons col"
-        >
+          </div>
           <div
-            id="confirmButton"
+            class="uniPageLinkRow row"
+          >
+            <button
+              class="smallbutton"
+              data-testid="ucpButton"
+              type="button"
+            >
+              Close Embed​
+            </button>
+            <div
+              class="iframeContainer"
+            >
+              <iframe
+                class="iframeLink"
+                src="https://www.ucp.ac.uk/a-z-courses/"
+                title="Courses at UCP"
+              />
+            </div>
+          </div>
+          <div
+            class="uniPageLinkRow row"
           >
             <a
-              href="/ClearingOfferMadeStudentEnd"
+              href="https://www.ucp.ac.uk/a-z-courses/"
             >
-              <button
-                class="mediumbutton"
-                data-testid="ucpButton"
-                primary="True"
-                type="button"
-              >
-                Confirm and Go​
-              </button>
+              Link to Course information page on UCP website
             </a>
+          </div>
+          <div
+            class="ucasCalculatorRow row"
+          >
+            <p>
+              <b>
+                UCAS Calculator:
+              </b>
+            </p>
+            <div
+              class="ucasCalculator"
+            >
+              <div>
+                <div
+                  class="container"
+                >
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col"
+                    >
+                      <select
+                        class="qualInputBox"
+                        id="qualifications"
+                      >
+                        <option
+                          disabled=""
+                        >
+                          Please select a qualification...
+                        </option>
+                        <option
+                          class="gradeTypeHeader"
+                          disabled=""
+                        >
+                          A Level and AS
+                        </option>
+                        <option
+                          value="A Level and AS;A Levels"
+                        >
+                            A Levels
+                        </option>
+                        <option
+                          value="A Level and AS;AS Levels"
+                        >
+                            AS Levels
+                        </option>
+                        <option
+                          class="gradeTypeHeader"
+                          disabled=""
+                        >
+                          BTEC National (RQF) (From 2016)
+                        </option>
+                        <option
+                          value="BTEC National (RQF) (From 2016);Pearson BTEC Level 3 National Extended Certificate (first teaching from September 2016)"
+                        >
+                            Pearson BTEC Level 3 National Extended Certificate (first teaching from September 2016)
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-md-2"
+                    >
+                      <div
+                        class="mobiletextbox"
+                      >
+                        <label />
+                        <input
+                          class="subjectInputBox"
+                          maxlength="30"
+                          minlength="0"
+                          placeholder="Subject (optional)"
+                          size="20"
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="col"
+                    >
+                      <br />
+                    </div>
+                    <div
+                      class="col-md-2"
+                    >
+                      <br />
+                      <select
+                        class="Dropdown"
+                        disabled=""
+                      >
+                        <option
+                          value=""
+                        />
+                        <option
+                          value="none"
+                        >
+                          ...
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-md-6"
+                    />
+                    <div
+                      class="col"
+                    >
+                      <span
+                        class="qualPoints"
+                        data-testid="qualPoints"
+                      >
+                        Points: 
+                        <b>
+                          0
+                        </b>
+                      </span>
+                    </div>
+                  </div>
+                  <br />
+                  <div
+                    class="row"
+                  >
+                    <button
+                      class="mediumbutton addQualButton"
+                      data-testid="ucpButton"
+                      type="button"
+                    >
+                      Add another qualification​
+                    </button>
+                  </div>
+                  <span
+                    class="totalQualPoints"
+                  >
+                    Total points: 
+                    <b
+                      data-testid="totalPoints"
+                    >
+                      0
+                    </b>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col"
+      >
+        <div
+          style="height: 30px; width: 90%; background-color: rgb(178, 221, 223); border-radius: 50px; margin: 50px;"
+        >
+          <div
+            style="height: 100%; width: 90%; background-color: rgb(0, 92, 110); border-radius: inherit; text-align: right;"
+          >
+            <span
+              style="padding: 5px; color: rgb(255, 255, 255); font-weight: bold;"
+            >
+               90% 
+            </span>
+          </div>
+        </div>
+        <div
+          class="degree-form d-flex justify-content-center container"
+        >
+          <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap"
+            rel="stylesheet"
+          />
+          <div
+            class="form-background"
+          >
+            <h3
+              class="form-title"
+            >
+              Level 4 or Above Experience
+            </h3>
+            <div
+              class="row"
+            >
+              <div
+                class="col"
+              >
+                <div
+                  class="radio-buttons"
+                >
+                  <h4 />
+                  <p>
+                    Do you have any level 4 or above qualifications?
+                  </p>
+                  <div
+                    class="radio-group"
+                  >
+                    <input
+                      data-testid="prior-yes"
+                      id="prior-yes"
+                      name="level-four"
+                      type="radio"
+                      value="yes"
+                    />
+                    <label
+                      for="prior-yes"
+                    >
+                      Yes
+                    </label>
+                  </div>
+                  <div
+                    class="radio-group"
+                  >
+                    <input
+                      data-testid="prior-no"
+                      id="prior-no"
+                      name="level-four"
+                      type="radio"
+                      value="no"
+                    />
+                    <label
+                      for="prior-no"
+                    >
+                      No
+                    </label>
+                  </div>
+                </div>
+                <span />
+              </div>
+              <div
+                class="col"
+              >
+                <div
+                  class="radio-buttons"
+                >
+                  <h4 />
+                  <p>
+                    ELQ - is the applicant applying to study a qualification that is equivalent or lower to one they already hold?
+                  </p>
+                  <div
+                    class="radio-group"
+                  >
+                    <input
+                      data-testid="elq-yes"
+                      id="elq-yes"
+                      name="elq"
+                      type="radio"
+                      value="yes"
+                    />
+                    <label
+                      for="elq-yes"
+                    >
+                      Yes
+                    </label>
+                  </div>
+                  <div
+                    class="radio-group"
+                  >
+                    <input
+                      data-testid="elq-no"
+                      id="elq-no"
+                      name="elq"
+                      type="radio"
+                      value="no"
+                    />
+                    <label
+                      for="elq-no"
+                    >
+                      No
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="container"
+        >
+          <div
+            class="row"
+            id="buttonRow"
+          >
+            <div
+              class="centered-buttons col"
+            >
+              <a
+                href="/LevelThreeQualifications"
+              >
+                <button
+                  class="mediumbutton"
+                  data-testid="ucpButton"
+                  primary="True"
+                  type="button"
+                >
+                  Go Back​
+                </button>
+              </a>
+            </div>
+            <div
+              class="centered-buttons col"
+            >
+              <div
+                id="confirmButton"
+              >
+                <a
+                  href="/ClearingOfferMadeStudentEnd"
+                >
+                  <button
+                    class="mediumbutton"
+                    data-testid="ucpButton"
+                    primary="True"
+                    type="button"
+                  >
+                    Confirm and Go​
+                  </button>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

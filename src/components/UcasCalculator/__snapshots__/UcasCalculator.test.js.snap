@@ -72,7 +72,7 @@ exports[`Renders the calculator 1`] = `
           </div>
         </div>
         <div
-          class="col-md-4"
+          class="col"
         >
           <br />
         </div>

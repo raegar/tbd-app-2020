@@ -5,6 +5,9 @@ import './SelectRole.css';
 import {isMobile} from 'react-device-detect';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import CourseInfoPanel from '../CourseInfoPanel/CourseInfoPanel';
+import '../../global/GlobalVariables.js';
+
 //Must Set HREF attribute to use
 
 function SelectRole() {
@@ -13,28 +16,37 @@ function SelectRole() {
 	return (
 		<div>
 			<Header/>
-			<Container className="mt-5 px-3 py-3 select-role-container">
-				<Row className="text-center">
-					<Col className="mt-3 mb-3">
-						<UCPButton 
-							to="/NewApplicationPage" 
-							buttonText="Prospective Student" 
-							className={buttonClassName} 
-							href="/NewApplicationPage" 
-						/>
-						<UCPButton 
-							to="/login" 
-							buttonText="Staff Portal" 
-							className={buttonClassName} 
-							href="/login" 
-							data-testid="staff-portal" 
-						/>
-						<UCPButton 
-							to="/AdminLogIn" 
-							buttonText="Admin" 
-							className={buttonClassName} 
-							href="/AdminLogIn" 
-						/>
+			<Container fluid>
+				<Row>
+					<Col md={4}>
+						<CourseInfoPanel/>
+					</Col>
+					<Col>
+						<Container className="mt-5 px-3 py-3 select-role-container">
+							<Row className="text-center">
+								<Col className="mt-3 mb-3">
+									<UCPButton 
+										to="/NewApplicationPage" 
+										buttonText="Prospective Student" 
+										className={buttonClassName} 
+										href="/NewApplicationPage" 
+									/>
+									<UCPButton 
+										to="/login" 
+										buttonText="Staff Portal" 
+										className={buttonClassName} 
+										href="/login" 
+										data-testid="staff-portal" 
+									/>
+									<UCPButton 
+										to="/AdminLogIn" 
+										buttonText="Admin" 
+										className={buttonClassName} 
+										href="/AdminLogIn" 
+									/>
+								</Col>
+							</Row>
+						</Container>
 					</Col>
 				</Row>
 			</Container>
