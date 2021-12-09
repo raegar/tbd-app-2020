@@ -12,5 +12,5 @@ global.userType = "student";
 global.staffFirstName = "";
 global.staffLastName = "";
 global.PageThreeSkip = false;
-global.SelectedCourse = "criminology";
+global.SelectedCourse = "";
 

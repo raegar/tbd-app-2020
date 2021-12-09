@@ -1,9 +1,9 @@
 .courseInfoBox {
-	margin-top: 3rem !important;
+	/*margin-top: 3rem !important;*/
 	height: 100%;
 	background-color: #B2DDDF;
 	margin-left: 1rem;
-	padding: 1em 1em 1em 1em;
+	padding: 1.5em 3em 3em 3em;
 }
 
 .titleRow {
