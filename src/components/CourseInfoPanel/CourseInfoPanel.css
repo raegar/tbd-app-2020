@@ -11,7 +11,7 @@
 }
 
 .courseInfoTitle {
-	font-style: bold;
+	font-weight: bold;
 }
 
 .courseTitle {
@@ -23,7 +23,7 @@
 }
 
 .uniPageLinkRow {
-	
+	margin: 1em 0 1em 0;
 }
 
 .uniPageLink {
@@ -39,4 +39,10 @@
 	height: 40em;
 	margin: 1em;
 	overflow-x: scroll;
+}
+
+.ucasCalculator {
+	border: 1px solid black;
+	border-radius: 8px;
+	padding: 0.5em;
 }

@@ -17,7 +17,7 @@ function CourseInfoPanel({className, ...props}) {
 		<div className={"courseInfoBox " + className}>
 			<Row className="courseTitleRow">
 				{/* Title */}
-				<p className="courseInfoTitle"><FontAwesomeIcon className="icon" icon={faCommentDots}/>  Course Info</p>
+				<h1 className="courseInfoTitle"><FontAwesomeIcon className="icon" icon={faCommentDots}/>  Course Info</h1>
 			</Row>
 			<Row className="uniPageLinkRow">
 				{/* Uni page link */}
@@ -31,17 +31,17 @@ function CourseInfoPanel({className, ...props}) {
 					<iframe className="iframeLink" src="https://www.ucp.ac.uk/a-z-courses/" title="Courses at UCP"/>
 				</div> : null}
 			</Row>
-			<Row>
-				<br/>
+			<Row className="uniPageLinkRow">
 				<a href="https://www.ucp.ac.uk/a-z-courses/">Link to Course information page on UCP website</a>
-				<br/>
 			</Row>
 			{global.SelectedCourse ? <Row className="courseInfoRow">
 				<span><b>Course Overview: </b>{SubjectInfo[global.SelectedCourse]}</span>
 			</Row> : null}
-			<Row>
+			<Row className="ucasCalculatorRow">
 				<p><b>UCAS Calculator:</b></p>
-				<UcasCalculator/>
+				<div className="ucasCalculator">
+					<UcasCalculator/>
+				</div>
 			</Row>
 		</div>
 	);
