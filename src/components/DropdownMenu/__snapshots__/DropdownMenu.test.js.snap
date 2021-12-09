@@ -14,7 +14,7 @@ exports[`Renders DropdownMenu 1`] = `
       BSc (Hons) Computing and Information Systems
     </option>
     <option
-      value="criminoloy"
+      value="criminology"
     >
       BA (Hons) Criminology
     </option>
