@@ -18,7 +18,7 @@ function SelectRole() {
 			<Header/>
 			<Container fluid>
 				<Row>
-					<Col md={6}>
+					<Col md={4}>
 						<CourseInfoPanel/>
 					</Col>
 					<Col>

@@ -17,7 +17,7 @@ function CourseInfoPanel({className, ...props}) {
 		<div className={"courseInfoBox " + className}>
 			<Row className="courseTitleRow">
 				{/* Title */}
-				<span className="courseInfoTitle"><FontAwesomeIcon className="icon" icon={faCommentDots}/>  Course Info</span>
+				<p className="courseInfoTitle"><FontAwesomeIcon className="icon" icon={faCommentDots}/>  Course Info</p>
 			</Row>
 			<Row className="uniPageLinkRow">
 				{/* Uni page link */}
@@ -40,6 +40,7 @@ function CourseInfoPanel({className, ...props}) {
 				<span><b>Course Overview: </b>{SubjectInfo[global.SelectedCourse]}</span>
 			</Row> : null}
 			<Row>
+				<p><b>UCAS Calculator:</b></p>
 				<UcasCalculator/>
 			</Row>
 		</div>
