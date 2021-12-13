@@ -10,7 +10,6 @@ import {isMobile} from 'react-device-detect';
 //import Headers from '../Header/Headers';
 import Footer from '../Footer/Footer';
 import {Time, Days} from '../../global/Constants';
-import ProgressBar from "../ProgressBar/ProgressBar";
 
 function EssentialApplicantInfo({disabled, ...props}) {
 	const [nameInput, setNameInput] = useState("");
@@ -26,10 +25,7 @@ function EssentialApplicantInfo({disabled, ...props}) {
 	const [postcode, setPostcode] = useState("");
 	const disabledInputs = disabled ? "disabled" : null;
 	const textboxClassName = isMobile ? "mobiletextbox" : "desktoptextbox";
-	//progress bar
-	const completionRate = [
-		{bgcolor: "#005C6E", completed:15 },
-	];
+
 	//Saves data collected to do with applicants address
 	function saveSelectedData() {
 		global.ApplicationFormData.name = nameInput;
@@ -117,10 +113,6 @@ function EssentialApplicantInfo({disabled, ...props}) {
 
   	return (
 		  <div>
-			{completionRate.map((item, idx)=>(
-				<ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed}/>
-			))}
-
   			<Container className="es-form-container">
   			<div className="es-form-background">
   				<h3 className="form-title">CLEARING APPLICATION</h3>

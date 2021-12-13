@@ -128,13 +128,15 @@ function Course() {
 		<div>
 			<Header/>
 			<Row>
+				{completionRate.map((item, idx)=>(
+					<ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed}/>
+				))}
+			</Row>
+			<Row>
 				<Col md={4}>
 					<CourseInfoPanel/>
 				</Col>
 				<Col>
-					{completionRate.map((item, idx)=>(
-						<ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed}/>
-					))}
 					<Container className="form-container d-flex justify-content-center">
 						<Row className="form-background">
 							<Col>
