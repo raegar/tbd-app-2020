@@ -52,6 +52,10 @@ function DegreeQualifications() {
 		{label: 'No', id: 'elq-no', value: 'no', handleChange: onElqChanged}
 	];
 
+	const completionRate = [
+		{bgcolor: "#005C6E", completed:90 },
+	];
+
 	function saveSelectedData() {
     	if (priorCheckedState.anyChecked) {
     		global.ApplicationFormData.anyLevelFourQualification = priorCheckedState.value;
@@ -68,21 +72,20 @@ function DegreeQualifications() {
 
     	console.log(global.ApplicationFormData);
 	}
-	const completionRate = [
-		{bgcolor: "#005C6E", completed:90 },
-	];
 
 	return (
 		<div>
 			<Header/>
 			<Row>
+				{completionRate.map((item, idx)=>(
+					<ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed}/>
+				))}
+			</Row>
+			<Row>
 				<Col md={3}>
 					<CourseInfoPanel/>
 				</Col>
 				<Col>
-					{completionRate.map((item, idx)=>(
-						<ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed}/>
-					))}
 					<Container className="degree-form d-flex justify-content-center">
 						<link 
 							href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" 

@@ -48,14 +48,15 @@ function NextOfKin({ ...props}) {
 		<div>
 			<Header/>
 			<Row>
+			{completionRate.map((item, idx)=>(
+				<ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed}/>
+			))}
+			</Row>
+			<Row>
 				<Col md={3}>
 					<CourseInfoPanel/>
 				</Col>
 				<Col>
-					{completionRate.map((item, idx)=>(
-						<ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed}/>
-					))}
-
 					<Container className="es-form-container">
 					<div className="es-form-background">
 						<h3 className="form-title">Next of kin</h3>

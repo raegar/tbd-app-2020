@@ -26,6 +26,23 @@ exports[`Renders Degree Qual 1`] = `
       class="row"
     >
       <div
+        style="height: 30px; width: 90%; background-color: rgb(178, 221, 223); border-radius: 50px; margin: 50px;"
+      >
+        <div
+          style="height: 100%; width: 90%; background-color: rgb(0, 92, 110); border-radius: inherit; text-align: right;"
+        >
+          <span
+            style="padding: 5px; color: rgb(255, 255, 255); font-weight: bold;"
+          >
+             90% 
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="row"
+    >
+      <div
         class="col-md-3"
       >
         <div
@@ -250,19 +267,6 @@ exports[`Renders Degree Qual 1`] = `
       <div
         class="col"
       >
-        <div
-          style="height: 30px; width: 90%; background-color: rgb(178, 221, 223); border-radius: 50px; margin: 50px;"
-        >
-          <div
-            style="height: 100%; width: 90%; background-color: rgb(0, 92, 110); border-radius: inherit; text-align: right;"
-          >
-            <span
-              style="padding: 5px; color: rgb(255, 255, 255); font-weight: bold;"
-            >
-               90% 
-            </span>
-          </div>
-        </div>
         <div
           class="degree-form d-flex justify-content-center container"
         >
