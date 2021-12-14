@@ -18,10 +18,12 @@ function LevelThreeQualifications() {
 		let count = counter - 1;
 
 		if (qualificationsInfo[count]) {
-			global.ApplicationFormData.levelThreeQualifications.qual[count] = qualificationsInfo[count]["qualification"];
-			global.ApplicationFormData.levelThreeQualifications.subject[count] = qualificationsInfo[count]["subject"];
-			global.ApplicationFormData.levelThreeQualifications.grade[count] = qualificationsInfo[count]["grade"];
-			global.ApplicationFormData.levelThreeQualifications.date[count] = qualificationsInfo[count]["year"];
+			global.ApplicationFormData.levelThreeQualifications[count] = {
+				qual: qualificationsInfo[count]["qualification"],
+				subject: qualificationsInfo[count]["subject"],
+				grade: qualificationsInfo[count]["grade"],
+				date: qualificationsInfo[count]["year"]
+			};
 		}
 
 		console.log(global.ApplicationFormData);

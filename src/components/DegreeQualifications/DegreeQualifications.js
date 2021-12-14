@@ -29,14 +29,14 @@ function DegreeQualifications() {
 
 	function onPriorChanged(e) {
 		setPriorCheckedState({
-			value: e.target.value,
+			value: e.target.value === 'yes',
 			anyChecked: true,
 		});
 	}
 
 	function onElqChanged(e) {
 		setElqCheckedState({
-			value: e.target.value,
+			value: e.target.value === 'yes',
 			anyChecked: true,
 		});
 	}
