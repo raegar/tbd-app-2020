@@ -107,6 +107,7 @@ export const SubjectKey = "subject";
 export const GradeKey = "grade";
 export const YearKey = "year";
 
+//NOTE: MAKE SURE THAT THIS DOES NOT END WITH / OR YOU WILL BREAK THINGS WITH THE BACKEND
 export const BackEnd = "";
 
 export const LoginEndpoint = BackEnd + "/login";
