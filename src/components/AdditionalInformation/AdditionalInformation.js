@@ -11,7 +11,7 @@ import TextBox from "../TextBox/TextBox";
 import CourseInfoPanel from '../CourseInfoPanel/CourseInfoPanel';
 
 function AdditionalInfo({ ...props}) {
-	const [supportInput, setSupportInput] = useState("false");
+	const [supportInput, setSupportInput] = useState(false);
 
 	const [nationalityState, setNationalityState] = useState({
 		value: "",
@@ -37,14 +37,14 @@ function AdditionalInfo({ ...props}) {
 
 	function anyCriminalConvChecked(e) {
 		setCriminalConvState({
-			value: e.target.value,
+			value: e.target.value === 'yes',
 			anyChecked: true,
 		});
 	}
 
 	function anySupportChecked(e) {
 		setSupportState({
-			value: e.target.value,
+			value: e.target.value === 'yes',
 			anyChecked: true,
 		});
 	}
@@ -140,7 +140,7 @@ function AdditionalInfo({ ...props}) {
 											rows="10"
 											maxLength="224" 
 											placeholder="disability"
-											onChange={(e) => setSupportInput(e.target.value)}
+											onChange={(e) => setSupportInput(e.target.value === 'yes')}
 										/>
 										: <span></span>
 								}

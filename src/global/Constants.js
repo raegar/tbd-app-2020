@@ -106,3 +106,11 @@ export const QualificationKey = "qualification";
 export const SubjectKey = "subject";
 export const GradeKey = "grade";
 export const YearKey = "year";
+
+//NOTE: MAKE SURE THAT THIS DOES NOT END WITH / OR YOU WILL BREAK THINGS WITH THE BACKEND
+export const BackEnd = "";
+
+export const LoginEndpoint = BackEnd + "/login";
+export const LogoutEndpoint = BackEnd + "/logout";
+export const AnalyticsEndpoint = BackEnd + "/analytics";
+export const SubmitClearingFormEndpoint = BackEnd + "/submitClearingForm";

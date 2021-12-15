@@ -1,10 +1,12 @@
 global.ApplicationFormData = {
-	levelThreeQualifications: {
-		qual: [],
-		subject: [],
-		grade: [],
-		date: [],
-	}
+	levelThreeQualifications: [
+		{
+			qual: "",
+			subject: "",
+			grade: "",
+			date: "",
+		}
+	]
 };
 
 

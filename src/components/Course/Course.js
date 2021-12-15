@@ -68,7 +68,7 @@ function Course() {
 
 	function onYearSelected(e) {
 		setYearState({
-			value: e.target.value,
+			value: parseInt(e.target.value),
 			anyChecked: true,
 		});
 	}
@@ -180,7 +180,7 @@ function Course() {
 											maxLength={3} 
 											min={0} 
 											max={360}
-											onChange={(e) => setPriorCreditValue(e.target.value)}
+											onChange={(e) => setPriorCreditValue(e.target.value === 'yes')}
 										/><br/></div>
 										: <span></span>
 								}
@@ -200,7 +200,7 @@ function Course() {
 											name="when-study" 
 											title="When did they last study at UCP/ARU?"  
 											type="date" 
-											onChange={(e) => setPriorStudyDate(e.target.value)}
+											onChange={(e) => setPriorStudyDate(e.target.value === 'yes')}
 										/>
 										: <span></span>
 								}

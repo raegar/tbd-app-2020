@@ -6,27 +6,40 @@ import UCPButton from "../Buttons/UCPButton";
 import ProgressBar from '../ProgressBar/ProgressBar';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import axios from 'axios';
+import { SubmitClearingFormEndpoint } from '../../global/Constants';
 
 function ClearingOfferMadeStudentEnd() {
 	const email = useRef(global.ApplicationFormData.email);
 
-	function downloadFile() {
-    	const fileName = "studentDetails.json"; 
-    	let saveData = (function () { 
-    		let a = document.createElement("a"); 
-    		document.body.appendChild(a); 
-    		a.style = "display: none"; 
-    		return function (fileName) { 
-    			let json = JSON.stringify(global.ApplicationFormData), 
-    				blob = new Blob([json], {type: "octet/stream"}), 
-    				url = window.URL.createObjectURL(blob); 
-    			a.href = url; 
-    			a.download = fileName; 
-    			a.click(); 
-    			window.URL.revokeObjectURL(url); 
-    		}; 
-    	}()); 
-    	saveData(fileName);
+	function sendClearingForm() {
+		axios.post(SubmitClearingFormEndpoint, { 
+			clearingFormData: global.ApplicationFormData
+		}).then((response) => {
+			//do whatever if it succeeds
+		}).catch((err) => {
+			console.log(err);
+
+			//fallback on downloading file if failed
+			const fileName = "studentDetails.json"; 
+			let saveData = (function () { 
+				let a = document.createElement("a"); 
+				document.body.appendChild(a); 
+				a.style = "display: none"; 
+				return function (fileName) { 
+					let json = JSON.stringify(global.ApplicationFormData), 
+						blob = new Blob([json], {type: "octet/stream"}), 
+						url = window.URL.createObjectURL(blob); 
+					a.href = url; 
+					a.download = fileName; 
+					a.click(); 
+					window.URL.revokeObjectURL(url); 
+				}; 
+			}()); 
+			saveData(fileName);
+		});
+
+    	
 	}
 	const completionRate = [
 		{bgcolor: "#005C6E", completed:100 },
@@ -66,7 +79,7 @@ function ClearingOfferMadeStudentEnd() {
 					</Col>
 					<Col className="centered-buttons">
 						<br/>
-						<div onClick={downloadFile}>
+						<div onClick={sendClearingForm}>
 							<UCPButton 
 								to ='/'
 								primary="True"
