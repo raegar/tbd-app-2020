@@ -71,4 +71,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 
 ## Backend
-The backend can be found [https://github.com/raegar/tbd-app-2020-backend](here). Alternatively you can find it at the original repository [https://github.com/Coldani3/tbd-app-2020-backend](here).
+The backend can be found [here](https://github.com/raegar/tbd-app-2020-backend). Alternatively you can find it at the original repository [here](https://github.com/Coldani3/tbd-app-2020-backend).
