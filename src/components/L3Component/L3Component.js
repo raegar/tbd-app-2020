@@ -20,37 +20,57 @@ function L3Component(
 		...props
 	}) {
 	const [qualificationCounter, setCounter] = useState(1);
+	const currentMaxQualificationCounter = useRef(qualificationCounter);
 	const inputContents = useRef({});
 
 	const l3ComponentClassName = isMobile ? "mobilel3component" : "l3component";
 	const l3FormRightClassName = isMobile ? "l3-mobile-form-right" : "l3-form-right";
 
 	function onYesMoreQualifications(event) {
-		if (event.target.value === 'no') {
-			setCounter(6);
-		} else {
-			setCounter(qualificationCounter + 1);
+		const skipToEnd = event.target.value === 'no';
+		if (!skipToEnd) {
 			saveSelectedData(qualificationCounter);
 		}
 
-		inputContents.current = {};
+		if (enableMoreQualifications()) {
+			inputContents.current = {};
 
-		if (onChange) {
-			onChange(event);
+			if (onChange) {
+				onChange(event);
+			}
+
+			if (skipToEnd) {
+				setCounter(6);
+			} else {
+				if (currentMaxQualificationCounter.current <= qualificationCounter) {
+					setCounter(qualificationCounter + 1);
+					currentMaxQualificationCounter.current = qualificationCounter;
+				} else {
+					let nextFilled = false;
+
+					for (const key of [QualificationKey, SubjectKey, GradeKey, YearKey]) {
+						if (qualificationsInfo[currentMaxQualificationCounter.current][key]) {
+							nextFilled = true;
+						}
+					}
+					
+					setCounter(currentMaxQualificationCounter.current + 1 + (nextFilled ? 1 : 0));
+				}
+				// setCounter((currentMaxQualificationCounter.current === qualificationCounter ? 
+				// 	qualificationCounter : 
+				// 	currentMaxQualificationCounter
+				// ) + 1);
+			}
 		}
+
 	}
 
 	function enableMoreQualifications() {
 		let empty = true;
 
-		console.log("Keys of inputs: " + Object.keys(inputContents.current));
-
 		if (qualificationCounter - 1 > 0) {								
 			for (let key of Object.keys(inputContents.current)) {
-				console.log(key);
-
 				if (inputContents.current[key] && inputContents.current[key].length > 0) {
-					console.log(key + " has a value");
 					empty = false;
 				}
 			}
@@ -58,7 +78,7 @@ function L3Component(
 			empty = false;
 		}
 
-		return empty;
+		return !empty;
 	}
 
 	function saveValue(e, key) {
@@ -142,7 +162,6 @@ function L3Component(
 								options={L3QualificationsOptions}
 								name="l3qualifications"
 								onChange={onYesMoreQualifications}
-								attribute={enableMoreQualifications()}
 							/>
 							<br/>
 							<div className="row">
