@@ -57,5 +57,5 @@ class Tabs extends Component {
   }
 }
 
-export default Renderer;
+export default Tabs;
 
