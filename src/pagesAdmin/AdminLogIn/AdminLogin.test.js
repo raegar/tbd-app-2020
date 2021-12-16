@@ -6,6 +6,14 @@ import { BrowserRouter as Router} from 'react-router-dom';
 import AdminLogIn from './AdminLogIn';
 
 it("Renders AdminLogIn", () => {
-    const { asFragment } = render(<Router><AdminLogIn /></Router>);
-    expect(asFragment()).toMatchSnapshot();
+	const { asFragment } = render(<Router><AdminLogIn /></Router>);
+	expect(asFragment()).toMatchSnapshot();
+});
+test("Login Conditional rendering", () => {
+	const lookingFor = 'Login:'
+	render(
+		<Router>
+			<AdminLogin />
+		</Router>
+	);
 });
