@@ -83,15 +83,15 @@ function UcasCalculator() {
 			);
 			grades.push(
 				<Row>
-					<Col md={2}>
+					<Col md={8}>
 						<TextBox 
 							placeholder="Subject (optional)" 
 							onChange={(e) => changeSubjectName(e, i)} 
 							className="subjectInputBox"
 						/>
 					</Col>
-					<Col>
-						<br/>
+					<Col className="spacingFix">
+
 					</Col>
 					<Col md={2}>
 						<br/>

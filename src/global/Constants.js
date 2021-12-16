@@ -90,7 +90,13 @@ export const UCASGrades = {
 			{grade: "D", points: 24},
 			{grade: "E", points: 16}
 		],
-		"AS Levels": []
+		"AS Levels": [
+			{grade: "A", points: 20},
+			{grade: "B", points: 16},
+			{grade: "C", points: 12},
+			{grade: "D", points: 8},
+			{grade: "E", points: 4},
+		]
 	},
 	"BTEC National (RQF) (From 2016)": {
 		"Pearson BTEC Level 3 National Extended Certificate (first teaching from September 2016)": [
