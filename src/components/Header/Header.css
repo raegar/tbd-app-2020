@@ -1,0 +1,24 @@
+.UCPLogoBlue, .MobileUCPLogoBlue{
+    display: block;
+}
+
+.Header{
+    background-color: #1b1e23;
+}
+
+.UCPLogoBlue{
+    padding: 0.5rem;
+    width: 20%;
+}
+
+.Line{
+    width: 100%;
+    height: 0.5rem;
+    background-color: #005c6e;;
+}
+
+.MobileUCPLogoBlue{
+    padding: 0.5rem;
+    width: 60%;
+    
+}

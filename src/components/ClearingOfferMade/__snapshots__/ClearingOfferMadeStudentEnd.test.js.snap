@@ -2,75 +2,129 @@
 
 exports[`Renders ClearingOfferMadeStudentEnd 1`] = `
 <DocumentFragment>
-  <div
-    class="container"
-  >
-    <h1>
-      Thank you for using the form
-    </h1>
-    <p>
-      Please press confirm to complete
-    </p>
-    <h3>
-      Please confirm email that your application will be sent to
-    </h3>
-    <div
-      class="mobiletextbox"
-    >
-      <label
-        for="emailConfirm"
-      />
-      <input
-        id="emailConfirm"
-        maxlength="30"
-        minlength="0"
-        placeholder="Test@email.com"
-        size="20"
-        type="text"
+  <div>
+    <div>
+      <header
+        class="Header"
+      >
+        <a
+          href="/tbd-app-2020"
+        >
+          <img
+            alt="UCP official logo"
+            class="UCPLogoBlue"
+            data-testid="ucpLogoHeader"
+            src="Logo_White.png"
+          />
+        </a>
+      </header>
+      <div
+        class="Line"
       />
     </div>
     <div
-      class="row"
+      style="height: 30px; width: 90%; background-color: rgb(178, 221, 223); border-radius: 50px; margin: 50px;"
     >
       <div
-        class="col"
+        style="height: 100%; width: 100%; background-color: rgb(0, 92, 110); border-radius: inherit; text-align: right;"
       >
-        <br />
-        <a
-          href="/DegreeQualifications"
+        <span
+          style="padding: 5px; color: rgb(255, 255, 255); font-weight: bold;"
         >
-          <button
-            class="mediumbutton"
-            data-testid="ucpButton"
-            href="/DegreeQualifications"
-            primary="True"
-            type="button"
-          >
-            Go Back​
-          </button>
-        </a>
+           100% 
+        </span>
       </div>
+    </div>
+    <div
+      class="form-container d-flex justify-content-center container"
+    >
       <div
-        class="col"
+        class="form-background row"
       >
-        <br />
-        <div>
+        <h1
+          class="form-title"
+        >
+          Thank you for using the form
+        </h1>
+        <h3>
+          Please confirm email that your application will be sent to
+        </h3>
+        <span
+          class="form-center"
+        >
+          <div
+            class="mobiletextbox"
+          >
+            <label
+              for="emailConfirm"
+            />
+            <input
+              class="emailBox"
+              id="emailConfirm"
+              maxlength="30"
+              minlength="0"
+              placeholder="Test@email.com"
+              size="20"
+              type="text"
+              value="Test@email.com"
+            />
+          </div>
+          <p>
+            Please press confirm to complete
+          </p>
+        </span>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="row"
+        id="buttonRow"
+      >
+        <div
+          class="centered-buttons col"
+        >
+          <br />
           <a
-            href="/"
+            href="/DegreeQualifications"
           >
             <button
               class="mediumbutton"
               data-testid="ucpButton"
-              href="/"
+              href="/DegreeQualifications"
               primary="True"
               type="button"
             >
-              Confirm​
+              Go Back​
             </button>
           </a>
         </div>
+        <div
+          class="centered-buttons col"
+        >
+          <br />
+          <div>
+            <a
+              href="/"
+            >
+              <button
+                class="mediumbutton"
+                data-testid="ucpButton"
+                href="/"
+                primary="True"
+                type="button"
+              >
+                Confirm​
+              </button>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
+    <footer
+      class="ucpFooter"
+    />
   </div>
 </DocumentFragment>
 `;

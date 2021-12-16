@@ -2,336 +2,286 @@
 
 exports[`Renders Essential Applicant Info 1`] = `
 <DocumentFragment>
-  <div
-    class="es-form-container container"
-  >
+  <div>
     <div
-      class="es-form-background"
+      class="es-form-container container"
     >
-      <h3
-        class="form-title"
-      >
-        CLEARING APPLICATION
-      </h3>
-      <span
-        class="ess-form-left"
-      >
-        <div
-          class="mobiletextbox"
-        >
-          <label
-            for="nameinput"
-          >
-            Name
-          </label>
-          <input
-            disabled=""
-            id="nameinput"
-            maxlength="60"
-            minlength="5"
-            name="name"
-            placeholder="Enter your name"
-            size="20"
-            type="text"
-          />
-        </div>
-        <div
-          class="mobiletextbox"
-        >
-          <label
-            for="emailinput"
-          >
-            Email
-          </label>
-          <input
-            disabled=""
-            id="emailinput"
-            maxlength="60"
-            minlength="5"
-            name="email"
-            placeholder="Enter your email"
-            size="20"
-            type="email"
-          />
-        </div>
-        <div
-          class="mobiletextbox"
-        >
-          <label
-            for="telinput"
-          >
-            Tel No
-          </label>
-          <input
-            disabled=""
-            id="telinput"
-            maxlength="12"
-            minlength="5"
-            name="telno"
-            placeholder="Enter phone number"
-            size="20"
-            type="tel"
-          />
-        </div>
-        <div
-          class="mobiletextbox"
-        >
-          <label
-            for="dobinput"
-          >
-            D/O/B
-          </label>
-          <input
-            disabled=""
-            id="dobinput"
-            maxlength="30"
-            minlength="0"
-            name="dob"
-            placeholder="Enter date of birth"
-            size="20"
-            type="date"
-          />
-        </div>
-        <div
-          class="mobiletextbox"
-        >
-          <label
-            for="ucasinput"
-          >
-            UCAS ID
-          </label>
-          <input
-            disabled=""
-            id="ucasinput"
-            maxlength="30"
-            minlength="0"
-            name="ucas"
-            placeholder="Enter UCAS ID"
-            size="20"
-            type="text"
-          />
-        </div>
-      </span>
-      <span
-        class="ess-form-right"
-      >
-        <div
-          class="radio-buttons"
-        >
-          <h4>
-            Nationality
-          </h4>
-          <p />
-          <div
-            class="radio-group"
-          >
-            <input
-              data-testid="UK"
-              disabled=""
-              id="UK"
-              name="nationality"
-              type="radio"
-              value="UK"
-            />
-            <label
-              for="UK"
-            >
-              UK National
-            </label>
-          </div>
-          <div
-            class="radio-group"
-          >
-            <input
-              data-testid="EU"
-              disabled=""
-              id="EU"
-              name="nationality"
-              type="radio"
-              value="EU"
-            />
-            <label
-              for="EU"
-            >
-              EU National
-            </label>
-          </div>
-          <div
-            class="radio-group"
-          >
-            <input
-              data-testid="Other"
-              disabled=""
-              id="Other"
-              name="nationality"
-              type="radio"
-              value="Other"
-            />
-            <label
-              for="Other"
-            >
-              Other
-            </label>
-          </div>
-        </div>
-        <div
-          class="radio-buttons"
-        >
-          <h4>
-            Convictions
-          </h4>
-          <p>
-            Do you have any unspent criminal convictions?
-          </p>
-          <div
-            class="radio-group"
-          >
-            <input
-              data-testid="crimeYes"
-              disabled=""
-              id="crimeYes"
-              name="criminal"
-              type="radio"
-              value="yes"
-            />
-            <label
-              for="crimeYes"
-            >
-              Yes
-            </label>
-          </div>
-          <div
-            class="radio-group"
-          >
-            <input
-              data-testid="crimeNo"
-              disabled=""
-              id="crimeNo"
-              name="criminal"
-              type="radio"
-              value="no"
-            />
-            <label
-              for="crimeNo"
-            >
-              No
-            </label>
-          </div>
-        </div>
-        <div
-          class="radio-buttons"
-        >
-          <h4>
-            Learning Support
-          </h4>
-          <p>
-            Do you have any additional learning support needs or disabilities?
-          </p>
-          <div
-            class="radio-group"
-          >
-            <input
-              data-testid="supportYes"
-              disabled=""
-              id="supportYes"
-              name="support"
-              type="radio"
-              value="yes"
-            />
-            <label
-              for="supportYes"
-            >
-              Yes
-            </label>
-          </div>
-          <div
-            class="radio-group"
-          >
-            <input
-              data-testid="supportNo"
-              disabled=""
-              id="supportNo"
-              name="support"
-              type="radio"
-              value="no"
-            />
-            <label
-              for="supportNo"
-            >
-              No
-            </label>
-          </div>
-        </div>
-        <h4>
-          Preferred Course
-        </h4>
-        <select
-          class="Dropdown"
-          id="courseSelection"
-        >
-          <option
-            value=""
-          />
-          <option
-            value="computing"
-          >
-            BSc (Hons) Computing and Information Systems
-          </option>
-          <option
-            value="criminoloy"
-          >
-            BA (Hons) Crimonology
-          </option>
-          <option
-            value="digitalArts"
-          >
-            FDA Digital Arts
-          </option>
-        </select>
-      </span>
-    </div>
-    <div>
       <div
-        class="row"
-        id="buttonRow"
+        class="es-form-background"
       >
-        <div
-          class="centered-buttons col"
+        <h3
+          class="form-title"
+        >
+          CLEARING APPLICATION
+        </h3>
+        <span
+          class="ess-form-left"
         >
           <div
-            id="confirmButton1"
+            class="mobiletextbox"
           >
-            <button
-              class="mediumbutton"
-              data-testid="ucpButton"
-              type="button"
+            <label
+              for="nameinput"
             >
-              Request a Call Back​
-            </button>
+              Name
+            </label>
+            <input
+              class="desktoptextbox"
+              id="nameinput"
+              maxlength="60"
+              minlength="5"
+              name="name"
+              placeholder="Enter your name"
+              required=""
+              size="20"
+              type="text"
+              value=""
+            />
           </div>
-        </div>
-        <div
-          class="centered-buttons col"
+          <div
+            class="mobiletextbox"
+          >
+            <label
+              for="prefixinput"
+            >
+              Perefered prefix
+            </label>
+            <input
+              class="desktoptextbox"
+              id="prefixinput"
+              maxlength="60"
+              minlength="5"
+              name="prefix"
+              placeholder="Enter your prefix"
+              required=""
+              size="20"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="mobiletextbox"
+          >
+            <label
+              for="ucasinput"
+            >
+              UCAS ID
+            </label>
+            <input
+              class="desktoptextbox"
+              id="ucasinput"
+              maxlength="12"
+              minlength="5"
+              name="ucas"
+              placeholder="Enter UCAS ID"
+              size="20"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="mobiletextbox"
+          >
+            <label
+              for="emailinput"
+            >
+              Email
+            </label>
+            <input
+              class="desktoptextbox"
+              id="emailinput"
+              maxlength="60"
+              minlength="5"
+              name="email"
+              placeholder="Enter your email"
+              required=""
+              size="20"
+              type="email"
+              value=""
+            />
+          </div>
+          <div
+            class="mobiletextbox"
+          >
+            <label
+              for="telinput"
+            >
+              Phone No
+            </label>
+            <input
+              class="desktoptextbox"
+              id="telinput"
+              maxlength="12"
+              minlength="5"
+              name="telno"
+              placeholder="Enter phone number"
+              size="20"
+              type="tel"
+              value=""
+            />
+          </div>
+          <div
+            class="mobiletextbox"
+          >
+            <label
+              for="dobinput"
+            >
+              D/O/B
+            </label>
+            <input
+              class="desktoptextbox"
+              id="dobinput"
+              maxlength="30"
+              minlength="0"
+              name="dob"
+              placeholder="Enter date of birth"
+              size="20"
+              type="date"
+              value=""
+            />
+          </div>
+        </span>
+        <span
+          class="ess-form-right"
         >
           <div
-            id="confirmButton"
+            class="mobiletextbox"
           >
-            <a
-              href="/MoreInfo"
+            <label
+              for="address-1"
+            >
+              Address Line 1
+            </label>
+            <input
+              id="address-1"
+              maxlength="100"
+              minlength="10"
+              name="address_line_1"
+              placeholder="Address Line 1"
+              size="35"
+              type="text"
+            />
+          </div>
+          <div
+            class="mobiletextbox"
+          >
+            <label
+              for="address-2"
+            >
+              Address Line 2
+            </label>
+            <input
+              id="address-2"
+              maxlength="100"
+              minlength="10"
+              name="address_line_2"
+              placeholder="Address Line 2"
+              size="35"
+              type="text"
+            />
+          </div>
+          <div
+            class="mobiletextbox"
+          >
+            <label
+              for="town-city"
+            >
+              Town/City
+            </label>
+            <input
+              id="town-city"
+              maxlength="100"
+              minlength="10"
+              name="town_city"
+              placeholder="Town/City"
+              size="35"
+              type="text"
+            />
+          </div>
+          <div
+            class="mobiletextbox"
+          >
+            <label
+              for="county"
+            >
+              Region
+            </label>
+            <input
+              id="county"
+              maxlength="30"
+              minlength="3"
+              name="region"
+              placeholder="Region"
+              size="25"
+              type="text"
+            />
+          </div>
+          <div
+            class="mobiletextbox"
+          >
+            <label
+              for="postcode"
+            >
+              Postcode
+            </label>
+            <input
+              id="postcode"
+              maxlength="9"
+              minlength="6"
+              name="postcode"
+              placeholder="Postcode"
+              size="10"
+              type="text"
+            />
+          </div>
+        </span>
+      </div>
+      <div>
+        <div
+          class="row"
+          id="buttonRow"
+        >
+          <div
+            class="centered-buttons col"
+          >
+            <div
+              id="confirmButton1"
             >
               <button
                 class="mediumbutton"
                 data-testid="ucpButton"
-                primary="True"
                 type="button"
               >
-                Apply Now​
+                Request a Call Back​
               </button>
-            </a>
+            </div>
+          </div>
+          <div
+            class="centered-buttons col"
+          >
+            <div
+              id="confirmButton"
+            >
+              <a
+                href="/NextOfKin"
+              >
+                <button
+                  class="mediumbutton"
+                  data-testid="ucpButton"
+                  primary="True"
+                  type="button"
+                >
+                  Apply Now​
+                </button>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <footer
+      class="ucpFooter"
+    />
   </div>
 </DocumentFragment>
 `;

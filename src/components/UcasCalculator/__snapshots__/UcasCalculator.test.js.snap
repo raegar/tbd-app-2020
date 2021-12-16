@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders the calculator 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="container"
+    >
+      <div
+        class="row"
+      >
+        <div
+          class="col"
+        >
+          <select
+            class="qualInputBox"
+            id="qualifications"
+          >
+            <option
+              disabled=""
+            >
+              Please select a qualification...
+            </option>
+            <option
+              class="gradeTypeHeader"
+              disabled=""
+            >
+              A Level and AS
+            </option>
+            <option
+              value="A Level and AS;A Levels"
+            >
+                A Levels
+            </option>
+            <option
+              value="A Level and AS;AS Levels"
+            >
+                AS Levels
+            </option>
+            <option
+              class="gradeTypeHeader"
+              disabled=""
+            >
+              BTEC National (RQF) (From 2016)
+            </option>
+            <option
+              value="BTEC National (RQF) (From 2016);Pearson BTEC Level 3 National Extended Certificate (first teaching from September 2016)"
+            >
+                Pearson BTEC Level 3 National Extended Certificate (first teaching from September 2016)
+            </option>
+          </select>
+        </div>
+      </div>
+      <div
+        class="row"
+      >
+        <div
+          class="col-md-2"
+        >
+          <div
+            class="mobiletextbox"
+          >
+            <label />
+            <input
+              class="subjectInputBox"
+              maxlength="30"
+              minlength="0"
+              placeholder="Subject (optional)"
+              size="20"
+              type="text"
+            />
+          </div>
+        </div>
+        <div
+          class="col"
+        >
+          <br />
+        </div>
+        <div
+          class="col-md-2"
+        >
+          <br />
+          <select
+            class="Dropdown"
+            disabled=""
+          >
+            <option
+              value=""
+            />
+            <option
+              value="none"
+            >
+              ...
+            </option>
+          </select>
+        </div>
+      </div>
+      <div
+        class="row"
+      >
+        <div
+          class="col-md-6"
+        />
+        <div
+          class="col"
+        >
+          <span
+            class="qualPoints"
+            data-testid="qualPoints"
+          >
+            Points: 
+            <b>
+              0
+            </b>
+          </span>
+        </div>
+      </div>
+      <br />
+      <div
+        class="row"
+      >
+        <button
+          class="mediumbutton addQualButton"
+          data-testid="ucpButton"
+          type="button"
+        >
+          Add another qualification​
+        </button>
+      </div>
+      <span
+        class="totalQualPoints"
+      >
+        Total points: 
+        <b
+          data-testid="totalPoints"
+        >
+          0
+        </b>
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -4,12 +4,12 @@
     justify-content: center;
     width: 90%;
 }
-.UserInfo span
-{
+
+.UserInfo span {
     font-size: 12px;
 }
-.InvalidInput
-{
+
+.InvalidInput {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,8 +28,8 @@
     left: 50%;
     width: 40% !important;
     top: 50%  !important;
-  
 }
+
 .MobileContainerStyle {
     margin-top: 10px;
     padding-top: 5%;
@@ -39,16 +39,17 @@
     left: 50%;
     width: 90% !important;
     top: 250px !important;
-
 }
-.mobiletextbox input{
+
+.mobiletextbox input {
     width: 250px;
     text-align: center;
 }
-.mobiletextbox{
+
+.mobiletextbox {
     width: 200px;
 }
-.mobiletextbox label{
+
+.mobiletextbox label {
     margin-left: 5px;
 }
-

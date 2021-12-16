@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders ClearingOfferMadeReasonIfNo 1`] = `
+<DocumentFragment>
+  <div>
+    <div>
+      <header
+        class="Header"
+      >
+        <a
+          href="/tbd-app-2020"
+        >
+          <img
+            alt="UCP official logo"
+            class="UCPLogoBlue"
+            data-testid="ucpLogoHeader"
+            src="Logo_White.png"
+          />
+        </a>
+      </header>
+      <div
+        class="Line"
+      />
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="offer-made row"
+      >
+        <h1>
+          Not Offered Details
+        </h1>
+        <span
+          class="form-center"
+        >
+          <div
+            class="mobiletextbox"
+          >
+            <label>
+              Please state reasons:
+            </label>
+            <input
+              maxlength="30"
+              minlength="0"
+              placeholder="Please state reasons:"
+              size="20"
+              type="text"
+            />
+          </div>
+        </span>
+      </div>
+    </div>
+    <div
+      class="container"
+    >
+      <div
+        class="row"
+        id="buttonRow"
+      >
+        <div
+          class="centered-buttons col"
+        >
+          <br />
+          <a
+            href="/ClearingOfferMadeSecondPage"
+          >
+            <button
+              class="mediumbutton"
+              data-testid="ucpButton"
+              href="/ClearingOfferMadeSecondPage"
+              primary="True"
+              type="button"
+            >
+              Go Back​
+            </button>
+          </a>
+        </div>
+        <div
+          class="centered-buttons col"
+        >
+          <br />
+          <a
+            href="/ClearingOfferMadeFifthPage"
+          >
+            <button
+              class="mediumbutton"
+              data-testid="ucpButton"
+              href="/ClearingOfferMadeFourthPage"
+              primary="True"
+              type="button"
+            >
+              Confirm and Continue​
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <footer
+      class="ucpFooter"
+    />
+  </div>
+</DocumentFragment>
+`;

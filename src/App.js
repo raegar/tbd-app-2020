@@ -1,69 +1,61 @@
 import React from 'react';
 import './App.css';
-import Tabs from "./components/TabbedNavbar";
-import Headers from './components/Header/Headers';
-import Footer from './components/Footer/Footer';
 import SelectRole from './components/SelectRole/SelectRole';
 import Login from './components/Login/Login';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import NewApplicationPage from './NewApplicationPage';
+import StartClearingApplicationPage from './StartClearingApplicationPage';
+import NextOfKin from './components/NextOfKin/NextOfKin';
 import LevelTwoQualifications from './components/LevelTwoQualifications/LevelTwoQualifications';
 import LevelThreeQualifications from './components/LevelThreeQualifications/LevelThreeQualifications';
 import ClearingOfferMade from './components/ClearingOfferMade/ClearingOfferMade';
-import DegreeQualifications from './components/Degree Qualifications/DegreeQualifications';
-import ClearingOfferMadeSecondPage from './components/ClearingOfferMade/ClearingOfferMadeSecondPage';
-import ClearingOfferMadeThirdPage from './components/ClearingOfferMade/ClearingOfferMadeThirdPage';
-import ClearingOfferMadeFourthPage from './components/ClearingOfferMade/ClearingOfferMadeFourthPage';
-import ClearingOfferMadeFifthPage from './components/ClearingOfferMade/ClearingOfferMadeFifthPage';
+import DegreeQualifications from './components/DegreeQualifications/DegreeQualifications';
+import ClearingOfferMadeYesNoSelect from './components/ClearingOfferMade/ClearingOfferMadeYesNoSelect';
+import ClearingOfferMadeReasonIfNo from './components/ClearingOfferMade/ClearingOfferMadeReasonIfNo';
+import ClearingOfferMadeInterviewRPA from './components/ClearingOfferMade/ClearingOfferMadeInterviewRPA';
+import ClearingOfferMadeBeforeCompleting from './components/ClearingOfferMade/ClearingOfferMadeBeforeCompleting';
 import ClearingOfferMadeStudentEnd from './components/ClearingOfferMade/ClearingOfferMadeStudentEnd';
-import FormOne from './components/FormOne/FormOne'
+import Course from './components/Course/Course';
+import AdditionalInformation from './components/AdditionalInformation/AdditionalInformation';
 
-const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
+import AdminLogin from './pagesAdmin/AdminLogIn/AdminLogIn';
+import AdminDashboard from './pagesAdmin/AdminDashboard/AdminDashboard';
+import AdminData from './pagesAdmin/AdminData/AdminData';
+import AdminGraph from './pagesAdmin/AdminGraphs/AdminGraph';
+
+const BaseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
 
 function App() {
- /* const className1 = isMobile ? "mobile-App" : "App"; */
-  return (
-
-    <div>
-      <h1>Tabs Demo</h1>
-      <Tabs>
-        <div label="Gator">
-          See ya later, <em>Alligator</em>!
-        </div>
-        <div label="Croc">
-          After 'while, <em>Crocodile</em>!
-        </div>
-        <div label="Sarcosuchus">
-          Nothing to see here, this tab is <em>extinct</em>!
-        </div>
-      </Tabs>
-    </div>
-
-    /*<Router basename={baseUrl}>
-    <div className="App">
-      <div className="main-app">
-      <Headers/>
-        <Switch>
-          <Route path='/' exact component={SelectRole} />
-          <Route path='/login' component={Login}/>
-          <Route path='/NewApplicationPage' component={NewApplicationPage}/>
-          <Route path="/MoreInfo" component={FormOne} />
-          <Route path='/LevelTwoQualifications' component={LevelTwoQualifications}/>
-          <Route path='/LevelThreeQualifications' component={LevelThreeQualifications}/>
-          <Route path='/DegreeQualifications' component={DegreeQualifications} />
-          <Route path='/ClearingOfferMade' component={ClearingOfferMade}/>
-          <Route path='/ClearingOfferMadeSecondPage' component={ClearingOfferMadeSecondPage}/>
-          <Route path='/ClearingOfferMadeThirdPage' component={ClearingOfferMadeThirdPage}/>
-          <Route path='/ClearingOfferMadeFourthPage' component={ClearingOfferMadeFourthPage}/>
-          <Route path='/ClearingOfferMadeFifthPage' component={ClearingOfferMadeFifthPage}/>
-          <Route path='/ClearingOfferMadeStudentEnd' component={ClearingOfferMadeStudentEnd}/>
-
-        </Switch>
-      </div>
-        <Footer/>
-    </div>
-    </Router>*/
-  );
+	/* const className1 = isMobile ? "mobile-App" : "App"; */
+	return (
+		<Router basename={BaseUrl}>
+			<div className="App">
+				<div className="main-app">
+					<Switch>
+						<Route path='/' exact component={SelectRole} />
+						<Route path='/login' component={Login}/>
+						<Route path='/AdditionalInformation' component={AdditionalInformation}/>
+						<Route path='/NewApplicationPage' component={StartClearingApplicationPage}/>
+						<Route path='/NextOfKin' component={NextOfKin}/>
+						<Route path='/Course' component={Course} />
+						<Route path='/LevelTwoQualifications' component={LevelTwoQualifications}/>
+						<Route path='/LevelThreeQualifications' component={LevelThreeQualifications}/>
+						<Route path='/DegreeQualifications' component={DegreeQualifications} />
+						<Route path='/ClearingOfferMade' component={ClearingOfferMade}/>
+						<Route path='/ClearingOfferMadeSecondPage' component={ClearingOfferMadeYesNoSelect}/>
+						<Route path='/ClearingOfferMadeThirdPage' component={ClearingOfferMadeReasonIfNo}/>
+						<Route path='/ClearingOfferMadeFourthPage' component={ClearingOfferMadeInterviewRPA}/>
+						<Route path='/ClearingOfferMadeFifthPage' component={ClearingOfferMadeBeforeCompleting}/>
+						<Route path='/ClearingOfferMadeStudentEnd' component={ClearingOfferMadeStudentEnd}/>
+					
+						<Route path='/AdminLogin' component={AdminLogin}/>
+						<Route path='/AdminDashboard' component={AdminDashboard}/>
+						<Route path='/AdminData' component={AdminData}/>
+						<Route path='/AdminGraph' component={AdminGraph}/>
+					</Switch>
+				</div>
+			</div>
+		</Router>
+	);
 }
 export default App;
 

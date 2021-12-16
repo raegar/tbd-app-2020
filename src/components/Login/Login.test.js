@@ -22,7 +22,7 @@ it("Renders Submit Button", () => {
 
 it("Renders Username TextBox and Placeholder", () => {
     const {queryByPlaceholderText} = render(<TextBox
-                                            type="text" title="Username" placeholder="Enter Your Username"/> )
+        type="text" title="Username" placeholder="Enter Your Username"/> )
     expect(queryByPlaceholderText("Enter Your Username")).toBeTruthy()   
 });
 it("Renders Password TextBox and Placeholder", () => {
