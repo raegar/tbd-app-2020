@@ -9,6 +9,6 @@ import { BrowserRouter as Router} from 'react-router-dom';
 afterEach(cleanup);
 
 it("Renders AdminDashboard", () => {
-    const {asFragment } = render(<Router><AdminDashboard/></Router>);
-    expect(asFragment()).toMatchSnapshot(); 
+	const {asFragment } = render(<Router><AdminDashboard/></Router>);
+	expect(asFragment()).toMatchSnapshot(); 
 });
