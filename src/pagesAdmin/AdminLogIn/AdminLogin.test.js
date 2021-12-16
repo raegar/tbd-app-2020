@@ -8,7 +8,7 @@ it("Renders AdminLogIn", () => {
 	const { asFragment } = render(<Router><AdminLogIn /></Router>);
 	expect(asFragment()).toMatchSnapshot();
 });
-test ("AdminLogin Conditional rendering"), ()=> {
+test ("AdminLogin Conditional rendering", ()=> {
 	const lookingFor ='Email:'
 	render(
 		<Router>
