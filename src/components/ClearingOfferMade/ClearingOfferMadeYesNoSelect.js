@@ -106,10 +106,6 @@ function ClearingOfferMadeYesNoSelect() {
 	}
 
 	//State setter methods end
-
-	/*I don't like putting a const here in the middle of the methods but using a method
-	  before it's defined is bad practice, even if JS allows it. I could do lambdas but
-	  that makes it less readable and is thus also bad practice.*/
 	const offerOptions = [
 		{
 			label: "Yes", 

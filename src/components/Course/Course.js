@@ -8,6 +8,8 @@ import UCPButton from '../Buttons/UCPButton';
 import ProgressBar from "../ProgressBar/ProgressBar";
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import '../../global/GlobalVariables.js';
+import CourseInfoPanel from '../CourseInfoPanel/CourseInfoPanel';
 
 function Course() {
 	const [showPrior, setShowPrior] = useState(false);
@@ -51,6 +53,12 @@ function Course() {
 		});
 	}
 
+	function updateCourse(e) {
+		global.SelectedCourse = e.target.value;
+		setSelectedCourse(e.target.value);
+		//TODO: update router so this changes the CourseInfo component.
+	}
+
 	function onPriorCreditSelected(e) {
 		setPriorCreditState({
 			value: e.target.value,
@@ -60,7 +68,7 @@ function Course() {
 
 	function onYearSelected(e) {
 		setYearState({
-			value: e.target.value,
+			value: parseInt(e.target.value),
 			anyChecked: true,
 		});
 	}
@@ -119,101 +127,110 @@ function Course() {
 	return (
 		<div>
 			<Header/>
-			{completionRate.map((item, idx)=>(
-				<ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed}/>
-			))}
-			<Container className="form-container d-flex justify-content-center">
-				<Row className="form-background">
-					<Col>
-						<h4>Preferred Course</h4>
-						<DropdownMenu onSelect={(e) => setSelectedCourse(e.target.value)} id="courseSelection"/>
-						<RadioButton
-							heading="Year of Entry"
-							options={yearOptions}
-							name="year-of-entry"
-							subtitle="In what year does the student want to begin their study?"
-						/>
-						<br/>
-						<RadioButton
-							heading="Full/Part Time"
-							options={fullPartOptions}
-							name="full-part"
-							subtitle="Will the student study the course full-time or part-time?"
-						/>
-					</Col>
-					<Col>
-						<div>
-							<RadioButton
-								heading="Prior Credit"
-								options={priorCreditOptions}
-								name="prior-credit"
-								subtitle="Does the student wish to enrol with prior credit?"
-								oc={handlePriorClick}
-							/>
-						</div>
-						{
-							(showPrior)
-								? <div><TextBox 
-									id="priorCred" 
-									data-testid="prior-credit-text" 
-									name="prior-credits" 
-									title="How Many Credits?" 
-									size={5} 
-									type="number"
-									placeholder="0" 
-									minLength={1} 
-									maxLength={3} 
-									min={0} 
-									max={360}
-									onChange={(e) => setPriorCreditValue(e.target.value)}
-								/><br/></div>
-								: <span></span>
-						}
-
-						<RadioButton
-							heading="Prior Study"
-							options={priorStudyOptions}
-							name="prior-study"
-							subtitle="Has the student studied at UCP/ARU before?"
-							oc={handleWhenClick}
-						/>
-
-						{
-							(whenStudy)
-								? <TextBox 
-									id="priorStudyDate" 
-									name="when-study" 
-									title="When did they last study at UCP/ARU?"  
-									type="date" 
-									onChange={(e) => setPriorStudyDate(e.target.value)}
+			<Row>
+				{completionRate.map((item, idx)=>(
+					<ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed}/>
+				))}
+			</Row>
+			<Row>
+				<Col md={4}>
+					<CourseInfoPanel/>
+				</Col>
+				<Col>
+					<Container className="form-container d-flex justify-content-center">
+						<Row className="form-background">
+							<Col>
+								<h4>Preferred Course</h4>
+								<DropdownMenu onSelect={updateCourse} id="courseSelection"/>
+								<RadioButton
+									heading="Year of Entry"
+									options={yearOptions}
+									name="year-of-entry"
+									subtitle="In what year does the student want to begin their study?"
 								/>
-								: <span></span>
-						}
-					</Col>
-				</Row>
-			</Container>
-			<Container>
-				<Row id="buttonRow">
-					<Col className="centered-buttons">
-						<UCPButton 
-							to='/AdditionalInformation'
-							primary="True"
-							className="mediumbutton"
-							buttonText="Go Back"
-						/>
-					</Col>
-					<Col className="centered-buttons">
-						<div id="confirmButton" onClick={saveSelectedData}>
-							<UCPButton
-								to = "/LevelTwoQualifications"
-								primary="True"
-								className="mediumbutton"
-								buttonText="Next"
-							/>
-						</div>
-					</Col>
-				</Row>
-			</Container>
+								<br/>
+								<RadioButton
+									heading="Full/Part Time"
+									options={fullPartOptions}
+									name="full-part"
+									subtitle="Will the student study the course full-time or part-time?"
+								/>
+							</Col>
+							<Col>
+								<div>
+									<RadioButton
+										heading="Prior Credit"
+										options={priorCreditOptions}
+										name="prior-credit"
+										subtitle="Does the student wish to enrol with prior credit?"
+										oc={handlePriorClick}
+									/>
+								</div>
+								{
+									(showPrior)
+										? <div><TextBox 
+											id="priorCred" 
+											data-testid="prior-credit-text" 
+											name="prior-credits" 
+											title="How Many Credits?" 
+											size={5} 
+											type="number"
+											placeholder="0" 
+											minLength={1} 
+											maxLength={3} 
+											min={0} 
+											max={360}
+											onChange={(e) => setPriorCreditValue(e.target.value === 'yes')}
+										/><br/></div>
+										: <span></span>
+								}
+
+								<RadioButton
+									heading="Prior Study"
+									options={priorStudyOptions}
+									name="prior-study"
+									subtitle="Has the student studied at UCP/ARU before?"
+									oc={handleWhenClick}
+								/>
+
+								{
+									(whenStudy)
+										? <TextBox 
+											id="priorStudyDate" 
+											name="when-study" 
+											title="When did they last study at UCP/ARU?"  
+											type="date" 
+											onChange={(e) => setPriorStudyDate(e.target.value === 'yes')}
+										/>
+										: <span></span>
+								}
+							</Col>
+						</Row>
+					</Container>
+					<Container>
+						<Row id="buttonRow">
+							<Col className="centered-buttons">
+								<UCPButton 
+									to='/AdditionalInformation'
+									primary="True"
+									className="mediumbutton"
+									buttonText="Go Back"
+								/>
+							</Col>
+							<Col className="centered-buttons">
+								<div id="confirmButton" onClick={saveSelectedData}>
+									<UCPButton
+										to = "/LevelTwoQualifications"
+										primary="True"
+										className="mediumbutton"
+										buttonText="Next"
+									/>
+								</div>
+							</Col>
+						</Row>
+					</Container>
+				</Col>
+			</Row>
 			<Footer/>
 		</div>
 	);

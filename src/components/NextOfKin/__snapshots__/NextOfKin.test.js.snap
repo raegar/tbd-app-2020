@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Renders Form One 1`] = `
+exports[`Renders NextOfKin 1`] = `
 <DocumentFragment>
   <div>
     <div>
@@ -29,12 +29,12 @@ exports[`Renders Form One 1`] = `
         style="height: 30px; width: 90%; background-color: rgb(178, 221, 223); border-radius: 50px; margin: 50px;"
       >
         <div
-          style="height: 100%; width: 45%; background-color: rgb(0, 92, 110); border-radius: inherit; text-align: right;"
+          style="height: 100%; width: 30%; background-color: rgb(0, 92, 110); border-radius: inherit; text-align: right;"
         >
           <span
             style="padding: 5px; color: rgb(255, 255, 255); font-weight: bold;"
           >
-             45% 
+             30% 
           </span>
         </div>
       </div>
@@ -43,7 +43,7 @@ exports[`Renders Form One 1`] = `
       class="row"
     >
       <div
-        class="col-md-4"
+        class="col-md-3"
       >
         <div
           class="courseInfoBox undefined"
@@ -266,234 +266,197 @@ exports[`Renders Form One 1`] = `
         class="col"
       >
         <div
-          class="form-container d-flex justify-content-center container"
+          class="es-form-container container"
         >
           <div
-            class="form-background row"
+            class="es-form-background"
           >
-            <div
-              class="col"
+            <h3
+              class="form-title"
             >
-              <h4>
-                Preferred Course
-              </h4>
-              <select
-                class="Dropdown"
-                id="courseSelection"
+              Next of kin
+            </h3>
+            <span
+              class="ess-form-left"
+            >
+              <div
+                class="mobiletextbox"
               >
-                <option
+                <label
+                  for="nameinput"
+                >
+                  Name
+                </label>
+                <input
+                  class="desktoptextbox"
+                  id="nameinput"
+                  maxlength="60"
+                  minlength="5"
+                  name="name"
+                  placeholder="Enter your name"
+                  required=""
+                  size="20"
+                  type="text"
                   value=""
                 />
-                <option
-                  value="computing"
-                >
-                  BSc (Hons) Computing and Information Systems
-                </option>
-                <option
-                  value="criminology"
-                >
-                  BA (Hons) Criminology
-                </option>
-                <option
-                  value="digitalArts"
-                >
-                  FDA Digital Arts
-                </option>
-              </select>
-              <div
-                class="radio-buttons"
-              >
-                <h4>
-                  Year of Entry
-                </h4>
-                <p>
-                  In what year does the student want to begin their study?
-                </p>
-                <div
-                  class="radio-group"
-                >
-                  <input
-                    data-testid="year-1"
-                    id="year-1"
-                    name="year-of-entry"
-                    type="radio"
-                    value="1"
-                  />
-                  <label
-                    for="year-1"
-                  >
-                    Year 1
-                  </label>
-                </div>
-                <div
-                  class="radio-group"
-                >
-                  <input
-                    data-testid="year-2"
-                    id="year-2"
-                    name="year-of-entry"
-                    type="radio"
-                    value="2"
-                  />
-                  <label
-                    for="year-2"
-                  >
-                    Year 2
-                  </label>
-                </div>
-                <div
-                  class="radio-group"
-                >
-                  <input
-                    data-testid="year-3"
-                    id="year-3"
-                    name="year-of-entry"
-                    type="radio"
-                    value="3"
-                  />
-                  <label
-                    for="year-3"
-                  >
-                    Year 3
-                  </label>
-                </div>
               </div>
-              <br />
               <div
-                class="radio-buttons"
+                class="mobiletextbox"
               >
-                <h4>
-                  Full/Part Time
-                </h4>
-                <p>
-                  Will the student study the course full-time or part-time?
-                </p>
-                <div
-                  class="radio-group"
+                <label
+                  for="kinEmailinput"
                 >
-                  <input
-                    data-testid="full"
-                    id="full"
-                    name="full-part"
-                    type="radio"
-                    value="full"
-                  />
-                  <label
-                    for="full"
-                  >
-                    Full Time
-                  </label>
-                </div>
-                <div
-                  class="radio-group"
-                >
-                  <input
-                    data-testid="part"
-                    id="part"
-                    name="full-part"
-                    type="radio"
-                    value="part"
-                  />
-                  <label
-                    for="part"
-                  >
-                    Part Time
-                  </label>
-                </div>
+                  Email
+                </label>
+                <input
+                  class="desktoptextbox"
+                  id="kinEmailinput"
+                  maxlength="60"
+                  minlength="5"
+                  name="kinEmail"
+                  placeholder="Enter your email"
+                  required=""
+                  size="20"
+                  type="email"
+                  value=""
+                />
               </div>
-            </div>
-            <div
-              class="col"
+              <div
+                class="mobiletextbox"
+              >
+                <label
+                  for="kinTelinput"
+                >
+                  Phone No
+                </label>
+                <input
+                  class="desktoptextbox"
+                  id="kinTelinput"
+                  maxlength="12"
+                  minlength="5"
+                  name="kTelno"
+                  placeholder="Enter phone number"
+                  size="20"
+                  type="tel"
+                  value=""
+                />
+              </div>
+              <div
+                class="mobiletextbox"
+              >
+                <label
+                  for="kinRelationship"
+                >
+                  Net of kin relationship
+                </label>
+                <input
+                  class="desktoptextbox"
+                  id="kinRelationship"
+                  maxlength="60"
+                  minlength="5"
+                  name="kinRelationship"
+                  placeholder="Enter your next of kins relationship"
+                  required=""
+                  size="20"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </span>
+            <span
+              class="ess-form-right"
             >
-              <div>
-                <div
-                  class="radio-buttons"
-                >
-                  <h4>
-                    Prior Credit
-                  </h4>
-                  <p>
-                    Does the student wish to enrol with prior credit?
-                  </p>
-                  <div
-                    class="radio-group"
-                  >
-                    <input
-                      data-testid="prior-yes"
-                      id="prior-yes"
-                      name="prior-credit"
-                      type="radio"
-                      value="yes"
-                    />
-                    <label
-                      for="prior-yes"
-                    >
-                      Yes
-                    </label>
-                  </div>
-                  <div
-                    class="radio-group"
-                  >
-                    <input
-                      data-testid="prior-no"
-                      id="prior-no"
-                      name="prior-credit"
-                      type="radio"
-                      value="no"
-                    />
-                    <label
-                      for="prior-no"
-                    >
-                      No
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <span />
               <div
-                class="radio-buttons"
+                class="mobiletextbox"
               >
-                <h4>
-                  Prior Study
-                </h4>
-                <p>
-                  Has the student studied at UCP/ARU before?
-                </p>
-                <div
-                  class="radio-group"
+                <label
+                  for="kin-address-1"
                 >
-                  <input
-                    data-testid="study-yes"
-                    id="study-yes"
-                    name="prior-study"
-                    type="radio"
-                    value="yes"
-                  />
-                  <label
-                    for="study-yes"
-                  >
-                    Yes
-                  </label>
-                </div>
-                <div
-                  class="radio-group"
-                >
-                  <input
-                    data-testid="study-no"
-                    id="study-no"
-                    name="prior-study"
-                    type="radio"
-                    value="no"
-                  />
-                  <label
-                    for="study-no"
-                  >
-                    No
-                  </label>
-                </div>
+                  Kin Address Line 1
+                </label>
+                <input
+                  id="kin-address-1"
+                  maxlength="100"
+                  minlength="10"
+                  name="kin_address_line_1"
+                  placeholder="Kin Address Line 1"
+                  size="35"
+                  type="text"
+                />
               </div>
-              <span />
-            </div>
+              <div
+                class="mobiletextbox"
+              >
+                <label
+                  for="kin-address-2"
+                >
+                  Kin Address Line 2
+                </label>
+                <input
+                  id="kin-address-2"
+                  maxlength="100"
+                  minlength="10"
+                  name="kin_address_line_2"
+                  placeholder="Kin Address Line 2"
+                  size="35"
+                  type="text"
+                />
+              </div>
+              <div
+                class="mobiletextbox"
+              >
+                <label
+                  for="kin-town-city"
+                >
+                  Kin Town/City
+                </label>
+                <input
+                  id="kin-town-city"
+                  maxlength="100"
+                  minlength="10"
+                  name="kin_town_city"
+                  placeholder="Kin Town/City"
+                  size="35"
+                  type="text"
+                />
+              </div>
+              <div
+                class="mobiletextbox"
+              >
+                <label
+                  for="kin-region"
+                >
+                  Kin Region
+                </label>
+                <input
+                  id="kin-region"
+                  maxlength="30"
+                  minlength="3"
+                  name="kin_region"
+                  placeholder="Kin Region"
+                  size="25"
+                  type="text"
+                />
+              </div>
+              <div
+                class="mobiletextbox"
+              >
+                <label
+                  for="kin-postcode"
+                >
+                  Kin Postcode
+                </label>
+                <input
+                  id="kin-postcode"
+                  maxlength="9"
+                  minlength="6"
+                  name="kin_postcode"
+                  placeholder="Kin Postcode"
+                  size="10"
+                  type="text"
+                />
+              </div>
+            </span>
           </div>
         </div>
         <div
@@ -507,7 +470,7 @@ exports[`Renders Form One 1`] = `
               class="centered-buttons col"
             >
               <a
-                href="/AdditionalInformation"
+                href="/EssentialApplicantInfo"
               >
                 <button
                   class="mediumbutton"
@@ -526,7 +489,7 @@ exports[`Renders Form One 1`] = `
                 id="confirmButton"
               >
                 <a
-                  href="/LevelTwoQualifications"
+                  href="/AdditionalInformation"
                 >
                   <button
                     class="mediumbutton"
@@ -534,7 +497,7 @@ exports[`Renders Form One 1`] = `
                     primary="True"
                     type="button"
                   >
-                    Next​
+                    Confirm and Go​
                   </button>
                 </a>
               </div>

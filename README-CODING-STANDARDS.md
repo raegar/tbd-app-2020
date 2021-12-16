@@ -291,7 +291,9 @@ Documentation should have proper capitalisation, but brief programming related c
 /*This is a comment.*/
 /*this is a comment*/
 
-//According to all the known laws of aviation, there is no way a bee //should be able to fly. Its tiny wings are simply too short to get its //fat little body off of the ground. Of course, it flies 
+//According to all the known laws of aviation, there is no way a bee 
+//should be able to fly. Its tiny wings are simply too short to get its 
+//fat little body off of the ground. Of course, it flies 
 //anyways, because it doesn't care what humans think is possible.
 
 //why did the chicken cross the road? To get to the other side
@@ -309,7 +311,7 @@ If a line of code stretches beyond 130 characters, and it can be made to span ov
 
 For example:
 ```javascript
-function funcName(param1, param2, param3, param4, param5, param6, param7, param8, param9, param10, param11);
+function funcName(param1, param2, param3, param4, param5, param6, param7, param8, param9, param10, param11) {}
 ```
 
 Should become:
@@ -320,7 +322,7 @@ function funcName(param1,
 	param4,
 	...
       param11
-);
+) {}
 ```
 
 

@@ -35,202 +35,427 @@ exports[`Renders LevelThreeQualifications 1`] = `
         </span>
       </div>
     </div>
-    <div
-      class="container"
-    >
+    <div>
       <div
-        class="l3-form-container"
+        class="row"
       >
         <div
-          class="form-background"
+          class="col-md-4"
         >
           <div
-            class="l3-form-right"
+            class="courseInfoBox undefined"
           >
-            <h3
-              class="form-title"
-            >
-              Level 3 Qualifications
-            </h3>
             <div
-              class="l3component"
+              class="courseTitleRow row"
             >
-              <h5>
-                Qualification : #1 
-              </h5>
+              <h1
+                class="courseInfoTitle"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="svg-inline--fa fa-comment-dots fa-w-16 icon"
+                  data-icon="comment-dots"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M256 32C114.6 32 0 125.1 0 240c0 49.6 21.4 95 57 130.7C44.5 421.1 2.7 466 2.2 466.5c-2.2 2.3-2.8 5.7-1.5 8.7S4.8 480 8 480c66.3 0 116-31.8 140.6-51.4 32.7 12.3 69 19.4 107.4 19.4 141.4 0 256-93.1 256-208S397.4 32 256 32zM128 272c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128 0c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128 0c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"
+                    fill="currentColor"
+                  />
+                </svg>
+                  Course Info
+              </h1>
+            </div>
+            <div
+              class="row"
+            >
+              <button
+                class="mediumbutton"
+                data-testid="ucpButton"
+                type="button"
+              >
+                Move UCAS Calculator to Here​
+              </button>
+            </div>
+            <div
+              class="uniPageLinkRow row"
+            >
+              <button
+                class="smallbutton"
+                data-testid="ucpButton"
+                type="button"
+              >
+                Close Embed​
+              </button>
+              <div
+                class="iframeContainer"
+              >
+                <iframe
+                  class="iframeLink"
+                  src="https://www.ucp.ac.uk/a-z-courses/"
+                  title="Courses at UCP"
+                />
+              </div>
+            </div>
+            <div
+              class="uniPageLinkRow row"
+            >
+              <a
+                href="https://www.ucp.ac.uk/a-z-courses/"
+              >
+                Link to Course information page on UCP website
+              </a>
+            </div>
+            <div
+              class="ucasCalculatorRow row"
+            >
               <p>
-                (E.g. A Level, BTEC, Access)
+                <b>
+                  UCAS Calculator:
+                </b>
               </p>
               <div
-                class="mobiletextbox"
+                class="ucasCalculator"
               >
-                <label
-                  for="qualification1"
-                />
-                <input
-                  id="qualification1"
-                  maxlength="30"
-                  minlength="0"
-                  placeholder="Enter qualification #1"
-                  type="text"
-                  value=""
-                />
-              </div>
-              <h5>
-                Subject: (E.g. Business Studies)
-              </h5>
-              <div
-                class="mobiletextbox"
-              >
-                <label
-                  for="subject1"
-                />
-                <input
-                  id="subject1"
-                  maxlength="30"
-                  minlength="0"
-                  placeholder="Enter subject #1"
-                  type="text"
-                  value=""
-                />
-              </div>
-              <h5>
-                Grade Achieved
-              </h5>
-              <div
-                class="mobiletextbox"
-              >
-                <label
-                  for="grade1"
-                />
-                <input
-                  id="grade1"
-                  maxlength="30"
-                  minlength="0"
-                  placeholder="Enter grade #1"
-                  type="text"
-                  value=""
-                />
-              </div>
-              <h5>
-                Year Achieved
-              </h5>
-              <div
-                class="mobiletextbox"
-              >
-                <label
-                  for="year1"
-                />
-                <input
-                  id="year1"
-                  max="9999-12-31"
-                  maxlength="8"
-                  min="1000-1-1"
-                  minlength="0"
-                  placeholder=""
-                  type="date"
-                  value=""
-                />
-              </div>
-              <br />
-              <h5>
-                Other L3 Qualifications
-              </h5>
-              <div
-                class="radio-buttons"
-              >
-                <h4 />
-                <p />
-                <div
-                  class="radio-group"
-                >
-                  <input
-                    data-testid="qualificationYes"
-                    id="qualificationYes"
-                    name="l3qualifications"
-                    type="radio"
-                    value="yes"
-                  />
-                  <label
-                    for="qualificationYes"
+                <div>
+                  <div
+                    class="container"
                   >
-                    Yes
-                  </label>
-                </div>
-              </div>
-              <br />
-              <div
-                class="row"
-              >
-                <div
-                  class="col-5"
-                >
-                  <button
-                    class="smallbutton"
-                    data-testid="ucpButton"
-                    disabled=""
-                    type="button"
-                  >
-                    Previous​
-                  </button>
-                </div>
-                <div
-                  class="col-2"
-                />
-                <div
-                  class="col-5"
-                >
-                  <button
-                    class="smallbutton"
-                    data-testid="ucpButton"
-                    disabled=""
-                    type="button"
-                  >
-                    Next​
-                  </button>
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="col"
+                      >
+                        <select
+                          class="qualInputBox"
+                          id="qualifications"
+                        >
+                          <option
+                            disabled=""
+                          >
+                            Please select a qualification...
+                          </option>
+                          <option
+                            class="gradeTypeHeader"
+                            disabled=""
+                          >
+                            A Level and AS
+                          </option>
+                          <option
+                            value="A Level and AS;A Levels"
+                          >
+                              A Levels
+                          </option>
+                          <option
+                            value="A Level and AS;AS Levels"
+                          >
+                              AS Levels
+                          </option>
+                          <option
+                            class="gradeTypeHeader"
+                            disabled=""
+                          >
+                            BTEC National (RQF) (From 2016)
+                          </option>
+                          <option
+                            value="BTEC National (RQF) (From 2016);Pearson BTEC Level 3 National Extended Certificate (first teaching from September 2016)"
+                          >
+                              Pearson BTEC Level 3 National Extended Certificate (first teaching from September 2016)
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="col-md-8"
+                      >
+                        <div
+                          class="mobiletextbox"
+                        >
+                          <label />
+                          <input
+                            class="subjectInputBox"
+                            maxlength="30"
+                            minlength="0"
+                            placeholder="Subject (optional)"
+                            type="text"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="spacingFix col"
+                      />
+                      <div
+                        class="col-md-2"
+                      >
+                        <br />
+                        <select
+                          class="Dropdown"
+                          disabled=""
+                        >
+                          <option
+                            value=""
+                          />
+                          <option
+                            value="none"
+                          >
+                            ...
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                    <div
+                      class="row"
+                    >
+                      <div
+                        class="col-md-6"
+                      />
+                      <div
+                        class="col"
+                      >
+                        <span
+                          class="qualPoints"
+                          data-testid="qualPoints"
+                        >
+                          Points: 
+                          <b>
+                            0
+                          </b>
+                        </span>
+                      </div>
+                    </div>
+                    <br />
+                    <div
+                      class="row"
+                    >
+                      <button
+                        class="mediumbutton addQualButton"
+                        data-testid="ucpButton"
+                        type="button"
+                      >
+                        Add another qualification​
+                      </button>
+                    </div>
+                    <span
+                      class="totalQualPoints"
+                    >
+                      Total points: 
+                      <b
+                        data-testid="totalPoints"
+                      >
+                        0
+                      </b>
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div
-          class="row"
-          id="buttonRow"
+          class="col"
         >
           <div
-            class="centered-buttons col"
-          >
-            <a
-              href="/LevelTwoQualifications"
-            >
-              <button
-                class="mediumbutton"
-                data-testid="ucpButton"
-                primary="True"
-                type="button"
-              >
-                Go Back​
-              </button>
-            </a>
-          </div>
-          <div
-            class="centered-buttons col"
+            class="l3-form-container"
           >
             <div
-              id="confirmButton"
+              class="form-background"
             >
-              <a
-                href="/DegreeQualifications"
+              <div
+                class="l3-form-right"
               >
-                <button
-                  class="mediumbutton"
-                  data-testid="ucpButton"
-                  primary="True"
-                  type="button"
+                <h3
+                  class="form-title"
                 >
-                  Confirm and Go​
-                </button>
-              </a>
+                  Level 3 Qualifications
+                </h3>
+                <div
+                  class="l3component"
+                >
+                  <h5>
+                    Qualification : #1 
+                  </h5>
+                  <p>
+                    (E.g. A Level, BTEC, Access)
+                  </p>
+                  <div
+                    class="mobiletextbox"
+                  >
+                    <label
+                      for="qualification1"
+                    />
+                    <input
+                      id="qualification1"
+                      maxlength="30"
+                      minlength="0"
+                      placeholder="Enter qualification #1"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <h5>
+                    Subject: (E.g. Business Studies)
+                  </h5>
+                  <div
+                    class="mobiletextbox"
+                  >
+                    <label
+                      for="subject1"
+                    />
+                    <input
+                      id="subject1"
+                      maxlength="30"
+                      minlength="0"
+                      placeholder="Enter subject #1"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <h5>
+                    Grade Achieved
+                  </h5>
+                  <div
+                    class="mobiletextbox"
+                  >
+                    <label
+                      for="grade1"
+                    />
+                    <input
+                      id="grade1"
+                      maxlength="30"
+                      minlength="0"
+                      placeholder="Enter grade #1"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <h5>
+                    Year Achieved
+                  </h5>
+                  <div
+                    class="mobiletextbox"
+                  >
+                    <label
+                      for="year1"
+                    />
+                    <input
+                      id="year1"
+                      max="9999-12-31"
+                      maxlength="8"
+                      min="1000-1-1"
+                      minlength="0"
+                      placeholder=""
+                      type="date"
+                      value=""
+                    />
+                  </div>
+                  <br />
+                  <h5>
+                    Other L3 Qualifications
+                  </h5>
+                  <div
+                    class="radio-buttons"
+                  >
+                    <h4 />
+                    <p />
+                    <div
+                      class="radio-group"
+                    >
+                      <input
+                        data-testid="qualificationYes"
+                        id="qualificationYes"
+                        name="l3qualifications"
+                        type="radio"
+                        value="yes"
+                      />
+                      <label
+                        for="qualificationYes"
+                      >
+                        Yes
+                      </label>
+                    </div>
+                  </div>
+                  <br />
+                  <div
+                    class="row"
+                  >
+                    <div
+                      class="col-5"
+                    >
+                      <button
+                        class="smallbutton"
+                        data-testid="ucpButton"
+                        disabled=""
+                        type="button"
+                      >
+                        Previous​
+                      </button>
+                    </div>
+                    <div
+                      class="col-2"
+                    />
+                    <div
+                      class="col-5"
+                    >
+                      <button
+                        class="smallbutton"
+                        data-testid="ucpButton"
+                        disabled=""
+                        type="button"
+                      >
+                        Next​
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="row"
+              id="buttonRow"
+            >
+              <div
+                class="centered-buttons col"
+              >
+                <a
+                  href="/LevelTwoQualifications"
+                >
+                  <button
+                    class="mediumbutton"
+                    data-testid="ucpButton"
+                    primary="True"
+                    type="button"
+                  >
+                    Go Back​
+                  </button>
+                </a>
+              </div>
+              <div
+                class="centered-buttons col"
+              >
+                <div
+                  id="confirmButton"
+                >
+                  <a
+                    href="/DegreeQualifications"
+                  >
+                    <button
+                      class="mediumbutton"
+                      data-testid="ucpButton"
+                      primary="True"
+                      type="button"
+                    >
+                      Confirm and Go​
+                    </button>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
