@@ -9,6 +9,6 @@ import { BrowserRouter as Router} from 'react-router-dom';
 afterEach(cleanup);
 
 it("Renders AdminGraph", () => {
-    const {asFragment } = render(<Router><AdminGraph/></Router>);
-    expect(asFragment()).toMatchSnapshot(); 
+	const {asFragment } = render(<Router><AdminGraph/></Router>);
+	expect(asFragment()).toMatchSnapshot(); 
 });
