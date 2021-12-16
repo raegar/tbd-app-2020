@@ -173,7 +173,7 @@ exports[`Renders LevelTwoQualifications 1`] = `
                       class="row"
                     >
                       <div
-                        class="col-md-2"
+                        class="col-md-8"
                       >
                         <div
                           class="mobiletextbox"
@@ -190,10 +190,8 @@ exports[`Renders LevelTwoQualifications 1`] = `
                         </div>
                       </div>
                       <div
-                        class="col"
-                      >
-                        <br />
-                      </div>
+                        class="spacingFix col"
+                      />
                       <div
                         class="col-md-2"
                       >

@@ -25,3 +25,7 @@
 .totalQualPoints {
 
 }
+
+.spacingFix {
+    pointer-events: none;
+}
